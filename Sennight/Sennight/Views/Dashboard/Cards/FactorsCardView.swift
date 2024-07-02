@@ -11,7 +11,7 @@ struct FactorsCardView: View {
     @State private var isPresentingUpdateFactorSheet = false
     
     var body: some View {
-        Section(header: Text("Factors")) {
+        Section(header: Text("Products")) {
             ForEach(0..<3) { _ in
                 FactorRowView()
                     .onTapGesture {
