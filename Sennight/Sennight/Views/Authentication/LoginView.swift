@@ -8,8 +8,48 @@
 import SwiftUI
 
 struct LoginView: View {
+    @State private var email = ""
+    @State private var password = ""
+    @State private var showSignUpView = false
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            Text("Login")
+                .font(.largeTitle)
+                .padding(.bottom, 20)
+
+            TextField("Email", text: $email)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+
+            SecureField("Password", text: $password)
+                .textFieldStyle(RoundedBorderTextFieldStyle())
+                .padding()
+
+            Button(action: {
+            }) {
+                Text("Login")
+                    .font(.title2)
+                    .padding()
+                    .frame(maxWidth: .infinity)
+                    .background(Color.blue)
+                    .foregroundColor(.white)
+                    .cornerRadius(10)
+            }
+            .padding()
+
+            Button(action: {
+                showSignUpView = true
+            }) {
+                Text("Don't have an account? Sign Up")
+                    .foregroundColor(.blue)
+            }
+            .padding(.top, 20)
+        }
+        .padding()
+        .sheet(isPresented: $showSignUpView) {
+            SignUpView()
+        }
     }
 }
 
