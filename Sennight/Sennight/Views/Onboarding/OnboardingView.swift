@@ -9,8 +9,18 @@ import SwiftUI
 
 struct OnboardingView: View {
     @Binding var isOnboardingComplete: Bool
+    @State private var currentStep = 1
+
     var body: some View {
-        Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
+        VStack {
+            if currentStep == 1 {
+                OnboardingStep1View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+            } else if currentStep == 2 {
+                OnboardingStep2View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+            } else if currentStep == 3 {
+                OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+            }
+        }
     }
 }
 
