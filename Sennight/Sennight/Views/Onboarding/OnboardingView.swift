@@ -8,11 +8,14 @@
 import SwiftUI
 
 struct OnboardingView: View {
+    @Binding var isOnboardingComplete: Bool
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
-#Preview {
-    OnboardingView()
+struct OnboardingView_Previews: PreviewProvider {
+    static var previews: some View {
+        OnboardingView(isOnboardingComplete: .constant(false))
+    }
 }

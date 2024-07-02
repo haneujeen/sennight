@@ -6,3 +6,9 @@
 //
 
 import Foundation
+import SwiftUI
+
+class UserViewModel: ObservableObject {
+    @Published var isLoggedIn: Bool = true
+}
+

@@ -76,6 +76,11 @@
 		4E0F84E12C2D3ECC0037AE25 /* NewActivitySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84E02C2D3ECC0037AE25 /* NewActivitySheet.swift */; };
 		4E0F84E32C2D3EE40037AE25 /* NewSmokingLogSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84E22C2D3EE40037AE25 /* NewSmokingLogSheet.swift */; };
 		4E0F84E52C2D3FA60037AE25 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 4E0F84E42C2D3FA60037AE25 /* Localizable.xcstrings */; };
+		4E6F39D32C33951A00058003 /* EntryView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D22C33951A00058003 /* EntryView.swift */; };
+		4E6F39D52C33980900058003 /* SupportIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D42C33980900058003 /* SupportIcon.swift */; };
+		4E6F39D72C33989A00058003 /* PostText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D62C33989A00058003 /* PostText.swift */; };
+		4E6F39DB2C339ABF00058003 /* MedalIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39DA2C339ABF00058003 /* MedalIcon.swift */; };
+		4E6F39DD2C33B79200058003 /* MyMilestonesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39DC2C33B79200058003 /* MyMilestonesView.swift */; };
 		4E9AC0A62C2E844700B3C2F0 /* FactorDetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AC0A52C2E844700B3C2F0 /* FactorDetailEditView.swift */; };
 		4E9AC0A82C2E863500B3C2F0 /* UpdateFactorSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AC0A72C2E863500B3C2F0 /* UpdateFactorSheet.swift */; };
 		4ECADF932C2E8DEC00E8861C /* CircularGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF922C2E8DEC00E8861C /* CircularGauge.swift */; };
@@ -171,6 +176,11 @@
 		4E0F84E02C2D3ECC0037AE25 /* NewActivitySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivitySheet.swift; sourceTree = "<group>"; };
 		4E0F84E22C2D3EE40037AE25 /* NewSmokingLogSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSmokingLogSheet.swift; sourceTree = "<group>"; };
 		4E0F84E42C2D3FA60037AE25 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		4E6F39D22C33951A00058003 /* EntryView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EntryView.swift; sourceTree = "<group>"; };
+		4E6F39D42C33980900058003 /* SupportIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportIcon.swift; sourceTree = "<group>"; };
+		4E6F39D62C33989A00058003 /* PostText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostText.swift; sourceTree = "<group>"; };
+		4E6F39DA2C339ABF00058003 /* MedalIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalIcon.swift; sourceTree = "<group>"; };
+		4E6F39DC2C33B79200058003 /* MyMilestonesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMilestonesView.swift; sourceTree = "<group>"; };
 		4E9AC0A52C2E844700B3C2F0 /* FactorDetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactorDetailEditView.swift; sourceTree = "<group>"; };
 		4E9AC0A72C2E863500B3C2F0 /* UpdateFactorSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateFactorSheet.swift; sourceTree = "<group>"; };
 		4ECADF922C2E8DEC00E8861C /* CircularGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGauge.swift; sourceTree = "<group>"; };
@@ -226,6 +236,7 @@
 				4E0F84532C2D0DBA0037AE25 /* Models */,
 				4E0F84542C2D0DC50037AE25 /* ViewModels */,
 				4E0F84552C2D0DDE0037AE25 /* Views */,
+				4E6F39D22C33951A00058003 /* EntryView.swift */,
 				4E0F842A2C2D07F70037AE25 /* ContentView.swift */,
 				4E0F84282C2D07F70037AE25 /* SennightApp.swift */,
 				4E0F84562C2D0DFF0037AE25 /* Services */,
@@ -380,7 +391,11 @@
 		4E0F84762C2D2A0E0037AE25 /* MilestonePosts */ = {
 			isa = PBXGroup;
 			children = (
+				4E6F39D42C33980900058003 /* SupportIcon.swift */,
+				4E6F39DA2C339ABF00058003 /* MedalIcon.swift */,
+				4E6F39D62C33989A00058003 /* PostText.swift */,
 				4E0F84DA2C2D3E6A0037AE25 /* MilestonePostCardView.swift */,
+				4E6F39DC2C33B79200058003 /* MyMilestonesView.swift */,
 				4E0F84A72C2D33E50037AE25 /* MilestonePostsView.swift */,
 			);
 			path = MilestonePosts;
@@ -581,12 +596,16 @@
 				4E0F84A22C2D30AE0037AE25 /* MilestonePostService.swift in Sources */,
 				4E0F84D82C2D3DFC0037AE25 /* SmokingLogChartCardView.swift in Sources */,
 				4E0F84CA2C2D3D3D0037AE25 /* FactorRowView.swift in Sources */,
+				4E6F39D52C33980900058003 /* SupportIcon.swift in Sources */,
+				4E6F39DD2C33B79200058003 /* MyMilestonesView.swift in Sources */,
 				4E9AC0A62C2E844700B3C2F0 /* FactorDetailEditView.swift in Sources */,
 				4E0F84BD2C2D34CD0037AE25 /* Theme.swift in Sources */,
 				4E0F849A2C2D30460037AE25 /* MilestoneService.swift in Sources */,
+				4E6F39D32C33951A00058003 /* EntryView.swift in Sources */,
 				4E0F84D62C2D3D8E0037AE25 /* ActivityRowView.swift in Sources */,
 				4E0F84922C2D30120037AE25 /* MotivationService.swift in Sources */,
 				4E0F84AF2C2D34990037AE25 /* Motivation.swift in Sources */,
+				4E6F39D72C33989A00058003 /* PostText.swift in Sources */,
 				4E0F84C22C2D3C8B0037AE25 /* HealthProgressCardView.swift in Sources */,
 				4E0F84DB2C2D3E6A0037AE25 /* MilestonePostCardView.swift in Sources */,
 				4E0F84812C2D2CB20037AE25 /* FactorListViewModel.swift in Sources */,
@@ -614,6 +633,7 @@
 				4E0F84DD2C2D3E940037AE25 /* NewFactorSheet.swift in Sources */,
 				4E0BF7DF2C2E4C2B0091ADB2 /* Config.swift in Sources */,
 				4E0F846C2C2D28E60037AE25 /* OnboardingStep1View.swift in Sources */,
+				4E6F39DB2C339ABF00058003 /* MedalIcon.swift in Sources */,
 				4E0F84E12C2D3ECC0037AE25 /* NewActivitySheet.swift in Sources */,
 				4E0F84962C2D30260037AE25 /* SymptomService.swift in Sources */,
 				4E0F84292C2D07F70037AE25 /* SennightApp.swift in Sources */,
