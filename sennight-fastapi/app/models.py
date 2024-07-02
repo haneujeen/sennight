@@ -20,7 +20,8 @@ class User(Base):
     smoking_logs = relationship("SmokingLog", back_populates="user", cascade="all, delete-orphan")
     motivation = relationship("UserMotivation", back_populates="user", cascade="all, delete-orphan")
     milestones = relationship("UserMilestone", back_populates="user", cascade="all, delete-orphan")
-    factors = relationship("UserFactor", back_populates="user", cascade="all, delete-orphan")
+    milestone_posts = relationship("MilestonePost", back_populates="user", cascade="all, delete-orphan")
+    aid_products = relationship("UserAidProduct", back_populates="user", cascade="all, delete-orphan")
     symptoms = relationship("UserSymptom", back_populates="user", cascade="all, delete-orphan")
     activities = relationship("UserActivity", back_populates="user", cascade="all, delete-orphan")
 
@@ -32,7 +33,8 @@ class QuitLog(Base):
     __tablename__ = "quit_log"
     id = Column(Integer, primary_key=True, autoincrement=True)
     user_id = Column(Integer, ForeignKey("user.id", ondelete="CASCADE"))
-    quit_date = Column(Date, nullable=True)
+    start_date = Column(Date, nullable=True)
+    end_date = Column(Date, nullable=True)
     daily_cigarettes = Column(Integer, nullable=True)
     cigarette_price = Column(Float, nullable=True)
     is_active = Column(Boolean, default=True)
@@ -93,31 +95,44 @@ class UserMilestone(Base):
 
     milestone = relationship("Milestone", back_populates="user_milestones")
     user = relationship("User", back_populates="milestones")
+    milestone_post = relationship("MilestonePost", back_populates="user_milestone")
 
 
-class Factor(Base):
-    __tablename__ = "factor"
+class MilestonePost(Base):
+    __tablename__ = "milestone_post"
+
+    id = Column(Integer, primary_key=True, autoincrement=True)
+    user_id = Column(Integer, ForeignKey("user.id", ondelete="CASCADE"))
+    user_milestone_id = Column(Integer, ForeignKey("user_milestone.id", ondelete="CASCADE"), unique=True)
+    support_count = Column(Integer)
+
+    user = relationship("User", back_populates="milestone_posts")
+    user_milestone = relationship("UserMilestone", back_populates="milestone_post")
+
+
+class AidProduct(Base):
+    __tablename__ = "aid_product"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     category = Column(String(50))
     name = Column(String(50))
 
-    user_factors = relationship("UserFactor", back_populates="factor")
+    user_aid_products = relationship("UserFactor", back_populates="factor")
 
 
-class UserFactor(Base):
-    __tablename__ = "user_factor"
+class UserAidProduct(Base):
+    __tablename__ = "user_aid_product"
 
     id = Column(Integer, primary_key=True, autoincrement=True)
     user_id = Column(Integer, ForeignKey("user.id", ondelete="CASCADE"))
-    factor_id = Column(Integer, ForeignKey("factor.id", ondelete="CASCADE"))
+    aid_product_id = Column(Integer, ForeignKey("aid_product.id", ondelete="CASCADE"))
     start_date = Column(Date)
     end_date = Column(Date, nullable=True)
 
-    factor = relationship("Factor", back_populates="user_factors")
-    user = relationship("User", back_populates="factors")
+    factor = relationship("AidProduct", back_populates="user_aid_products")
+    user = relationship("User", back_populates="aid_products")
 
-    __table_args__ = (UniqueConstraint('user_id', 'factor_id', name='_user_factor_uc'),)
+    __table_args__ = (UniqueConstraint('user_id', 'aid_product_id', name='_user_aid_product_uc'),)
 
 
 class Symptom(Base):
