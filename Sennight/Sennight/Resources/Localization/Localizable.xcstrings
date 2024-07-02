@@ -4,7 +4,49 @@
     "!" : {
 
     },
+    "%lld%%" : {
+
+    },
+    "3 Month Fresh" : {
+
+    },
+    "7 Day Fresh" : {
+
+    },
+    "30 Day Hero" : {
+
+    },
+    "About App" : {
+
+    },
+    "Account Settings" : {
+
+    },
+    "Activities" : {
+
+    },
     "Activity row" : {
+
+    },
+    "Add smoking" : {
+
+    },
+    "Already have an account? Log In" : {
+
+    },
+    "App Permissions" : {
+
+    },
+    "App Version" : {
+
+    },
+    "Change Password" : {
+
+    },
+    "Confirm Password" : {
+
+    },
+    "Contact Support" : {
 
     },
     "Dashboard" : {
@@ -13,13 +55,31 @@
     "Dashboard header" : {
 
     },
+    "Data Usage" : {
+
+    },
+    "Dismiss" : {
+
+    },
+    "Don't have an account? Sign Up" : {
+
+    },
+    "Email" : {
+
+    },
+    "Error" : {
+
+    },
     "Factor detail edit" : {
 
     },
     "Factor row" : {
 
     },
-    "Factors" : {
+    "General" : {
+
+    },
+    "Get Started" : {
 
     },
     "Health progress card" : {
@@ -28,10 +88,22 @@
     "Hello, World!" : {
 
     },
-    "Milestone post card" : {
+    "Language" : {
 
     },
-    "Milestone posts" : {
+    "Legal" : {
+
+    },
+    "Licenses" : {
+
+    },
+    "Login" : {
+
+    },
+    "Logout" : {
+
+    },
+    "Milestone Posts" : {
 
     },
     "Milestones" : {
@@ -41,6 +113,12 @@
 
     },
     "Motivation card" : {
+
+    },
+    "My milestones" : {
+
+    },
+    "Name" : {
 
     },
     "New activity sheet" : {
@@ -55,16 +133,79 @@
     "New symptom sheet" : {
 
     },
+    "Next" : {
+
+    },
+    "Number of Cigarettes per Day" : {
+
+    },
+    "OK" : {
+
+    },
+    "Password" : {
+
+    },
+    "Price of a cigarette or a pack of cigarettes" : {
+
+    },
+    "Privacy and Security" : {
+
+    },
+    "Privacy Policy" : {
+
+    },
+    "Products" : {
+
+    },
+    "Profile" : {
+
+    },
+    "Quit Date" : {
+
+    },
     "Settings" : {
+
+    },
+    "Sign Up" : {
 
     },
     "Smoking log chart card" : {
 
     },
+    "Step 1: Registration" : {
+
+    },
+    "Step 2: Create Quit Log" : {
+
+    },
+    "Step 3: Motivation" : {
+
+    },
+    "Subscription/Billing Information" : {
+
+    },
+    "Support" : {
+
+    },
     "Symptom row" : {
 
     },
+    "Symptoms" : {
+
+    },
+    "Terms of Service" : {
+
+    },
+    "Time Zone" : {
+
+    },
     "Update factor sheet" : {
+
+    },
+    "User achieved %@ Milestone! Send support?" : {
+
+    },
+    "Why do you want to stop smoking?" : {
 
     }
   },
