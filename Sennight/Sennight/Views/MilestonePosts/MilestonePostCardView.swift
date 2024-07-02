@@ -8,11 +8,21 @@
 import SwiftUI
 
 struct MilestonePostCardView: View {
+    var title: String
+    
     var body: some View {
-        Text("Milestone post card")
+        HStack {
+            MedalIcon()
+            PostText(title: title)
+            Spacer()
+            SupportIcon()
+        }
+        .padding()
+        .background(.white)
+        .cornerRadius(15)
     }
 }
 
 #Preview {
-    MilestonePostCardView()
+    MilestonePostCardView(title: "7 Day")
 }

@@ -9,7 +9,27 @@ import SwiftUI
 
 struct MilestonePostsView: View {
     var body: some View {
-        Text("Milestone posts")
+        NavigationView {
+            VStack {
+                VStack {
+                    MilestonePostCardView(title: "7 Day")
+                    MilestonePostCardView(title: "30 Day")
+                    MilestonePostCardView(title: "5 Year")
+                }
+                .padding()
+                Spacer()
+                NavigationLink(destination: MyMilestonesView()) {
+                    Text("My milestones")
+                        .padding()
+                        .background(Color.blue)
+                        .foregroundColor(.white)
+                        .cornerRadius(8)
+                }
+                Spacer()
+            }
+            .background(Color(.systemGray6))
+            .navigationBarTitle("Milestone Posts", displayMode: .inline)
+        }
     }
 }
 
