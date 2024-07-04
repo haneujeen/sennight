@@ -80,6 +80,7 @@
 		4E9AC0A82C2E863500B3C2F0 /* UpdateFactorSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AC0A72C2E863500B3C2F0 /* UpdateFactorSheet.swift */; };
 		4ECADF932C2E8DEC00E8861C /* CircularGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF922C2E8DEC00E8861C /* CircularGauge.swift */; };
 		D636EF562C339F89008FDE69 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636EF552C339F89008FDE69 /* HeaderView.swift */; };
+		D6794D642C36718400171BD4 /* ChartsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D6794D632C36718400171BD4 /* ChartsView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -176,6 +177,7 @@
 		4E9AC0A72C2E863500B3C2F0 /* UpdateFactorSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateFactorSheet.swift; sourceTree = "<group>"; };
 		4ECADF922C2E8DEC00E8861C /* CircularGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGauge.swift; sourceTree = "<group>"; };
 		D636EF552C339F89008FDE69 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
+		D6794D632C36718400171BD4 /* ChartsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChartsView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -320,6 +322,7 @@
 				4E0F84772C2D2A280037AE25 /* Settings */,
 				4E0F84622C2D10640037AE25 /* HomeView.swift */,
 				D636EF552C339F89008FDE69 /* HeaderView.swift */,
+				D6794D632C36718400171BD4 /* ChartsView.swift */,
 				4E0F84652C2D10A30037AE25 /* SplashScreenView.swift */,
 			);
 			path = Views;
@@ -621,6 +624,7 @@
 				4E0F84E12C2D3ECC0037AE25 /* NewActivitySheet.swift in Sources */,
 				4E0F84962C2D30260037AE25 /* SymptomService.swift in Sources */,
 				4E0F84292C2D07F70037AE25 /* SennightApp.swift in Sources */,
+				D6794D642C36718400171BD4 /* ChartsView.swift in Sources */,
 				4E0F84632C2D10640037AE25 /* HomeView.swift in Sources */,
 				4E0F847F2C2D2CA60037AE25 /* FactorViewModel.swift in Sources */,
 				4E0F84D02C2D3D6D0037AE25 /* SymptomsCardView.swift in Sources */,
