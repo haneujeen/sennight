@@ -79,6 +79,7 @@
 		4E9AC0A62C2E844700B3C2F0 /* FactorDetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AC0A52C2E844700B3C2F0 /* FactorDetailEditView.swift */; };
 		4E9AC0A82C2E863500B3C2F0 /* UpdateFactorSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AC0A72C2E863500B3C2F0 /* UpdateFactorSheet.swift */; };
 		4ECADF932C2E8DEC00E8861C /* CircularGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF922C2E8DEC00E8861C /* CircularGauge.swift */; };
+		D636EF562C339F89008FDE69 /* HeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = D636EF552C339F89008FDE69 /* HeaderView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -174,6 +175,7 @@
 		4E9AC0A52C2E844700B3C2F0 /* FactorDetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactorDetailEditView.swift; sourceTree = "<group>"; };
 		4E9AC0A72C2E863500B3C2F0 /* UpdateFactorSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateFactorSheet.swift; sourceTree = "<group>"; };
 		4ECADF922C2E8DEC00E8861C /* CircularGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGauge.swift; sourceTree = "<group>"; };
+		D636EF552C339F89008FDE69 /* HeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeaderView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -317,6 +319,7 @@
 				4E0F84762C2D2A0E0037AE25 /* MilestonePosts */,
 				4E0F84772C2D2A280037AE25 /* Settings */,
 				4E0F84622C2D10640037AE25 /* HomeView.swift */,
+				D636EF552C339F89008FDE69 /* HeaderView.swift */,
 				4E0F84652C2D10A30037AE25 /* SplashScreenView.swift */,
 			);
 			path = Views;
@@ -585,6 +588,7 @@
 				4E0F84BD2C2D34CD0037AE25 /* Theme.swift in Sources */,
 				4E0F849A2C2D30460037AE25 /* MilestoneService.swift in Sources */,
 				4E0F84D62C2D3D8E0037AE25 /* ActivityRowView.swift in Sources */,
+				D636EF562C339F89008FDE69 /* HeaderView.swift in Sources */,
 				4E0F84922C2D30120037AE25 /* MotivationService.swift in Sources */,
 				4E0F84AF2C2D34990037AE25 /* Motivation.swift in Sources */,
 				4E0F84C22C2D3C8B0037AE25 /* HealthProgressCardView.swift in Sources */,
