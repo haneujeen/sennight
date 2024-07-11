@@ -84,6 +84,7 @@
 		4E9AC0A62C2E844700B3C2F0 /* FactorDetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AC0A52C2E844700B3C2F0 /* FactorDetailEditView.swift */; };
 		4E9AC0A82C2E863500B3C2F0 /* UpdateFactorSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AC0A72C2E863500B3C2F0 /* UpdateFactorSheet.swift */; };
 		4ECADF932C2E8DEC00E8861C /* CircularGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF922C2E8DEC00E8861C /* CircularGauge.swift */; };
+		D6356CF42C3BDCBC000EE5D4 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D6356CF32C3BDCBC000EE5D4 /* Alamofire */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -191,6 +192,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				D6356CF42C3BDCBC000EE5D4 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -466,6 +468,7 @@
 			);
 			name = Sennight;
 			packageProductDependencies = (
+				D6356CF32C3BDCBC000EE5D4 /* Alamofire */,
 			);
 			productName = Sennight;
 			productReference = 4E0F84252C2D07F70037AE25 /* Sennight.app */;
@@ -542,6 +545,7 @@
 			);
 			mainGroup = 4E0F841C2C2D07F70037AE25;
 			packageReferences = (
+				D6356CF22C3BDCBC000EE5D4 /* XCRemoteSwiftPackageReference "Alamofire" */,
 			);
 			productRefGroup = 4E0F84262C2D07F70037AE25 /* Products */;
 			projectDirPath = "";
@@ -820,7 +824,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Sennight/Preview Content\"";
-				DEVELOPMENT_TEAM = NNA9AVJNUS;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -849,7 +853,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Sennight/Preview Content\"";
-				DEVELOPMENT_TEAM = NNA9AVJNUS;
+				DEVELOPMENT_TEAM = "";
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -986,6 +990,25 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		D6356CF22C3BDCBC000EE5D4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.9.1;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		D6356CF32C3BDCBC000EE5D4 /* Alamofire */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = D6356CF22C3BDCBC000EE5D4 /* XCRemoteSwiftPackageReference "Alamofire" */;
+			productName = Alamofire;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 4E0F841D2C2D07F70037AE25 /* Project object */;
 }
