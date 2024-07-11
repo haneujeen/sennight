@@ -13,7 +13,7 @@ class UserService {
     static let shared = UserService() //싱글톤 패턴 공유 인스턴스 생성
     let tokenkey = "token"
     let host = "http://127.0.0.1"
-    let port = "8080"
+    let port = "8000"
     //토큰을 UserDefaults에 저장
     func saveToken(_ token: String) {
         UserDefaults.standard.set(token, forKey: tokenkey)
