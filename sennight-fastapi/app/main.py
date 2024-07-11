@@ -2,23 +2,18 @@ from fastapi import FastAPI, HTTPException, Request
 from fastapi.responses import JSONResponse
 from jose import jwt, JWTError
 from .database import engine, Base
-from .routes import users, factors, motivations, milestones, symptoms, activities
+from .routes import mock_user
 from .config import settings
 
 Base.metadata.create_all(bind=engine)
 
 app = FastAPI()
 
-app.include_router(users.router)
-app.include_router(factors.router)
-app.include_router(motivations.router)
-app.include_router(milestones.router)
-app.include_router(symptoms.router)
-app.include_router(activities.router)
+app.include_router(mock_user.router)
 
 @app.middleware("http")
 async def jwt_middleware(request: Request, call_next):
-    if request.method == "POST" and request.url.path.startswith("/users"):
+    if request.method == "POST" and request.url.path.startswith("/mock"):
         return await call_next(request)
 
     authorization: str = request.headers.get("Authorization")
