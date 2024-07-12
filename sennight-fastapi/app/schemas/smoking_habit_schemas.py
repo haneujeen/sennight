@@ -4,6 +4,7 @@ from pydantic import BaseModel
 
 
 class SmokingHabitBase(BaseModel):
+    user_id: int
     daily_cigarettes: Optional[int] = None
     cigarette_price: Optional[float] = None
     first_cigarette: Optional[time] = None
@@ -20,7 +21,6 @@ class SmokingHabitUpdate(SmokingHabitBase):
 
 class SmokingHabit(SmokingHabitBase):
     id: int
-    user_id: int
 
     class Config:
         from_attributes = True

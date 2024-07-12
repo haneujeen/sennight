@@ -1,14 +1,14 @@
 from datetime import datetime
 from typing import List, Optional
 from pydantic import BaseModel, EmailStr
-from .smoking_habit import SmokingHabit
-from .quit_attempt import QuitAttempt
-from .smoking_log import SmokingLog
-from .motivation import UserMotivation
-from .milestone import UserMilestone
-from .aid_product import UserAidProduct
-from .symptom import UserSymptom
-from .activity import UserActivity
+from .smoking_habit_schemas import SmokingHabit
+from .quit_attempt_schemas import QuitAttempt
+from .smoking_log_schemas import SmokingLog
+from .motivation_schemas import UserMotivation
+from .milestone_schemas import UserMilestone
+from .aid_product_schemas import UserAidProduct
+from .symptom_schemas import UserSymptom
+from .activity_schemas import UserActivity
 
 
 class UserBase(BaseModel):
@@ -18,11 +18,13 @@ class UserBase(BaseModel):
 
 class UserCreate(UserBase):
     password: str
+    photo_filename: Optional[str] = None
 
 
 class UserUpdate(UserBase):
     name: Optional[str] = None
     password: Optional[str] = None
+    photo_filename: Optional[str] = None
 
 
 class UserLogin(UserBase):
@@ -32,6 +34,7 @@ class UserLogin(UserBase):
 
 class User(UserBase):
     id: int
+    photo_filename: Optional[str] = None
     created_at: datetime
     updated_at: datetime
     deleted_at: Optional[datetime] = None

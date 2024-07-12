@@ -7,9 +7,10 @@ from .database import Base
 class User(Base):
     __tablename__ = "user"
     id = Column(Integer, primary_key=True, autoincrement=True)
-    email = Column(String(100), unique=True, index=True)
-    name = Column(String(50))
-    hashed_password = Column(String(255))
+    email = Column(String(100), unique=True, index=True, nullable=False)
+    name = Column(String(50), nullable=False)
+    hashed_password = Column(String(255), nullable=False)
+    photo_filename = Column(String(255))
 
     created_at = Column(DateTime, server_default=func.now())
     updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now())
@@ -28,6 +29,7 @@ class User(Base):
 
     def soft_delete(self):
         self.deleted_at = func.now()
+
 
 class SmokingHabit(Base):
     __tablename__ = "smoking_habit"
@@ -114,7 +116,7 @@ class Milestone(Base):
     title = Column(String(50), nullable=False)
     content = Column(String(255), nullable=False)
 
-    user_milestones = relationship("UserMilestones", back_populates="milestone")
+    user_milestones = relationship("UserMilestone", back_populates="milestone")
 
 
 class UserMilestone(Base):
@@ -141,6 +143,8 @@ class MilestonePost(Base):
     quit_attempt_id = Column(Integer, ForeignKey("quit_attempt.id"))
     content = Column(String(255), nullable=False)
     support_count = Column(Integer, default=0)
+    created_at = Column(DateTime, server_default=func.now())
+    updated_at = Column(DateTime, server_default=func.now(), onupdate=func.now())
 
     user = relationship("User", back_populates="milestone_posts")
     user_milestone = relationship("UserMilestone", back_populates="milestone_post")
@@ -179,7 +183,7 @@ class Symptom(Base):
     title = Column(String(50), nullable=False)
     description = Column(String(255), nullable=False)
 
-    user_symptoms = relationship("User", back_populates="symptom")
+    user_symptoms = relationship("UserSymptom", back_populates="symptom")
 
 
 class UserSymptom(Base):
