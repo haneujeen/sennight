@@ -1,0 +1,59 @@
+  Host
+    ├── /users
+    │   ├── POST /register
+    │   ├── POST /
+    │   ├── GET /{userID}
+    │   ├── PUT /{userID}
+    │   └── DELETE /{userID}
+    ├── /smoking-habits
+    │   ├── POST /
+    │   ├── GET /{userID}
+    │   └── PUT /{habitID}
+    ├── /quit-attempts
+    │   ├── POST /
+    │   ├── GET /{userID}
+    │   ├── PUT /{attemptID}
+    │   ├── DELETE /{attemptID}
+    │   └── GET /{attemptID}/milestones
+    ├── /smoking-logs
+    │   ├── POST /
+    │   ├── GET /{userID}
+    │   ├── PUT /{smokingLogID}
+    │   └── DELETE /{smokingLogID}
+    ├── /health-benefits
+    │   └── GET /
+    ├── /triggers
+    │   └── GET /
+    ├── /motivations
+    │   └── GET /
+    ├── /milestones
+    │   └── GET /
+    ├── /aid-products
+    │   └── GET /
+    ├── /symptoms
+    │   └── GET /
+    ├── /activities
+    │   └── GET /
+    ├── /user-motivations
+    │   ├── POST /
+    │   ├── GET /{userID}
+    │   └── PUT /{userMotivationID}
+    ├── /user-milestones
+    │   ├── POST /
+    │   └── GET /{userID}
+    ├── /user-aid-products
+    │   ├── POST /
+    │   ├── GET /{userID}
+    │   └── DELETE /{userAidProductID}
+    ├── /user-symptoms
+    │   ├── POST /
+    │   ├── GET /{userID}
+    │   └── DELETE /{userSymptomID}
+    ├── /user-activities
+    │   ├── POST /
+    │   ├── GET /{userID}
+    │   └── DELETE /{userActivityID}
+    └── /milestone-posts
+        ├── POST /
+        ├── GET /
+        └── PUT /{milestonePostID}
