@@ -49,30 +49,25 @@ async def create(
     }
 
 
+# Retrieves most recent quit attempt
 @router.get("/quit-attempts/{user_id}")
 async def read(user_id: int, db: Session = Depends(database.get_db)):
     quit_attempt = quit_attempt_crud.read(db, user_id)
     return {
         "status": True,
         "detail": "",
-        "data": {
-            "id": quit_attempt.id,
-            "user_id": quit_attempt.user_id,
-            "start_date": quit_attempt.start_date,
-            "is_active": quit_attempt.is_active
-        }
+        "data": quit_attempt
     }
 
 
-@router.get("/quit-attempts/all/{user_id}", response_model=List[quit_attempt_schemas.QuitAttempt])
+# Retrieves all quit attempts
+@router.get("/quit-attempts/all/{user_id}")
 async def read_all(user_id: int, db: Session = Depends(database.get_db)):
     quit_attempts = quit_attempt_crud.read_all(db, user_id)
     return {
         "status": True,
         "detail": "",
-        "data": {
-            "quit_attempts": quit_attempts
-        }
+        "data": quit_attempts
     }
 
 
@@ -87,12 +82,7 @@ async def update(
     return {
         "status": True,
         "detail": "Quit attempt updated successfully",
-        "data": {
-            "user_id": updated_quit_attempt.user_id,
-            "start_date": updated_quit_attempt.start_date,
-            "end_date": updated_quit_attempt.end_date,
-            "is_active": updated_quit_attempt.is_active
-        }
+        "data": updated_quit_attempt
     }
 
 
@@ -108,13 +98,11 @@ async def delete(attempt_id: int, db: Session = Depends(database.get_db)):
     }
 
 
-@router.post("/quit-attempts/{attempt_id}/milestones", response_model=List[milestone_schemas.UserMilestone])
+@router.get("/quit-attempts/{attempt_id}/milestones")
 async def read_milestones(attempt_id: int, db: Session = Depends(database.get_db)):
     milestones = quit_attempt_crud.read_milestones(db, attempt_id)
     return {
         "status": True,
         "detail": "",
-        "data": {
-            "milestones": milestones
-        }
+        "data": milestones
     }

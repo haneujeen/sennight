@@ -29,7 +29,7 @@ from typing import List
 router = APIRouter()
 
 
-@router.post("/smoking-logs", response_model=smoking_log_schemas.SmokingLog)
+@router.post("/smoking-logs")
 async def create(
         smoking_log: smoking_log_schemas.SmokingLogCreate,
         request: Request,
@@ -51,7 +51,7 @@ async def create(
 #       .offset(skip)
 #       .limit(limit)
 #       .all()
-@router.get("/smoking-logs/{user_id}", response_model=List[smoking_log_schemas.SmokingLog])
+@router.get("/smoking-logs/{user_id}")
 async def read(user_id: int, db: Session = Depends(database.get_db)):
     smoking_logs = smoking_log_crud.read(db, user_id)
     return {
@@ -61,7 +61,7 @@ async def read(user_id: int, db: Session = Depends(database.get_db)):
     }
 
 
-@router.put("/smoking-logs/{smoking_log_id}", response_model=smoking_log_schemas.SmokingLog)
+@router.put("/smoking-logs/{smoking_log_id}")
 async def update(
         smoking_log_id: int,
         smoking_log: smoking_log_schemas.SmokingLogUpdate,

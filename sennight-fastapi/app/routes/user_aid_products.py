@@ -26,7 +26,7 @@ from typing import List
 router = APIRouter()
 
 
-@router.post("/user-aid-products", response_model=aid_product_schemas.UserAidProduct)
+@router.post("/user-aid-products")
 async def create(
         user_aid_product: aid_product_schemas.UserAidProductCreate,
         request: Request,
@@ -42,7 +42,7 @@ async def create(
     }
 
 
-@router.get("/user-aid-products/{user_id}", response_model=List[aid_product_schemas.UserAidProduct])
+@router.get("/user-aid-products/{user_id}")
 async def read(user_id: int, db: Session = Depends(database.get_db)):
     user_aid_products = user_aid_product_crud.read(db, user_id)
     return {

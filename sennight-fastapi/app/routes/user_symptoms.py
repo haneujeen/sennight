@@ -24,7 +24,7 @@ from typing import List
 router = APIRouter()
 
 
-@router.post("/user-symptoms", response_model=symptom_schemas.UserSymptom)
+@router.post("/user-symptoms")
 async def create(
         user_symptom: symptom_schemas.UserSymptomCreate,
         request: Request,
@@ -40,7 +40,7 @@ async def create(
     }
 
 
-@router.get("/user-symptoms/{user_id}", response_model=List[symptom_schemas.UserSymptom])
+@router.get("/user-symptoms/{user_id}")
 async def read(user_id: int, db: Session = Depends(database.get_db)):
     user_symptoms = user_symptom_crud.read(db, user_id)
     return {

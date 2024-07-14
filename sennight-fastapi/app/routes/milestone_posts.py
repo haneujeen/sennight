@@ -27,7 +27,7 @@ from typing import List
 router = APIRouter()
 
 
-@router.post("/milestone-posts", response_model=milestone_post_schemas.MilestonePost)
+@router.post("/milestone-posts")
 async def create(
         milestone_post: milestone_post_schemas.MilestonePostCreate,
         request: Request,
@@ -44,7 +44,7 @@ async def create(
 
 
 # TODO: Add pagination
-@router.get("/milestone-posts", response_model=List[milestone_post_schemas.MilestonePost])
+@router.get("/milestone-posts")
 async def read(skip: int, limit: int, db: Session = Depends(database.get_db)):
     milestone_posts = milestone_post_crud.read(db)
     return {
@@ -55,7 +55,7 @@ async def read(skip: int, limit: int, db: Session = Depends(database.get_db)):
 
 
 # Updates support count
-@router.patch("/milestone-posts/{milestone_post_id}", response_model=milestone_post_schemas.MilestonePost)
+@router.patch("/milestone-posts/{milestone_post_id}")
 async def update(milestone_post_id: int, db: Session = Depends(database.get_db)):
     updated_milestone_post = milestone_post_crud.update(db, milestone_post_id)
 

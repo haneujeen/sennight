@@ -25,7 +25,7 @@ from ..crud import user_motivation_crud
 router = APIRouter()
 
 
-@router.post("/user-motivations", response_model=motivation_schemas.UserMotivation)
+@router.post("/user-motivations")
 async def create(
         user_motivation: motivation_schemas.UserMotivationCreate,
         request: Request,
@@ -41,7 +41,7 @@ async def create(
     }
 
 
-@router.get("/user-motivations/{user_id}", response_model=motivation_schemas.UserMotivation)
+@router.get("/user-motivations/{user_id}")
 async def read(user_id: int, db: Session = Depends(database.get_db)):
     user_motivation = user_motivation_crud.read(db, user_id)
     return {
@@ -51,7 +51,7 @@ async def read(user_id: int, db: Session = Depends(database.get_db)):
     }
 
 
-@router.put("/user-motivations/{user_motivation_id}", response_model=motivation_schemas.UserMotivation)
+@router.put("/user-motivations/{user_motivation_id}")
 async def update(
         user_motivation_id: int,
         user_motivation: motivation_schemas.UserMotivationUpdate,

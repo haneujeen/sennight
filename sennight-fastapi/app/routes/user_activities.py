@@ -24,7 +24,7 @@ from typing import List
 router = APIRouter()
 
 
-@router.post("/user-activities", response_model=activity_schemas.UserActivity)
+@router.post("/user-activities")
 async def create(
         user_activity: activity_schemas.UserActivityCreate,
         request: Request,
@@ -40,7 +40,7 @@ async def create(
     }
 
 
-@router.get("/user-activities/{user_id}", response_model=List[activity_schemas.UserActivity])
+@router.get("/user-activities/{user_id}")
 async def read(user_id: int, db: Session = Depends(database.get_db)):
     user_activities = user_activity_crud.read(db, user_id)
     return {

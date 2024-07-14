@@ -23,7 +23,7 @@ from typing import List
 router = APIRouter()
 
 
-@router.get("/triggers", response_model=List[trigger_schemas.Trigger])
+@router.get("/triggers")
 async def read(db: Session = Depends(database.get_db)):
     triggers = trigger_crud.read(db)
     return {

@@ -24,7 +24,7 @@ from typing import List
 router = APIRouter()
 
 
-@router.get("/health-benefits", response_model=List[health_benefit_schemas.HealthBenefit])
+@router.get("/health-benefits")
 async def read(db: Session = Depends(database.get_db)):
     health_benefits = health_benefit_crud.read(db)
     return {

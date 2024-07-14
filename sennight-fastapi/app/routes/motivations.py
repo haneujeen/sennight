@@ -23,7 +23,7 @@ from typing import List
 router = APIRouter()
 
 
-@router.get("/motivations", response_model=List[motivation_schemas.Motivation])
+@router.get("/motivations")
 async def read(db: Session = Depends(database.get_db)):
     motivations = motivation_crud.read(db)
     return {

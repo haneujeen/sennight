@@ -23,7 +23,7 @@ from typing import List
 router = APIRouter()
 
 
-@router.get("/milestones", response_model=List[milestone_schemas.Milestone])
+@router.get("/milestones")
 async def read(db: Session = Depends(database.get_db)):
     milestones = milestone_crud.read(db)
     return {

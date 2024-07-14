@@ -25,7 +25,7 @@ from typing import List
 router = APIRouter()
 
 
-@router.post("/user-milestones", response_model=milestone_schemas.UserMilestone)
+@router.post("/user-milestones")
 async def create(
         user_milestone: milestone_schemas.UserMilestoneCreate,
         request: Request,
@@ -41,7 +41,7 @@ async def create(
     }
 
 
-@router.get("/user-milestones/{user_id}", response_model=List[milestone_schemas.UserMilestone])
+@router.get("/user-milestones/{user_id}")
 async def read(user_id: int, db: Session = Depends(database.get_db)):
     user_milestones = user_milestone_crud.read(db, user_id)
     return {

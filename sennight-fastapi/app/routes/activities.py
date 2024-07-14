@@ -23,7 +23,7 @@ from typing import List
 router = APIRouter()
 
 
-@router.get("/activities", response_model=List[activity_schemas.Activity])
+@router.get("/activities")
 async def read(db: Session = Depends(database.get_db)):
     activities = activity_crud.read(db)
     return {
