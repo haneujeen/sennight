@@ -5,7 +5,7 @@ from ..schemas import aid_product_schemas
 
 
 def create(db: Session, user_id: int, user_aid_product: aid_product_schemas.UserAidProductCreate):
-    db_user_aid_product = models.UserAidProduct(**user_aid_product.model_dump(), user_id=user_id)
+    db_user_aid_product = models.UserAidProduct(**user_aid_product.model_dump())
     db.add(db_user_aid_product)
     db.commit()
     db.refresh(db_user_aid_product)

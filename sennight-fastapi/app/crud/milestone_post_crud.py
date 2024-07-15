@@ -5,7 +5,7 @@ from ..schemas import milestone_post_schemas
 
 
 def create(db: Session, user_id: int, milestone_post: milestone_post_schemas.MilestonePostCreate):
-    db_milestone_post = models.MilestonePost(**milestone_post.model_dump(), user_id=user_id)
+    db_milestone_post = models.MilestonePost(**milestone_post.model_dump())
     db.add(db_milestone_post)
     db.commit()
     db.refresh(db_milestone_post)

@@ -45,7 +45,7 @@ async def create(
 
 # TODO: Add pagination
 @router.get("/milestone-posts")
-async def read(skip: int, limit: int, db: Session = Depends(database.get_db)):
+async def read(skip: int = 0, limit: int = 100, db: Session = Depends(database.get_db)):
     milestone_posts = milestone_post_crud.read(db)
     return {
         "status": True,
