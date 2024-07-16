@@ -88,7 +88,9 @@
 		4E82E39D2C4661D400F06DE3 /* OnboardingStep8View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E39C2C4661D400F06DE3 /* OnboardingStep8View.swift */; };
 		4E82E39F2C4661E200F06DE3 /* OnboardingStep9View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E39E2C4661E200F06DE3 /* OnboardingStep9View.swift */; };
 		4E82E3A12C4663D000F06DE3 /* SmokingHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E3A02C4663D000F06DE3 /* SmokingHabit.swift */; };
+		4E82E3A32C46640D00F06DE3 /* SmokingHabitViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E3A22C46640D00F06DE3 /* SmokingHabitViewModel.swift */; };
 		4E82E3A52C4665CB00F06DE3 /* QuitAttempt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E3A42C4665CB00F06DE3 /* QuitAttempt.swift */; };
+		4E82E3A72C4665EF00F06DE3 /* QuitAttemptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E3A62C4665EF00F06DE3 /* QuitAttemptViewModel.swift */; };
 		4E82E3A92C46661F00F06DE3 /* SmokingHabitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E3A82C46661F00F06DE3 /* SmokingHabitService.swift */; };
 		4E82E3AB2C46663400F06DE3 /* QuitAttemptService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E3AA2C46663400F06DE3 /* QuitAttemptService.swift */; };
 		4E9AC0A62C2E844700B3C2F0 /* FactorDetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AC0A52C2E844700B3C2F0 /* FactorDetailEditView.swift */; };
@@ -198,7 +200,9 @@
 		4E82E39C2C4661D400F06DE3 /* OnboardingStep8View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep8View.swift; sourceTree = "<group>"; };
 		4E82E39E2C4661E200F06DE3 /* OnboardingStep9View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep9View.swift; sourceTree = "<group>"; };
 		4E82E3A02C4663D000F06DE3 /* SmokingHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingHabit.swift; sourceTree = "<group>"; };
+		4E82E3A22C46640D00F06DE3 /* SmokingHabitViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingHabitViewModel.swift; sourceTree = "<group>"; };
 		4E82E3A42C4665CB00F06DE3 /* QuitAttempt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitAttempt.swift; sourceTree = "<group>"; };
+		4E82E3A62C4665EF00F06DE3 /* QuitAttemptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitAttemptViewModel.swift; sourceTree = "<group>"; };
 		4E82E3A82C46661F00F06DE3 /* SmokingHabitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingHabitService.swift; sourceTree = "<group>"; };
 		4E82E3AA2C46663400F06DE3 /* QuitAttemptService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitAttemptService.swift; sourceTree = "<group>"; };
 		4E9AC0A52C2E844700B3C2F0 /* FactorDetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactorDetailEditView.swift; sourceTree = "<group>"; };
@@ -324,6 +328,8 @@
 			children = (
 				4E0F84672C2D10C20037AE25 /* OnboardingViewModel.swift */,
 				4E0F84782C2D2BF90037AE25 /* UserViewModel.swift */,
+				4E82E3A22C46640D00F06DE3 /* SmokingHabitViewModel.swift */,
+				4E82E3A62C4665EF00F06DE3 /* QuitAttemptViewModel.swift */,
 				4E0F847C2C2D2C880037AE25 /* MotivationViewModel.swift */,
 				4E0F847A2C2D2C780037AE25 /* MotivationListViewModel.swift */,
 				4E0F849B2C2D30680037AE25 /* MilestoneViewModel.swift */,
@@ -626,6 +632,7 @@
 				4E0F84942C2D301B0037AE25 /* FactorService.swift in Sources */,
 				4E0F84A22C2D30AE0037AE25 /* MilestonePostService.swift in Sources */,
 				4E0F84D82C2D3DFC0037AE25 /* SmokingLogChartCardView.swift in Sources */,
+				4E82E3A32C46640D00F06DE3 /* SmokingHabitViewModel.swift in Sources */,
 				4E0F84CA2C2D3D3D0037AE25 /* FactorRowView.swift in Sources */,
 				4E82E3A12C4663D000F06DE3 /* SmokingHabit.swift in Sources */,
 				4E6F39D52C33980900058003 /* SupportIcon.swift in Sources */,
@@ -695,6 +702,7 @@
 				4E0F84852C2D2CC70037AE25 /* SymptomListViewModel.swift in Sources */,
 				4E0F84A42C2D30C90037AE25 /* SmokingLogService.swift in Sources */,
 				4E0F84B32C2D34A60037AE25 /* Factor.swift in Sources */,
+				4E82E3A72C4665EF00F06DE3 /* QuitAttemptViewModel.swift in Sources */,
 				4E0F84AA2C2D33F80037AE25 /* SettingsView.swift in Sources */,
 				4E0F84BB2C2D34C70037AE25 /* SmokingLog.swift in Sources */,
 			);
