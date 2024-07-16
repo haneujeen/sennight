@@ -81,6 +81,12 @@
 		4E6F39D72C33989A00058003 /* PostText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D62C33989A00058003 /* PostText.swift */; };
 		4E6F39DB2C339ABF00058003 /* MedalIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39DA2C339ABF00058003 /* MedalIcon.swift */; };
 		4E6F39DD2C33B79200058003 /* MyMilestonesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39DC2C33B79200058003 /* MyMilestonesView.swift */; };
+		4E82E3952C4661A600F06DE3 /* OnboardingStep4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E3942C4661A600F06DE3 /* OnboardingStep4View.swift */; };
+		4E82E3972C4661B600F06DE3 /* OnboardingStep5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E3962C4661B600F06DE3 /* OnboardingStep5View.swift */; };
+		4E82E3992C4661C100F06DE3 /* OnboardingStep6View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E3982C4661C100F06DE3 /* OnboardingStep6View.swift */; };
+		4E82E39B2C4661CB00F06DE3 /* OnboardingStep7View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E39A2C4661CB00F06DE3 /* OnboardingStep7View.swift */; };
+		4E82E39D2C4661D400F06DE3 /* OnboardingStep8View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E39C2C4661D400F06DE3 /* OnboardingStep8View.swift */; };
+		4E82E39F2C4661E200F06DE3 /* OnboardingStep9View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E39E2C4661E200F06DE3 /* OnboardingStep9View.swift */; };
 		4E9AC0A62C2E844700B3C2F0 /* FactorDetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AC0A52C2E844700B3C2F0 /* FactorDetailEditView.swift */; };
 		4E9AC0A82C2E863500B3C2F0 /* UpdateFactorSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AC0A72C2E863500B3C2F0 /* UpdateFactorSheet.swift */; };
 		4ECADF932C2E8DEC00E8861C /* CircularGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF922C2E8DEC00E8861C /* CircularGauge.swift */; };
@@ -181,6 +187,12 @@
 		4E6F39D62C33989A00058003 /* PostText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostText.swift; sourceTree = "<group>"; };
 		4E6F39DA2C339ABF00058003 /* MedalIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalIcon.swift; sourceTree = "<group>"; };
 		4E6F39DC2C33B79200058003 /* MyMilestonesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMilestonesView.swift; sourceTree = "<group>"; };
+		4E82E3942C4661A600F06DE3 /* OnboardingStep4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep4View.swift; sourceTree = "<group>"; };
+		4E82E3962C4661B600F06DE3 /* OnboardingStep5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep5View.swift; sourceTree = "<group>"; };
+		4E82E3982C4661C100F06DE3 /* OnboardingStep6View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep6View.swift; sourceTree = "<group>"; };
+		4E82E39A2C4661CB00F06DE3 /* OnboardingStep7View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep7View.swift; sourceTree = "<group>"; };
+		4E82E39C2C4661D400F06DE3 /* OnboardingStep8View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep8View.swift; sourceTree = "<group>"; };
+		4E82E39E2C4661E200F06DE3 /* OnboardingStep9View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep9View.swift; sourceTree = "<group>"; };
 		4E9AC0A52C2E844700B3C2F0 /* FactorDetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactorDetailEditView.swift; sourceTree = "<group>"; };
 		4E9AC0A72C2E863500B3C2F0 /* UpdateFactorSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateFactorSheet.swift; sourceTree = "<group>"; };
 		4ECADF922C2E8DEC00E8861C /* CircularGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGauge.swift; sourceTree = "<group>"; };
@@ -373,6 +385,12 @@
 				4E0F846B2C2D28E60037AE25 /* OnboardingStep1View.swift */,
 				4E0F846D2C2D28ED0037AE25 /* OnboardingStep2View.swift */,
 				4E0F846F2C2D28F40037AE25 /* OnboardingStep3View.swift */,
+				4E82E3942C4661A600F06DE3 /* OnboardingStep4View.swift */,
+				4E82E3962C4661B600F06DE3 /* OnboardingStep5View.swift */,
+				4E82E3982C4661C100F06DE3 /* OnboardingStep6View.swift */,
+				4E82E39A2C4661CB00F06DE3 /* OnboardingStep7View.swift */,
+				4E82E39C2C4661D400F06DE3 /* OnboardingStep8View.swift */,
+				4E82E39E2C4661E200F06DE3 /* OnboardingStep9View.swift */,
 				4E0F84692C2D28D90037AE25 /* OnboardingView.swift */,
 			);
 			path = Onboarding;
@@ -590,6 +608,7 @@
 				4E0F84C82C2D3D0B0037AE25 /* FactorsCardView.swift in Sources */,
 				4E9AC0A82C2E863500B3C2F0 /* UpdateFactorSheet.swift in Sources */,
 				4E0F84E32C2D3EE40037AE25 /* NewSmokingLogSheet.swift in Sources */,
+				4E82E3972C4661B600F06DE3 /* OnboardingStep5View.swift in Sources */,
 				4ECADF932C2E8DEC00E8861C /* CircularGauge.swift in Sources */,
 				4E0F84D42C2D3D850037AE25 /* ActivitiesCardView.swift in Sources */,
 				4E0F84942C2D301B0037AE25 /* FactorService.swift in Sources */,
@@ -604,12 +623,15 @@
 				4E6F39D32C33951A00058003 /* EntryView.swift in Sources */,
 				4E0F84D62C2D3D8E0037AE25 /* ActivityRowView.swift in Sources */,
 				4E0F84922C2D30120037AE25 /* MotivationService.swift in Sources */,
+				4E82E3952C4661A600F06DE3 /* OnboardingStep4View.swift in Sources */,
 				4E0F84AF2C2D34990037AE25 /* Motivation.swift in Sources */,
 				4E6F39D72C33989A00058003 /* PostText.swift in Sources */,
+				4E82E39F2C4661E200F06DE3 /* OnboardingStep9View.swift in Sources */,
 				4E0F84C22C2D3C8B0037AE25 /* HealthProgressCardView.swift in Sources */,
 				4E0F84DB2C2D3E6A0037AE25 /* MilestonePostCardView.swift in Sources */,
 				4E0F84812C2D2CB20037AE25 /* FactorListViewModel.swift in Sources */,
 				4E0F84C42C2D3CBB0037AE25 /* MotivationCardView.swift in Sources */,
+				4E82E39D2C4661D400F06DE3 /* OnboardingStep8View.swift in Sources */,
 				4E0F848B2C2D2CE60037AE25 /* SmokingLogViewModel.swift in Sources */,
 				4E0F84C62C2D3CC70037AE25 /* MoneySavedCardView.swift in Sources */,
 				4E0F84832C2D2CBD0037AE25 /* SymptomViewModel.swift in Sources */,
@@ -620,6 +642,7 @@
 				4E0F84BF2C2D3C220037AE25 /* DashboardHeaderView.swift in Sources */,
 				4E0F84DF2C2D3EB80037AE25 /* NewSymptomSheet.swift in Sources */,
 				4E0F849C2C2D30680037AE25 /* MilestoneViewModel.swift in Sources */,
+				4E82E3992C4661C100F06DE3 /* OnboardingStep6View.swift in Sources */,
 				4E0F84A62C2D33DA0037AE25 /* DashboardView.swift in Sources */,
 				4E0F846E2C2D28ED0037AE25 /* OnboardingStep2View.swift in Sources */,
 				4E0F84D22C2D3D790037AE25 /* SymptomRowView.swift in Sources */,
@@ -628,6 +651,7 @@
 				4E0F84B12C2D349F0037AE25 /* Milestone.swift in Sources */,
 				4E0F84B52C2D34AD0037AE25 /* Symptom.swift in Sources */,
 				4E0F84A82C2D33E50037AE25 /* MilestonePostsView.swift in Sources */,
+				4E82E39B2C4661CB00F06DE3 /* OnboardingStep7View.swift in Sources */,
 				4E0F84AD2C2D34910037AE25 /* User.swift in Sources */,
 				4E0F849E2C2D30720037AE25 /* MilestoneListViewModel.swift in Sources */,
 				4E0F84DD2C2D3E940037AE25 /* NewFactorSheet.swift in Sources */,
