@@ -89,6 +89,8 @@
 		4E82E39F2C4661E200F06DE3 /* OnboardingStep9View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E39E2C4661E200F06DE3 /* OnboardingStep9View.swift */; };
 		4E82E3A12C4663D000F06DE3 /* SmokingHabit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E3A02C4663D000F06DE3 /* SmokingHabit.swift */; };
 		4E82E3A52C4665CB00F06DE3 /* QuitAttempt.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E3A42C4665CB00F06DE3 /* QuitAttempt.swift */; };
+		4E82E3A92C46661F00F06DE3 /* SmokingHabitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E3A82C46661F00F06DE3 /* SmokingHabitService.swift */; };
+		4E82E3AB2C46663400F06DE3 /* QuitAttemptService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E3AA2C46663400F06DE3 /* QuitAttemptService.swift */; };
 		4E9AC0A62C2E844700B3C2F0 /* FactorDetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AC0A52C2E844700B3C2F0 /* FactorDetailEditView.swift */; };
 		4E9AC0A82C2E863500B3C2F0 /* UpdateFactorSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AC0A72C2E863500B3C2F0 /* UpdateFactorSheet.swift */; };
 		4ECADF932C2E8DEC00E8861C /* CircularGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF922C2E8DEC00E8861C /* CircularGauge.swift */; };
@@ -197,6 +199,8 @@
 		4E82E39E2C4661E200F06DE3 /* OnboardingStep9View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep9View.swift; sourceTree = "<group>"; };
 		4E82E3A02C4663D000F06DE3 /* SmokingHabit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingHabit.swift; sourceTree = "<group>"; };
 		4E82E3A42C4665CB00F06DE3 /* QuitAttempt.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitAttempt.swift; sourceTree = "<group>"; };
+		4E82E3A82C46661F00F06DE3 /* SmokingHabitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingHabitService.swift; sourceTree = "<group>"; };
+		4E82E3AA2C46663400F06DE3 /* QuitAttemptService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitAttemptService.swift; sourceTree = "<group>"; };
 		4E9AC0A52C2E844700B3C2F0 /* FactorDetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactorDetailEditView.swift; sourceTree = "<group>"; };
 		4E9AC0A72C2E863500B3C2F0 /* UpdateFactorSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateFactorSheet.swift; sourceTree = "<group>"; };
 		4ECADF922C2E8DEC00E8861C /* CircularGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGauge.swift; sourceTree = "<group>"; };
@@ -356,6 +360,8 @@
 			children = (
 				4E0F845B2C2D0E710037AE25 /* NetworkService.swift */,
 				4E0F845D2C2D0E7B0037AE25 /* UserService.swift */,
+				4E82E3A82C46661F00F06DE3 /* SmokingHabitService.swift */,
+				4E82E3AA2C46663400F06DE3 /* QuitAttemptService.swift */,
 				4E0F84912C2D30120037AE25 /* MotivationService.swift */,
 				4E0F84932C2D301B0037AE25 /* FactorService.swift */,
 				4E0F84952C2D30260037AE25 /* SymptomService.swift */,
@@ -623,7 +629,9 @@
 				4E0F84CA2C2D3D3D0037AE25 /* FactorRowView.swift in Sources */,
 				4E82E3A12C4663D000F06DE3 /* SmokingHabit.swift in Sources */,
 				4E6F39D52C33980900058003 /* SupportIcon.swift in Sources */,
+				4E82E3AB2C46663400F06DE3 /* QuitAttemptService.swift in Sources */,
 				4E6F39DD2C33B79200058003 /* MyMilestonesView.swift in Sources */,
+				4E82E3A92C46661F00F06DE3 /* SmokingHabitService.swift in Sources */,
 				4E9AC0A62C2E844700B3C2F0 /* FactorDetailEditView.swift in Sources */,
 				4E0F84BD2C2D34CD0037AE25 /* Theme.swift in Sources */,
 				4E0F849A2C2D30460037AE25 /* MilestoneService.swift in Sources */,
