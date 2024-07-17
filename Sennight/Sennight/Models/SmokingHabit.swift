@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct smokingHabitsRequest: Codable {
+struct SmokingHabitsRequest: Codable {
     let userId: Int
     let dailyCigarettes: Int
     let cigarettePrice: Int
@@ -23,13 +23,13 @@ struct smokingHabitsRequest: Codable {
     }
 }
 
-struct smokingHabitResponse: Codable {
+struct SmokingHabitResponse: Codable {
     let status : Bool
     let detail : String
-    let data : smokingHabitsData
+    let data : SmokingHabitsData
 }
 
-struct smokingHabitsData: Codable {
+struct SmokingHabitsData: Codable {
     let id: Int
     let userId: Int
     let dailyCigarettes: Int
