@@ -19,6 +19,18 @@ struct OnboardingView: View {
                 OnboardingStep2View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
             } else if currentStep == 3 {
                 OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+            } else if currentStep == 4 {
+                OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+            } else if currentStep == 5 {
+                OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+            } else if currentStep == 6 {
+                OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+            } else if currentStep == 7 {
+                OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+            } else if currentStep == 8 {
+                OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+            } else if currentStep == 9 {
+                OnboardingStep9View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
             }
         }
     }
