@@ -28,15 +28,25 @@ struct OnboardingStep3View: View {
             }
             
             Spacer()
-            Text("Step 3: Motivation")
+            Text("Step 2: cigarettes")
                 .font(.largeTitle)
                 .padding(.bottom, 40)
-            TextField("Why do you want to stop smoking?", text: $motivation)
+            HStack {
+                Text("Q.")
+                    .font(.title2)
+                    .padding(.bottom, 25)
+                Text("Let us know the price of a pack of cigarettes you usually buy.")
+                    .font(.title2)
+                    .padding()
+            }
+            .padding(.horizontal)
+            
+            TextField("입력해주세요", text: $motivation)
                 .padding()
                 .background(Color.gray.opacity(0.2))
                 .cornerRadius(8)
                 .padding(.bottom, 40)
-            
+                .padding(.horizontal)
             Button(action: {
                 if motivation.isEmpty {
                     alertMessage = "Please select your motivation."

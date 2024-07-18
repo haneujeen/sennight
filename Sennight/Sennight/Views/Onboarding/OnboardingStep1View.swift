@@ -28,42 +28,12 @@ struct OnboardingStep1View: View {
                 }
                 .padding()
             }
-            
             Spacer()
-            Text("Step 1: Registration")
+            Text("Welcome to Sennight!")
                 .font(.largeTitle)
                 .padding(.bottom, 40)
-            TextField("Name", text: $name)
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(8)
-                .padding(.bottom, 20)
-            
-            TextField("Email", text: $email)
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(8)
-                .padding(.bottom, 20)
-            
-            SecureField("Password", text: $password)
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(8)
-                .padding(.bottom, 20)
-            
             Button(action: {
-                if name.isEmpty {
-                    alertMessage = "Name can not be empty."
-                    showAlert = true
-                } else if email.isEmpty {
-                    alertMessage = "Email can not be empty."
-                    showAlert = true
-                } else if password.isEmpty {
-                    alertMessage = "Password can not be empty."
-                    showAlert = true
-                } else {
-                    currentStep = 2
-                }
+                currentStep = 2
             }) {
                 Text("Next")
             }
@@ -71,9 +41,6 @@ struct OnboardingStep1View: View {
             .background(Color.blue)
             .foregroundColor(.white)
             .cornerRadius(8)
-            .alert(isPresented: $showAlert) {
-                Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
-            }
             Spacer()
         }
     }
