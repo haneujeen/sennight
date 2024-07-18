@@ -23,6 +23,8 @@
  * 8. UserViewModel의 사용되지 않는 변수 errorMessage를 삭제했습니다.
  * 9. UserViewModel의 isSignUpDisabled 연산 프로퍼티가 수정되었습니다.
  * 10. UserViewModel이 LoginViewModel, SignUpViewModel, UpdateUserViewModel로 분리되었습니다.
+ * 11. LoginView의 userViewModel 변수명을 loginViewModel로 수정하였습니다.
+ * 12. signUpView의 userViewModel 변수명을 signUpViewModel로 수정하였습니다.
  *
  * 요청사항
  *
@@ -34,7 +36,8 @@ import SwiftUI
 
 struct LoginView: View {
     // FIXME: @EnvironmentObject var loginVM: UserViewModel
-    @EnvironmentObject var userViewModel: UserViewModel
+    // FIXME: @EnvironmentObject var userViewModel: UserViewModel
+    @EnvironmentObject var loginViewModel: LoginViewModel
     @State private var showSignUpView = false
     // FIXME: @State var result = "로그인 전"
     
@@ -45,19 +48,19 @@ struct LoginView: View {
                     .font(.largeTitle)
                     .padding(.bottom, 20)
                 
-                TextField("Email", text: $userViewModel.email)
+                TextField("Email", text: $loginViewModel.email)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.bottom)
                     .textInputAutocapitalization(.never)
                 
-                SecureField("Password", text: $userViewModel.password)
+                SecureField("Password", text: $loginViewModel.password)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding(.bottom, 10)
                 
                 Button(action: {
-                    userViewModel.login { status in
+                    loginViewModel.login { status in
                         if status {
-                            userViewModel.isLoggedIn = status
+                            loginViewModel.isLoggedIn = status
                             // FIXME: result = "로그인 성공"
                             // FIXME: print("로그인 성공!!")
                         } else {

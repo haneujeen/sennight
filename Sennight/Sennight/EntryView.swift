@@ -9,11 +9,11 @@ import SwiftUI
 
 struct EntryView: View {
     @AppStorage("isOnboardingComplete") private var isOnboardingComplete: Bool = false
-    @EnvironmentObject var userViewModel: UserViewModel
+    @EnvironmentObject var loginViewModel: LoginViewModel
     
     var body: some View {
         if isOnboardingComplete {
-            if userViewModel.isLoggedIn {
+            if loginViewModel.isLoggedIn {
                 HomeView()
             } else {
                 LoginView()

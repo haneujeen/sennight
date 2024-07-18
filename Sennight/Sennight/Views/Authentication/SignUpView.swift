@@ -12,7 +12,8 @@ import Combine
 
 struct SignUpView: View {
     // FIXME: @StateObject var signupVM = UserViewModel()
-    @EnvironmentObject var userViewModel: UserViewModel
+    // FIXME: @EnvironmentObject var userViewModel: UserViewModel
+    @StateObject var signUpViewModel = SignUpViewModel()
     @State private var confirmPassword: String = ""
     @Environment(\.dismiss) var dismiss
     @State private var showAlert = false
@@ -21,7 +22,7 @@ struct SignUpView: View {
     // 비밀번호와 확인 비밀번호가 같은지 확인하는 연산 프로퍼티
     private var isSignUpDisabled: Bool {
         // FIXME: userViewModel.password.isEmpty || confirmPassword.isEmpty || userViewModel.password != confirmPassword
-        userViewModel.email.isEmpty || userViewModel.password.isEmpty || userViewModel.password != confirmPassword
+        signUpViewModel.email.isEmpty || signUpViewModel.password.isEmpty || signUpViewModel.password != confirmPassword
     }
     
     var body: some View {
@@ -31,17 +32,17 @@ struct SignUpView: View {
                     .font(.largeTitle)
                     .padding(.bottom, 20)
                 
-                TextField("Email", text: $userViewModel.email)
+                TextField("Email", text: $signUpViewModel.email)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                     .textInputAutocapitalization(.never)
                 
-                TextField("Name", text: $userViewModel.name)
+                TextField("Name", text: $signUpViewModel.name)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                     .textInputAutocapitalization(.words)
                 
-                SecureField("Password", text: $userViewModel.password)
+                SecureField("Password", text: $signUpViewModel.password)
                     .textFieldStyle(RoundedBorderTextFieldStyle())
                     .padding()
                 
@@ -50,7 +51,7 @@ struct SignUpView: View {
                     .padding()
                 
                 Button(action: {
-                    userViewModel.register { response in
+                    signUpViewModel.register { response in
                         if response.status {
                             dismiss()
                         } else {
@@ -60,7 +61,6 @@ struct SignUpView: View {
                                 alertMessage = "An unknown error occurred."
                             }
                             showAlert = true
-                            userViewModel.email = ""
                         }
                     }
                 }, label: {
@@ -89,10 +89,6 @@ struct SignUpView: View {
                 .padding(.top, 20)
             }
             .padding()
-            .onDisappear {
-                userViewModel.name = ""
-                userViewModel.password = ""
-            }
         }
     }
 }

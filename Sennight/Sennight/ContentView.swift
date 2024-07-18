@@ -8,11 +8,11 @@
 import SwiftUI
 
 struct ContentView: View {
-    var userViewModel = UserViewModel()
+    var loginViewModel = LoginViewModel()
     
     var body: some View {
         EntryView()
-            .environmentObject(userViewModel)
+            .environmentObject(loginViewModel)
     }
 }
 
