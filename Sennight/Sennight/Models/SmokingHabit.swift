@@ -11,7 +11,7 @@ struct SmokingHabitsRequest: Codable {
     let userId: Int
     let dailyCigarettes: Int
     let cigarettePrice: Int
-    let firstCigarette: Date
+    let firstCigarette: String
     let smokingYears: Int
     
     enum CodingKeys: String, CodingKey {
@@ -21,37 +21,12 @@ struct SmokingHabitsRequest: Codable {
         case firstCigarette = "first_cigarette"
         case smokingYears = "smoking_years"
     }
-    
-    // Custom Encoder to handle Date
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        try container.encode(userId, forKey: .userId)
-        try container.encode(dailyCigarettes, forKey: .dailyCigarettes)
-        try container.encode(cigarettePrice, forKey: .cigarettePrice)
-        try container.encode(dateFormatter.string(from: firstCigarette), forKey: .firstCigarette)
-        try container.encode(smokingYears, forKey: .smokingYears)
-    }
-    
-    // Custom Decoder to handle Date
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        userId = try container.decode(Int.self, forKey: .userId)
-        dailyCigarettes = try container.decode(Int.self, forKey: .dailyCigarettes)
-        cigarettePrice = try container.decode(Int.self, forKey: .cigarettePrice)
-        let firstCigaretteString = try container.decode(String.self, forKey: .firstCigarette)
-        firstCigarette = dateFormatter.date(from: firstCigaretteString)!
-        smokingYears = try container.decode(Int.self, forKey: .smokingYears)
-    }
 }
 
 struct SmokingHabitResponse: Codable {
-    let status: Bool
-    let detail: String
-    let data: SmokingHabitsData
+    let status : Bool
+    let detail : String
+    let data : SmokingHabitsData
 }
 
 struct SmokingHabitsData: Codable {
@@ -59,7 +34,7 @@ struct SmokingHabitsData: Codable {
     let userId: Int
     let dailyCigarettes: Int
     let cigarettePrice: Int
-    let firstCigarette: Date
+    let firstCigarette: String
     let smokingYears: Int
     
     enum CodingKeys: String, CodingKey {
@@ -69,32 +44,5 @@ struct SmokingHabitsData: Codable {
         case cigarettePrice = "cigarette_price"
         case firstCigarette = "first_cigarette"
         case smokingYears = "smoking_years"
-    }
-    
-    // Custom Encoder to handle Date
-    func encode(to encoder: Encoder) throws {
-        var container = encoder.container(keyedBy: CodingKeys.self)
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        try container.encode(id, forKey: .id)
-        try container.encode(userId, forKey: .userId)
-        try container.encode(dailyCigarettes, forKey: .dailyCigarettes)
-        try container.encode(cigarettePrice, forKey: .cigarettePrice)
-        try container.encode(dateFormatter.string(from: firstCigarette), forKey: .firstCigarette)
-        try container.encode(smokingYears, forKey: .smokingYears)
-    }
-    
-    // Custom Decoder to handle Date
-    init(from decoder: Decoder) throws {
-        let container = try decoder.container(keyedBy: CodingKeys.self)
-        let dateFormatter = DateFormatter()
-        dateFormatter.dateFormat = "yyyy-MM-dd"
-        id = try container.decode(Int.self, forKey: .id)
-        userId = try container.decode(Int.self, forKey: .userId)
-        dailyCigarettes = try container.decode(Int.self, forKey: .dailyCigarettes)
-        cigarettePrice = try container.decode(Int.self, forKey: .cigarettePrice)
-        let firstCigaretteString = try container.decode(String.self, forKey: .firstCigarette)
-        firstCigarette = dateFormatter.date(from: firstCigaretteString)!
-        smokingYears = try container.decode(Int.self, forKey: .smokingYears)
     }
 }
