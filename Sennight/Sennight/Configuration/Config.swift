@@ -13,4 +13,5 @@ class Settings {
     private init() {}
     
     let HOST = ProcessInfo.processInfo.environment["HOST"] ?? ""
+    let PORT = ProcessInfo.processInfo.environment["PORT"] ?? ""
 }

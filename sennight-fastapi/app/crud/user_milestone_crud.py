@@ -4,7 +4,7 @@ from ..schemas import milestone_schemas
 
 
 def create(db: Session, user_id: int, user_milestone: milestone_schemas.UserMilestoneCreate):
-    db_user_milestone = models.SmokingLog(**user_milestone.model_dump(), user_id=user_id)
+    db_user_milestone = models.UserMilestone(**user_milestone.model_dump())
     db.add(db_user_milestone)
     db.commit()
     db.refresh(db_user_milestone)
