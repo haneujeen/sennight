@@ -268,7 +268,7 @@
 				4E0F84532C2D0DBA0037AE25 /* Models */,
 				4E0F84542C2D0DC50037AE25 /* ViewModels */,
 				4E0F84552C2D0DDE0037AE25 /* Views */,
-				4E6F39D22C33951A00058003 /* EntryView.swift */,
+				4E0F84652C2D10A30037AE25 /* SplashScreenView.swift */,
 				4E0F842A2C2D07F70037AE25 /* ContentView.swift */,
 				4E0F84282C2D07F70037AE25 /* SennightApp.swift */,
 				4E0F84562C2D0DFF0037AE25 /* Services */,
@@ -365,7 +365,7 @@
 				4E0F84762C2D2A0E0037AE25 /* MilestonePosts */,
 				4E0F84772C2D2A280037AE25 /* Settings */,
 				4E0F84622C2D10640037AE25 /* HomeView.swift */,
-				4E0F84652C2D10A30037AE25 /* SplashScreenView.swift */,
+				4E6F39D22C33951A00058003 /* EntryView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";

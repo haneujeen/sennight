@@ -9,7 +9,7 @@ import SwiftUI
 
 struct EntryView: View {
     @AppStorage("isOnboardingComplete") private var isOnboardingComplete: Bool = false
-    @EnvironmentObject var loginViewModel: LoginViewModel
+    var loginViewModel = LoginViewModel()
     
     var body: some View {
         if isOnboardingComplete {
@@ -17,6 +17,7 @@ struct EntryView: View {
                 HomeView()
             } else {
                 LoginView()
+                    .environmentObject(loginViewModel)
             }
         } else {
             OnboardingView(isOnboardingComplete: $isOnboardingComplete)
@@ -27,5 +28,4 @@ struct EntryView: View {
 
 #Preview {
     EntryView()
-        .environmentObject(UserViewModel())
 }

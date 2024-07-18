@@ -12,7 +12,6 @@ import Combine
 
 struct SignUpView: View {
     // FIXME: @StateObject var signupVM = UserViewModel()
-    // FIXME: @EnvironmentObject var userViewModel: UserViewModel
     @StateObject var signUpViewModel = SignUpViewModel()
     @State private var confirmPassword: String = ""
     @Environment(\.dismiss) var dismiss

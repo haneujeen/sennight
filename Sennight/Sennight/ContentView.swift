@@ -8,11 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
-    var loginViewModel = LoginViewModel()
+    @State private var showSplashScreen = true
     
     var body: some View {
-        EntryView()
-            .environmentObject(loginViewModel)
+        if showSplashScreen {
+            SplashScreenView()
+                .transition(.opacity)
+                .onAppear {
+                    DispatchQueue.main.asyncAfter(deadline: .now() + 2.3) {
+                        withAnimation {
+                            showSplashScreen = false
+                        }
+                    }
+                }
+        } else {
+            EntryView()
+                .transition(.opacity)
+        }
+        
     }
 }
 

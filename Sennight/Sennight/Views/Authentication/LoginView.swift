@@ -13,18 +13,16 @@
  * 작성자: 한유진
  * Assignee: 김소연
  *
- * 1. LoginView의 loginVM과 SignUpView의 signupVM의 변수 명을 userViewModel로 수정하였습니다.
- * 2. LoginView와 SignUpView가 같은 UserViewModel 객체를 공유하도록 SignUpView의 state object를 environment object로 수정하였습니다. 이로 인해 발생하는 LoginView에 자동으로 비밀번호가 입력되는 현상을 해결하기 위해 SignUpView에 .onDisappear 수정자를 추가하였습니다.
- * 3. LoginView의 사용되지 않는 변수 result가 삭제되었습니다.
- * 4. 디버깅 문이 삭제되었습니다.
+ * 1. UserViewModel이 LoginViewModel, SignUpViewModel, UpdateUserViewModel로 분리되었습니다.
+ * 2. LoginView의 userViewModel 변수명을 loginViewModel로 수정하였습니다.
+ * 3. signUpView의 userViewModel 변수명을 signUpViewModel로 수정하였습니다.
+ * 4. LoginView의 사용되지 않는 변수 result가 삭제되었습니다.
  * 5. LoginView와 SignUpView의 TextField에 .textInputAutocapitalization(.never) 수정자가 추가되었습니다.
  * 6. 가독성을 위한 개행문자를 추가하였습니다.
  * 7. UserViewModel의 login 함수의 .receive(on: DispatchQueue.main) 운영자 (operator)가 삭제되었습니다. Login 과정에서 UI의 변경이 발생하지 않으므로 이후의 작업이 메인 스레드에서 처리될 필요가 없습니다.
  * 8. UserViewModel의 사용되지 않는 변수 errorMessage를 삭제했습니다.
  * 9. UserViewModel의 isSignUpDisabled 연산 프로퍼티가 수정되었습니다.
- * 10. UserViewModel이 LoginViewModel, SignUpViewModel, UpdateUserViewModel로 분리되었습니다.
- * 11. LoginView의 userViewModel 변수명을 loginViewModel로 수정하였습니다.
- * 12. signUpView의 userViewModel 변수명을 signUpViewModel로 수정하였습니다.
+ * 10. 디버깅 문이 삭제되었습니다.
  *
  * 요청사항
  *
@@ -36,7 +34,6 @@ import SwiftUI
 
 struct LoginView: View {
     // FIXME: @EnvironmentObject var loginVM: UserViewModel
-    // FIXME: @EnvironmentObject var userViewModel: UserViewModel
     @EnvironmentObject var loginViewModel: LoginViewModel
     @State private var showSignUpView = false
     // FIXME: @State var result = "로그인 전"
@@ -96,5 +93,5 @@ struct LoginView: View {
 
 #Preview {
     LoginView()
-        .environmentObject(UserViewModel())
+        .environmentObject(LoginViewModel())
 }
