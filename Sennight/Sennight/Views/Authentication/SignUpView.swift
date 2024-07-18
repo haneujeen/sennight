@@ -46,7 +46,7 @@ struct SignUpView: View {
                         if status {
                             dismiss()
                         } else {
-                            // 등록 실패 시 처리 로직 추가
+                            // TODO: 등록 실패 시 처리 로직 추가
                         }
                     }
                 }, label: {
