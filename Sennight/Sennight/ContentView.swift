@@ -22,7 +22,7 @@ struct ContentView: View {
                     }
                 }
         } else {
-            EntryView()
+            CheckOnboardingView()
                 .transition(.opacity)
         }
         

@@ -3,11 +3,12 @@
 //  Sennight
 //
 //  Created by 한유진 on 7/2/24.
+//  Edited by 한유진 on 2024-07-19: EntryView.swift 파일 이름 변경
 //
 
 import SwiftUI
 
-struct EntryView: View {
+struct CheckOnboardingView: View {
     @AppStorage("isOnboardingComplete") private var isOnboardingComplete: Bool = false
     var loginViewModel = LoginViewModel()
     
@@ -27,5 +28,5 @@ struct EntryView: View {
 }
 
 #Preview {
-    EntryView()
+    CheckOnboardingView()
 }
