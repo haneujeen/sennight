@@ -27,27 +27,64 @@ struct SignUpView: View {
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Sign Up")
-                    .font(.largeTitle)
-                    .padding(.bottom, 20)
+                Spacer()
+                HStack {
+                    VStack(alignment: .leading) {
+                        Text("Create your account")
+                            .font(.title2)
+                            .fontWeight(.bold)
+                            .foregroundStyle(Theme.indigo.mainColor)
+                    }
+                    Spacer()
+                }
+                .padding(.horizontal)
                 
-                TextField("Email", text: $signUpViewModel.email)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                    .textInputAutocapitalization(.never)
+                VStack {
+                    TextField("Email address", text: $signUpViewModel.email)
+                        .textFieldStyle(CustomTextFieldStyle())
+                        .textInputAutocapitalization(.never)
+                    
+                    TextField("Name", text: $signUpViewModel.name)
+                        .textFieldStyle(CustomTextFieldStyle())
+                        .textInputAutocapitalization(.words)
+                    
+                    SecureField("Password", text: $signUpViewModel.password)
+                        .textFieldStyle(CustomTextFieldStyle())
+                    
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text("Your password must:")
+                                .fontWeight(.semibold)
+                            Spacer()
+                        }
+                        
+                        HStack {
+                            Image(systemName: "checkmark")
+                                .foregroundStyle(.poppy)
+                                .fontWeight(.bold)
+                            Text("be 8-32 characters long")
+                        }
+                        
+                        HStack {
+                            Image(systemName: "checkmark")
+                            Text("have at least 1 letter (A-Z, a-z)")
+                        }
+                        
+                        HStack {
+                            Image(systemName: "checkmark")
+                            Text("have at least 1 digit (0-9)")
+                        }
+                        
+                    }
+                    .font(.footnote)
+                    .foregroundColor(Theme.indigo.mainColor)
+                    
+                    SecureField("Confirm Password", text: $confirmPassword)
+                        .textFieldStyle(CustomTextFieldStyle())
+                }
+                .padding()
                 
-                TextField("Name", text: $signUpViewModel.name)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                    .textInputAutocapitalization(.words)
-                
-                SecureField("Password", text: $signUpViewModel.password)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
-                
-                SecureField("Confirm Password", text: $confirmPassword)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding()
+                Spacer()
                 
                 Button(action: {
                     signUpViewModel.register { response in
@@ -63,31 +100,45 @@ struct SignUpView: View {
                         }
                     }
                 }, label: {
-                    Text("Sign Up")
-                        .font(.title2)
-                        .padding()
+                    Text("Continue")
+                        .fontWeight(.semibold)
+                        .padding(20)
                         .frame(maxWidth: .infinity)
-                        .background(isSignUpDisabled ? Color.gray : Color.green)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+                        .background(isSignUpDisabled ? Color.secondary : Theme.sky.mainColor)
+                        .foregroundColor(Theme.sky.accentColor)
+                        .cornerRadius(25)
                 })
                 .disabled(isSignUpDisabled)
-                .padding()
                 .alert("Error", isPresented: $showAlert, presenting: alertMessage) { _ in
                     Button("OK", role: .cancel) { }
                 } message: { alertMessage in
                     Text(alertMessage)
                 }
+                .padding(.horizontal)
                 
                 Button(action: {
                     dismiss()
                 }, label: {
-                    Text("Already have an account? Log In")
-                        .foregroundColor(.blue)
+                    HStack(spacing: 0) {
+                        Text("Already have an account?")
+                            .foregroundColor(Theme.indigo.mainColor)
+                        Text(" Log In")
+                            .foregroundColor(Theme.poppy.mainColor)
+                            .fontWeight(.bold)
+                    }
                 })
-                .padding(.top, 20)
+                .padding(.top)
             }
             .padding()
+            .background(Theme.seafoam.mainColor, ignoresSafeAreaEdges: .all)
+            .onAppear {
+                withAnimation(.easeIn(duration: 0.5)) {
+                    
+                }
+            }
+            .onTapGesture {
+                hideKeyboard()
+            }
         }
     }
 }

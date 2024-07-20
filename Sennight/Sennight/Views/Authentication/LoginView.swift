@@ -62,7 +62,7 @@ struct LoginView: View {
                         .transition(.blurReplace)
                 }
                 
-                TextField("Email", text: $loginViewModel.email)
+                TextField("Email address", text: $loginViewModel.email)
                     .textFieldStyle(CustomTextFieldStyle())
                     .padding(.horizontal)
                     .textInputAutocapitalization(.never)
@@ -149,12 +149,12 @@ struct LoginView: View {
                     
                 }
                 .font(.footnote)
-                .foregroundColor(Color.gray)
+                .foregroundColor(Color.secondary)
             }
             .padding()
             .background(Theme.buttercup.mainColor, ignoresSafeAreaEdges: .all)
             .onAppear {
-                withAnimation(.easeIn(duration: 0.3)) {
+                withAnimation(.easeIn(duration: 0.5)) {
                     isWelcoming = true
                 }
             }
