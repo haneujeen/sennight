@@ -27,8 +27,8 @@ enum Theme: String, CaseIterable, Identifiable {
     
     var accentColor: Color {
         switch self {
-        case .bubblegum, .buttercup, .lavender, .orange, .periwinkle, .poppy, .seafoam, .sky, .tan, .teal, .yellow: return .black
-        case .indigo, .magenta, .navy, .purple, .red: return .white
+        case .bubblegum, .buttercup, .lavender, .orange, .periwinkle, .seafoam, .sky, .tan, .teal, .yellow: return .black
+        case .indigo, .magenta, .navy, .purple, .red, .poppy: return .white
         }
     }
     var mainColor: Color {
