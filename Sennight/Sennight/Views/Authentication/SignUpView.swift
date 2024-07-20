@@ -26,118 +26,127 @@ struct SignUpView: View {
     
     var body: some View {
         NavigationStack {
-            VStack {
-                Spacer()
-                HStack {
-                    VStack(alignment: .leading) {
-                        Text("Create your account")
-                            .font(.title2)
-                            .fontWeight(.bold)
-                            .foregroundStyle(Theme.indigo.mainColor)
-                    }
-                    Spacer()
-                }
-                .padding(.horizontal)
-                
-                VStack {
-                    TextField("Email address", text: $signUpViewModel.email)
-                        .textFieldStyle(CustomTextFieldStyle())
-                        .textInputAutocapitalization(.never)
+            ZStack {
+                GeometryReader { geometry in
+                    LottieView(name: Constants.lavenderCrossingLine, animationSpeed: 0.1)
+                        .rotationEffect(.degrees(120))
+                        .scaleEffect(2)
+                        .frame(width: geometry.size.width)
                     
-                    TextField("Name", text: $signUpViewModel.name)
-                        .textFieldStyle(CustomTextFieldStyle())
-                        .textInputAutocapitalization(.words)
-                    
-                    SecureField("Password", text: $signUpViewModel.password)
-                        .textFieldStyle(CustomTextFieldStyle())
-                    
-                    VStack(alignment: .leading) {
+                    VStack {
+                        Spacer()
                         HStack {
-                            Text("Your password must:")
-                                .fontWeight(.semibold)
+                            VStack(alignment: .leading) {
+                                Text("Create your account")
+                                    .font(.title2)
+                                    .fontWeight(.bold)
+                                    .foregroundStyle(Theme.indigo.mainColor)
+                            }
                             Spacer()
                         }
+                        .padding(.horizontal)
                         
-                        HStack {
-                            Image(systemName: "checkmark")
-                                .foregroundStyle(.poppy)
-                                .fontWeight(.bold)
-                            Text("be 8-32 characters long")
-                        }
-                        
-                        HStack {
-                            Image(systemName: "checkmark")
-                            Text("have at least 1 letter (A-Z, a-z)")
-                        }
-                        
-                        HStack {
-                            Image(systemName: "checkmark")
-                            Text("have at least 1 digit (0-9)")
-                        }
-                        
-                    }
-                    .font(.footnote)
-                    .foregroundColor(Theme.indigo.mainColor)
-                    
-                    SecureField("Confirm Password", text: $confirmPassword)
-                        .textFieldStyle(CustomTextFieldStyle())
-                }
-                .padding()
-                
-                Spacer()
-                
-                Button(action: {
-                    signUpViewModel.register { response in
-                        if response.status {
-                            dismiss()
-                        } else {
-                            if response.detail == "Email in use" {
-                                alertMessage = "Email in use"
-                            } else {
-                                alertMessage = "An unknown error occurred."
+                        VStack {
+                            TextField("Email address", text: $signUpViewModel.email)
+                                .textFieldStyle(CustomTextFieldStyle())
+                                .textInputAutocapitalization(.never)
+                            
+                            TextField("Name", text: $signUpViewModel.name)
+                                .textFieldStyle(CustomTextFieldStyle())
+                                .textInputAutocapitalization(.words)
+                            
+                            SecureField("Password", text: $signUpViewModel.password)
+                                .textFieldStyle(CustomTextFieldStyle())
+                            
+                            VStack(alignment: .leading) {
+                                HStack {
+                                    Text("Your password must:")
+                                        .fontWeight(.semibold)
+                                    Spacer()
+                                }
+                                
+                                HStack {
+                                    Image(systemName: "checkmark")
+                                        .foregroundStyle(.poppy)
+                                        .fontWeight(.bold)
+                                    Text("be 8-32 characters long")
+                                }
+                                
+                                HStack {
+                                    Image(systemName: "checkmark")
+                                    Text("have at least 1 letter (A-Z, a-z)")
+                                }
+                                
+                                HStack {
+                                    Image(systemName: "checkmark")
+                                    Text("have at least 1 digit (0-9)")
+                                }
+                                
                             }
-                            showAlert = true
+                            .font(.footnote)
+                            .foregroundColor(Theme.indigo.mainColor)
+                            
+                            SecureField("Confirm Password", text: $confirmPassword)
+                                .textFieldStyle(CustomTextFieldStyle())
+                        }
+                        .padding()
+                        
+                        Spacer()
+                        
+                        Button(action: {
+                            signUpViewModel.register { response in
+                                if response.status {
+                                    dismiss()
+                                } else {
+                                    if response.detail == "Email in use" {
+                                        alertMessage = "Email in use"
+                                    } else {
+                                        alertMessage = "An unknown error occurred."
+                                    }
+                                    showAlert = true
+                                }
+                            }
+                        }, label: {
+                            Text("Continue")
+                                .fontWeight(.semibold)
+                                .padding(20)
+                                .frame(maxWidth: .infinity)
+                                .background(isSignUpDisabled ? .sky : Theme.sky.mainColor)
+                                .foregroundColor(Theme.sky.accentColor)
+                                .cornerRadius(25)
+                        })
+                        .disabled(isSignUpDisabled)
+                        .alert("Error", isPresented: $showAlert, presenting: alertMessage) { _ in
+                            Button("OK", role: .cancel) { }
+                        } message: { alertMessage in
+                            Text(alertMessage)
+                        }
+                        .padding(.horizontal)
+                        
+                        Button(action: {
+                            dismiss()
+                        }, label: {
+                            HStack(spacing: 0) {
+                                Text("Already have an account?")
+                                    .foregroundColor(Theme.indigo.mainColor)
+                                Text(" Log In")
+                                    .foregroundColor(Theme.poppy.mainColor)
+                                    .fontWeight(.bold)
+                            }
+                        })
+                        .padding(.top)
+                    }
+                    .padding()
+                    .onAppear {
+                        withAnimation(.easeIn(duration: 0.5)) {
+                            
                         }
                     }
-                }, label: {
-                    Text("Continue")
-                        .fontWeight(.semibold)
-                        .padding(20)
-                        .frame(maxWidth: .infinity)
-                        .background(isSignUpDisabled ? Color.secondary : Theme.sky.mainColor)
-                        .foregroundColor(Theme.sky.accentColor)
-                        .cornerRadius(25)
-                })
-                .disabled(isSignUpDisabled)
-                .alert("Error", isPresented: $showAlert, presenting: alertMessage) { _ in
-                    Button("OK", role: .cancel) { }
-                } message: { alertMessage in
-                    Text(alertMessage)
-                }
-                .padding(.horizontal)
-                
-                Button(action: {
-                    dismiss()
-                }, label: {
-                    HStack(spacing: 0) {
-                        Text("Already have an account?")
-                            .foregroundColor(Theme.indigo.mainColor)
-                        Text(" Log In")
-                            .foregroundColor(Theme.poppy.mainColor)
-                            .fontWeight(.bold)
+                    .onTapGesture {
+                        hideKeyboard()
                     }
-                })
-                .padding(.top)
-            }
-            .padding()
-            .background(Theme.seafoam.mainColor, ignoresSafeAreaEdges: .all)
-            .onAppear {
-                withAnimation(.easeIn(duration: 0.5)) {
-                    
                 }
-            }
-            .onTapGesture {
-                hideKeyboard()
+                .background(Theme.seafoam.mainColor, ignoresSafeAreaEdges: .all)
             }
         }
     }
