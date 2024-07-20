@@ -4,6 +4,12 @@
     " and " : {
 
     },
+    " Log In" : {
+
+    },
+    " Sign Up" : {
+
+    },
     " will apply." : {
 
     },
@@ -37,13 +43,16 @@
     "Add smoking" : {
 
     },
-    "Already have an account? Log In" : {
+    "Already have an account?" : {
 
     },
     "App Permissions" : {
 
     },
     "App Version" : {
+
+    },
+    "be 8-32 characters long" : {
 
     },
     "Change Password" : {
@@ -59,6 +68,9 @@
 
     },
     "Continue with Apple" : {
+
+    },
+    "Create your account" : {
 
     },
     "Dashboard" : {
@@ -79,6 +91,9 @@
     "Email" : {
 
     },
+    "Email address" : {
+
+    },
     "Error" : {
 
     },
@@ -92,6 +107,12 @@
 
     },
     "Get Started" : {
+
+    },
+    "have at least 1 digit (0-9)" : {
+
+    },
+    "have at least 1 letter (A-Z, a-z)" : {
 
     },
     "Health progress card" : {
@@ -181,9 +202,6 @@
     "Settings" : {
 
     },
-    "Sign Up" : {
-
-    },
     "Smoking log chart card" : {
 
     },
@@ -227,6 +245,9 @@
 
     },
     "Why do you want to stop smoking?" : {
+
+    },
+    "Your password must:" : {
 
     }
   },

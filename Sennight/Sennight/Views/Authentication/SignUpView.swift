@@ -5,6 +5,7 @@
 //  Created by 한유진 on 6/27/24.
 //  Edited by 김소연 on :
 //  Edited by 한유진 on 2024-07-18: Refactored SignUpView
+//  Edited by 한유진 on 2024-07-18: UI 수정과 비밀번호 조건 메시지 추가
 //
 
 import SwiftUI
@@ -21,18 +22,35 @@ struct SignUpView: View {
     // 비밀번호와 확인 비밀번호가 같은지 확인하는 연산 프로퍼티
     private var isSignUpDisabled: Bool {
         // FIXME: userViewModel.password.isEmpty || confirmPassword.isEmpty || userViewModel.password != confirmPassword
-        signUpViewModel.email.isEmpty || signUpViewModel.password.isEmpty || signUpViewModel.password != confirmPassword
+        signUpViewModel.email.isEmpty ||
+        signUpViewModel.password.isEmpty ||
+        signUpViewModel.password != confirmPassword ||
+        !isPasswordLengthValid ||
+        !hasLetter ||
+        !hasDigit
+    }
+    
+    // 비밀번호 길이 확인하는 연산 프로퍼티
+    private var isPasswordLengthValid: Bool {
+        signUpViewModel.password.count >= 8 && signUpViewModel.password.count <= 32
+    }
+    
+    private var hasLetter: Bool {
+        signUpViewModel.password.rangeOfCharacter(from: .letters) != nil
+    }
+    
+    private var hasDigit: Bool {
+        signUpViewModel.password.rangeOfCharacter(from: .decimalDigits) != nil
     }
     
     var body: some View {
         NavigationStack {
             ZStack {
-                GeometryReader { geometry in
-                    LottieView(name: Constants.lavenderCrossingLine, animationSpeed: 0.1)
-                        .rotationEffect(.degrees(120))
-                        .scaleEffect(2)
-                        .frame(width: geometry.size.width)
-                    
+                LottieView(name: Constants.lavenderCrossingLine, loopMode: .autoReverse, animationSpeed: 0.2)
+                    .rotationEffect(.degrees(290))
+                    .scaleEffect(2.5)
+                    .ignoresSafeArea()
+                
                     VStack {
                         Spacer()
                         HStack {
@@ -58,33 +76,39 @@ struct SignUpView: View {
                             SecureField("Password", text: $signUpViewModel.password)
                                 .textFieldStyle(CustomTextFieldStyle())
                             
-                            VStack(alignment: .leading) {
-                                HStack {
-                                    Text("Your password must:")
-                                        .fontWeight(.semibold)
-                                    Spacer()
+                            if !signUpViewModel.password.isEmpty {
+                                VStack(alignment: .leading) {
+                                    HStack {
+                                        Text("Your password must:")
+                                            .fontWeight(.semibold)
+                                        Spacer()
+                                    }
+                                    
+                                    HStack {
+                                        Image(systemName: isPasswordLengthValid ? "checkmark" : "checkmark")
+                                            .foregroundStyle(isPasswordLengthValid ? Theme.poppy.mainColor : Theme.indigo.mainColor)
+                                            .fontWeight(isPasswordLengthValid ? .bold : .regular)
+                                        Text("be 8-32 characters long")
+                                    }
+                                    
+                                    HStack {
+                                        Image(systemName: hasLetter ? "checkmark" : "checkmark")
+                                            .foregroundStyle(hasLetter ? Theme.poppy.mainColor : Theme.indigo.mainColor)
+                                            .fontWeight(hasLetter ? .bold : .regular)
+                                        Text("have at least 1 letter (A-Z, a-z)")
+                                    }
+                                    
+                                    HStack {
+                                        Image(systemName: hasDigit ? "checkmark" : "checkmark")
+                                            .foregroundStyle(hasDigit ? Theme.poppy.mainColor : Theme.indigo.mainColor)
+                                            .fontWeight(hasDigit ? .bold : .regular)
+                                        Text("have at least 1 digit (0-9)")
+                                    }
+                                    
                                 }
-                                
-                                HStack {
-                                    Image(systemName: "checkmark")
-                                        .foregroundStyle(.poppy)
-                                        .fontWeight(.bold)
-                                    Text("be 8-32 characters long")
-                                }
-                                
-                                HStack {
-                                    Image(systemName: "checkmark")
-                                    Text("have at least 1 letter (A-Z, a-z)")
-                                }
-                                
-                                HStack {
-                                    Image(systemName: "checkmark")
-                                    Text("have at least 1 digit (0-9)")
-                                }
-                                
+                                .font(.footnote)
+                                .foregroundColor(Theme.indigo.mainColor)
                             }
-                            .font(.footnote)
-                            .foregroundColor(Theme.indigo.mainColor)
                             
                             SecureField("Confirm Password", text: $confirmPassword)
                                 .textFieldStyle(CustomTextFieldStyle())
@@ -111,7 +135,7 @@ struct SignUpView: View {
                                 .fontWeight(.semibold)
                                 .padding(20)
                                 .frame(maxWidth: .infinity)
-                                .background(isSignUpDisabled ? .sky : Theme.sky.mainColor)
+                                .background(isSignUpDisabled ? Color.secondary : Theme.sky.mainColor)
                                 .foregroundColor(Theme.sky.accentColor)
                                 .cornerRadius(25)
                         })
@@ -137,17 +161,12 @@ struct SignUpView: View {
                         .padding(.top)
                     }
                     .padding()
-                    .onAppear {
-                        withAnimation(.easeIn(duration: 0.5)) {
-                            
-                        }
-                    }
                     .onTapGesture {
                         hideKeyboard()
                     }
                 }
                 .background(Theme.seafoam.mainColor, ignoresSafeAreaEdges: .all)
-            }
+    
         }
     }
 }
