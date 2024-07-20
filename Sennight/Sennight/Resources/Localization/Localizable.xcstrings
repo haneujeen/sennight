@@ -1,6 +1,12 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    " and " : {
+
+    },
+    " will apply." : {
+
+    },
     "!" : {
 
     },
@@ -49,6 +55,12 @@
     "Contact Support" : {
 
     },
+    "Continue" : {
+
+    },
+    "Continue with Apple" : {
+
+    },
     "Dashboard" : {
 
     },
@@ -61,7 +73,7 @@
     "Dismiss" : {
 
     },
-    "Don't have an account? Sign Up" : {
+    "Don't have an account?" : {
 
     },
     "Email" : {
@@ -88,6 +100,9 @@
     "Hello, World!" : {
 
     },
+    "If you are creating a new account," : {
+
+    },
     "Language" : {
 
     },
@@ -95,9 +110,6 @@
 
     },
     "Licenses" : {
-
-    },
-    "Login" : {
 
     },
     "Logout" : {
@@ -116,9 +128,6 @@
 
     },
     "My milestones" : {
-
-    },
-    "MY SPLASH SCREEN" : {
 
     },
     "Name" : {
@@ -199,6 +208,9 @@
     "Symptoms" : {
 
     },
+    "Terms & Conditions" : {
+
+    },
     "Terms of Service" : {
 
     },
@@ -209,6 +221,9 @@
 
     },
     "User achieved %@ Milestone! Send support?" : {
+
+    },
+    "Welcome back" : {
 
     },
     "Why do you want to stop smoking?" : {

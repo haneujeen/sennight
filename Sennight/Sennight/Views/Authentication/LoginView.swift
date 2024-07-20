@@ -4,6 +4,7 @@
 //
 //  Created by 김소연 on 7/14/24.
 //  Edited by 한유진 on 2024-07-18: 코드 개선 문서 추가
+//  Edited by 한유진 on 2024-07-20: Updated UI
 //
 
 /**
@@ -37,22 +38,38 @@ struct LoginView: View {
     @EnvironmentObject var loginViewModel: LoginViewModel
     @State private var showSignUpView = false
     // FIXME: @State var result = "로그인 전"
+    @State private var isWelcoming = false
     
     var body: some View {
         NavigationStack {
             VStack {
-                Text("Login")
-                    .font(.largeTitle)
-                    .padding(.bottom, 20)
+                Spacer()
+                
+                if !isWelcoming {
+                    Text("Welcome back")
+                        .foregroundStyle(Color.clear)
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .padding(.bottom, 20)
+                }
+                
+                if isWelcoming {
+                    Text("Welcome back")
+                        .foregroundStyle(Theme.teal.mainColor)
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .padding(.bottom, 20)
+                        .transition(.blurReplace)
+                }
                 
                 TextField("Email", text: $loginViewModel.email)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(.bottom)
+                    .textFieldStyle(CustomTextFieldStyle())
+                    .padding(.horizontal)
                     .textInputAutocapitalization(.never)
                 
                 SecureField("Password", text: $loginViewModel.password)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(.bottom, 10)
+                    .textFieldStyle(CustomTextFieldStyle())
+                    .padding(.horizontal)
                 
                 Button(action: {
                     loginViewModel.login { status in
@@ -65,25 +82,85 @@ struct LoginView: View {
                         }
                     }
                 }) {
-                    Text("Login")
-                        .font(.title2)
-                        .padding()
+                    Text("Continue")
+                        .fontWeight(.semibold)
+                        .padding(20)
                         .frame(maxWidth: .infinity)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+                        .background(Theme.indigo.mainColor)
+                        .foregroundColor(Theme.indigo.accentColor)
+                        .cornerRadius(25)
                 }
-                .padding()
+                .padding([.horizontal, .top])
+                
+                Button(action: {
+                    // TODO: Apple sign-in
+                }) {
+                    HStack {
+                        Image(systemName: "applelogo")
+                        Text("Continue with Apple")
+                            .fontWeight(.semibold)
+                    }
+                    .padding(20)
+                    .frame(maxWidth: .infinity)
+                    .background(Theme.poppy.mainColor)
+                    .foregroundColor(Theme.poppy.accentColor)
+                    .cornerRadius(25)
+                }
+                .padding(.horizontal)
                 
                 Button(action: {
                     showSignUpView = true
                 }) {
-                    Text("Don't have an account? Sign Up")
-                        .foregroundColor(.blue)
+                    HStack(spacing: 0) {
+                        Text("Don't have an account?")
+                            .foregroundColor(Theme.indigo.mainColor)
+                        Text(" Sign Up")
+                            .foregroundColor(Theme.teal.mainColor)
+                            .fontWeight(.bold)
+                    }
                 }
-                .padding(.top, 20)
+                .padding(.top, 15)
+                
+                Spacer()
+                
+                VStack {
+                    Text("If you are creating a new account,")
+                    
+                    HStack(spacing: 0) {
+                        Text("Terms & Conditions")
+                            .foregroundColor(Theme.teal.mainColor)
+                            .underline()
+                            .onTapGesture {
+                                if let url = URL(string: "https://www.example.com/terms") {
+                                    UIApplication.shared.open(url)
+                                }
+                            }
+                        Text(" and ")
+                        Text("Privacy Policy")
+                            .foregroundColor(Theme.teal.mainColor)
+                            .underline()
+                            .onTapGesture {
+                                if let url = URL(string: "https://www.example.com/privacy") {
+                                    UIApplication.shared.open(url)
+                                }
+                            }
+                        Text(" will apply.")
+                    }
+                    
+                }
+                .font(.footnote)
+                .foregroundColor(Color.gray)
             }
             .padding()
+            .background(Theme.buttercup.mainColor, ignoresSafeAreaEdges: .all)
+            .onAppear {
+                withAnimation(.easeIn(duration: 0.3)) {
+                    isWelcoming = true
+                }
+            }
+            .onTapGesture {
+                hideKeyboard()
+            }
             .sheet(isPresented: $showSignUpView) {
                 SignUpView()
             }

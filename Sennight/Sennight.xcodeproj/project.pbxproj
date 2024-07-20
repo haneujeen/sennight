@@ -99,6 +99,7 @@
 		4EB3C1D02C4B3CE90066D658 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB3C1CF2C4B3CE90066D658 /* Theme.swift */; };
 		4EB3C1D22C4B3D260066D658 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB3C1D12C4B3D260066D658 /* Launch Screen.storyboard */; };
 		4EB3C1D52C4B3F2A0066D658 /* CustomTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB3C1D32C4B3F2A0066D658 /* CustomTextFieldStyle.swift */; };
+		4EB3C1D72C4B42330066D658 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB3C1D62C4B42330066D658 /* View+.swift */; };
 		4ECADF932C2E8DEC00E8861C /* CircularGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF922C2E8DEC00E8861C /* CircularGauge.swift */; };
 		D6BEFFAC2C44C66200C6678B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F992A92C42E95B001BE18C /* LoginView.swift */; };
 		D6EEF6142C451B810097FF98 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D6EEF6132C451B810097FF98 /* Alamofire */; };
@@ -217,6 +218,7 @@
 		4EB3C1CF2C4B3CE90066D658 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		4EB3C1D12C4B3D260066D658 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4EB3C1D32C4B3F2A0066D658 /* CustomTextFieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFieldStyle.swift; sourceTree = "<group>"; };
+		4EB3C1D62C4B42330066D658 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		4ECADF922C2E8DEC00E8861C /* CircularGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGauge.swift; sourceTree = "<group>"; };
 		92F992A92C42E95B001BE18C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -514,6 +516,7 @@
 			isa = PBXGroup;
 			children = (
 				4EB3C1D32C4B3F2A0066D658 /* CustomTextFieldStyle.swift */,
+				4EB3C1D62C4B42330066D658 /* View+.swift */,
 			);
 			path = HelpersAndCustomViews;
 			sourceTree = "<group>";
@@ -719,6 +722,7 @@
 				4E0F84AD2C2D34910037AE25 /* User.swift in Sources */,
 				4E0F849E2C2D30720037AE25 /* MilestoneListViewModel.swift in Sources */,
 				4E0F84DD2C2D3E940037AE25 /* NewAidProductSheet.swift in Sources */,
+				4EB3C1D72C4B42330066D658 /* View+.swift in Sources */,
 				4E0BF7DF2C2E4C2B0091ADB2 /* Config.swift in Sources */,
 				4E0F846C2C2D28E60037AE25 /* OnboardingStep1View.swift in Sources */,
 				4E6F39DB2C339ABF00058003 /* MedalIcon.swift in Sources */,
