@@ -55,7 +55,7 @@ struct SignUpView: View {
                         Spacer()
                         HStack {
                             VStack(alignment: .leading) {
-                                Text("Create your account")
+                                Text("Create your account.")
                                     .font(.title2)
                                     .fontWeight(.bold)
                                     .foregroundStyle(Theme.indigo.mainColor)
