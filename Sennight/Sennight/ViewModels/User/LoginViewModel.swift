@@ -6,6 +6,7 @@
 //  Edited by 김소연 on :
 //  Edited by 한유진 on 2024-07-18: Refactored UserViewModel
 //  Edited by 한유진 on 2024-07-18: Separated view models (to follow single responsibility principle)
+//  Edited by 한유진 on 2024-07-19: saveToken에서 token과 userID를 함께 저장하도록 수정
 //
 
 import Foundation
@@ -45,8 +46,7 @@ class LoginViewModel: ObservableObject {
                 // FIXME: print("서버 응답: \(response)") // 서버 응답 출력
                 completion(response.status)
                 if response.status {
-                    UserService.shared.saveToken(response.data!.accessToken!)
-                    self.isLoggedIn = response.status
+                    UserService.shared.saveToken(token: response.data!.accessToken!, userID: response.data!.id!)
                 }
             }.store(in: &cancellables)
     }

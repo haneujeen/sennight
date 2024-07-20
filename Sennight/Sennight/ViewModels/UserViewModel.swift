@@ -62,7 +62,7 @@ class UserViewModel: ObservableObject {
                 // FIXME: print("서버 응답: \(response)") // 서버 응답 출력
                 completion(response.status)
                 if response.status {
-                    UserService.shared.saveToken(response.data!.accessToken!)
+                    //UserService.shared.saveToken(response.data!.accessToken!)
                     self.isLoggedIn = response.status
                 }
             }.store(in: &cancellables)

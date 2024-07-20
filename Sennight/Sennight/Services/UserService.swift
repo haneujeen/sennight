@@ -5,6 +5,7 @@
 //  Created by 한유진 on 6/27/24.
 //  Edited by 김소연 on :
 //  Edited by 한유진 on 2024-07-18: Refactored register and login methods
+//  Edited by 한유진 on 2024-07-19: saveToken에서 token과 userID를 함께 저장하도록 수정
 //
 
 import Foundation
@@ -15,10 +16,12 @@ class UserService {
     static let shared = UserService() // 싱글톤 패턴 공유 인스턴스 생성
     let HOST = Settings.shared.HOST
     let tokenKey = "token"
+    let userIDKey = "userID"
     
     // 토큰을 UserDefaults에 저장
-    func saveToken(_ token: String) {
+    func saveToken(token: String, userID: Int) {
         UserDefaults.standard.set(token, forKey: tokenKey)
+        UserDefaults.standard.set(token, forKey: userIDKey)
     }
     
     // UserDefaults에서 토큰을 가져오는 메소드
@@ -32,6 +35,7 @@ class UserService {
     // 로그아웃, 토큰을 UserDefaults에서 삭제
     func logout() {
         UserDefaults.standard.removeObject(forKey: tokenKey)
+        UserDefaults.standard.removeObject(forKey: userIDKey)
     }
     
     // 회원가입 Publisher 생성
@@ -85,7 +89,7 @@ class UserService {
 //    func login(email: String, password: String) -> AnyPublisher<LoginResponse, AFError> {
 //        let url = "\(HOST)/users" // 로그인 URL 설정
 //        let body = LoginRequest(email: email, password: password) // 로그인 요청 바디 생성
-//        
+//
 //        return AF.request(url,
 //                          method: .post, // HTTP 메서드 POST로 설정
 //                          parameters: body, // 요청 바디 설정
