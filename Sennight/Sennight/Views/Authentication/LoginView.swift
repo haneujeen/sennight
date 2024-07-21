@@ -34,10 +34,8 @@
 import SwiftUI
 
 struct LoginView: View {
-    // FIXME: @EnvironmentObject var loginVM: UserViewModel
     @EnvironmentObject var loginViewModel: LoginViewModel
     @State private var showSignUpView = false
-    // FIXME: @State var result = "로그인 전"
     @State private var isWelcoming = false
     
     var body: some View {
@@ -81,10 +79,7 @@ struct LoginView: View {
                         loginViewModel.login { status in
                             if status {
                                 loginViewModel.isLoggedIn = status
-                                // FIXME: result = "로그인 성공"
-                                // FIXME: print("로그인 성공!!")
                             } else {
-                                // FIXME: result = "로그인 실패"
                             }
                         }
                     }) {

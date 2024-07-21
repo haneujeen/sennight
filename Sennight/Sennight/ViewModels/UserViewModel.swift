@@ -5,6 +5,7 @@
 //  Created by 한유진 on 6/27/24.
 //  Edited by 김소연 on :
 //  Edited by 한유진 on 2024-07-18: Refactored UserViewModel
+//  Edited by 김소연 on 2024-07-21: FIXME 주석문 삭제
 //
 
 import Foundation
@@ -17,7 +18,6 @@ class UserViewModel: ObservableObject {
     @Published var name: String = ""
     @Published var password: String = ""
     @Published var photoFilename: String = ""
-    // FIXME: @Published var errorMessage: String? = nil
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -50,7 +50,6 @@ class UserViewModel: ObservableObject {
     //로그인
     func login(completion: @escaping (Bool) -> Void) {
         UserService.shared.login(email: email, password: password)
-        // FIXME: .receive(on: DispatchQueue.main)
             .sink { completion in
                 switch completion {
                 case .finished:
@@ -59,7 +58,6 @@ class UserViewModel: ObservableObject {
                     print(error.localizedDescription)
                 }
             } receiveValue: { response in
-                // FIXME: print("서버 응답: \(response)") // 서버 응답 출력
                 completion(response.status)
                 if response.status {
                     //UserService.shared.saveToken(response.data!.accessToken!)
