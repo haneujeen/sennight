@@ -1,6 +1,18 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    " and " : {
+
+    },
+    " Log In" : {
+
+    },
+    " Sign Up" : {
+
+    },
+    " will apply." : {
+
+    },
     "!" : {
 
     },
@@ -31,13 +43,22 @@
     "Add smoking" : {
 
     },
-    "Already have an account? Log In" : {
+    "Add your smoking habits and cravings." : {
+
+    },
+    "Already have an account?" : {
 
     },
     "App Permissions" : {
 
     },
     "App Version" : {
+
+    },
+    "be 8-32 characters long" : {
+
+    },
+    "Begin your journey and stay updated with your progress." : {
 
     },
     "Change Password" : {
@@ -47,6 +68,15 @@
 
     },
     "Contact Support" : {
+
+    },
+    "Continue" : {
+
+    },
+    "Continue with Apple" : {
+
+    },
+    "Create your account." : {
 
     },
     "Dashboard" : {
@@ -61,10 +91,13 @@
     "Dismiss" : {
 
     },
-    "Don't have an account? Sign Up" : {
+    "Don't have an account?" : {
 
     },
     "Email" : {
+
+    },
+    "Email address" : {
 
     },
     "Error" : {
@@ -76,16 +109,31 @@
     "Factor row" : {
 
     },
+    "Feelings and Symptoms" : {
+
+    },
     "General" : {
 
     },
     "Get Started" : {
 
     },
+    "have at least 1 digit (0-9)" : {
+
+    },
+    "have at least 1 letter (A-Z, a-z)" : {
+
+    },
     "Health progress card" : {
 
     },
     "Hello, World!" : {
+
+    },
+    "If you are creating a new account," : {
+
+    },
+    "Keep track of your emotions and withdrawal symptoms." : {
 
     },
     "Language" : {
@@ -95,9 +143,6 @@
 
     },
     "Licenses" : {
-
-    },
-    "Login" : {
 
     },
     "Logout" : {
@@ -145,6 +190,9 @@
     "Password" : {
 
     },
+    "Please enter your email, name, and password." : {
+
+    },
     "Price of a cigarette or a pack of cigarettes" : {
 
     },
@@ -166,13 +214,13 @@
     "Settings" : {
 
     },
-    "Sign Up" : {
+    "Share Your Milestones" : {
 
     },
     "Smoking log chart card" : {
 
     },
-    "Step 1: Registration" : {
+    "Start Your Quitting Log" : {
 
     },
     "Step 2: Create Quit Log" : {
@@ -187,10 +235,16 @@
     "Support" : {
 
     },
+    "Support and get support from others who are also on this journey." : {
+
+    },
     "Symptom row" : {
 
     },
     "Symptoms" : {
+
+    },
+    "Terms & Conditions" : {
 
     },
     "Terms of Service" : {
@@ -199,13 +253,25 @@
     "Time Zone" : {
 
     },
+    "Track Habits and Cravings" : {
+
+    },
     "Update factor sheet" : {
 
     },
     "User achieved %@ Milestone! Send support?" : {
 
     },
+    "Welcome back" : {
+
+    },
+    "Welcome to Sennight!" : {
+
+    },
     "Why do you want to stop smoking?" : {
+
+    },
+    "Your password must:" : {
 
     }
   },

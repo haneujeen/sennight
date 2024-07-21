@@ -5,18 +5,18 @@
 //  Created by 한유진 on 6/27/24.
 //  Edited by 김소연 on :
 //  Edited by 한유진 on 2024-07-18: Refactored UserViewModel
+//  Edited by 한유진 on 2024-07-18: Separated view models (to follow single responsibility principle)
+//  Edited by 한유진 on 2024-07-19: saveToken에서 token과 userID를 함께 저장하도록 수정
 //
 
 import Foundation
 import SwiftUI
 import Combine
 
-class UserViewModel: ObservableObject {
+class LoginViewModel: ObservableObject {
     @Published var isLoggedIn: Bool = false
     @Published var email: String = ""
-    @Published var name: String = ""
     @Published var password: String = ""
-    @Published var photoFilename: String = ""
     // FIXME: @Published var errorMessage: String? = nil
     
     private var cancellables = Set<AnyCancellable>()
@@ -29,22 +29,6 @@ class UserViewModel: ObservableObject {
     func logout() {
         UserService.shared.logout()
         isLoggedIn = UserService.shared.isLoggedIn()
-    }
-    
-    //회원가입
-    func register(completionHandler: @escaping (UserResponse) -> Void){
-        UserService.shared.register(email: email, name: name, password: password)
-            .sink { completion in
-                switch completion {
-                case .finished:
-                    break
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
-            } receiveValue: { response in
-                completionHandler(response)
-            }
-            .store(in: &cancellables)
     }
     
     //로그인
@@ -62,8 +46,7 @@ class UserViewModel: ObservableObject {
                 // FIXME: print("서버 응답: \(response)") // 서버 응답 출력
                 completion(response.status)
                 if response.status {
-                    //UserService.shared.saveToken(response.data!.accessToken!)
-                    self.isLoggedIn = response.status
+                    UserService.shared.saveToken(token: response.data!.accessToken!, userID: response.data!.id!)
                 }
             }.store(in: &cancellables)
     }

@@ -3,20 +3,23 @@
 //  Sennight
 //
 //  Created by 한유진 on 7/2/24.
+//  Edited by 한유진 on 2024-07-19: EntryView.swift 파일 이름 변경
+//  Edited by 한유진 on 2024-07-19: Fix not being navigated error
 //
 
 import SwiftUI
 
-struct EntryView: View {
+struct CheckOnboardingView: View {
     @AppStorage("isOnboardingComplete") private var isOnboardingComplete: Bool = false
-    @EnvironmentObject var userViewModel: UserViewModel
+    @StateObject var loginViewModel = LoginViewModel()
     
     var body: some View {
         if isOnboardingComplete {
-            if userViewModel.isLoggedIn {
+            if loginViewModel.isLoggedIn {
                 HomeView()
             } else {
                 LoginView()
+                    .environmentObject(loginViewModel)
             }
         } else {
             OnboardingView(isOnboardingComplete: $isOnboardingComplete)
@@ -26,6 +29,5 @@ struct EntryView: View {
 }
 
 #Preview {
-    EntryView()
-        .environmentObject(UserViewModel())
+    CheckOnboardingView()
 }

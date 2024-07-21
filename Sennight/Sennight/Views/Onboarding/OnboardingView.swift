@@ -10,28 +10,43 @@ import SwiftUI
 struct OnboardingView: View {
     @Binding var isOnboardingComplete: Bool
     @State private var currentStep = 1
-
+    
     var body: some View {
-        VStack {
-            if currentStep == 1 {
-                OnboardingStep1View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
-            } else if currentStep == 2 {
-                OnboardingStep2View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
-            } else if currentStep == 3 {
-                OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
-            } else if currentStep == 4 {
-                OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
-            } else if currentStep == 5 {
-                OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
-            } else if currentStep == 6 {
-                OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
-            } else if currentStep == 7 {
-                OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
-            } else if currentStep == 8 {
-                OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
-            } else if currentStep == 9 {
-                OnboardingStep9View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+        ZStack {
+            LottieView(name: Constants.buttercupCrossingLine, loopMode: .repeat(4), animationSpeed: 1, contentMode: .bottom)
+            VStack {
+                if currentStep == 1 {
+                    OnboardingStep1View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                        .transition(.blurReplace)
+                } else if currentStep == 2 {
+                    OnboardingStep2View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                } else if currentStep == 3 {
+                    OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                } else if currentStep == 4 {
+                    OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                } else if currentStep == 5 {
+                    OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                } else if currentStep == 6 {
+                    OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                } else if currentStep == 7 {
+                    OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                } else if currentStep == 8 {
+                    OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                } else if currentStep == 9 {
+                    OnboardingStep9View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                }
+                Spacer()
+                
+                HStack {
+                    ForEach(1...9, id: \.self) { index in
+                        Circle()
+                            .fill(index == currentStep ? Theme.indigo.mainColor : .lightGray)
+                            .frame(width: 10, height: 10)
+                    }
+                }
+                .padding(.bottom, 20)
             }
+            .animation(.easeInOut, value: currentStep)
         }
     }
 }
