@@ -84,6 +84,7 @@
 		4E33CEBF2C4BBA9800BE9303 /* Buttercup crossing line.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E33CEBE2C4BBA9800BE9303 /* Buttercup crossing line.json */; };
 		4E33CEC32C4BBABC00BE9303 /* Seafoam crossing line.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E33CEC22C4BBABC00BE9303 /* Seafoam crossing line.json */; };
 		4E33CEC52C4BBC0300BE9303 /* Lavender crossing line.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E33CEC42C4BBC0300BE9303 /* Lavender crossing line.json */; };
+		4E33CECB2C4CA06800BE9303 /* Welcome confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E33CECA2C4CA06700BE9303 /* Welcome confetti.json */; };
 		4E6F39D32C33951A00058003 /* CheckOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D22C33951A00058003 /* CheckOnboardingView.swift */; };
 		4E6F39D52C33980900058003 /* SupportIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D42C33980900058003 /* SupportIcon.swift */; };
 		4E6F39D72C33989A00058003 /* PostText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D62C33989A00058003 /* PostText.swift */; };
@@ -209,6 +210,7 @@
 		4E33CEBE2C4BBA9800BE9303 /* Buttercup crossing line.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Buttercup crossing line.json"; sourceTree = "<group>"; };
 		4E33CEC22C4BBABC00BE9303 /* Seafoam crossing line.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Seafoam crossing line.json"; sourceTree = "<group>"; };
 		4E33CEC42C4BBC0300BE9303 /* Lavender crossing line.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Lavender crossing line.json"; sourceTree = "<group>"; };
+		4E33CECA2C4CA06700BE9303 /* Welcome confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Welcome confetti.json"; sourceTree = "<group>"; };
 		4E6F39D22C33951A00058003 /* CheckOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOnboardingView.swift; sourceTree = "<group>"; };
 		4E6F39D42C33980900058003 /* SupportIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportIcon.swift; sourceTree = "<group>"; };
 		4E6F39D62C33989A00058003 /* PostText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostText.swift; sourceTree = "<group>"; };
@@ -534,6 +536,7 @@
 				4E33CEBE2C4BBA9800BE9303 /* Buttercup crossing line.json */,
 				4E33CEC22C4BBABC00BE9303 /* Seafoam crossing line.json */,
 				4E33CEC42C4BBC0300BE9303 /* Lavender crossing line.json */,
+				4E33CECA2C4CA06700BE9303 /* Welcome confetti.json */,
 				4E33CEBC2C4B9D8D00BE9303 /* Constants.swift */,
 			);
 			path = "Lottie Files";
@@ -664,6 +667,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E33CECB2C4CA06800BE9303 /* Welcome confetti.json in Resources */,
 				4E0F84302C2D07F90037AE25 /* Preview Assets.xcassets in Resources */,
 				4E0F842D2C2D07F90037AE25 /* Assets.xcassets in Resources */,
 				4EB3C1D22C4B3D260066D658 /* Launch Screen.storyboard in Resources */,
