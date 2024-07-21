@@ -4,11 +4,16 @@ struct OnboardingStep1View: View {
     @Binding var currentStep: Int
     @Binding var isOnboardingComplete: Bool
     @State private var showDetails = false
+    @State private var showFireworks = false
     
     var body: some View {
         ZStack {
-            LottieView(name: Constants.welcomeConfetti, loopMode: .autoReverse, contentMode: .top)
+            LottieView(name: Constants.welcomeConfetti, animationSpeed: 0.8, contentMode: .top)
                 .ignoresSafeArea()
+            
+            if showFireworks {
+                LottieView(name: Constants.yellowFireworks, animationSpeed: 0.5, contentMode: .top)
+            }
             
             VStack {
                 Spacer()
@@ -16,7 +21,7 @@ struct OnboardingStep1View: View {
                     .foregroundStyle(Theme.indigo.mainColor)
                     .font(.title)
                     .fontWeight(.bold)
-                    .padding(.bottom, 20)
+                    .padding(.top, 20)
                 
                 if showDetails {
                     Spacer()
@@ -93,7 +98,7 @@ struct OnboardingStep1View: View {
                         }
                     }
                     .padding(.horizontal)
-                    .transition(.opacity)
+                    .transition(.blurReplace)
                 }
                 
                 Spacer()
@@ -114,9 +119,16 @@ struct OnboardingStep1View: View {
             .padding()
             .foregroundStyle(Theme.indigo.mainColor)
             .onAppear {
-                DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
-                    withAnimation(.easeIn(duration: 0.5)) {
+                DispatchQueue.main.asyncAfter(deadline: .now() + 1.5) {
+                    withAnimation(.easeIn(duration: 0.7)) {
                         showDetails = true
+                        showFireworks = true
+                    }
+                }
+                
+                DispatchQueue.main.asyncAfter(deadline: .now() + 2.5) {
+                    withAnimation(.easeIn(duration: 0.7)) {
+                        showFireworks = true
                     }
                 }
             }

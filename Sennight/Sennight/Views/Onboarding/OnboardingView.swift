@@ -13,11 +13,15 @@ struct OnboardingView: View {
     
     var body: some View {
         ZStack {
-            LottieView(name: Constants.buttercupCrossingLine, loopMode: .repeat(4), animationSpeed: 1, contentMode: .bottom)
+            LottieView(name: Constants.buttercupCrossingLine, loopMode: .repeat(4), animationSpeed: 0.05, contentMode: .left)
+                .scaleEffect(10)
+                .rotationEffect(.degrees(180))
+            
+//            LottieView(name: <#T##String#>, loopMode: <#T##LottieLoopMode#>, animationSpeed: <#T##CGFloat#>, contentMode: <#T##UIView.ContentMode#>, play: <#T##Binding<Bool>#>)
+//
             VStack {
                 if currentStep == 1 {
                     OnboardingStep1View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
-                        .transition(.blurReplace)
                 } else if currentStep == 2 {
                     OnboardingStep2View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
                 } else if currentStep == 3 {

@@ -13,4 +13,6 @@ enum Constants {
     static var seafoamCrossingLine = "Seafoam crossing line"
     static var lavenderCrossingLine = "Lavender crossing line"
     static var welcomeConfetti = "Welcome confetti"
+    static var lavenderFireworks = "Lavender fireworks"
+    static var yellowFireworks = "Yellow fireworks"
 }
