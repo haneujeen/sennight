@@ -30,42 +30,51 @@ struct OnboardingStep9View: View {
             }
             
             Spacer()
-            Text("Please enter your email, name, and password.")
-                .font(.title)
-                .padding(.bottom, 40)
-            TextField("Name", text: $name)
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(8)
-                .padding(.bottom, 20)
             
-            TextField("Email", text: $email)
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(8)
-                .padding(.bottom, 20)
-            
-            SecureField("Password", text: $password)
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(8)
-                .padding(.bottom, 20)
+            VStack {
+                Text("Please enter your email, name, and password.")
+                    .font(.title)
+                    .padding(.bottom, 40)
+                
+                TextField("Email", text: $email)
+                    .padding()
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(8)
+                    .padding(.bottom, 20)
+                
+                TextField("Name", text: $name)
+                    .padding()
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(8)
+                    .padding(.bottom, 20)
+                
+                SecureField("Password", text: $password)
+                    .padding()
+                    .background(Color.gray.opacity(0.2))
+                    .cornerRadius(8)
+                    .padding(.bottom, 20)
+            }
+            .padding(.horizontal)
             
             Button(action: {
-                if name.isEmpty {
-                    alertMessage = "Name can not be empty."
-                    showAlert = true
-                } else if email.isEmpty {
+                if email.isEmpty {
                     alertMessage = "Email can not be empty."
+                    showAlert = true
+                } else if name.isEmpty {
+                    alertMessage = "Name can not be empty."
                     showAlert = true
                 } else if password.isEmpty {
                     alertMessage = "Password can not be empty."
                     showAlert = true
                 } else {
-                    currentStep = 2
+                    // Requests
+                    // UserViewModel.register --> id (userId)
+                    // SmokingHabitViewModel.create
+                    // QuitAttemptViewModel.create
+                    // MotivationViewModel.create
                 }
             }) {
-                Text("Next")
+                Text("Get Started")
             }
             .padding()
             .background(Color.blue)

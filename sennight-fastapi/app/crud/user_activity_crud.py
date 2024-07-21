@@ -5,7 +5,7 @@ from ..schemas import activity_schemas
 
 
 def create(db: Session, user_id: int, user_activity: activity_schemas.UserActivityCreate):
-    db_user_activity = models.UserActivity(**user_activity.model_dump(), user_id=user_id)
+    db_user_activity = models.UserActivity(**user_activity.model_dump())
     db.add(db_user_activity)
     db.commit()
     db.refresh(db_user_activity)
