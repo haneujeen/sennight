@@ -85,7 +85,7 @@ struct OnboardingStep4View: View {
                     isOnboardingComplete = true
                 }
             }) {
-                Text("Get Started")
+                Text("Next")
             }
             .padding()
             .background(Color.blue)
