@@ -10,7 +10,7 @@ import SwiftUI
 struct OnboardingStep3View: View {
     @Binding var currentStep: Int
     @Binding var isOnboardingComplete: Bool
-    @State private var motivation = ""
+    @State private var price = ""
     @State private var showAlert = false
     @State private var alertMessage = ""
     
@@ -41,18 +41,20 @@ struct OnboardingStep3View: View {
             }
             .padding(.horizontal)
             
-            TextField("입력해주세요", text: $motivation)
+            TextField("입력해주세요", text: $price)
+                .keyboardType(.decimalPad)
                 .padding()
                 .background(Color.gray.opacity(0.2))
                 .cornerRadius(8)
                 .padding(.bottom, 40)
                 .padding(.horizontal)
             Button(action: {
-                if motivation.isEmpty {
-                    alertMessage = "Please select your motivation."
-                    showAlert = true
-                } else {
+                if let _ = Double(price), !price.isEmpty { // price를 Double로 변환 시도
+                    currentStep = 4
                     isOnboardingComplete = true
+                } else {
+                    alertMessage = "Please enter a valid price."
+                    showAlert = true
                 }
             }) {
                 Text("Next")
@@ -61,9 +63,10 @@ struct OnboardingStep3View: View {
             .background(Color.blue)
             .foregroundColor(.white)
             .cornerRadius(8)
-            .alert(isPresented: $showAlert) {
-                Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+            .alert(isPresented: $showAlert) { // 유효하지 않은 입력 시 경고 메시지 표시
+                Alert(title: Text("Invalid Input"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
             }
+            
             Spacer()
         }
     }

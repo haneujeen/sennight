@@ -10,9 +10,10 @@ import SwiftUI
 struct OnboardingStep5View: View {
     @Binding var currentStep: Int
     @Binding var isOnboardingComplete: Bool
-    @State private var motivation = ""
+    @State private var smokingYears = ""
     @State private var showAlert = false
     @State private var alertMessage = ""
+    let selectedYears = Array(0...60)
     
     var body: some View {
         VStack {
@@ -40,16 +41,21 @@ struct OnboardingStep5View: View {
                     .padding()
             }
             .padding(.horizontal)
-            TextField("입력해주세요", text: $motivation)
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(8)
-                .padding(.bottom, 40)
-                .padding(.horizontal)
+            //TODO: 피커로 변경 필요
+            Picker("", selection: $smokingYears) {
+                ForEach(selectedYears, id: \.self) { selectedYears in
+                    Text("\(selectedYears)")
+                        .font(.title3)
+                }
+            }
+            .pickerStyle(.wheel)
+            .frame(height: 100)
+            .clipped()
+            .padding(.bottom, 30)
             
             Button(action: {
-                if motivation.isEmpty {
-                    alertMessage = "Please select your motivation."
+                if smokingYears.isEmpty {
+                    alertMessage = "Please select the price."
                     showAlert = true
                 } else {
                     isOnboardingComplete = true

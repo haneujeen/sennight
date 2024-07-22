@@ -11,7 +11,6 @@ import SwiftUI
 struct OnboardingStep8View: View {
     let motivations = ["건강을 위해", "돈을 절약하기 위해", "가족을 위해", "나 자신을 위해" ,"환경보호를 위해", "직접입력"]
     @State private var selectedMotivation = "건강을 위해"
-    
     @Binding var currentStep: Int
     @Binding var isOnboardingComplete: Bool
     @State private var customMotivation = ""

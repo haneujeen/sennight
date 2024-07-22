@@ -23,17 +23,17 @@ struct OnboardingView: View {
                 } else if currentStep == 3 {
                     OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
                 } else if currentStep == 4 {
-                    OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                    OnboardingStep4View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
                 } else if currentStep == 5 {
-                    OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                    OnboardingStep5View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
                 } else if currentStep == 6 {
-                    OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                    OnboardingStep6View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
                 } else if currentStep == 7 {
-                    OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                    OnboardingStep7View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
                 } else if currentStep == 8 {
-                    OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                    OnboardingStep8View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
                 } else if currentStep == 9 {
-                    OnboardingStep9View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                    // TODO: 회원가입 뷰로 이동 추가
                 }
                 Spacer()
                 

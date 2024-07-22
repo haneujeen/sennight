@@ -45,25 +45,22 @@ struct OnboardingStep2View: View {
             }
             
             // Picker의 selection 바인딩과 ForEach의 item 바인딩이 일치해야 합니다.
-            Picker("", selection: $selectedNum) {
-                ForEach(dailyCigarettesNum, id: \.self) { number in
-                    Text("\(number)")
-                        .font(.title3)
-                        .foregroundStyle(.primary)
+            GeometryReader { geometry in
+                Picker("", selection: $selectedNum) {
+                    ForEach(dailyCigarettesNum, id: \.self) { number in
+                        Text("\(number)")
+                            .font(.title3)
+                            .foregroundStyle(.primary)
+                    }
                 }
-            }
-            .pickerStyle(.wheel)
-            .frame(width: .infinity, height: 100)
-            .clipped() // 프레임을 벗어나는 이미지 제거
+                .pickerStyle(.wheel)
+                .frame(width: geometry.size.width, height: 100)
+                .clipped() // 프레임을 벗어나는 이미지 제거
             .padding(.bottom, 30)
-
+            }
+            
             Button(action: {
-                if motivation.isEmpty {
-                    alertMessage = "Please select your motivation."
-                    showAlert = true
-                } else {
-                    isOnboardingComplete = true
-                }
+                currentStep = 3
             }) {
                 Text("Next")
             }

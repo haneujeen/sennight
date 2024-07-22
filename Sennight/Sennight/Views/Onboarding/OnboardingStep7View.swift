@@ -33,9 +33,7 @@ struct OnboardingStep7View: View {
                 }
                 .padding()
             }
-            
             Spacer()
-            
             // 제목
             Text("Step 6: Quit attempt")
                 .font(.largeTitle)

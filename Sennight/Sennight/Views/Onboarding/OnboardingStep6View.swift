@@ -12,7 +12,7 @@ import SwiftUI
 struct OnboardingStep6View: View {
     @Binding var currentStep: Int
     @Binding var isOnboardingComplete: Bool
-    @State private var motivation = ""
+    @State private var SmokingStatus = ""
     @State private var showAlert = false
     @State private var alertMessage = ""
     
@@ -41,16 +41,29 @@ struct OnboardingStep6View: View {
                     .padding()
             }
             .padding(.horizontal)
-            TextField("입력해주세요", text: $motivation)
+            
+            // TODO: Y/N 버튼 구현
+            
+            HStack {
+                Button(action: {}, label: {
+                    Text("Yes")
+                })
                 .padding()
-                .background(Color.gray.opacity(0.2))
+                .background(Color.yellow)
+                .foregroundColor(.blue)
                 .cornerRadius(8)
-                .padding(.bottom, 40)
-                .padding(.horizontal)
+                Button(action: {}, label: {
+                    Text("No")
+                })
+                .padding()
+                .background(Color.yellow)
+                .foregroundColor(Color.blue)
+                .cornerRadius(8)
+            }
             
             Button(action: {
-                if motivation.isEmpty {
-                    alertMessage = "Please select your motivation."
+                if SmokingStatus.isEmpty {
+                    alertMessage = "Please select the price."
                     showAlert = true
                 } else {
                     isOnboardingComplete = true
