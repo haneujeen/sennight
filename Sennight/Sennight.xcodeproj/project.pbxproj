@@ -111,6 +111,7 @@
 		4EB3C1D52C4B3F2A0066D658 /* CustomTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB3C1D32C4B3F2A0066D658 /* CustomTextFieldStyle.swift */; };
 		4EB3C1D72C4B42330066D658 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB3C1D62C4B42330066D658 /* View+.swift */; };
 		4ECADF932C2E8DEC00E8861C /* CircularGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF922C2E8DEC00E8861C /* CircularGauge.swift */; };
+		4EDF63EC2C4ED771008CCD82 /* Poppy fireworks.json in Resources */ = {isa = PBXBuildFile; fileRef = 4EDF63EB2C4ED771008CCD82 /* Poppy fireworks.json */; };
 		D6BEFFAC2C44C66200C6678B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F992A92C42E95B001BE18C /* LoginView.swift */; };
 		D6EEF6142C451B810097FF98 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D6EEF6132C451B810097FF98 /* Alamofire */; };
 /* End PBXBuildFile section */
@@ -239,6 +240,7 @@
 		4EB3C1D32C4B3F2A0066D658 /* CustomTextFieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFieldStyle.swift; sourceTree = "<group>"; };
 		4EB3C1D62C4B42330066D658 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		4ECADF922C2E8DEC00E8861C /* CircularGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGauge.swift; sourceTree = "<group>"; };
+		4EDF63EB2C4ED771008CCD82 /* Poppy fireworks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Poppy fireworks.json"; sourceTree = "<group>"; };
 		92F992A92C42E95B001BE18C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -543,6 +545,7 @@
 				4E33CECA2C4CA06700BE9303 /* Welcome confetti.json */,
 				4E0128522C4D63DC007FB1C6 /* Lavender fireworks.json */,
 				4E0128542C4D63F8007FB1C6 /* Yellow fireworks.json */,
+				4EDF63EB2C4ED771008CCD82 /* Poppy fireworks.json */,
 				4E33CEBC2C4B9D8D00BE9303 /* Constants.swift */,
 			);
 			path = "Lottie Files";
@@ -675,6 +678,7 @@
 			files = (
 				4E33CECB2C4CA06800BE9303 /* Welcome confetti.json in Resources */,
 				4E0F84302C2D07F90037AE25 /* Preview Assets.xcassets in Resources */,
+				4EDF63EC2C4ED771008CCD82 /* Poppy fireworks.json in Resources */,
 				4E0F842D2C2D07F90037AE25 /* Assets.xcassets in Resources */,
 				4EB3C1D22C4B3D260066D658 /* Launch Screen.storyboard in Resources */,
 				4E0128532C4D63DC007FB1C6 /* Lavender fireworks.json in Resources */,
