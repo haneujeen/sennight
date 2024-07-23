@@ -8,14 +8,14 @@
 import Foundation
 
 struct SmokingHabitsRequest: Codable {
-    let userId: Int
+    let userID: Int
     let dailyCigarettes: Int
     let cigarettePrice: Int
     let firstCigarette: String
     let smokingYears: Int
     
     enum CodingKeys: String, CodingKey {
-        case userId = "user_id"
+        case userID = "user_id"
         case dailyCigarettes = "daily_cigarettes"
         case cigarettePrice = "cigarette_price"
         case firstCigarette = "first_cigarette"
@@ -31,7 +31,7 @@ struct SmokingHabitResponse: Codable {
 
 struct SmokingHabitsData: Codable {
     let id: Int
-    let userId: Int
+    let userID: Int
     let dailyCigarettes: Int
     let cigarettePrice: Int
     let firstCigarette: String
@@ -39,7 +39,7 @@ struct SmokingHabitsData: Codable {
     
     enum CodingKeys: String, CodingKey {
         case id
-        case userId = "user_id"
+        case userID = "user_id"
         case dailyCigarettes = "daily_cigarettes"
         case cigarettePrice = "cigarette_price"
         case firstCigarette = "first_cigarette"

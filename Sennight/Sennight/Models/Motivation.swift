@@ -9,40 +9,22 @@
 import Foundation
 
 struct MotivationRequest: Codable {
-    let userId: Int
-    let motivationId: Int
+    let userID: Int?
+    let motivationID: Int?
+    let userMotivationID: Int?
    
     enum CodingKeys: String, CodingKey {
-        case userId = "user_id"
-        case motivationId = "motivation_id"
+        case userID = "user_id"
+        case motivationID = "motivation_id"
+        case userMotivationID = "user_motivation_id"
     }
 }
 
 struct MotivationReadRequest: Codable {
-    let userId: Int
+    let userID: Int
    
     enum CodingKeys: String, CodingKey {
-        case userId = "user_id"
-    }
-}
-
-struct MotivationUpdateRequest: Codable {
-    let userId: Int
-    let motivationId: Int
-    let userMotivationId: Int
-    
-    enum CodingKeys: String, CodingKey {
-        case userId = "user_id"
-        case motivationId = "motivation_id"
-        case userMotivationId = "user_motivation_id"
-    }
-}
-
-struct MotivationDeleteRequest: Codable {
-    let userMotivationId: Int
-    
-    enum CodingKeys: String, CodingKey {
-        case userMotivationId = "user_motivation_id"
+        case userID = "user_id"
     }
 }
 
@@ -55,13 +37,13 @@ struct MotivationResponse: Codable {
 struct MotivationData: Codable {
     let id: Int
     let message: String?
-    let userId: Int
-    let motivationId: Int
+    let userID: Int
+    let motivationID: Int
     
     enum CodingKeys: String, CodingKey {
         case id
         case message
-        case userId = "user_id"
-        case motivationId = "motivation_id"
+        case userID = "user_id"
+        case motivationID = "motivation_id"
     }
 }

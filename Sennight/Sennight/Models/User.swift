@@ -86,6 +86,7 @@ struct User: Codable {
     let password: String?
     let photoFilename: String?
     let accessToken: String?
+    let onboardingToken: String?
     let createdAt: String?
     let updatedAt: String?
     let deletedAt: String?
@@ -94,6 +95,7 @@ struct User: Codable {
         case id, email, name, password
         case photoFilename = "photo_filename"
         case accessToken = "access_token"
+        case onboardingToken = "onboarding_token"
         case createdAt = "created_at"
         case updatedAt = "updated_at"
         case deletedAt = "deleted_at"
