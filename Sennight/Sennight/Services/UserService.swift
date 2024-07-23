@@ -14,6 +14,7 @@ import Foundation
 import Combine
 import Alamofire
 
+// TODO: UserService TokenService 분리
 class UserService {
     static let shared = UserService() // 싱글톤 패턴 공유 인스턴스 생성
     let HOST = Settings.shared.HOST
