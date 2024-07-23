@@ -17,7 +17,6 @@ class LoginViewModel: ObservableObject {
     @Published var isLoggedIn: Bool = false
     @Published var email: String = ""
     @Published var password: String = ""
-    // FIXME: @Published var errorMessage: String? = nil
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -32,9 +31,8 @@ class LoginViewModel: ObservableObject {
     }
     
     //로그인
-    func login(completion: @escaping (Bool) -> Void) {
+    func login(completionHandler: @escaping (Bool) -> Void) {
         UserService.shared.login(email: email, password: password)
-        // FIXME: .receive(on: DispatchQueue.main)
             .sink { completion in
                 switch completion {
                 case .finished:
@@ -43,8 +41,7 @@ class LoginViewModel: ObservableObject {
                     print(error.localizedDescription)
                 }
             } receiveValue: { response in
-                // FIXME: print("서버 응답: \(response)") // 서버 응답 출력
-                completion(response.status)
+                completionHandler(response.status)
                 if response.status {
                     UserService.shared.saveToken(token: response.data!.accessToken!, userID: response.data!.id!)
                 }
