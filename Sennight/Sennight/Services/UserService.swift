@@ -7,6 +7,7 @@
 //  Edited by 한유진 on 2024-07-18: Refactored register and login methods
 //  Edited by 한유진 on 2024-07-19: saveToken에서 token과 userID를 함께 저장하도록 수정
 //  Edited by 김소연 on 2024-07-21: userID를 가져오는 메서드 추가
+//  Edited by 한유진 on 2024-07-19: updateUser 메서드 추가
 //
 
 import Foundation
@@ -42,7 +43,7 @@ class UserService {
         UserDefaults.standard.removeObject(forKey: tokenKey)
         UserDefaults.standard.removeObject(forKey: userIDKey)
     }
-  
+    
     func register(email: String, name: String, password: String) -> AnyPublisher<UserResponse, AFError> {
         let URL = "\(HOST)/users/register"
         let parameters = UserRequest(email: email, name: name, password: password, photoFilename: nil)
@@ -77,6 +78,20 @@ class UserService {
                           method: .post,
                           parameters: parameters,
                           encoder: JSONParameterEncoder.default)
+        .publishDecodable(type: UserResponse.self)
+        .value()
+        .eraseToAnyPublisher()
+    }
+    
+    func updateUser(userID: Int, name: String?, password: String, photoFilename: String?) -> AnyPublisher<UserResponse, AFError> {
+        let URL = "\(HOST)/users/\(userID)"
+        let parameters = UserRequest(email: nil, name: name, password: password, photoFilename: photoFilename)
+        
+        return AF.request(URL,
+                          method: .put,
+                          parameters: parameters,
+                          encoder: JSONParameterEncoder.default)
+        .validate(contentType: ["application/json"])
         .publishDecodable(type: UserResponse.self)
         .value()
         .eraseToAnyPublisher()
