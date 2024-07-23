@@ -3,16 +3,17 @@
 //  Sennight
 //
 //  Created by 한유진 on 7/16/24.
+//  Edited by 김소연 on 2024-07-23:
+//    UI 수정
+//    Next 버튼을 눌렀을 때 다음 온보딩 화면으로 넘어가지 않는 오류 수정
 //
-
-import SwiftUI
 
 import SwiftUI
 
 struct OnboardingStep6View: View {
     @Binding var currentStep: Int
     @Binding var isOnboardingComplete: Bool
-    @State private var SmokingStatus = ""
+    @State private var smokingStatus: String = ""
     @State private var showAlert = false
     @State private var alertMessage = ""
     
@@ -30,7 +31,7 @@ struct OnboardingStep6View: View {
             }
             
             Spacer()
-            Text("Step 5: Smoking status")
+            Text("Step 6: Smoking status")
                 .font(.largeTitle)
                 .padding(.bottom, 40)
             HStack {
@@ -42,31 +43,35 @@ struct OnboardingStep6View: View {
             }
             .padding(.horizontal)
             
-            // TODO: Y/N 버튼 구현
-            
             HStack {
-                Button(action: {}, label: {
+                Button(action: {
+                    smokingStatus = "Yes"
+                }, label: {
                     Text("Yes")
                 })
                 .padding()
-                .background(Color.yellow)
-                .foregroundColor(.blue)
+                .background(smokingStatus == "Yes" ? Color.green : Color.yellow)
+                .foregroundColor(.white)
                 .cornerRadius(8)
-                Button(action: {}, label: {
+                
+                Button(action: {
+                    smokingStatus = "No"
+                }, label: {
                     Text("No")
                 })
                 .padding()
-                .background(Color.yellow)
-                .foregroundColor(Color.blue)
+                .background(smokingStatus == "No" ? Color.green : Color.yellow)
+                .foregroundColor(.white)
                 .cornerRadius(8)
             }
+            .padding(.bottom, 40)
             
             Button(action: {
-                if SmokingStatus.isEmpty {
-                    alertMessage = "Please select the price."
+                if smokingStatus.isEmpty {
+                    alertMessage = "Please select your smoking status."
                     showAlert = true
                 } else {
-                    isOnboardingComplete = true
+                    currentStep = 7
                 }
             }) {
                 Text("Next")

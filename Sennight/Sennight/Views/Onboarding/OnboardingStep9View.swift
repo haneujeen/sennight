@@ -48,11 +48,21 @@ struct OnboardingStep9View: View {
                     .ignoresSafeArea()
                 
                 VStack {
+                    HStack {
+                        Spacer()
+                        Button(action: {
+                            isOnboardingComplete = true
+                        }) {
+                            Text("Dismiss")
+                                .foregroundColor(.red)
+                        }
+                        .padding()
+                    }
                     Spacer()
                     HStack {
-                            Text("Step 8: 회원가입")
-                                .font(.largeTitle)
-                                .padding(.bottom, 40)
+                        Text("Step 9: 회원가입")
+                            .font(.largeTitle)
+                            .padding(.bottom, 40)
                     }
                     .padding(.horizontal)
                     
@@ -111,9 +121,13 @@ struct OnboardingStep9View: View {
                     
                     Button(action: {
                         signUpViewModel.register { response in
+                            // 온보딩 토큰이 UserDefaults에 저장된 상태
                             if response.status {
+                                isOnboardingComplete = true //온보딩 완료 처리
+                                // 주: OnboardingTokenManager를 통한 토큰 저장은 SignUpViewModel에서 이미 처리됨
                                 dismiss()
                             } else {
+                                
                                 if response.detail == "Email in use" {
                                     alertMessage = "Email in use"
                                 } else {

@@ -3,6 +3,7 @@
 //  Sennight
 //
 //  Created by 한유진 on 6/27/24.
+//  Edited by 김소연 on 2024-07-22: 온보딩 스텝 2 UI 수정
 //
 
 import SwiftUI
@@ -10,10 +11,8 @@ import SwiftUI
 struct OnboardingStep2View: View {
     let dailyCigarettesNum = Array(0...60)
     @State private var selectedNum = 1
-    
     @Binding var currentStep: Int
     @Binding var isOnboardingComplete: Bool
-    @State private var motivation = ""
     @State private var showAlert = false
     @State private var alertMessage = ""
     
@@ -31,7 +30,7 @@ struct OnboardingStep2View: View {
             }
             
             Spacer()
-            Text("Step 1: daily cigarettes")
+            Text("Step 2: daily cigarettes")
                 .font(.largeTitle)
                 .padding(.bottom, 40)
             
@@ -56,7 +55,7 @@ struct OnboardingStep2View: View {
                 .pickerStyle(.wheel)
                 .frame(width: geometry.size.width, height: 100)
                 .clipped() // 프레임을 벗어나는 이미지 제거
-            .padding(.bottom, 30)
+                .padding(.bottom, 30)
             }
             
             Button(action: {

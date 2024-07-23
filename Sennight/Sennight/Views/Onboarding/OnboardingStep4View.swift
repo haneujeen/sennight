@@ -15,7 +15,6 @@ struct OnboardingStep4View: View {
     
     @Binding var currentStep: Int
     @Binding var isOnboardingComplete: Bool
-    @State private var firstCigarette = ""
     @State private var showAlert = false
     @State private var alertMessage = ""
     
@@ -33,7 +32,7 @@ struct OnboardingStep4View: View {
             }
             
             Spacer()
-            Text("Step 3: first Cigarette")
+            Text("Step 4: first Cigarette")
                 .font(.largeTitle)
                 .padding(.bottom, 40)
             
@@ -78,12 +77,11 @@ struct OnboardingStep4View: View {
                 .padding(.bottom, 30)
             
             Button(action: {
-                currentStep = 5
-                if firstCigarette.isEmpty {
-                    alertMessage = "Please enter the price."
+                if selectedHour == 0 && selectedMinute == 0 {
+                    alertMessage = "Please enter a valid time."
                     showAlert = true
                 } else {
-                    isOnboardingComplete = true
+                    currentStep = 5
                 }
             }) {
                 Text("Next")

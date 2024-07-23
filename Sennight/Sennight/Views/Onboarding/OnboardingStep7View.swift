@@ -3,6 +3,8 @@
 //  Sennight
 //
 //  Created by 한유진 on 7/16/24.
+//  Edited by 김소연 on 2024-07-23:
+//    UI수정
 //
 
 import SwiftUI
@@ -35,7 +37,7 @@ struct OnboardingStep7View: View {
             }
             Spacer()
             // 제목
-            Text("Step 6: Quit attempt")
+            Text("Step 7: Quit attempt")
                 .font(.largeTitle)
                 .padding(.bottom, 40)
             
@@ -61,12 +63,12 @@ struct OnboardingStep7View: View {
             
             // 다음 버튼
             Button(action: {
-                // 선택된 날짜가 과거인지 확인합니다.
+                // 선택된 날짜가 미래인지 확인합니다.
                 if selectedDate > Date() {
                     alertMessage = "Please select a date in the past."
                     showAlert = true
                 } else {
-                    currentStep += 1 // 다음 단계로 이동
+                    currentStep = 8
                 }
             }) {
                 Text("Next")

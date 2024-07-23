@@ -3,7 +3,7 @@
 //  Sennight
 //
 //  Created by 한유진 on 7/16/24.
-//  Edited by 김소연 on 2024-07-19: UI수정: 피커의 직접입력 선택시 텍스트 필드 입력창이 나타나도록 수정
+//  Edited by 김소연 on 2024-07-23: 피커의 직접입력 선택시 텍스트 필드 입력창이 나타나도록 수정
 //
 
 import SwiftUI
@@ -31,7 +31,7 @@ struct OnboardingStep8View: View {
             }
             
             Spacer()
-            Text("Step 7: Motivation")
+            Text("Step 8: Motivation")
                 .font(.largeTitle)
                 .padding(.bottom, 40)
             
@@ -64,11 +64,12 @@ struct OnboardingStep8View: View {
             }
             
             Button(action: {
+                
                 if selectedMotivation == "직접입력" && customMotivation.isEmpty {
                     alertMessage = "Please enter your custom motivation."
                     showAlert = true
                 } else {
-                    isOnboardingComplete = true
+                    currentStep = 9
                 }
             }) {
                 Text("Next")

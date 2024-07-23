@@ -28,7 +28,7 @@ struct OnboardingStep3View: View {
             }
             
             Spacer()
-            Text("Step 2: cigarettes")
+            Text("Step 3: cigarettes")
                 .font(.largeTitle)
                 .padding(.bottom, 40)
             HStack {
@@ -49,9 +49,9 @@ struct OnboardingStep3View: View {
                 .padding(.bottom, 40)
                 .padding(.horizontal)
             Button(action: {
-                if let _ = Double(price), !price.isEmpty { // price를 Double로 변환 시도
+                //price를 Double로 변환 시도
+                if let priceValue = Double(price), !price.isEmpty {
                     currentStep = 4
-                    isOnboardingComplete = true
                 } else {
                     alertMessage = "Please enter a valid price."
                     showAlert = true

@@ -3,6 +3,9 @@
 //  Sennight
 //
 //  Created by 한유진 on 7/16/24.
+//  Edited by 김소연 on 2024-07-23: 
+//    UI수정
+//    다음 화면으로 넘어가지 않는 오류 수정
 //
 
 import SwiftUI
@@ -10,7 +13,7 @@ import SwiftUI
 struct OnboardingStep5View: View {
     @Binding var currentStep: Int
     @Binding var isOnboardingComplete: Bool
-    @State private var smokingYears = ""
+    @State private var smokingYears = -1
     @State private var showAlert = false
     @State private var alertMessage = ""
     let selectedYears = Array(0...60)
@@ -29,7 +32,7 @@ struct OnboardingStep5View: View {
             }
             
             Spacer()
-            Text("Step 4: smoking years")
+            Text("Step 5: smoking years")
                 .font(.largeTitle)
                 .padding(.bottom, 40)
             HStack {
@@ -41,7 +44,7 @@ struct OnboardingStep5View: View {
                     .padding()
             }
             .padding(.horizontal)
-            //TODO: 피커로 변경 필요
+       
             Picker("", selection: $smokingYears) {
                 ForEach(selectedYears, id: \.self) { selectedYears in
                     Text("\(selectedYears)")
@@ -54,11 +57,12 @@ struct OnboardingStep5View: View {
             .padding(.bottom, 30)
             
             Button(action: {
-                if smokingYears.isEmpty {
-                    alertMessage = "Please select the price."
+                
+                if smokingYears == -1 {
+                    alertMessage = "Please select the value."
                     showAlert = true
                 } else {
-                    isOnboardingComplete = true
+                    currentStep = 6
                 }
             }) {
                 Text("Next")
