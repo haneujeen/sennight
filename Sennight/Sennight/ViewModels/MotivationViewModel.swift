@@ -12,15 +12,15 @@ import Combine
 
 class MotivationViewModel: ObservableObject {
     
-    @Published var userId = 0
-    @Published var motivationId = 0
-    @Published var userMotivationId = 0
+    @Published var userID = 0
+    @Published var motivationID = 0
+    @Published var userMotivationID = 0
     
     private var cancellables = Set<AnyCancellable>()
     
     //금연 동기 등록
     func creat(completion: @escaping (Bool)->Void) {
-        MotivationService.shared.createMO(userId: userId, motivationId: motivationId)
+        MotivationService.shared.createMotivation(userID: userID, motivationID: motivationID)
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 switch completion {
@@ -35,7 +35,7 @@ class MotivationViewModel: ObservableObject {
     }
     //금연 동기 등록
     func read(completion: @escaping (Bool)->Void) {
-        MotivationService.shared.readMO(userId: userId)
+        MotivationService.shared.readMotivation(userID: userID)
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 switch completion {
@@ -50,7 +50,7 @@ class MotivationViewModel: ObservableObject {
     }
     //금연 동기 수정
     func update(completion: @escaping (Bool)->Void) {
-        MotivationService.shared.updateMO(userId: userId, motivationId: motivationId, userMotivationId: userMotivationId)
+        MotivationService.shared.updateMotivation(userID: userID, motivationID: motivationID, userMotivationID: userMotivationID)
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 switch completion {
@@ -65,7 +65,7 @@ class MotivationViewModel: ObservableObject {
     }
     //금연 동기 삭제
     func delete(completion: @escaping (Bool)->Void) {
-        MotivationService.shared.deleteMO(userMotivationId: userMotivationId)
+        MotivationService.shared.deleteMotivation(userMotivationID: userMotivationID)
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 switch completion {
