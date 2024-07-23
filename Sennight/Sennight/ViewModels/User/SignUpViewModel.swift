@@ -31,6 +31,10 @@ class SignUpViewModel: ObservableObject {
                 }
             } receiveValue: { response in
                 completionHandler(response)
+                if response.status {
+                    // 응답 상태가 성공인 경우
+                    UserService.shared.saveToken(token: response.data!.onboardingToken!, userID: response.data!.id!)
+                }
             }
             .store(in: &cancellables)
     }
