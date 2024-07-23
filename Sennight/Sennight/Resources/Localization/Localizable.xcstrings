@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     " and " : {
 
     },
@@ -13,7 +16,13 @@
     " will apply." : {
 
     },
+    ":" : {
+
+    },
     "!" : {
+
+    },
+    "%lld" : {
 
     },
     "%lld%%" : {
@@ -55,6 +64,9 @@
     "App Version" : {
 
     },
+    "Are you currently a smoker?" : {
+
+    },
     "be 8-32 characters long" : {
 
     },
@@ -94,10 +106,10 @@
     "Don't have an account?" : {
 
     },
-    "Email" : {
+    "Email address" : {
 
     },
-    "Email address" : {
+    "Enter your motivation" : {
 
     },
     "Error" : {
@@ -115,9 +127,6 @@
     "General" : {
 
     },
-    "Get Started" : {
-
-    },
     "have at least 1 digit (0-9)" : {
 
     },
@@ -127,10 +136,16 @@
     "Health progress card" : {
 
     },
-    "Hello, World!" : {
+    "Hour" : {
+
+    },
+    "How many years have you been smoking?" : {
 
     },
     "If you are creating a new account," : {
+
+    },
+    "Invalid Input" : {
 
     },
     "Keep track of your emotions and withdrawal symptoms." : {
@@ -140,6 +155,15 @@
 
     },
     "Legal" : {
+
+    },
+    "Let us know the date you quit smoking." : {
+
+    },
+    "Let us know the number of cigarettes you smoke daily." : {
+
+    },
+    "Let us know the price of a pack of cigarettes you usually buy." : {
 
     },
     "Licenses" : {
@@ -152,6 +176,9 @@
 
     },
     "Milestones" : {
+
+    },
+    "Minute" : {
 
     },
     "Money saved card" : {
@@ -181,19 +208,13 @@
     "Next" : {
 
     },
-    "Number of Cigarettes per Day" : {
+    "No" : {
 
     },
     "OK" : {
 
     },
     "Password" : {
-
-    },
-    "Please enter your email, name, and password." : {
-
-    },
-    "Price of a cigarette or a pack of cigarettes" : {
 
     },
     "Privacy and Security" : {
@@ -208,8 +229,24 @@
     "Profile" : {
 
     },
-    "Quit Date" : {
+    "Q." : {
 
+    },
+    "Select Date" : {
+
+    },
+    "Selected Date: %@" : {
+
+    },
+    "Selected Time: %@:%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Selected Time: %1$@:%2$@"
+          }
+        }
+      }
     },
     "Settings" : {
 
@@ -223,10 +260,28 @@
     "Start Your Quitting Log" : {
 
     },
-    "Step 2: Create Quit Log" : {
+    "Step 2: daily cigarettes" : {
 
     },
-    "Step 3: Motivation" : {
+    "Step 3: cigarettes" : {
+
+    },
+    "Step 4: first Cigarette" : {
+
+    },
+    "Step 5: smoking years" : {
+
+    },
+    "Step 6: Smoking status" : {
+
+    },
+    "Step 7: Quit attempt" : {
+
+    },
+    "Step 8: Motivation" : {
+
+    },
+    "Step 9: 회원가입" : {
 
     },
     "Subscription/Billing Information" : {
@@ -242,6 +297,9 @@
 
     },
     "Symptoms" : {
+
+    },
+    "Tell us what motivated you to quit smoking?" : {
 
     },
     "Terms & Conditions" : {
@@ -268,10 +326,19 @@
     "Welcome to Sennight!" : {
 
     },
-    "Why do you want to stop smoking?" : {
+    "What time do you usually have your first cigarette of the day?" : {
+
+    },
+    "Yes" : {
 
     },
     "Your password must:" : {
+
+    },
+    "시작하세요" : {
+
+    },
+    "입력해주세요" : {
 
     }
   },
