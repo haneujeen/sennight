@@ -15,75 +15,33 @@ class QuitAttemptService {
     
     let HOST = Settings.shared.HOST
     
-    func createQA(startDate: String) -> AnyPublisher<QuitAttemptResponse, AFError> {
-        let url = "\(HOST)/quit-attempts"
-        let body = CreateQARequest(startDate: startDate)
-        return AF.request(url,
-                          method: .post,
-                          parameters: body,
-                          encoder: JSONParameterEncoder.default)
-            .publishDecodable(type: QuitAttemptResponse.self)
-            .value()
-            .eraseToAnyPublisher()
+    /// Creates ongoing quitting smoking attempt.
+    func createQuitAttempt(userId: Int, quitAttemptData: [String: Any]) -> QuitAttempt {
+        // Implementation here
     }
     
-    func readQA(userId: Int) -> AnyPublisher<QuitAttemptResponse, AFError> {
-        let url = "\(HOST)/quit-attempts/\(userId)"
-        let body = ReadQARequest(userId: userId)
-        return AF.request(url,
-                          method: .get,
-                          parameters: body,
-                          encoder: JSONParameterEncoder.default)
-            .publishDecodable(type: QuitAttemptResponse.self)
-            .value()
-            .eraseToAnyPublisher()
+    /// Retrieves user's most recent quitting smoking attempt.
+    func getLatestQuitAttempt(userId: Int) -> QuitAttempt? {
+        // Implementation here
     }
     
-    func readAllQA(userId: Int) -> AnyPublisher<QuitAttemptResponse, AFError> {
-        let url = "\(HOST)/quit-attempts/all/\(userId)"
-        let body = ReadQARequest(userId: userId)
-        return AF.request(url,
-                          method: .get,
-                          parameters: body,
-                          encoder: JSONParameterEncoder.default)
-            .publishDecodable(type: QuitAttemptResponse.self)
-            .value()
-            .eraseToAnyPublisher()
+    /// Retrieves all of user's quitting smoking attempts.
+    func getAllQuitAttempts(userId: Int) -> [QuitAttempt] {
+        // Implementation here
     }
     
-    func updateQA(attemptId: Int, startDate: String, endDate: String, isActive: Bool) -> AnyPublisher<QuitAttemptResponse, AFError> {
-        let url = "\(HOST)/quit-attempts/\(attemptId)"
-        let body = UpdateDeleteQARequest(attemptId: attemptId, startDate: startDate, endDate: endDate, isActive: isActive)
-        return AF.request(url,
-                          method: .put,
-                          parameters: body,
-                          encoder: JSONParameterEncoder.default)
-            .publishDecodable(type: QuitAttemptResponse.self)
-            .value()
-            .eraseToAnyPublisher()
+    /// Deletes a quitting smoking attempt.
+    func deleteQuitAttempt(userId: Int, attemptId: Int) {
+        // Implementation here
     }
     
-    func deleteQA(attemptId: Int, startDate: String, endDate: String, isActive: Bool) -> AnyPublisher<QuitAttemptResponse, AFError> {
-        let url = "\(HOST)/quit-attempts/\(attemptId)"
-        let body = UpdateDeleteQARequest(attemptId: attemptId, startDate: startDate, endDate: endDate, isActive: isActive)
-        return AF.request(url,
-                          method: .delete,
-                          parameters: body,
-                          encoder: JSONParameterEncoder.default)
-            .publishDecodable(type: QuitAttemptResponse.self)
-            .value()
-            .eraseToAnyPublisher()
+    /// Updates a quitting smoking attempt.
+    func updateQuitAttempt(userId: Int, attemptId: Int, quitAttemptData: [String: Any]) -> QuitAttempt {
+        // Implementation here
     }
     
-    func ReadMilestionesQA(attemptId: Int, startDate: String, endDate: String, isActive: Bool) -> AnyPublisher<QuitAttemptResponse, AFError> {
-        let url = "\(HOST)/quit-attempts/\(attemptId)/milestones"
-        let body = ReadMilestonesQARequest(attemptId: attemptId, startDate: startDate, endDate: endDate, isActive: isActive)
-        return AF.request(url,
-                          method: .get,
-                          parameters: body,
-                          encoder: JSONParameterEncoder.default)
-            .publishDecodable(type: QuitAttemptResponse.self)
-            .value()
-            .eraseToAnyPublisher()
+    /// Retrieves milestones associated with a quitting smoking attempt.
+    func getMilestonesForQuitAttempt(userId: Int, attemptId: Int) -> [Milestone] {
+        // Implementation here
     }
 }
