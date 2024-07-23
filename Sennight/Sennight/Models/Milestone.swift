@@ -58,9 +58,9 @@ struct Milestone: Codable {
     }
 }
 
-struct MilestoneResponse: Codable {
+struct MilestonesResponse: Codable {
     let status: Bool
     let detail: String
-    let data: Milestone?
+    let data: [Milestone]?
 }
 
