@@ -5,6 +5,7 @@
 //  Created by 한유진 on 7/16/24.
 //  Edited by 김소연 on 2024-07-19: Quit Attempt Service 코드 생성
 //  Edited by 한유진 on 2024-07-24: Added getLatestQuitAttempt(userID:)
+//  Edited by 한유진 on 2024-07-24: 함수 이름 getLatestQuitAttempt을 getActiveQuitAttempt로 수정
 //
 
 import SwiftUI
@@ -22,7 +23,7 @@ class QuitAttemptService {
     //    }
     
     /// Retrieves user's most recent quitting smoking attempt.
-    func getLatestQuitAttempt(userID: Int) -> AnyPublisher<QuitAttempt, AFError> {
+    func getActiveQuitAttempt(userID: Int) -> AnyPublisher<QuitAttempt, AFError> {
         let URL = "\(HOST)/quit-attempts/\(userID)"
         guard let token = UserService.shared.getToken() else {
             return Fail(error: AFError.explicitlyCancelled)

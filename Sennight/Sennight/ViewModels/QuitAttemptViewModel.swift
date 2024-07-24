@@ -41,11 +41,11 @@ class QuitAttemptViewModel: ObservableObject{
      
      */
     /// Retrieves the most recent quitting smoking attempt for the user and updates the `latestQuitAttempt` property.
-    func getLatestQuitAttempt() {
+    func getActiveQuitAttempt() {
         guard let userID = UserService.shared.getUserID() else {
             return
         }
-        QuitAttemptService.shared.getLatestQuitAttempt(userID: userID)
+        QuitAttemptService.shared.getActiveQuitAttempt(userID: userID)
             .sink { completion in
                 switch completion {
                 case .finished:
