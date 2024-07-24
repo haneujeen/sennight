@@ -3,11 +3,15 @@
 //  Sennight
 //
 //  Created by 한유진 on 7/15/24.
+//  Edited by 김소연 on 2024-07-24: View model과 연결
 //
 
 import SwiftUI
 
 struct OnboardingStep9View: View {
+    @EnvironmentObject var motivationViewModel: MotivationViewModel
+    @EnvironmentObject var quitAttemptViewModel: QuitAttemptViewModel
+    @EnvironmentObject var smokingHabitViewModel: SmokingHabitViewModel
     @Binding var currentStep: Int
     @Binding var isOnboardingComplete: Bool
     @StateObject var signUpViewModel = SignUpViewModel()
@@ -123,11 +127,39 @@ struct OnboardingStep9View: View {
                         signUpViewModel.register { response in
                             // 온보딩 토큰이 UserDefaults에 저장된 상태
                             if response.status {
-                                isOnboardingComplete = true //온보딩 완료 처리
-                                // 주: OnboardingTokenManager를 통한 토큰 저장은 SignUpViewModel에서 이미 처리됨
+                                guard let token = response.data?.onboardingToken else {
+                                     return
+                                }
+                                //1
+                                smokingHabitViewModel.onboardingToken = token
+                                //isOnboardingComplete = true //온보딩 완료 처리
+                                smokingHabitViewModel.create { status in
+                                    if status{
+                                        print("smokingHabit 추가 성공")
+                                    } else {
+                                        print("smokingHabit 추가 실패")
+                                    }
+                                }
+                                //2
+                                quitAttemptViewModel.onboardingToken = token
+                                quitAttemptViewModel.create { status in
+                                    if status{
+                                        print("quitAttempt 추가 성공")
+                                    } else {
+                                        print("quitAttempt 추가 실패")
+                                    }
+                                }
+                                //3
+                                motivationViewModel.onboardingToken = token
+                                motivationViewModel.create { status in
+                                    if status{
+                                        print("motivation 추가 성공")
+                                    } else {
+                                        print("motivation 추가 실패")
+                                    }
+                                }
                                 dismiss()
                             } else {
-                                
                                 if response.detail == "Email in use" {
                                     alertMessage = "Email in use"
                                 } else {
