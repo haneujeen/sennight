@@ -17,20 +17,45 @@ class QuitAttemptService {
     let HOST = Settings.shared.HOST
     
     // 현재 진행중인 금연 도전 생성
-    func createQuitAttempt(startDate: String, userID: Int) -> AnyPublisher<QuitAttemptResponse, AFError> {
+    func createQuitAttempt(onboardingToken: String, startDate: String, userID: Int) -> AnyPublisher<QuitAttemptResponse, AFError> {
         let url = "\(HOST)/quit-attempts"
-        guard let token = UserService.shared.getToken() else {
-                    return Fail(error: AFError.createURLRequestFailed(error: URLError(.userAuthenticationRequired))).eraseToAnyPublisher()
-                }
         let body = QuitAttemptRequest(userID: userID, startDate: startDate, endDate: nil, isActive: nil)
+        do {
+            let jsonData = try JSONEncoder().encode(body)
+            if let jsonString = String(data: jsonData, encoding: .utf8) {
+                print("Request: \(jsonString)")
+            }
+        } catch {
+            print("Failed to encode: \(error)")
+        }
         return AF.request(url,
                           method: .post,
                           parameters: body,
                           encoder: JSONParameterEncoder.default,
-                          headers: ["Authorization": "Bearer \(token)"])
-            .publishDecodable(type: QuitAttemptResponse.self)
-            .value()
-            .eraseToAnyPublisher()
+                          headers: ["Authorization": "Bearer \(onboardingToken)"])
+        .publishData()
+                .tryMap { result -> Data in
+                    if let data = result.data {
+                        // 응답 데이터를 로그로 출력
+                        if let jsonString = String(data: data, encoding: .utf8) {
+                            print("Raw JSON response: \(jsonString)")
+                        } else {
+                            print("Failed to convert data to string")
+                        }
+                        return data
+                    } else {
+                        throw AFError.responseValidationFailed(reason: .dataFileNil)
+                    }
+                }
+                .decode(type: QuitAttemptResponse.self, decoder: JSONDecoder())
+                .mapError { error in
+                    if let afError = error as? AFError {
+                        return afError
+                    } else {
+                        return AFError.responseSerializationFailed(reason: .decodingFailed(error: error))
+                    }
+                }
+                .eraseToAnyPublisher()
     }
     
     // HTTP get,delete request는 body를 보내지 않음
