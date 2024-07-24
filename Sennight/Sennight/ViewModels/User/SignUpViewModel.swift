@@ -20,7 +20,7 @@ class SignUpViewModel: ObservableObject {
     private var cancellables = Set<AnyCancellable>()
     
     //회원가입
-    func register(completionHandler: @escaping (UserResponse) -> Void){
+    func register(completionHandler: @escaping (UserResponse) -> Void) {
         UserService.shared.register(email: email, name: name, password: password)
             .sink { completion in
                 switch completion {
