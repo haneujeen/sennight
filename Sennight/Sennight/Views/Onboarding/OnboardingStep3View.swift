@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OnboardingStep3View: View {
+    @EnvironmentObject var smokingHabitViewModel: SmokingHabitViewModel
     @Binding var currentStep: Int
     @Binding var isOnboardingComplete: Bool
     @State private var price = ""
@@ -49,8 +50,10 @@ struct OnboardingStep3View: View {
                 .padding(.bottom, 40)
                 .padding(.horizontal)
             Button(action: {
+                
                 //price를 Double로 변환 시도
                 if let priceValue = Double(price), !price.isEmpty {
+                    smokingHabitViewModel.cigarettePrice = priceValue
                     currentStep = 4
                 } else {
                     alertMessage = "Please enter a valid price."
@@ -75,5 +78,6 @@ struct OnboardingStep3View: View {
 struct OnboardingStep3View_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingStep3View(currentStep: .constant(3), isOnboardingComplete: .constant(false))
+            .environmentObject(SmokingHabitViewModel())
     }
 }

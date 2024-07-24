@@ -4,11 +4,13 @@
 //
 //  Created by 한유진 on 6/27/24.
 //  Edited by 김소연 on 2024-07-22: 온보딩 스텝 2 UI 수정
+//  Edited by 김소연 on 2024-07-24: selectedNum을 SmokingHabitViewModel의 dailyCigarettes에 저장
 //
 
 import SwiftUI
 
 struct OnboardingStep2View: View {
+    @EnvironmentObject var smokingHabitViewModel: SmokingHabitViewModel
     let dailyCigarettesNum = Array(0...60)
     @State private var selectedNum = 1
     @Binding var currentStep: Int
@@ -59,6 +61,7 @@ struct OnboardingStep2View: View {
             }
             
             Button(action: {
+                smokingHabitViewModel.dailyCigarettes = selectedNum
                 currentStep = 3
             }) {
                 Text("Next")
@@ -78,5 +81,6 @@ struct OnboardingStep2View: View {
 struct OnboardingStep2View_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingStep2View(currentStep: .constant(2), isOnboardingComplete: .constant(false))
+            .environmentObject(SmokingHabitViewModel())
     }
 }

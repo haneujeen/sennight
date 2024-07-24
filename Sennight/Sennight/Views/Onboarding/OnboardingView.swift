@@ -10,7 +10,9 @@ import SwiftUI
 struct OnboardingView: View {
     @Binding var isOnboardingComplete: Bool
     @State private var currentStep = 1
-    @State private var onboardingData: [String: Any] = [:]
+    var smokingHabitViewModel = SmokingHabitViewModel()
+    var quitAttemptViewModel = QuitAttemptViewModel()
+    var motivationViewModel = MotivationViewModel()
     
     var body: some View {
         ZStack {
@@ -20,21 +22,30 @@ struct OnboardingView: View {
                     OnboardingStep1View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
                         .transition(.blurReplace)
                 } else if currentStep == 2 {
-                    OnboardingStep2View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete, onboardingData: $onboardingData)
+                    OnboardingStep2View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                        .environmentObject(smokingHabitViewModel)
                 } else if currentStep == 3 {
-                    OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete, onboardingData: $onboardingData)
+                    OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                        .environmentObject(smokingHabitViewModel)
                 } else if currentStep == 4 {
-                    OnboardingStep4View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete, onboardingData: $onboardingData)
+                    OnboardingStep4View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                        .environmentObject(smokingHabitViewModel)
                 } else if currentStep == 5 {
-                    OnboardingStep5View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete, onboardingData: $onboardingData)
+                    OnboardingStep5View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                        .environmentObject(smokingHabitViewModel)
                 } else if currentStep == 6 {
-                    OnboardingStep6View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete, onboardingData: $onboardingData)
+                    OnboardingStep6View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
                 } else if currentStep == 7 {
-                    OnboardingStep7View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete, onboardingData: $onboardingData)
+                    OnboardingStep7View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                        .environmentObject(quitAttemptViewModel)
                 } else if currentStep == 8 {
-                    OnboardingStep8View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete, onboardingData: $onboardingData)
+                    OnboardingStep8View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                        .environmentObject(motivationViewModel)
                 } else if currentStep == 9 {
-                    OnboardingStep9View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete, onboardingData: $onboardingData)
+                    OnboardingStep9View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                        .environmentObject(smokingHabitViewModel)
+                        .environmentObject(motivationViewModel)
+                        .environmentObject(quitAttemptViewModel)
                 }
                 Spacer()
                 

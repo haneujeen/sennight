@@ -11,6 +11,7 @@
 import SwiftUI
 
 struct OnboardingStep5View: View {
+    @EnvironmentObject var smokingHabitViewModel: SmokingHabitViewModel
     @Binding var currentStep: Int
     @Binding var isOnboardingComplete: Bool
     @State private var smokingYears = -1
@@ -57,11 +58,11 @@ struct OnboardingStep5View: View {
             .padding(.bottom, 30)
             
             Button(action: {
-                
                 if smokingYears == -1 {
                     alertMessage = "Please select the value."
                     showAlert = true
                 } else {
+                    smokingHabitViewModel.smokingYears = smokingYears
                     currentStep = 6
                 }
             }) {
@@ -82,5 +83,6 @@ struct OnboardingStep5View: View {
 struct OnboardingStep5View_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingStep5View(currentStep: .constant(5), isOnboardingComplete: .constant(false))
+            .environmentObject(SmokingHabitViewModel())
     }
 }

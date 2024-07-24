@@ -10,6 +10,7 @@
 import SwiftUI
 
 struct OnboardingStep7View: View {
+    @EnvironmentObject var quitAttemptViewModel: QuitAttemptViewModel
     // @Binding 변수들은 부모 뷰에서 전달받은 값을 양방향으로 바인딩합니다.
     @Binding var currentStep: Int
     @Binding var isOnboardingComplete: Bool
@@ -68,6 +69,10 @@ struct OnboardingStep7View: View {
                     alertMessage = "Please select a date in the past."
                     showAlert = true
                 } else {
+                    let dateFormatter = DateFormatter()
+                    dateFormatter.dateFormat = "yyyy-MM-dd"
+                    let selectedDateString = dateFormatter.string(from: selectedDate)
+                    quitAttemptViewModel.startDate = selectedDateString
                     currentStep = 8
                 }
             }) {
@@ -96,5 +101,6 @@ struct OnboardingStep7View: View {
 struct OnboardingStep7View_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingStep7View(currentStep: .constant(7), isOnboardingComplete: .constant(false))
+            .environmentObject(QuitAttemptViewModel())
     }
 }

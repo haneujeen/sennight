@@ -9,6 +9,7 @@
 import SwiftUI
 
 struct OnboardingStep8View: View {
+    @EnvironmentObject var motivationViewModel: MotivationViewModel
     let motivations = ["건강을 위해", "돈을 절약하기 위해", "가족을 위해", "나 자신을 위해" ,"환경보호를 위해", "직접입력"]
     @State private var selectedMotivation = "건강을 위해"
     @Binding var currentStep: Int
@@ -64,11 +65,11 @@ struct OnboardingStep8View: View {
             }
             
             Button(action: {
-                
                 if selectedMotivation == "직접입력" && customMotivation.isEmpty {
                     alertMessage = "Please enter your custom motivation."
                     showAlert = true
                 } else {
+                    //motivationViewModel.motivationID =
                     currentStep = 9
                 }
             }) {
@@ -89,5 +90,6 @@ struct OnboardingStep8View: View {
 struct OnboardingStep8View_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingStep8View(currentStep: .constant(8), isOnboardingComplete: .constant(false))
+            .environmentObject(MotivationViewModel())
     }
 }

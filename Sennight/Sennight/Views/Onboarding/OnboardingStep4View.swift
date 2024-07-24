@@ -8,6 +8,7 @@
 import SwiftUI
 
 struct OnboardingStep4View: View {
+    @EnvironmentObject var smokingHabitViewModel: SmokingHabitViewModel
     let hours = Array(0...23)
     let minutes = Array(0...59)
     @State private var selectedHour = 0
@@ -81,6 +82,8 @@ struct OnboardingStep4View: View {
                     alertMessage = "Please enter a valid time."
                     showAlert = true
                 } else {
+                    let selectedTime = String(format: "%02d:%02d", selectedHour, selectedMinute)
+                    smokingHabitViewModel.firstCigarette = selectedTime
                     currentStep = 5
                 }
             }) {
@@ -101,5 +104,6 @@ struct OnboardingStep4View: View {
 struct OnboardingStep4View_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingStep4View(currentStep: .constant(4), isOnboardingComplete: .constant(false))
+            .environmentObject(SmokingHabitViewModel())
     }
 }
