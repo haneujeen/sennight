@@ -10,7 +10,7 @@ import Foundation
 struct SmokingHabitsRequest: Codable {
     let userID: Int
     let dailyCigarettes: Int
-    let cigarettePrice: Int
+    let cigarettePrice: Double
     let firstCigarette: String
     let smokingYears: Int
     
