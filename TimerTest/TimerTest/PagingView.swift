@@ -19,13 +19,11 @@ struct PagingView: View {
             }
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .always))
-        //.frame(height: 150)
         .onAppear {
             DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                 withAnimation {
                     selection = 2
                 }
-                print("Selection set to: \(selection)")
             }
         }
     }

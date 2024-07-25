@@ -16,8 +16,7 @@ struct ProgressViewView: View {
         VStack {
             CircularGauge(progress: progress)
             Text(String(format: "%.2f%%", progress * 100))
-            Text("Interval: \(interval)")
-            
+            Text("Interval: \(interval)")  
         }
 //        ProgressView(value: progress, total: 1.0) {
 //            Text(String(format: "%.1f%%", progress * 100))

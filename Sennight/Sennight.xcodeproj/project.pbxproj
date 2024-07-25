@@ -103,6 +103,8 @@
 		4E82E3AB2C46663400F06DE3 /* QuitAttemptService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E3AA2C46663400F06DE3 /* QuitAttemptService.swift */; };
 		4E9AC0A62C2E844700B3C2F0 /* AidProductDetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AC0A52C2E844700B3C2F0 /* AidProductDetailEditView.swift */; };
 		4E9AC0A82C2E863500B3C2F0 /* UpdateAidProductSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AC0A72C2E863500B3C2F0 /* UpdateAidProductSheet.swift */; };
+		4EABEA832C52FE7400252308 /* StringToDateFormatter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABEA822C52FE7400252308 /* StringToDateFormatter.swift */; };
+		4EABEA852C52FEE800252308 /* ElapsedTimeString.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EABEA842C52FEE800252308 /* ElapsedTimeString.swift */; };
 		4EB3C1D02C4B3CE90066D658 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB3C1CF2C4B3CE90066D658 /* Theme.swift */; };
 		4EB3C1D22C4B3D260066D658 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB3C1D12C4B3D260066D658 /* Launch Screen.storyboard */; };
 		4EB3C1D52C4B3F2A0066D658 /* CustomTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB3C1D32C4B3F2A0066D658 /* CustomTextFieldStyle.swift */; };
@@ -228,6 +230,8 @@
 		4E82E3AA2C46663400F06DE3 /* QuitAttemptService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitAttemptService.swift; sourceTree = "<group>"; };
 		4E9AC0A52C2E844700B3C2F0 /* AidProductDetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AidProductDetailEditView.swift; sourceTree = "<group>"; };
 		4E9AC0A72C2E863500B3C2F0 /* UpdateAidProductSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAidProductSheet.swift; sourceTree = "<group>"; };
+		4EABEA822C52FE7400252308 /* StringToDateFormatter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StringToDateFormatter.swift; sourceTree = "<group>"; };
+		4EABEA842C52FEE800252308 /* ElapsedTimeString.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeString.swift; sourceTree = "<group>"; };
 		4EB3C1CF2C4B3CE90066D658 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		4EB3C1D12C4B3D260066D658 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		4EB3C1D32C4B3F2A0066D658 /* CustomTextFieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFieldStyle.swift; sourceTree = "<group>"; };
@@ -545,6 +549,8 @@
 				4EB3C1D32C4B3F2A0066D658 /* CustomTextFieldStyle.swift */,
 				4EB3C1D62C4B42330066D658 /* View+.swift */,
 				4E33CEB52C4B973700BE9303 /* LottieView.swift */,
+				4EABEA822C52FE7400252308 /* StringToDateFormatter.swift */,
+				4EABEA842C52FEE800252308 /* ElapsedTimeString.swift */,
 			);
 			path = HelpersAndCustomViews;
 			sourceTree = "<group>";
@@ -715,6 +721,7 @@
 				4E82E3AB2C46663400F06DE3 /* QuitAttemptService.swift in Sources */,
 				4E6F39DD2C33B79200058003 /* MyMilestonesView.swift in Sources */,
 				4E82E3A92C46661F00F06DE3 /* SmokingHabitService.swift in Sources */,
+				4EABEA832C52FE7400252308 /* StringToDateFormatter.swift in Sources */,
 				4E9AC0A62C2E844700B3C2F0 /* AidProductDetailEditView.swift in Sources */,
 				4E0F849A2C2D30460037AE25 /* MilestoneService.swift in Sources */,
 				4E1A80EF2C495D240052CBD2 /* LoginViewModel.swift in Sources */,
@@ -730,6 +737,7 @@
 				4E0F84812C2D2CB20037AE25 /* AidProductListViewModel.swift in Sources */,
 				4E0F84C42C2D3CBB0037AE25 /* MotivationCardView.swift in Sources */,
 				4E82E39D2C4661D400F06DE3 /* OnboardingStep8View.swift in Sources */,
+				4EABEA852C52FEE800252308 /* ElapsedTimeString.swift in Sources */,
 				4E82E3A52C4665CB00F06DE3 /* QuitAttempt.swift in Sources */,
 				4EB3C1D52C4B3F2A0066D658 /* CustomTextFieldStyle.swift in Sources */,
 				4E0F848B2C2D2CE60037AE25 /* SmokingLogViewModel.swift in Sources */,

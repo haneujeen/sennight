@@ -29,16 +29,41 @@ let intervals: [TimeInterval] = [
     473_385_600       // 15 years
 ]
 
-let startDate: Date = dateFormatter.date(from: "2024-07-26T06:00:00") ?? Date()
+let startDate: Date = dateFormatter.date(from: "1980-09-05T6:00:00") ?? Date()
 
 struct ContentView: View {
     @State private var currentDate = Date()
     
     var body: some View {
         VStack {
-            Text(elapsedTimeString(from: startDate, to: currentDate))
-                .font(.largeTitle)
+            HStack {
+                if currentDate.timeIntervalSince(startDate) > 31_536_000 {
+                    Text(elapsedTimeStringYears(from: startDate, to: currentDate))
+                }
+                if currentDate.timeIntervalSince(startDate) > 2_592_000 {
+                    Text(elapsedTimeStringMonths(from: startDate, to: currentDate))
+                }
+                if currentDate.timeIntervalSince(startDate) > 86400 {
+                    Text(elapsedTimeStringDays(from: startDate, to: currentDate))
+                }
+            }
+            .font(.system(size: 26))
             
+            if currentDate.timeIntervalSince(startDate) > 86400 {
+                HStack {
+                    Text(elapsedTimeStringHours(from: startDate, to: currentDate))
+                    Text(elapsedTimeStringMinutes(from: startDate, to: currentDate))
+                    Text(elapsedTimeStringSeconds(from: startDate, to: currentDate))
+                }
+                .font(.system(size: 18))
+            } else {
+                HStack {
+                    Text(elapsedTimeStringHours(from: startDate, to: currentDate))
+                    Text(elapsedTimeStringMinutes(from: startDate, to: currentDate))
+                    Text(elapsedTimeStringSeconds(from: startDate, to: currentDate))
+                }
+                .font(.system(size: 24))
+            }
             
             PagingView()
         }
@@ -49,12 +74,6 @@ struct ContentView: View {
                 }
             }
         })
-
-    }
-    
-    func elapsedTimeString(from start: Date, to end: Date) -> String {
-        let components = Calendar.current.dateComponents([.year, .month, .day, .hour, .minute, .second], from: start, to: end)
-        return "\(components.year ?? 0) years \(components.month ?? 0) months \(components.day ?? 0) days \(components.hour ?? 0) hours \(components.minute ?? 0) minutes \(components.second ?? 0) seconds"
     }
 }
 
