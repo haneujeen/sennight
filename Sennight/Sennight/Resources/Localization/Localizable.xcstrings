@@ -127,6 +127,9 @@
     "General" : {
 
     },
+    "Get started" : {
+
+    },
     "have at least 1 digit (0-9)" : {
 
     },
@@ -281,7 +284,7 @@
     "Step 8: Motivation" : {
 
     },
-    "Step 9: 회원가입" : {
+    "Step 9: Sign Up" : {
 
     },
     "Subscription/Billing Information" : {
@@ -333,9 +336,6 @@
 
     },
     "Your password must:" : {
-
-    },
-    "시작하세요" : {
 
     },
     "입력해주세요" : {
