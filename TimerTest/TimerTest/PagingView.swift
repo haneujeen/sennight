@@ -12,13 +12,8 @@ struct PagingView: View {
     
     var body: some View {
         TabView(selection: $selection) {
-            ForEach(1..<4) { index in
-                Text("\(index)")
-                    .frame(width: 150, height: 150)
-                    .background(Color.blue)
-                    .foregroundColor(.white)
-                    .font(.largeTitle)
-                    .tag(index)
+            ForEach(intervals, id: \.self) { interval in
+                ProgressViewView(interval: interval)
             }
         }
         .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))

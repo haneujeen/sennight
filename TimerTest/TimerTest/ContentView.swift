@@ -37,9 +37,7 @@ struct ContentView: View {
             Text(elapsedTimeString(from: startDate, to: Date()))
                 .font(.largeTitle)
             
-            ForEach(intervals, id: \.self) { interval in
-                ProgressViewView(interval: interval)
-            }
+            PagingView()
         }
     }
     

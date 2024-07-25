@@ -57,10 +57,10 @@
 			children = (
 				641963FB2C51E4AD008537F5 /* TimerTestApp.swift */,
 				641963FD2C51E4AD008537F5 /* ContentView.swift */,
+				4E1685DA2C5288B000DD05DD /* PagingView.swift */,
 				4E0B39232C521695008BA258 /* ProgressViewView.swift */,
 				641963FF2C51E4B1008537F5 /* Assets.xcassets */,
 				641964012C51E4B1008537F5 /* Preview Content */,
-				4E1685DA2C5288B000DD05DD /* PagingView.swift */,
 			);
 			path = TimerTest;
 			sourceTree = "<group>";
