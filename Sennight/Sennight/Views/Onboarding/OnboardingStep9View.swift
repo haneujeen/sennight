@@ -64,7 +64,7 @@ struct OnboardingStep9View: View {
                     }
                     Spacer()
                     HStack {
-                        Text("Step 9: 회원가입")
+                        Text("Step 9: Sign Up")
                             .font(.largeTitle)
                             .padding(.bottom, 40)
                     }
@@ -130,32 +130,32 @@ struct OnboardingStep9View: View {
                                 guard let token = response.data?.onboardingToken else {
                                      return
                                 }
-                                //1
+                                
                                 smokingHabitViewModel.onboardingToken = token
                                 //isOnboardingComplete = true //온보딩 완료 처리
                                 smokingHabitViewModel.create { status in
                                     if status{
-                                        print("smokingHabit 추가 성공")
+                                        print("Smoking habit 추가 성공")
                                     } else {
-                                        print("smokingHabit 추가 실패")
+                                        print("Smoking habit 추가 실패")
                                     }
                                 }
-                                //2
+                                
                                 quitAttemptViewModel.onboardingToken = token
                                 quitAttemptViewModel.create { status in
                                     if status{
-                                        print("quitAttempt 추가 성공")
+                                        print("Quit attempt 추가 성공")
                                     } else {
-                                        print("quitAttempt 추가 실패")
+                                        print("Quit attempt 추가 실패")
                                     }
                                 }
-                                //3
+                                
                                 motivationViewModel.onboardingToken = token
                                 motivationViewModel.create { status in
                                     if status{
-                                        print("motivation 추가 성공")
+                                        print("Motivation 추가 성공")
                                     } else {
-                                        print("motivation 추가 실패")
+                                        print("Motivation 추가 실패")
                                     }
                                 }
                                 dismiss()
@@ -169,7 +169,7 @@ struct OnboardingStep9View: View {
                             }
                         }
                     }, label: {
-                        Text("시작하세요")
+                        Text("Get started")
                             .fontWeight(.semibold)
                     })
                     .padding(20)
