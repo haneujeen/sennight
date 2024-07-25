@@ -13,14 +13,15 @@ struct ProgressViewView: View {
     @State private var progress: Double = 0.0
     
     var body: some View {
-//        VStack {
-//            CircularGauge(progress: progress)
-//            Text(String(format: "%.1f%%", progress * 100))
-//            
-//        }
-        ProgressView(value: progress, total: 1.0) {
-            Text(String(format: "%.1f%%", progress * 100))
+        VStack {
+            CircularGauge(progress: progress)
+            Text(String(format: "%.2f%%", progress * 100))
+            Text("Interval: \(interval)")
+            
         }
+//        ProgressView(value: progress, total: 1.0) {
+//            Text(String(format: "%.1f%%", progress * 100))
+//        }
         .onAppear(perform: {
             range = startDate...startDate.addingTimeInterval(interval)
             Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
@@ -37,5 +38,5 @@ struct ProgressViewView: View {
 }
 
 #Preview {
-    ProgressViewView(interval: intervals[5])
+    ProgressViewView(interval: intervals[0])
 }
