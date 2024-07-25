@@ -8,7 +8,8 @@
 import SwiftUI
 
 struct ProgressViewView: View {
-    let range = startDate...startDate.addingTimeInterval(3600) // 1 hour
+    var interval: TimeInterval
+    @State private var range: ClosedRange<Date>?
     @State private var progress: Double = 0.0
     
     var body: some View {
@@ -16,9 +17,10 @@ struct ProgressViewView: View {
             Text(String(format: "%.1f%%", progress * 100))
         }
         .onAppear(perform: {
+            range = startDate...startDate.addingTimeInterval(interval)
             Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
                 let elapsedTime = Date().timeIntervalSince(startDate)
-                let duration = range.upperBound.timeIntervalSince(startDate)
+                let duration = range?.upperBound.timeIntervalSince(startDate) ?? 1
                 progress = min(elapsedTime / duration, 1.0)
                 
                 if progress >= 1.0 {
@@ -30,5 +32,5 @@ struct ProgressViewView: View {
 }
 
 #Preview {
-    ProgressViewView()
+    ProgressViewView(interval: intervals[5])
 }
