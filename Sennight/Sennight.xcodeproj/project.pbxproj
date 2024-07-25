@@ -25,7 +25,6 @@
 		4E0F846E2C2D28ED0037AE25 /* OnboardingStep2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F846D2C2D28ED0037AE25 /* OnboardingStep2View.swift */; };
 		4E0F84702C2D28F50037AE25 /* OnboardingStep3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F846F2C2D28F40037AE25 /* OnboardingStep3View.swift */; };
 		4E0F84742C2D29220037AE25 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84732C2D29220037AE25 /* SignUpView.swift */; };
-		4E0F84792C2D2BF90037AE25 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84782C2D2BF90037AE25 /* UserViewModel.swift */; };
 		4E0F847B2C2D2C780037AE25 /* MotivationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F847A2C2D2C780037AE25 /* MotivationListViewModel.swift */; };
 		4E0F847D2C2D2C880037AE25 /* MotivationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F847C2C2D2C880037AE25 /* MotivationViewModel.swift */; };
 		4E0F847F2C2D2CA60037AE25 /* AidProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F847E2C2D2CA60037AE25 /* AidProductViewModel.swift */; };
@@ -152,7 +151,6 @@
 		4E0F846D2C2D28ED0037AE25 /* OnboardingStep2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep2View.swift; sourceTree = "<group>"; };
 		4E0F846F2C2D28F40037AE25 /* OnboardingStep3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep3View.swift; sourceTree = "<group>"; };
 		4E0F84732C2D29220037AE25 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		4E0F84782C2D2BF90037AE25 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		4E0F847A2C2D2C780037AE25 /* MotivationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationListViewModel.swift; sourceTree = "<group>"; };
 		4E0F847C2C2D2C880037AE25 /* MotivationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationViewModel.swift; sourceTree = "<group>"; };
 		4E0F847E2C2D2CA60037AE25 /* AidProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AidProductViewModel.swift; sourceTree = "<group>"; };
@@ -358,7 +356,6 @@
 			children = (
 				4E0F84672C2D10C20037AE25 /* OnboardingViewModel.swift */,
 				4E1A80F42C495D4D0052CBD2 /* User */,
-				4E0F84782C2D2BF90037AE25 /* UserViewModel.swift */,
 				4E82E3A22C46640D00F06DE3 /* SmokingHabitViewModel.swift */,
 				4E82E3A62C4665EF00F06DE3 /* QuitAttemptViewModel.swift */,
 				4E0F847C2C2D2C880037AE25 /* MotivationViewModel.swift */,
@@ -780,7 +777,6 @@
 				4E0F845C2C2D0E710037AE25 /* NetworkService.swift in Sources */,
 				4E0F84B92C2D34BF0037AE25 /* MilestonePost.swift in Sources */,
 				4E0F84A02C2D30920037AE25 /* MilestonePostListViewModel.swift in Sources */,
-				4E0F84792C2D2BF90037AE25 /* UserViewModel.swift in Sources */,
 				4E0F847D2C2D2C880037AE25 /* MotivationViewModel.swift in Sources */,
 				4E33CEB62C4B973700BE9303 /* LottieView.swift in Sources */,
 				4E0F84852C2D2CC70037AE25 /* SymptomListViewModel.swift in Sources */,
