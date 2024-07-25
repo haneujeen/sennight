@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		4E0B39242C521695008BA258 /* ProgressViewView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0B39232C521695008BA258 /* ProgressViewView.swift */; };
 		641963FC2C51E4AD008537F5 /* TimerTestApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641963FB2C51E4AD008537F5 /* TimerTestApp.swift */; };
 		641963FE2C51E4AD008537F5 /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 641963FD2C51E4AD008537F5 /* ContentView.swift */; };
 		641964002C51E4B1008537F5 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 641963FF2C51E4B1008537F5 /* Assets.xcassets */; };
@@ -15,6 +16,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		4E0B39232C521695008BA258 /* ProgressViewView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProgressViewView.swift; sourceTree = "<group>"; };
 		641963F82C51E4AD008537F5 /* TimerTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TimerTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		641963FB2C51E4AD008537F5 /* TimerTestApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TimerTestApp.swift; sourceTree = "<group>"; };
 		641963FD2C51E4AD008537F5 /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
@@ -56,6 +58,7 @@
 				641964092C51E519008537F5 /* TimerObject.swift */,
 				641963FB2C51E4AD008537F5 /* TimerTestApp.swift */,
 				641963FD2C51E4AD008537F5 /* ContentView.swift */,
+				4E0B39232C521695008BA258 /* ProgressViewView.swift */,
 				641963FF2C51E4B1008537F5 /* Assets.xcassets */,
 				641964012C51E4B1008537F5 /* Preview Content */,
 			);
@@ -140,6 +143,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E0B39242C521695008BA258 /* ProgressViewView.swift in Sources */,
 				641963FE2C51E4AD008537F5 /* ContentView.swift in Sources */,
 				6419640A2C51E519008537F5 /* TimerObject.swift in Sources */,
 				641963FC2C51E4AD008537F5 /* TimerTestApp.swift in Sources */,

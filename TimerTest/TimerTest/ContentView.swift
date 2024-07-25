@@ -7,8 +7,15 @@
 
 import SwiftUI
 
+let dateFormatter: DateFormatter = {
+    let formatter = DateFormatter()
+    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
+    return formatter
+}()
+
+let startDate: Date = dateFormatter.date(from: "2024-07-25T15:21:00") ?? Date()
+
 struct ContentView: View {
-    @ObservedObject var myTimer = MyTimer()
     let range1 = startDate...startDate.addingTimeInterval(720) // 12 minutes
     let range2 = startDate...startDate.addingTimeInterval(3600) // 1 hour
     @State private var progress1: Double = 0.0
@@ -23,9 +30,7 @@ struct ContentView: View {
                 Text(String(format: "%.1f%%", progress1 * 100))
             }
             
-            ProgressView(value: progress2, total: 1.0) {
-                Text(String(format: "%.1f%%", progress2 * 100))
-            }
+            ProgressViewView()
         }
         .onAppear(perform: {
             Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
@@ -55,14 +60,6 @@ struct ContentView: View {
         return "\(components.year ?? 0) years \(components.month ?? 0) months \(components.day ?? 0) days \(components.hour ?? 0) hours \(components.minute ?? 0) minutes \(components.second ?? 0) seconds"
     }
 }
-
-let dateFormatter: DateFormatter = {
-    let formatter = DateFormatter()
-    formatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
-    return formatter
-}()
-
-let startDate: Date = dateFormatter.date(from: "2024-07-25T13:44:00") ?? Date()
 
 #Preview {
     ContentView()
