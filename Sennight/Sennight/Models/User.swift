@@ -9,6 +9,7 @@
 
 import Foundation
 
+/*
 //회원가입 모델
 struct RegisterRequest: Codable {
     let email: String
@@ -49,7 +50,6 @@ struct LoginData: Codable {
     let name: String
     let accessToken: String
 
-    
     enum CodingKeys: String, CodingKey {
         case email
         case name
@@ -63,6 +63,7 @@ struct LoginResponse : Codable {
     let detail: String
     let data: LoginData
 }
+*/
 
 // Unified Models
 // Combines request data for registration, login, and update.

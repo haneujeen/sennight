@@ -6,6 +6,7 @@
 //  Edited by 김소연 on :
 //  Edited by 한유진 on 2024-07-18: Refactored SignUpView
 //  Edited by 한유진 on 2024-07-18: UI 수정과 비밀번호 조건 메시지 추가
+//  Edited by 김소연 on 2024-07-21: FIXME 주석문 삭제하고 들여쓰기 수정
 //
 
 import SwiftUI
@@ -164,7 +165,6 @@ struct SignUpView: View {
                 }
             }
             .background(Theme.seafoam.mainColor, ignoresSafeAreaEdges: .all)
-            
         }
     }
 }
