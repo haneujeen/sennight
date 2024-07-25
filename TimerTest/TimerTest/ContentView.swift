@@ -29,7 +29,7 @@ let intervals: [TimeInterval] = [
     473_385_600      // 15 years
 ]
 
-let startDate: Date = dateFormatter.date(from: "2024-07-25T21:59:00") ?? Date()
+let startDate: Date = dateFormatter.date(from: "2024-07-25T22:42:00") ?? Date()
 
 struct ContentView: View {
     var body: some View {

@@ -13,6 +13,11 @@ struct ProgressViewView: View {
     @State private var progress: Double = 0.0
     
     var body: some View {
+//        VStack {
+//            CircularGauge(progress: progress)
+//            Text(String(format: "%.1f%%", progress * 100))
+//            
+//        }
         ProgressView(value: progress, total: 1.0) {
             Text(String(format: "%.1f%%", progress * 100))
         }
