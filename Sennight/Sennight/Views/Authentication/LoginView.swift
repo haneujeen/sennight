@@ -4,6 +4,7 @@
 //
 //  Created by 김소연 on 7/14/24.
 //  Edited by 한유진 on 2024-07-18: 코드 개선 문서 추가
+//  Edited by 한유진 on 2024-07-20: Updated UI
 //
 
 /**
@@ -33,60 +34,139 @@
 import SwiftUI
 
 struct LoginView: View {
-    // FIXME: @EnvironmentObject var loginVM: UserViewModel
     @EnvironmentObject var loginViewModel: LoginViewModel
     @State private var showSignUpView = false
-    // FIXME: @State var result = "로그인 전"
+    @State private var isWelcoming = false
     
     var body: some View {
         NavigationStack {
-            VStack {
-                Text("Login")
-                    .font(.largeTitle)
-                    .padding(.bottom, 20)
-                
-                TextField("Email", text: $loginViewModel.email)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(.bottom)
-                    .textInputAutocapitalization(.never)
-                
-                SecureField("Password", text: $loginViewModel.password)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(.bottom, 10)
-                
-                Button(action: {
-                    loginViewModel.login { status in
-                        if status {
-                            loginViewModel.isLoggedIn = status
-                            // FIXME: result = "로그인 성공"
-                            // FIXME: print("로그인 성공!!")
-                        } else {
-                            // FIXME: result = "로그인 실패"
+            ZStack {
+                LottieView(name: Constants.yellowCrossingLine, loopMode: .autoReverse, animationSpeed: 0.2)
+                    .rotationEffect(.degrees(60))
+                    .scaleEffect(2.5)
+                    .ignoresSafeArea()
+                    
+                VStack {
+                    Spacer()
+                    if !isWelcoming {
+                        Text("Welcome back")
+                            .foregroundStyle(Color.clear)
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .padding(.bottom, 20)
+                    }
+                    
+                    if isWelcoming {
+                        Text("Welcome back")
+                            .foregroundStyle(Theme.teal.mainColor)
+                            .font(.largeTitle)
+                            .fontWeight(.bold)
+                            .padding(.bottom, 20)
+                            .transition(.blurReplace)
+                    }
+                    
+                    TextField("Email address", text: $loginViewModel.email)
+                        .textFieldStyle(CustomTextFieldStyle())
+                        .padding(.horizontal)
+                        .textInputAutocapitalization(.never)
+                    
+                    SecureField("Password", text: $loginViewModel.password)
+                        .textFieldStyle(CustomTextFieldStyle())
+                        .padding(.horizontal)
+                    
+                    // TODO: isLoginDisabled 변수 추가...
+                    Button(action: {
+                        loginViewModel.login { status in
+                            if status {
+                                loginViewModel.isLoggedIn = status
+                            } else {
+                            }
+                        }
+                    }) {
+                        Text("Continue")
+                            .fontWeight(.semibold)
+                            .padding(20)
+                            .frame(maxWidth: .infinity)
+                            .background(Theme.indigo.mainColor)
+                            .foregroundColor(Theme.indigo.accentColor)
+                            .cornerRadius(25)
+                    }
+                    .padding([.horizontal, .top])
+                    
+                    Button(action: {
+                        // TODO: Apple sign-in
+                    }) {
+                        HStack {
+                            Image(systemName: "applelogo")
+                            Text("Continue with Apple")
+                                .fontWeight(.semibold)
+                        }
+                        .padding(20)
+                        .frame(maxWidth: .infinity)
+                        .background(Theme.poppy.mainColor)
+                        .foregroundColor(Theme.poppy.accentColor)
+                        .cornerRadius(25)
+                    }
+                    .padding(.horizontal)
+                    
+                    Button(action: {
+                        showSignUpView = true
+                    }) {
+                        HStack(spacing: 0) {
+                            Text("Don't have an account?")
+                                .foregroundColor(Theme.indigo.mainColor)
+                            Text(" Sign Up")
+                                .foregroundColor(Theme.teal.mainColor)
+                                .fontWeight(.bold)
                         }
                     }
-                }) {
-                    Text("Login")
-                        .font(.title2)
-                        .padding()
-                        .frame(maxWidth: .infinity)
-                        .background(Color.blue)
-                        .foregroundColor(.white)
-                        .cornerRadius(10)
+                    .padding(.top, 15)
+                    
+                    Spacer()
+                    
+                    VStack {
+                        Text("If you are creating a new account,")
+                        
+                        HStack(spacing: 0) {
+                            Text("Terms & Conditions")
+                                .foregroundColor(Theme.teal.mainColor)
+                                .underline()
+                                .onTapGesture {
+                                    if let url = URL(string: "https://www.example.com/terms") {
+                                        UIApplication.shared.open(url)
+                                    }
+                                }
+                            Text(" and ")
+                            Text("Privacy Policy")
+                                .foregroundColor(Theme.teal.mainColor)
+                                .underline()
+                                .onTapGesture {
+                                    if let url = URL(string: "https://www.example.com/privacy") {
+                                        UIApplication.shared.open(url)
+                                    }
+                                }
+                            Text(" will apply.")
+                        }
+                        
+                    }
+                    .font(.footnote)
+                    .foregroundColor(Color.secondary)
                 }
                 .padding()
-                
-                Button(action: {
-                    showSignUpView = true
-                }) {
-                    Text("Don't have an account? Sign Up")
-                        .foregroundColor(.blue)
+                .onAppear {
+                    withAnimation(.easeIn(duration: 0.5)) {
+                        isWelcoming = true
+                    }
                 }
-                .padding(.top, 20)
+                .onTapGesture {
+                    hideKeyboard()
+                }
+                .sheet(isPresented: $showSignUpView) {
+                    SignUpView()
+                }
             }
-            .padding()
-            .sheet(isPresented: $showSignUpView) {
-                SignUpView()
-            }
+            .background(Theme.buttercup.mainColor, ignoresSafeAreaEdges: .all)
+            
         }
     }
 }

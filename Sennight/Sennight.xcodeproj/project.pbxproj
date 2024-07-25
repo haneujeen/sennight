@@ -25,7 +25,6 @@
 		4E0F846E2C2D28ED0037AE25 /* OnboardingStep2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F846D2C2D28ED0037AE25 /* OnboardingStep2View.swift */; };
 		4E0F84702C2D28F50037AE25 /* OnboardingStep3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F846F2C2D28F40037AE25 /* OnboardingStep3View.swift */; };
 		4E0F84742C2D29220037AE25 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84732C2D29220037AE25 /* SignUpView.swift */; };
-		4E0F84792C2D2BF90037AE25 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84782C2D2BF90037AE25 /* UserViewModel.swift */; };
 		4E0F847B2C2D2C780037AE25 /* MotivationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F847A2C2D2C780037AE25 /* MotivationListViewModel.swift */; };
 		4E0F847D2C2D2C880037AE25 /* MotivationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F847C2C2D2C880037AE25 /* MotivationViewModel.swift */; };
 		4E0F847F2C2D2CA60037AE25 /* AidProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F847E2C2D2CA60037AE25 /* AidProductViewModel.swift */; };
@@ -57,7 +56,6 @@
 		4E0F84B72C2D34B40037AE25 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84B62C2D34B40037AE25 /* Activity.swift */; };
 		4E0F84B92C2D34BF0037AE25 /* MilestonePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84B82C2D34BF0037AE25 /* MilestonePost.swift */; };
 		4E0F84BB2C2D34C70037AE25 /* SmokingLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84BA2C2D34C70037AE25 /* SmokingLog.swift */; };
-		4E0F84BD2C2D34CD0037AE25 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84BC2C2D34CD0037AE25 /* Theme.swift */; };
 		4E0F84BF2C2D3C220037AE25 /* DashboardHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84BE2C2D3C220037AE25 /* DashboardHeaderView.swift */; };
 		4E0F84C22C2D3C8B0037AE25 /* HealthProgressCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84C12C2D3C8B0037AE25 /* HealthProgressCardView.swift */; };
 		4E0F84C42C2D3CBB0037AE25 /* MotivationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84C32C2D3CBB0037AE25 /* MotivationCardView.swift */; };
@@ -78,6 +76,14 @@
 		4E1A80EF2C495D240052CBD2 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1A80EE2C495D240052CBD2 /* LoginViewModel.swift */; };
 		4E1A80F12C495D310052CBD2 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1A80F02C495D310052CBD2 /* SignUpViewModel.swift */; };
 		4E1A80F32C495D460052CBD2 /* UpdateUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1A80F22C495D460052CBD2 /* UpdateUserViewModel.swift */; };
+		4E33CEB42C4B96B700BE9303 /* Lottie in Frameworks */ = {isa = PBXBuildFile; productRef = 4E33CEB32C4B96B700BE9303 /* Lottie */; };
+		4E33CEB62C4B973700BE9303 /* LottieView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E33CEB52C4B973700BE9303 /* LottieView.swift */; };
+		4E33CEB92C4B9B8E00BE9303 /* Yellow crossing line.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E33CEB82C4B9B8E00BE9303 /* Yellow crossing line.json */; };
+		4E33CEBD2C4B9D8D00BE9303 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E33CEBC2C4B9D8D00BE9303 /* Constants.swift */; };
+		4E33CEBF2C4BBA9800BE9303 /* Buttercup crossing line.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E33CEBE2C4BBA9800BE9303 /* Buttercup crossing line.json */; };
+		4E33CEC32C4BBABC00BE9303 /* Seafoam crossing line.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E33CEC22C4BBABC00BE9303 /* Seafoam crossing line.json */; };
+		4E33CEC52C4BBC0300BE9303 /* Lavender crossing line.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E33CEC42C4BBC0300BE9303 /* Lavender crossing line.json */; };
+		4E33CECB2C4CA06800BE9303 /* Welcome confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E33CECA2C4CA06700BE9303 /* Welcome confetti.json */; };
 		4E6F39D32C33951A00058003 /* CheckOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D22C33951A00058003 /* CheckOnboardingView.swift */; };
 		4E6F39D52C33980900058003 /* SupportIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D42C33980900058003 /* SupportIcon.swift */; };
 		4E6F39D72C33989A00058003 /* PostText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D62C33989A00058003 /* PostText.swift */; };
@@ -97,7 +103,10 @@
 		4E82E3AB2C46663400F06DE3 /* QuitAttemptService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E3AA2C46663400F06DE3 /* QuitAttemptService.swift */; };
 		4E9AC0A62C2E844700B3C2F0 /* AidProductDetailEditView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AC0A52C2E844700B3C2F0 /* AidProductDetailEditView.swift */; };
 		4E9AC0A82C2E863500B3C2F0 /* UpdateAidProductSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E9AC0A72C2E863500B3C2F0 /* UpdateAidProductSheet.swift */; };
-		4EA13D102C4A05C80009F281 /* DashboardViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EA13D0F2C4A05C80009F281 /* DashboardViewModel.swift */; };
+		4EB3C1D02C4B3CE90066D658 /* Theme.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB3C1CF2C4B3CE90066D658 /* Theme.swift */; };
+		4EB3C1D22C4B3D260066D658 /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 4EB3C1D12C4B3D260066D658 /* Launch Screen.storyboard */; };
+		4EB3C1D52C4B3F2A0066D658 /* CustomTextFieldStyle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB3C1D32C4B3F2A0066D658 /* CustomTextFieldStyle.swift */; };
+		4EB3C1D72C4B42330066D658 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB3C1D62C4B42330066D658 /* View+.swift */; };
 		4ECADF932C2E8DEC00E8861C /* CircularGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF922C2E8DEC00E8861C /* CircularGauge.swift */; };
 		D6BEFFAC2C44C66200C6678B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F992A92C42E95B001BE18C /* LoginView.swift */; };
 		D6EEF6142C451B810097FF98 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D6EEF6132C451B810097FF98 /* Alamofire */; };
@@ -142,7 +151,6 @@
 		4E0F846D2C2D28ED0037AE25 /* OnboardingStep2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep2View.swift; sourceTree = "<group>"; };
 		4E0F846F2C2D28F40037AE25 /* OnboardingStep3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep3View.swift; sourceTree = "<group>"; };
 		4E0F84732C2D29220037AE25 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		4E0F84782C2D2BF90037AE25 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		4E0F847A2C2D2C780037AE25 /* MotivationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationListViewModel.swift; sourceTree = "<group>"; };
 		4E0F847C2C2D2C880037AE25 /* MotivationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationViewModel.swift; sourceTree = "<group>"; };
 		4E0F847E2C2D2CA60037AE25 /* AidProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AidProductViewModel.swift; sourceTree = "<group>"; };
@@ -174,7 +182,6 @@
 		4E0F84B62C2D34B40037AE25 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		4E0F84B82C2D34BF0037AE25 /* MilestonePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestonePost.swift; sourceTree = "<group>"; };
 		4E0F84BA2C2D34C70037AE25 /* SmokingLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingLog.swift; sourceTree = "<group>"; };
-		4E0F84BC2C2D34CD0037AE25 /* Theme.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
 		4E0F84BE2C2D3C220037AE25 /* DashboardHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardHeaderView.swift; sourceTree = "<group>"; };
 		4E0F84C12C2D3C8B0037AE25 /* HealthProgressCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthProgressCardView.swift; sourceTree = "<group>"; };
 		4E0F84C32C2D3CBB0037AE25 /* MotivationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationCardView.swift; sourceTree = "<group>"; };
@@ -195,6 +202,13 @@
 		4E1A80EE2C495D240052CBD2 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		4E1A80F02C495D310052CBD2 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		4E1A80F22C495D460052CBD2 /* UpdateUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserViewModel.swift; sourceTree = "<group>"; };
+		4E33CEB52C4B973700BE9303 /* LottieView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LottieView.swift; sourceTree = "<group>"; };
+		4E33CEB82C4B9B8E00BE9303 /* Yellow crossing line.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Yellow crossing line.json"; sourceTree = "<group>"; };
+		4E33CEBC2C4B9D8D00BE9303 /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		4E33CEBE2C4BBA9800BE9303 /* Buttercup crossing line.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Buttercup crossing line.json"; sourceTree = "<group>"; };
+		4E33CEC22C4BBABC00BE9303 /* Seafoam crossing line.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Seafoam crossing line.json"; sourceTree = "<group>"; };
+		4E33CEC42C4BBC0300BE9303 /* Lavender crossing line.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Lavender crossing line.json"; sourceTree = "<group>"; };
+		4E33CECA2C4CA06700BE9303 /* Welcome confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Welcome confetti.json"; sourceTree = "<group>"; };
 		4E6F39D22C33951A00058003 /* CheckOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOnboardingView.swift; sourceTree = "<group>"; };
 		4E6F39D42C33980900058003 /* SupportIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportIcon.swift; sourceTree = "<group>"; };
 		4E6F39D62C33989A00058003 /* PostText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostText.swift; sourceTree = "<group>"; };
@@ -214,7 +228,10 @@
 		4E82E3AA2C46663400F06DE3 /* QuitAttemptService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitAttemptService.swift; sourceTree = "<group>"; };
 		4E9AC0A52C2E844700B3C2F0 /* AidProductDetailEditView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AidProductDetailEditView.swift; sourceTree = "<group>"; };
 		4E9AC0A72C2E863500B3C2F0 /* UpdateAidProductSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateAidProductSheet.swift; sourceTree = "<group>"; };
-		4EA13D0F2C4A05C80009F281 /* DashboardViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardViewModel.swift; sourceTree = "<group>"; };
+		4EB3C1CF2C4B3CE90066D658 /* Theme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Theme.swift; sourceTree = "<group>"; };
+		4EB3C1D12C4B3D260066D658 /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
+		4EB3C1D32C4B3F2A0066D658 /* CustomTextFieldStyle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomTextFieldStyle.swift; sourceTree = "<group>"; };
+		4EB3C1D62C4B42330066D658 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		4ECADF922C2E8DEC00E8861C /* CircularGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGauge.swift; sourceTree = "<group>"; };
 		92F992A92C42E95B001BE18C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -225,6 +242,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D6EEF6142C451B810097FF98 /* Alamofire in Frameworks */,
+				4E33CEB42C4B96B700BE9303 /* Lottie in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -328,7 +346,7 @@
 				4E0F84B02C2D349F0037AE25 /* Milestone.swift */,
 				4E0F84B82C2D34BF0037AE25 /* MilestonePost.swift */,
 				4E0F84BA2C2D34C70037AE25 /* SmokingLog.swift */,
-				4E0F84BC2C2D34CD0037AE25 /* Theme.swift */,
+				4EB3C1CF2C4B3CE90066D658 /* Theme.swift */,
 			);
 			path = Models;
 			sourceTree = "<group>";
@@ -338,8 +356,6 @@
 			children = (
 				4E0F84672C2D10C20037AE25 /* OnboardingViewModel.swift */,
 				4E1A80F42C495D4D0052CBD2 /* User */,
-				4E0F84782C2D2BF90037AE25 /* UserViewModel.swift */,
-				4EA13D0F2C4A05C80009F281 /* DashboardViewModel.swift */,
 				4E82E3A22C46640D00F06DE3 /* SmokingHabitViewModel.swift */,
 				4E82E3A62C4665EF00F06DE3 /* QuitAttemptViewModel.swift */,
 				4E0F847C2C2D2C880037AE25 /* MotivationViewModel.swift */,
@@ -362,6 +378,7 @@
 		4E0F84552C2D0DDE0037AE25 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4EB3C1D42C4B3F2A0066D658 /* HelpersAndCustomViews */,
 				4E0F84642C2D106C0037AE25 /* Onboarding */,
 				4E0F84612C2D0EA70037AE25 /* Authentication */,
 				4E0F84752C2D29F70037AE25 /* Dashboard */,
@@ -394,8 +411,10 @@
 		4E0F84582C2D0E130037AE25 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4E33CEB72C4B979000BE9303 /* Lottie Files */,
 				4E0F842C2C2D07F90037AE25 /* Assets.xcassets */,
 				4E0F848E2C2D2DE00037AE25 /* Localization */,
+				4EB3C1D12C4B3D260066D658 /* Launch Screen.storyboard */,
 			);
 			path = Resources;
 			sourceTree = "<group>";
@@ -507,6 +526,29 @@
 			path = User;
 			sourceTree = "<group>";
 		};
+		4E33CEB72C4B979000BE9303 /* Lottie Files */ = {
+			isa = PBXGroup;
+			children = (
+				4E33CEB82C4B9B8E00BE9303 /* Yellow crossing line.json */,
+				4E33CEBE2C4BBA9800BE9303 /* Buttercup crossing line.json */,
+				4E33CEC22C4BBABC00BE9303 /* Seafoam crossing line.json */,
+				4E33CEC42C4BBC0300BE9303 /* Lavender crossing line.json */,
+				4E33CECA2C4CA06700BE9303 /* Welcome confetti.json */,
+				4E33CEBC2C4B9D8D00BE9303 /* Constants.swift */,
+			);
+			path = "Lottie Files";
+			sourceTree = "<group>";
+		};
+		4EB3C1D42C4B3F2A0066D658 /* HelpersAndCustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				4EB3C1D32C4B3F2A0066D658 /* CustomTextFieldStyle.swift */,
+				4EB3C1D62C4B42330066D658 /* View+.swift */,
+				4E33CEB52C4B973700BE9303 /* LottieView.swift */,
+			);
+			path = HelpersAndCustomViews;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -525,6 +567,7 @@
 			name = Sennight;
 			packageProductDependencies = (
 				D6EEF6132C451B810097FF98 /* Alamofire */,
+				4E33CEB32C4B96B700BE9303 /* Lottie */,
 			);
 			productName = Sennight;
 			productReference = 4E0F84252C2D07F70037AE25 /* Sennight.app */;
@@ -603,6 +646,7 @@
 			packageReferences = (
 				D6356CF22C3BDCBC000EE5D4 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				D6EA41672C44FD7F001213D1 /* XCRemoteSwiftPackageReference "Kingfisher" */,
+				4E33CEB22C4B96B700BE9303 /* XCRemoteSwiftPackageReference "lottie-ios" */,
 			);
 			productRefGroup = 4E0F84262C2D07F70037AE25 /* Products */;
 			projectDirPath = "";
@@ -620,9 +664,15 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				4E33CECB2C4CA06800BE9303 /* Welcome confetti.json in Resources */,
 				4E0F84302C2D07F90037AE25 /* Preview Assets.xcassets in Resources */,
 				4E0F842D2C2D07F90037AE25 /* Assets.xcassets in Resources */,
+				4EB3C1D22C4B3D260066D658 /* Launch Screen.storyboard in Resources */,
 				4E0F84E52C2D3FA60037AE25 /* Localizable.xcstrings in Resources */,
+				4E33CEC52C4BBC0300BE9303 /* Lavender crossing line.json in Resources */,
+				4E33CEC32C4BBABC00BE9303 /* Seafoam crossing line.json in Resources */,
+				4E33CEB92C4B9B8E00BE9303 /* Yellow crossing line.json in Resources */,
+				4E33CEBF2C4BBA9800BE9303 /* Buttercup crossing line.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -658,6 +708,7 @@
 				4E0F84A22C2D30AE0037AE25 /* MilestonePostService.swift in Sources */,
 				4E0F84D82C2D3DFC0037AE25 /* SmokingLogChartCardView.swift in Sources */,
 				4E82E3A32C46640D00F06DE3 /* SmokingHabitViewModel.swift in Sources */,
+				4E33CEBD2C4B9D8D00BE9303 /* Constants.swift in Sources */,
 				4E0F84CA2C2D3D3D0037AE25 /* AidProductRowView.swift in Sources */,
 				4E82E3A12C4663D000F06DE3 /* SmokingHabit.swift in Sources */,
 				4E6F39D52C33980900058003 /* SupportIcon.swift in Sources */,
@@ -665,7 +716,6 @@
 				4E6F39DD2C33B79200058003 /* MyMilestonesView.swift in Sources */,
 				4E82E3A92C46661F00F06DE3 /* SmokingHabitService.swift in Sources */,
 				4E9AC0A62C2E844700B3C2F0 /* AidProductDetailEditView.swift in Sources */,
-				4E0F84BD2C2D34CD0037AE25 /* Theme.swift in Sources */,
 				4E0F849A2C2D30460037AE25 /* MilestoneService.swift in Sources */,
 				4E1A80EF2C495D240052CBD2 /* LoginViewModel.swift in Sources */,
 				4E6F39D32C33951A00058003 /* CheckOnboardingView.swift in Sources */,
@@ -677,11 +727,11 @@
 				4E82E39F2C4661E200F06DE3 /* OnboardingStep9View.swift in Sources */,
 				4E0F84C22C2D3C8B0037AE25 /* HealthProgressCardView.swift in Sources */,
 				4E0F84DB2C2D3E6A0037AE25 /* MilestonePostCardView.swift in Sources */,
-				4EA13D102C4A05C80009F281 /* DashboardViewModel.swift in Sources */,
 				4E0F84812C2D2CB20037AE25 /* AidProductListViewModel.swift in Sources */,
 				4E0F84C42C2D3CBB0037AE25 /* MotivationCardView.swift in Sources */,
 				4E82E39D2C4661D400F06DE3 /* OnboardingStep8View.swift in Sources */,
 				4E82E3A52C4665CB00F06DE3 /* QuitAttempt.swift in Sources */,
+				4EB3C1D52C4B3F2A0066D658 /* CustomTextFieldStyle.swift in Sources */,
 				4E0F848B2C2D2CE60037AE25 /* SmokingLogViewModel.swift in Sources */,
 				4E0F84C62C2D3CC70037AE25 /* MoneySavedCardView.swift in Sources */,
 				4E0F84832C2D2CBD0037AE25 /* SymptomViewModel.swift in Sources */,
@@ -699,6 +749,7 @@
 				4E0F84D22C2D3D790037AE25 /* SymptomRowView.swift in Sources */,
 				4E0F84872C2D2CD10037AE25 /* ActivityViewModel.swift in Sources */,
 				4E0F84682C2D10C20037AE25 /* OnboardingViewModel.swift in Sources */,
+				4EB3C1D02C4B3CE90066D658 /* Theme.swift in Sources */,
 				4E0F84B12C2D349F0037AE25 /* Milestone.swift in Sources */,
 				4E1A80F12C495D310052CBD2 /* SignUpViewModel.swift in Sources */,
 				4E0F84B52C2D34AD0037AE25 /* Symptom.swift in Sources */,
@@ -707,6 +758,7 @@
 				4E0F84AD2C2D34910037AE25 /* User.swift in Sources */,
 				4E0F849E2C2D30720037AE25 /* MilestoneListViewModel.swift in Sources */,
 				4E0F84DD2C2D3E940037AE25 /* NewAidProductSheet.swift in Sources */,
+				4EB3C1D72C4B42330066D658 /* View+.swift in Sources */,
 				4E0BF7DF2C2E4C2B0091ADB2 /* Config.swift in Sources */,
 				4E0F846C2C2D28E60037AE25 /* OnboardingStep1View.swift in Sources */,
 				4E6F39DB2C339ABF00058003 /* MedalIcon.swift in Sources */,
@@ -725,8 +777,8 @@
 				4E0F845C2C2D0E710037AE25 /* NetworkService.swift in Sources */,
 				4E0F84B92C2D34BF0037AE25 /* MilestonePost.swift in Sources */,
 				4E0F84A02C2D30920037AE25 /* MilestonePostListViewModel.swift in Sources */,
-				4E0F84792C2D2BF90037AE25 /* UserViewModel.swift in Sources */,
 				4E0F847D2C2D2C880037AE25 /* MotivationViewModel.swift in Sources */,
+				4E33CEB62C4B973700BE9303 /* LottieView.swift in Sources */,
 				4E0F84852C2D2CC70037AE25 /* SymptomListViewModel.swift in Sources */,
 				4E0F84A42C2D30C90037AE25 /* SmokingLogService.swift in Sources */,
 				4E0F84B32C2D34A60037AE25 /* AidProduct.swift in Sources */,
@@ -903,6 +955,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -932,6 +985,7 @@
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1065,6 +1119,14 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		4E33CEB22C4B96B700BE9303 /* XCRemoteSwiftPackageReference "lottie-ios" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/airbnb/lottie-ios";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 4.5.0;
+			};
+		};
 		D6356CF22C3BDCBC000EE5D4 /* XCRemoteSwiftPackageReference "Alamofire" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/Alamofire/Alamofire.git";
@@ -1084,6 +1146,11 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		4E33CEB32C4B96B700BE9303 /* Lottie */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 4E33CEB22C4B96B700BE9303 /* XCRemoteSwiftPackageReference "lottie-ios" */;
+			productName = Lottie;
+		};
 		D6EEF6132C451B810097FF98 /* Alamofire */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = D6356CF22C3BDCBC000EE5D4 /* XCRemoteSwiftPackageReference "Alamofire" */;
