@@ -28,9 +28,15 @@ struct CircularGauge: View {
                 .rotationEffect(.degrees(-90))
                 .frame(width: size, height: size)
             
-            Text("\(Int((progress / maxProgress) * 100))%")
-                .font(.largeTitle)
-                .bold()
+            if progress == 1 {
+                Text("100%")
+                    .font(.largeTitle)
+                    .bold()
+            } else {
+                Text(String(format: "%.1f%%", progress * 100))
+                    .font(.largeTitle)
+                    .bold()
+            }
         }
     }
 }

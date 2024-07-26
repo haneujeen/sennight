@@ -515,7 +515,6 @@
 			isa = PBXGroup;
 			children = (
 				4E0F84BE2C2D3C220037AE25 /* ElapsedTimeTextHeaderView.swift */,
-				4ECADF922C2E8DEC00E8861C /* CircularGauge.swift */,
 				4E19A13A2C53380900CB3553 /* QuitAttemptCardView.swift */,
 				4EE4659C2C53AC6A0039A729 /* NewQuitAttemptSheet.swift */,
 				4E0F84C12C2D3C8B0037AE25 /* HealthProgressCardView.swift */,
@@ -567,6 +566,7 @@
 		4EB3C1D42C4B3F2A0066D658 /* HelpersAndCustomViews */ = {
 			isa = PBXGroup;
 			children = (
+				4ECADF922C2E8DEC00E8861C /* CircularGauge.swift */,
 				4EB3C1D32C4B3F2A0066D658 /* CustomTextFieldStyle.swift */,
 				4EB3C1D62C4B42330066D658 /* View+.swift */,
 				4E33CEB52C4B973700BE9303 /* LottieView.swift */,
