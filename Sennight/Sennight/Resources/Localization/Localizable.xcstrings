@@ -22,9 +22,6 @@
     "%lld" : {
 
     },
-    "%lld%%" : {
-
-    },
     "3 Month Fresh" : {
 
     },
@@ -50,9 +47,6 @@
 
     },
     "Add and manage your smoking habits and cravings." : {
-
-    },
-    "Add smoking" : {
 
     },
     "Already have an account?" : {
@@ -136,7 +130,7 @@
     "have at least 1 letter (A-Z, a-z)" : {
 
     },
-    "Health progress card" : {
+    "Hello, World!" : {
 
     },
     "Hour" : {
@@ -148,7 +142,7 @@
     "If you are creating a new account," : {
 
     },
-    "It's tough. So are you. Start quitting today!" : {
+    "It's tough. So are you." : {
 
     },
     "Keep track of your emotions and withdrawal symptoms." : {
@@ -258,6 +252,9 @@
 
     },
     "Smoking log chart card" : {
+
+    },
+    "Start quitting today!" : {
 
     },
     "Start Your Quitting Log" : {

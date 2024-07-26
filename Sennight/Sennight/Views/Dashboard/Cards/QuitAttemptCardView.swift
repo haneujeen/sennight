@@ -13,10 +13,11 @@ struct QuitAttemptCardView: View {
     
     var body: some View {
         ZStack {
-            HealthProgressCardView()
-                .blur(radius: quitAttemptViewModel.isActiveQuitAttempt ? 0 : 10)
-            
-            if !quitAttemptViewModel.isActiveQuitAttempt {
+            if quitAttemptViewModel.isActiveQuitAttempt {
+                HealthProgressCardView()
+            } else {
+                CircularGauge(progress: 0)
+                    .blur(radius: quitAttemptViewModel.isActiveQuitAttempt ? 0 : 10)
                 VStack {
                     Spacer()
                     Button(action: {
