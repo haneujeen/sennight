@@ -3,6 +3,7 @@
 //  Sennight
 //
 //  Created by 한유진 on 6/27/24.
+//  Edited by 한유진 on 2024-07-26
 //
 
 import SwiftUI
@@ -28,18 +29,18 @@ struct HealthProgressCardView: View {
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
                 .onAppear {
-                    // Cache the initial tab index based on elapsed time
+                    /// Cache the initial tab index based on elapsed time
                     let elapsedTime = Date().timeIntervalSince(startDate)
                     if let snappedBenefit = HealthBenefit.allCases.firstIndex(where: { $0.timeInterval > elapsedTime }) {
                         UserDefaults.standard.set(snappedBenefit, forKey: cacheKey)
                     }
                     
-                    // Get the cached index
+                    /// Get the cached index
                     if let cachedSnap = UserDefaults.standard.value(forKey: cacheKey) as? Int {
                         initialSnap = cachedSnap
                     }
                     
-                    // Update tab index
+                    /// Update tab index
                     DispatchQueue.main.asyncAfter(deadline: .now() + 0.1) {
                         selection = initialSnap
                     }
