@@ -13,7 +13,7 @@ struct CircularGauge: View {
     var lineWidth: CGFloat = 20
     var gaugeColor: Color = .blue
     var backgroundColor: Color = .gray.opacity(0.2)
-    var size: CGFloat = 200
+    var size: CGFloat = 150
     
     var body: some View {
         ZStack {

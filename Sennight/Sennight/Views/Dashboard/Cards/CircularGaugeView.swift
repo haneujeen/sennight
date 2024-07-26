@@ -12,6 +12,7 @@ struct CircularGaugeView: View {
     var healthBenefit: HealthBenefit
     @State private var range: ClosedRange<Date>?
     @State private var progress: Double = 0.0
+    @State private var showDetail = false
     
     private var startDate: Date {
         dateFormatter.date(from: quitAttemptViewModel.activeQuitAttempt?.startDate ?? "") ?? Date()
@@ -20,8 +21,34 @@ struct CircularGaugeView: View {
     var body: some View {
         VStack {
             CircularGauge(progress: progress)
-            Text(healthBenefit.rawValue)
-            Text(healthBenefit.description)
+            Button(action: {
+                showDetail = true
+            }, label: {
+                Text(healthBenefit.rawValue)
+            })
+            .sheet(isPresented: $showDetail) {
+                
+                VStack(alignment: .leading, spacing: 16) {
+                    Text(healthBenefit.rawValue)
+                        .font(.headline)
+                    
+                    Text(healthBenefit.description)
+                        .lineLimit(5)
+                    
+                    Text("Note: The health benefits listed are general estimates and may vary from person to person. Please consult with a healthcare professional for personalized guidance.")
+                        .font(.footnote)
+                        .foregroundColor(.gray)
+                    
+                    Button("Dismiss") {
+                        showDetail = false
+                    }
+                    .padding()
+                }
+                .padding()
+                .background(Color.white)
+                .presentationDetents([.medium, .large])
+                .presentationDragIndicator(.hidden)
+            }
         }
         .onAppear(perform: {
             range = startDate...startDate.addingTimeInterval(healthBenefit.timeInterval)
