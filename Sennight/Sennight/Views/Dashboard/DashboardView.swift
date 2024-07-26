@@ -17,6 +17,8 @@ struct DashboardView: View {
                     .frame(height: 60)
                     .environmentObject(quitAttemptViewModel)
                 QuitAttemptCardView()
+                    .frame(height: 300)
+                    .environmentObject(quitAttemptViewModel)
                 MotivationCardView()
                     .frame(height: 40)
                 MoneySavedCardView()
