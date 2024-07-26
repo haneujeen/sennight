@@ -59,7 +59,7 @@
 		4E0F84B72C2D34B40037AE25 /* Activity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84B62C2D34B40037AE25 /* Activity.swift */; };
 		4E0F84B92C2D34BF0037AE25 /* MilestonePost.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84B82C2D34BF0037AE25 /* MilestonePost.swift */; };
 		4E0F84BB2C2D34C70037AE25 /* SmokingLog.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84BA2C2D34C70037AE25 /* SmokingLog.swift */; };
-		4E0F84BF2C2D3C220037AE25 /* DashboardHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84BE2C2D3C220037AE25 /* DashboardHeaderView.swift */; };
+		4E0F84BF2C2D3C220037AE25 /* ElapsedTimeTextHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84BE2C2D3C220037AE25 /* ElapsedTimeTextHeaderView.swift */; };
 		4E0F84C22C2D3C8B0037AE25 /* HealthProgressCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84C12C2D3C8B0037AE25 /* HealthProgressCardView.swift */; };
 		4E0F84C42C2D3CBB0037AE25 /* MotivationCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84C32C2D3CBB0037AE25 /* MotivationCardView.swift */; };
 		4E0F84C62C2D3CC70037AE25 /* MoneySavedCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84C52C2D3CC70037AE25 /* MoneySavedCardView.swift */; };
@@ -193,7 +193,7 @@
 		4E0F84B62C2D34B40037AE25 /* Activity.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Activity.swift; sourceTree = "<group>"; };
 		4E0F84B82C2D34BF0037AE25 /* MilestonePost.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestonePost.swift; sourceTree = "<group>"; };
 		4E0F84BA2C2D34C70037AE25 /* SmokingLog.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingLog.swift; sourceTree = "<group>"; };
-		4E0F84BE2C2D3C220037AE25 /* DashboardHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardHeaderView.swift; sourceTree = "<group>"; };
+		4E0F84BE2C2D3C220037AE25 /* ElapsedTimeTextHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ElapsedTimeTextHeaderView.swift; sourceTree = "<group>"; };
 		4E0F84C12C2D3C8B0037AE25 /* HealthProgressCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthProgressCardView.swift; sourceTree = "<group>"; };
 		4E0F84C32C2D3CBB0037AE25 /* MotivationCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationCardView.swift; sourceTree = "<group>"; };
 		4E0F84C52C2D3CC70037AE25 /* MoneySavedCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoneySavedCardView.swift; sourceTree = "<group>"; };
@@ -467,7 +467,6 @@
 			isa = PBXGroup;
 			children = (
 				4E0F84C02C2D3C590037AE25 /* Cards */,
-				4E0F84BE2C2D3C220037AE25 /* DashboardHeaderView.swift */,
 				4E0F84A52C2D33DA0037AE25 /* DashboardView.swift */,
 			);
 			path = Dashboard;
@@ -513,6 +512,7 @@
 		4E0F84C02C2D3C590037AE25 /* Cards */ = {
 			isa = PBXGroup;
 			children = (
+				4E0F84BE2C2D3C220037AE25 /* ElapsedTimeTextHeaderView.swift */,
 				4ECADF922C2E8DEC00E8861C /* CircularGauge.swift */,
 				4E19A13A2C53380900CB3553 /* QuitAttemptCardView.swift */,
 				4E0F84C12C2D3C8B0037AE25 /* HealthProgressCardView.swift */,
@@ -768,7 +768,7 @@
 				D6BEFFAC2C44C66200C6678B /* LoginView.swift in Sources */,
 				4E0F846A2C2D28D90037AE25 /* OnboardingView.swift in Sources */,
 				4E0F84982C2D302D0037AE25 /* ActivityService.swift in Sources */,
-				4E0F84BF2C2D3C220037AE25 /* DashboardHeaderView.swift in Sources */,
+				4E0F84BF2C2D3C220037AE25 /* ElapsedTimeTextHeaderView.swift in Sources */,
 				4E0F84DF2C2D3EB80037AE25 /* NewSymptomSheet.swift in Sources */,
 				4E0F849C2C2D30680037AE25 /* MilestoneViewModel.swift in Sources */,
 				4E82E3992C4661C100F06DE3 /* OnboardingStep6View.swift in Sources */,

@@ -48,14 +48,14 @@ struct QuitAttemptRequest: Codable {
 }
 
 struct QuitAttempt: Codable {
-    let ID: Int
+    let id: Int
     let userID: Int
     let startDate: String
-    let endDate: String
+    let endDate: String?
     let isActive: Bool
     
     enum CodingKeys: String, CodingKey {
-        case ID
+        case id
         case userID = "user_id"
         case startDate = "start_date"
         case endDate = "end_date"

@@ -12,8 +12,9 @@ import SwiftUI
 
 class QuitAttemptViewModel: ObservableObject{
     @Published var quitAttempts: [QuitAttempt] = []
-    @Published var latestQuitAttempt: QuitAttempt?
+    @Published var activeQuitAttempt: QuitAttempt?
     @Published var milestones: [Milestone] = []
+    @Published var isActiveQuitAttempt = false
     
     private var cancellables = Set<AnyCancellable>()
     
@@ -22,22 +23,7 @@ class QuitAttemptViewModel: ObservableObject{
         
     }
     
-    /**
-     func fetchSales() {
-         SaleService.shared.fetchSales()
-             .sink { completion in
-                 switch completion {
-                 case .finished:
-                     break
-                 case .failure(let error):
-                     print(error.localizedDescription)
-                 }
-             } receiveValue: { documents in
-                 self.sales = documents
-             }
-             .store(in: &cancellables) // Retain counter += 1
-
-     }
+    /*
      
      */
     /// Retrieves the most recent quitting smoking attempt for the user and updates the `latestQuitAttempt` property.
@@ -54,7 +40,8 @@ class QuitAttemptViewModel: ObservableObject{
                     print(error.localizedDescription)
                 }
             } receiveValue: { quitAttempt in
-                self.latestQuitAttempt = quitAttempt
+                self.activeQuitAttempt = quitAttempt
+                self.isActiveQuitAttempt = true
             }
             .store(in: &cancellables)
     }

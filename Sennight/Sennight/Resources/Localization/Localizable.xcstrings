@@ -19,9 +19,6 @@
     ":" : {
 
     },
-    "!" : {
-
-    },
     "%lld" : {
 
     },
@@ -94,9 +91,6 @@
     "Dashboard" : {
 
     },
-    "Dashboard header" : {
-
-    },
     "Data Usage" : {
 
     },
@@ -149,6 +143,9 @@
 
     },
     "If you are creating a new account," : {
+
+    },
+    "It's tough. So are you. Start quitting today!" : {
 
     },
     "Keep track of your emotions and withdrawal symptoms." : {
@@ -323,7 +320,7 @@
     "Welcome back" : {
 
     },
-    "Welcome to Sennight" : {
+    "Welcome to Sennight!" : {
 
     },
     "What time do you usually have your first cigarette of the day?" : {

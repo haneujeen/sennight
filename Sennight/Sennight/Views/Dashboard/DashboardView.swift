@@ -8,14 +8,14 @@
 import SwiftUI
 
 struct DashboardView: View {
+    @StateObject private var quitAttemptViewModel = QuitAttemptViewModel()
+    
     var body: some View {
         NavigationStack {
             List {
-                DashboardHeaderView()
+                ElapsedTimeTextHeaderView()
                     .frame(height: 60)
-                HealthProgressCardView()
-                    .frame(height: 300)
-                QuitAttemptView()
+                    .environmentObject(quitAttemptViewModel)
                 QuitAttemptCardView()
                 MotivationCardView()
                     .frame(height: 40)
@@ -25,8 +25,10 @@ struct DashboardView: View {
                 SymptomsCardView()
                 ActivitiesCardView()
             }
+            .onAppear {
+                quitAttemptViewModel.getActiveQuitAttempt()
+            }
         }
-        
     }
 }
 
