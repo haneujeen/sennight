@@ -76,6 +76,7 @@
 		4E0F84E12C2D3ECC0037AE25 /* NewActivitySheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84E02C2D3ECC0037AE25 /* NewActivitySheet.swift */; };
 		4E0F84E32C2D3EE40037AE25 /* NewSmokingLogSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84E22C2D3EE40037AE25 /* NewSmokingLogSheet.swift */; };
 		4E0F84E52C2D3FA60037AE25 /* Localizable.xcstrings in Resources */ = {isa = PBXBuildFile; fileRef = 4E0F84E42C2D3FA60037AE25 /* Localizable.xcstrings */; };
+		4E19A13B2C53380900CB3553 /* QuitAttemptCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E19A13A2C53380900CB3553 /* QuitAttemptCardView.swift */; };
 		4E1A80EF2C495D240052CBD2 /* LoginViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1A80EE2C495D240052CBD2 /* LoginViewModel.swift */; };
 		4E1A80F12C495D310052CBD2 /* SignUpViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1A80F02C495D310052CBD2 /* SignUpViewModel.swift */; };
 		4E1A80F32C495D460052CBD2 /* UpdateUserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E1A80F22C495D460052CBD2 /* UpdateUserViewModel.swift */; };
@@ -209,6 +210,7 @@
 		4E0F84E02C2D3ECC0037AE25 /* NewActivitySheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewActivitySheet.swift; sourceTree = "<group>"; };
 		4E0F84E22C2D3EE40037AE25 /* NewSmokingLogSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewSmokingLogSheet.swift; sourceTree = "<group>"; };
 		4E0F84E42C2D3FA60037AE25 /* Localizable.xcstrings */ = {isa = PBXFileReference; lastKnownFileType = text.json.xcstrings; path = Localizable.xcstrings; sourceTree = "<group>"; };
+		4E19A13A2C53380900CB3553 /* QuitAttemptCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitAttemptCardView.swift; sourceTree = "<group>"; };
 		4E1A80EE2C495D240052CBD2 /* LoginViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewModel.swift; sourceTree = "<group>"; };
 		4E1A80F02C495D310052CBD2 /* SignUpViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewModel.swift; sourceTree = "<group>"; };
 		4E1A80F22C495D460052CBD2 /* UpdateUserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpdateUserViewModel.swift; sourceTree = "<group>"; };
@@ -512,6 +514,7 @@
 			isa = PBXGroup;
 			children = (
 				4ECADF922C2E8DEC00E8861C /* CircularGauge.swift */,
+				4E19A13A2C53380900CB3553 /* QuitAttemptCardView.swift */,
 				4E0F84C12C2D3C8B0037AE25 /* HealthProgressCardView.swift */,
 				4E0F84C32C2D3CBB0037AE25 /* MotivationCardView.swift */,
 				4E0F84C52C2D3CC70037AE25 /* MoneySavedCardView.swift */,
@@ -800,6 +803,7 @@
 				4E0F848D2C2D2D050037AE25 /* SmokingLogChartViewModel.swift in Sources */,
 				4E0F84742C2D29220037AE25 /* SignUpView.swift in Sources */,
 				4E0F84B72C2D34B40037AE25 /* Activity.swift in Sources */,
+				4E19A13B2C53380900CB3553 /* QuitAttemptCardView.swift in Sources */,
 				4E0F845C2C2D0E710037AE25 /* NetworkService.swift in Sources */,
 				4E0F84B92C2D34BF0037AE25 /* MilestonePost.swift in Sources */,
 				4E0F84A02C2D30920037AE25 /* MilestonePostListViewModel.swift in Sources */,
