@@ -9,11 +9,16 @@
 import SwiftUI
 
 struct AidProductRowView: View {
+    @EnvironmentObject var login: LoginViewModel
+    @StateObject var aidProductViewModel = AidProductViewModel()
     var body: some View {
-        Text("Factor row")
-            .frame(maxWidth: .infinity)
-            .background(Color.white)
-            .cornerRadius(10)
+        List(aidProductViewModel.data) { data in
+            Text("금연보조제 아이디: \(data.aidProductID)")
+                .frame(maxWidth: .infinity)
+                .background(Color.white)
+                .cornerRadius(10)
+        }
+        
     }
 }
 
