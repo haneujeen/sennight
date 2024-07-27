@@ -1,6 +1,9 @@
 {
   "sourceLanguage" : "en",
   "strings" : {
+    "" : {
+
+    },
     " and " : {
 
     },
@@ -13,10 +16,10 @@
     " will apply." : {
 
     },
-    "!" : {
+    ":" : {
 
     },
-    "%lld%%" : {
+    "%lld" : {
 
     },
     "3 Month Fresh" : {
@@ -26,6 +29,9 @@
 
     },
     "30 Day Hero" : {
+
+    },
+    "100%" : {
 
     },
     "About App" : {
@@ -40,10 +46,7 @@
     "Activity row" : {
 
     },
-    "Add smoking" : {
-
-    },
-    "Add your smoking habits and cravings." : {
+    "Add and manage your smoking habits and cravings." : {
 
     },
     "Already have an account?" : {
@@ -53,6 +56,9 @@
 
     },
     "App Version" : {
+
+    },
+    "Are you currently a smoker?" : {
 
     },
     "be 8-32 characters long" : {
@@ -82,9 +88,6 @@
     "Dashboard" : {
 
     },
-    "Dashboard header" : {
-
-    },
     "Data Usage" : {
 
     },
@@ -98,6 +101,9 @@
 
     },
     "Email address" : {
+
+    },
+    "Enter your motivation" : {
 
     },
     "Error" : {
@@ -124,13 +130,19 @@
     "have at least 1 letter (A-Z, a-z)" : {
 
     },
-    "Health progress card" : {
-
-    },
     "Hello, World!" : {
 
     },
+    "Hour" : {
+
+    },
+    "How many years have you been smoking?" : {
+
+    },
     "If you are creating a new account," : {
+
+    },
+    "It's tough. So are you." : {
 
     },
     "Keep track of your emotions and withdrawal symptoms." : {
@@ -140,6 +152,15 @@
 
     },
     "Legal" : {
+
+    },
+    "Let us know the date you quit smoking." : {
+
+    },
+    "Let us know the number of cigarettes you smoke daily." : {
+
+    },
+    "Let us know the price of a pack of cigarettes you usually buy." : {
 
     },
     "Licenses" : {
@@ -152,6 +173,9 @@
 
     },
     "Milestones" : {
+
+    },
+    "Minute" : {
 
     },
     "Money saved card" : {
@@ -181,7 +205,7 @@
     "Next" : {
 
     },
-    "Number of Cigarettes per Day" : {
+    "Note: The health benefits listed are general estimates and may vary from person to person. Please consult with a healthcare professional for personalized guidance." : {
 
     },
     "OK" : {
@@ -191,9 +215,6 @@
 
     },
     "Please enter your email, name, and password." : {
-
-    },
-    "Price of a cigarette or a pack of cigarettes" : {
 
     },
     "Privacy and Security" : {
@@ -208,8 +229,24 @@
     "Profile" : {
 
     },
-    "Quit Date" : {
+    "Q." : {
 
+    },
+    "Select Date" : {
+
+    },
+    "Selected Date: %@" : {
+
+    },
+    "Selected Time: %@:%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Selected Time: %1$@:%2$@"
+          }
+        }
+      }
     },
     "Settings" : {
 
@@ -220,13 +257,31 @@
     "Smoking log chart card" : {
 
     },
+    "Start quitting today!" : {
+
+    },
     "Start Your Quitting Log" : {
 
     },
-    "Step 2: Create Quit Log" : {
+    "Step 1: daily cigarettes" : {
 
     },
-    "Step 3: Motivation" : {
+    "Step 2: cigarettes" : {
+
+    },
+    "Step 3: firstCigarette" : {
+
+    },
+    "Step 4: smoking years" : {
+
+    },
+    "Step 5: Smoking status" : {
+
+    },
+    "Step 6: Quit attempt" : {
+
+    },
+    "Step 7: Motivation" : {
 
     },
     "Subscription/Billing Information" : {
@@ -242,6 +297,9 @@
 
     },
     "Symptoms" : {
+
+    },
+    "Tell us what motivated you to quit smoking?" : {
 
     },
     "Terms & Conditions" : {
@@ -268,10 +326,13 @@
     "Welcome to Sennight!" : {
 
     },
-    "Why do you want to stop smoking?" : {
+    "What time do you usually have your first cigarette of the day?" : {
 
     },
     "Your password must:" : {
+
+    },
+    "입력해주세요" : {
 
     }
   },

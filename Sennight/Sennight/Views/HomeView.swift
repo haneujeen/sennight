@@ -14,7 +14,6 @@ struct HomeView: View {
                 .tabItem {
                     Label("Dashboard", systemImage: "tray.and.arrow.down.fill")
                 }
-                .badge(2)
             
             MilestonePostsView()
                 .tabItem {
@@ -25,7 +24,6 @@ struct HomeView: View {
                 .tabItem {
                     Label("Settings", systemImage: "person.crop.circle.fill")
                 }
-                .badge("!")
         }
     }
 }

@@ -13,25 +13,27 @@ struct OnboardingView: View {
     
     var body: some View {
         ZStack {
-            LottieView(name: Constants.buttercupCrossingLine, loopMode: .repeat(4), animationSpeed: 1, contentMode: .bottom)
+            LottieView(name: Constants.seafoamCrossingLine, loopMode: .autoReverse, animationSpeed: 0.03, contentMode: .left)
+                .scaleEffect(10)
+                .rotationEffect(.degrees(100))
+            
             VStack {
                 if currentStep == 1 {
-                    OnboardingStep1View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
-                        .transition(.blurReplace)
+                    OnboardingStep1View(currentStep: $currentStep)
                 } else if currentStep == 2 {
                     OnboardingStep2View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
                 } else if currentStep == 3 {
                     OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
                 } else if currentStep == 4 {
-                    OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                    OnboardingStep4View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
                 } else if currentStep == 5 {
-                    OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                    OnboardingStep5View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
                 } else if currentStep == 6 {
-                    OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                    OnboardingStep6View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
                 } else if currentStep == 7 {
-                    OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                    OnboardingStep7View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
                 } else if currentStep == 8 {
-                    OnboardingStep3View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
+                    OnboardingStep8View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
                 } else if currentStep == 9 {
                     OnboardingStep9View(currentStep: $currentStep, isOnboardingComplete: $isOnboardingComplete)
                 }
@@ -40,7 +42,7 @@ struct OnboardingView: View {
                 HStack {
                     ForEach(1...9, id: \.self) { index in
                         Circle()
-                            .fill(index == currentStep ? Theme.indigo.mainColor : .lightGray)
+                            .fill(index == currentStep ? Theme.sky.mainColor : Theme.lightGray.mainColor)
                             .frame(width: 10, height: 10)
                     }
                 }
