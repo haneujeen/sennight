@@ -13,7 +13,7 @@ struct CustomTextFieldStyle: TextFieldStyle {
             .padding(15)
             .background(
                 RoundedRectangle(cornerRadius: 20, style: .continuous)
-                    .fill(Color.white) // Fill the rectangle with the background color
+                    .fill(Color.white)
             )
     }
 }
