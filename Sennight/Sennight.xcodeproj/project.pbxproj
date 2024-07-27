@@ -27,7 +27,6 @@
 		4E0F846E2C2D28ED0037AE25 /* OnboardingStep2View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F846D2C2D28ED0037AE25 /* OnboardingStep2View.swift */; };
 		4E0F84702C2D28F50037AE25 /* OnboardingStep3View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F846F2C2D28F40037AE25 /* OnboardingStep3View.swift */; };
 		4E0F84742C2D29220037AE25 /* SignUpView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84732C2D29220037AE25 /* SignUpView.swift */; };
-		4E0F84792C2D2BF90037AE25 /* UserViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84782C2D2BF90037AE25 /* UserViewModel.swift */; };
 		4E0F847B2C2D2C780037AE25 /* MotivationListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F847A2C2D2C780037AE25 /* MotivationListViewModel.swift */; };
 		4E0F847D2C2D2C880037AE25 /* MotivationViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F847C2C2D2C880037AE25 /* MotivationViewModel.swift */; };
 		4E0F847F2C2D2CA60037AE25 /* AidProductViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F847E2C2D2CA60037AE25 /* AidProductViewModel.swift */; };
@@ -39,7 +38,7 @@
 		4E0F848B2C2D2CE60037AE25 /* SmokingLogViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F848A2C2D2CE60037AE25 /* SmokingLogViewModel.swift */; };
 		4E0F848D2C2D2D050037AE25 /* SmokingLogChartViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F848C2C2D2D050037AE25 /* SmokingLogChartViewModel.swift */; };
 		4E0F84922C2D30120037AE25 /* MotivationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84912C2D30120037AE25 /* MotivationService.swift */; };
-		4E0F84942C2D301B0037AE25 /* FactorService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84932C2D301B0037AE25 /* FactorService.swift */; };
+		4E0F84942C2D301B0037AE25 /* AidProductService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84932C2D301B0037AE25 /* AidProductService.swift */; };
 		4E0F84962C2D30260037AE25 /* SymptomService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84952C2D30260037AE25 /* SymptomService.swift */; };
 		4E0F84982C2D302D0037AE25 /* ActivityService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84972C2D302D0037AE25 /* ActivityService.swift */; };
 		4E0F849A2C2D30460037AE25 /* MilestoneService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84992C2D30460037AE25 /* MilestoneService.swift */; };
@@ -169,7 +168,6 @@
 		4E0F846D2C2D28ED0037AE25 /* OnboardingStep2View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep2View.swift; sourceTree = "<group>"; };
 		4E0F846F2C2D28F40037AE25 /* OnboardingStep3View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep3View.swift; sourceTree = "<group>"; };
 		4E0F84732C2D29220037AE25 /* SignUpView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpView.swift; sourceTree = "<group>"; };
-		4E0F84782C2D2BF90037AE25 /* UserViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserViewModel.swift; sourceTree = "<group>"; };
 		4E0F847A2C2D2C780037AE25 /* MotivationListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationListViewModel.swift; sourceTree = "<group>"; };
 		4E0F847C2C2D2C880037AE25 /* MotivationViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationViewModel.swift; sourceTree = "<group>"; };
 		4E0F847E2C2D2CA60037AE25 /* AidProductViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AidProductViewModel.swift; sourceTree = "<group>"; };
@@ -181,7 +179,7 @@
 		4E0F848A2C2D2CE60037AE25 /* SmokingLogViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingLogViewModel.swift; sourceTree = "<group>"; };
 		4E0F848C2C2D2D050037AE25 /* SmokingLogChartViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingLogChartViewModel.swift; sourceTree = "<group>"; };
 		4E0F84912C2D30120037AE25 /* MotivationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MotivationService.swift; sourceTree = "<group>"; };
-		4E0F84932C2D301B0037AE25 /* FactorService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FactorService.swift; sourceTree = "<group>"; };
+		4E0F84932C2D301B0037AE25 /* AidProductService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AidProductService.swift; sourceTree = "<group>"; };
 		4E0F84952C2D30260037AE25 /* SymptomService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SymptomService.swift; sourceTree = "<group>"; };
 		4E0F84972C2D302D0037AE25 /* ActivityService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ActivityService.swift; sourceTree = "<group>"; };
 		4E0F84992C2D30460037AE25 /* MilestoneService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneService.swift; sourceTree = "<group>"; };
@@ -395,7 +393,6 @@
 			children = (
 				4E0F84672C2D10C20037AE25 /* OnboardingViewModel.swift */,
 				4E1A80F42C495D4D0052CBD2 /* User */,
-				4E0F84782C2D2BF90037AE25 /* UserViewModel.swift */,
 				4E82E3A22C46640D00F06DE3 /* SmokingHabitViewModel.swift */,
 				4E82E3A62C4665EF00F06DE3 /* QuitAttemptViewModel.swift */,
 				4E0F847C2C2D2C880037AE25 /* MotivationViewModel.swift */,
@@ -438,7 +435,7 @@
 				4E82E3A82C46661F00F06DE3 /* SmokingHabitService.swift */,
 				4E82E3AA2C46663400F06DE3 /* QuitAttemptService.swift */,
 				4E0F84912C2D30120037AE25 /* MotivationService.swift */,
-				4E0F84932C2D301B0037AE25 /* FactorService.swift */,
+				4E0F84932C2D301B0037AE25 /* AidProductService.swift */,
 				4E0F84952C2D30260037AE25 /* SymptomService.swift */,
 				4E0F84972C2D302D0037AE25 /* ActivityService.swift */,
 				4E0F84992C2D30460037AE25 /* MilestoneService.swift */,
@@ -756,7 +753,7 @@
 				4E82E3972C4661B600F06DE3 /* OnboardingStep5View.swift in Sources */,
 				4ECADF932C2E8DEC00E8861C /* CircularGauge.swift in Sources */,
 				4E0F84D42C2D3D850037AE25 /* ActivitiesCardView.swift in Sources */,
-				4E0F84942C2D301B0037AE25 /* FactorService.swift in Sources */,
+				4E0F84942C2D301B0037AE25 /* AidProductService.swift in Sources */,
 				4E0F84A22C2D30AE0037AE25 /* MilestonePostService.swift in Sources */,
 				4E935D4B2C54D5EB0035D6D5 /* UserMilestone.swift in Sources */,
 				4E0F84D82C2D3DFC0037AE25 /* SmokingLogChartCardView.swift in Sources */,
@@ -838,7 +835,6 @@
 				4E0F845C2C2D0E710037AE25 /* NetworkService.swift in Sources */,
 				4E0F84B92C2D34BF0037AE25 /* MilestonePost.swift in Sources */,
 				4E0F84A02C2D30920037AE25 /* MilestonePostListViewModel.swift in Sources */,
-				4E0F84792C2D2BF90037AE25 /* UserViewModel.swift in Sources */,
 				4E0F847D2C2D2C880037AE25 /* MotivationViewModel.swift in Sources */,
 				4E33CEB62C4B973700BE9303 /* LottieView.swift in Sources */,
 				4E0F84852C2D2CC70037AE25 /* SymptomListViewModel.swift in Sources */,

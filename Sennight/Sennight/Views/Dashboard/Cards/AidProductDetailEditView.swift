@@ -10,7 +10,7 @@ import SwiftUI
 
 struct AidProductDetailEditView: View {
     var body: some View {
-        Text("Factor detail edit")
+        Text("Aid product detail edit")
     }
 }
 
