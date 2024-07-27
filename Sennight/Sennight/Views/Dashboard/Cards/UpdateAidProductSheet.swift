@@ -12,7 +12,7 @@ struct UpdateAidProductSheet: View {
     @Binding var isPresentingUpdateFactorSheet: Bool
     
     var body: some View {
-        Text("Update factor sheet")
+        Text("Update aid product sheet")
     }
 }
 

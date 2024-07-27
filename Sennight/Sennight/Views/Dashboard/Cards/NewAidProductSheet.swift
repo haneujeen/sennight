@@ -10,7 +10,7 @@ import SwiftUI
 
 struct NewAidProductSheet: View {
     var body: some View {
-        Text("New factor sheet")
+        Text("New aid product sheet")
     }
 }
 
