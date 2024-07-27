@@ -14,10 +14,13 @@ struct HomeView: View {
                 .tabItem {
                     Label("Dashboard", systemImage: "tray.and.arrow.down.fill")
                 }
-            
+//            Text("Calendar view")
+//                .tabItem {
+//                    Label("Dashboard", systemImage: "calendar")
+//                }
             MilestonePostsView()
                 .tabItem {
-                    Label("Milestones", systemImage: "tray.and.arrow.up.fill")
+                    Label("Milestones", systemImage: "trophy")
                 }
             
             SettingsView()
