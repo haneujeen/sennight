@@ -18,10 +18,15 @@ struct HomeView: View {
 //                .tabItem {
 //                    Label("Dashboard", systemImage: "calendar")
 //                }
-            MilestonePostsView()
+            MyMilestonesView()
                 .tabItem {
                     Label("Milestones", systemImage: "trophy")
                 }
+            
+//            MilestonePostsView()
+//                .tabItem {
+//                    Label("Milestones", systemImage: "bubble.left.and.bubble.right")
+//                }
             
             SettingsView()
                 .tabItem {
