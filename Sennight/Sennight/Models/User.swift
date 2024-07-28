@@ -68,7 +68,7 @@ struct LoginResponse : Codable {
 // Unified Models
 // Combines request data for registration, login, and update.
 struct UserRequest: Codable {
-    let email: String
+    let email: String?
     let name: String?
     let password: String
     let photoFilename: String?

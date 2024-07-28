@@ -13,7 +13,7 @@ struct CircularGauge: View {
     var lineWidth: CGFloat = 20
     var gaugeColor: Color = .blue
     var backgroundColor: Color = .gray.opacity(0.2)
-    var size: CGFloat = 200
+    var size: CGFloat = 150
     
     var body: some View {
         ZStack {
@@ -28,9 +28,15 @@ struct CircularGauge: View {
                 .rotationEffect(.degrees(-90))
                 .frame(width: size, height: size)
             
-            Text("\(Int((progress / maxProgress) * 100))%")
-                .font(.largeTitle)
-                .bold()
+            if progress == 1 {
+                Text("100%")
+                    .font(.largeTitle)
+                    .bold()
+            } else {
+                Text(String(format: "%.1f%%", progress * 100))
+                    .font(.largeTitle)
+                    .bold()
+            }
         }
     }
 }

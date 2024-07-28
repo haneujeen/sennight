@@ -41,9 +41,9 @@ struct LoginView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                LottieView(name: Constants.yellowCrossingLine, loopMode: .autoReverse, animationSpeed: 0.2)
-                    .rotationEffect(.degrees(60))
-                    .scaleEffect(2.5)
+                LottieView(name: Constants.yellowCrossingLine, loopMode: .autoReverse, animationSpeed: 0.1)
+                    .rotationEffect(.degrees(70))
+                    .scaleEffect(5)
                     .ignoresSafeArea()
                     
                 VStack {
