@@ -13,10 +13,10 @@ import Foundation
 struct AidProductResponse: Codable {
     let status: Bool
     let detail: String
-    let data: [AidProduct]
+    let data: [UserAidProduct]
 }
 
-struct AidProduct: Codable, Identifiable {
+struct UserAidProduct: Codable, Identifiable {
     let id: Int
     let aidProductID: Int
     let userID: Int

@@ -11,10 +11,10 @@ import Foundation
 struct MilestoneResponse: Codable {
     let status: Bool
     let detail: String
-    let data: [Milestone]
+    let data: [UserMilestone]
 }
 
-struct Milestone: Codable, Identifiable {
+struct UserMilestone: Codable, Identifiable {
     let id: Int
     let quitAttemptID: Int
     let userID: Int
