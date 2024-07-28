@@ -23,16 +23,16 @@
                                 <nil key="highlightedColor"/>
                             </label>
                             <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="splash_screen_background" translatesAutoresizingMaskIntoConstraints="NO" id="Pzq-ZZ-1XS">
-                                <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
+                                <rect key="frame" x="-2" y="-2" width="397" height="856"/>
                             </imageView>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="Bcu-3y-fUS"/>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="Pzq-ZZ-1XS" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" id="59s-bT-n5x"/>
-                            <constraint firstItem="Pzq-ZZ-1XS" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="7u2-h3-r0a"/>
-                            <constraint firstItem="Pzq-ZZ-1XS" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="T4x-xZ-JSE"/>
-                            <constraint firstItem="Pzq-ZZ-1XS" firstAttribute="bottom" secondItem="Ze5-6b-2t3" secondAttribute="bottom" id="nRm-BS-ko3"/>
+                            <constraint firstItem="Pzq-ZZ-1XS" firstAttribute="trailing" secondItem="Ze5-6b-2t3" secondAttribute="trailing" constant="2" id="59s-bT-n5x"/>
+                            <constraint firstItem="Pzq-ZZ-1XS" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" constant="-2" id="7u2-h3-r0a"/>
+                            <constraint firstItem="Pzq-ZZ-1XS" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" constant="-2" id="T4x-xZ-JSE"/>
+                            <constraint firstItem="Pzq-ZZ-1XS" firstAttribute="bottom" secondItem="Ze5-6b-2t3" secondAttribute="bottom" constant="2" id="nRm-BS-ko3"/>
                         </constraints>
                     </view>
                 </viewController>
