@@ -15,7 +15,7 @@ class SmokingHabitService {
     let HOST = Settings.shared.HOST
     
     func createSmokingHabit(dailyCigarettes: Int, cigarettePrice: Double, firstCigarette: String, smokingYears: Int) -> AnyPublisher<SmokingHabitResponse, AFError> {
-        guard let userID = UserService.shared.getUserID() else {
+        guard let userID = UserService.shared.getUserID(), let token = UserService.shared.getToken() else {
             return Fail(error: AFError.explicitlyCancelled).eraseToAnyPublisher()
         }
         let url = "\(HOST)/smoking-habits"
@@ -24,9 +24,6 @@ class SmokingHabitService {
                                              cigarettePrice: cigarettePrice,
                                              firstCigarette: firstCigarette,
                                              smokingYears: smokingYears)
-        guard let token = UserService.shared.getToken() else {
-            return Fail(error: AFError.explicitlyCancelled).eraseToAnyPublisher()
-        }
         let headers: HTTPHeaders = ["Authorization": "Bearer \(token)"]
         return AF.request(url,
                           method: .post,
@@ -39,13 +36,10 @@ class SmokingHabitService {
     }
     
     func getSmokingHabit() -> AnyPublisher<SmokingHabitResponse, AFError> {
-        guard let userID = UserService.shared.getUserID() else {
+        guard let userID = UserService.shared.getUserID(), let token = UserService.shared.getToken() else {
             return Fail(error: AFError.explicitlyCancelled).eraseToAnyPublisher()
         }
         let url = "\(HOST)/smoking-habits/\(userID)"
-        guard let token = UserService.shared.getToken() else {
-            return Fail(error: AFError.explicitlyCancelled).eraseToAnyPublisher()
-        }
         let headers: HTTPHeaders = ["Authorization": "Bearer \(token)"]
         return AF.request(url, method: .get, headers: headers)
             .publishDecodable(type: SmokingHabitResponse.self)
@@ -54,7 +48,7 @@ class SmokingHabitService {
     }
     
     func updateSmokingHabit(habitID: Int, dailyCigarettes: Int, cigarettePrice: Double, firstCigarette: String, smokingYears: Int) -> AnyPublisher<SmokingHabitResponse, AFError> {
-        guard let userID = UserService.shared.getUserID() else {
+        guard let userID = UserService.shared.getUserID(), let token = UserService.shared.getToken() else {
             return Fail(error: AFError.explicitlyCancelled).eraseToAnyPublisher()
         }
         let url = "\(HOST)/smoking-habits/\(habitID)"
@@ -63,9 +57,6 @@ class SmokingHabitService {
                                              cigarettePrice: cigarettePrice,
                                              firstCigarette: firstCigarette,
                                              smokingYears: smokingYears)
-        guard let token = UserService.shared.getToken() else {
-            return Fail(error: AFError.explicitlyCancelled).eraseToAnyPublisher()
-        }
         let headers: HTTPHeaders = ["Authorization": "Bearer \(token)"]
         return AF.request(url,
                           method: .put,
