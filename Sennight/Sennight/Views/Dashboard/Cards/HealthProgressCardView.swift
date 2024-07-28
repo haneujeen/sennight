@@ -18,16 +18,26 @@ struct HealthProgressCardView: View {
         dateFormatter.date(from: quitAttemptViewModel.activeQuitAttempt?.startDate ?? "") ?? Date()
     }
     
+    init() {
+        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.systemBlue
+        UIPageControl.appearance().pageIndicatorTintColor = UIColor.lightGray
+    }
+    
     var body: some View {
         Section {
             VStack {
+                HStack {
+                    Label("100", systemImage: "heart.fill")
+                    Spacer()
+                    QuitAttemptMenu()
+                }
                 TabView(selection: $selection) {
                     ForEach(HealthBenefit.allCases.indices, id: \.self) { index in
                         CircularGaugeView(healthBenefit: HealthBenefit.allCases[index])
                             .tag(index)
                     }
                 }
-                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .never))
+                .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
                 .onAppear {
                     /// Cache the initial tab index based on elapsed time
                     let elapsedTime = Date().timeIntervalSince(startDate)

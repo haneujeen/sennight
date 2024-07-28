@@ -1,22 +1,20 @@
 //
-//  NewSmokingLogSheet.swift
+//  EditQuitAttemptSheet.swift
 //  Sennight
 //
-//  Created by 한유진 on 6/27/24.
+//  Created by 한유진 on 7/28/24.
 //
 
 import SwiftUI
 
-struct NewSmokingLogSheet: View {
+struct EditQuitAttemptSheet: View {
     @Binding var selectedDate: Date
-    @Binding var isNewSmokingLogSheetPresented: Bool
+    @Binding var isEditSheetPresented: Bool
     
     var body: some View {
         NavigationView {
             VStack {
-                Text("Craving level")
-                    .font(.title)
-                Text("Trigger")
+                Text("Update start date")
                     .font(.title)
                 DatePicker("Select Date", selection: $selectedDate, displayedComponents: .date)
                     .datePickerStyle(.wheel)
@@ -24,12 +22,12 @@ struct NewSmokingLogSheet: View {
                     .padding()
             }
             .navigationBarItems(trailing: Button("Save") {
-                isNewSmokingLogSheetPresented = false
+                isEditSheetPresented = false // Dismiss the modal
             })
         }
     }
 }
 
 #Preview {
-    NewSmokingLogSheet(selectedDate: .constant(Date()), isNewSmokingLogSheetPresented: .constant(true))
+    EditQuitAttemptSheet(selectedDate: .constant(Date()), isEditSheetPresented: .constant(true))
 }

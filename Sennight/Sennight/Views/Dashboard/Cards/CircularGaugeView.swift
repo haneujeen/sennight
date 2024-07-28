@@ -20,6 +20,7 @@ struct CircularGaugeView: View {
     
     var body: some View {
         VStack {
+            Text(healthBenefit.timeIntervalString)
             CircularGauge(progress: progress)
             Button(action: {
                 showDetail = true
@@ -27,14 +28,11 @@ struct CircularGaugeView: View {
                 Text(healthBenefit.rawValue)
             })
             .sheet(isPresented: $showDetail) {
-                
                 VStack(alignment: .leading, spacing: 16) {
                     Text(healthBenefit.rawValue)
                         .font(.headline)
-                    
                     Text(healthBenefit.description)
                         .lineLimit(5)
-                    
                     Text("Note: The health benefits listed are general estimates and may vary from person to person. Please consult with a healthcare professional for personalized guidance.")
                         .font(.footnote)
                         .foregroundColor(.gray)

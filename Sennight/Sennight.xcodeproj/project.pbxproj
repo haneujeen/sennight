@@ -123,6 +123,8 @@
 		4EDF63EC2C4ED771008CCD82 /* Poppy fireworks.json in Resources */ = {isa = PBXBuildFile; fileRef = 4EDF63EB2C4ED771008CCD82 /* Poppy fireworks.json */; };
 		4EE4659D2C53AC6A0039A729 /* NewQuitAttemptSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4659C2C53AC6A0039A729 /* NewQuitAttemptSheet.swift */; };
 		4EE4659F2C53B1310039A729 /* CircularGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4659E2C53B1310039A729 /* CircularGaugeView.swift */; };
+		4EEACA442C5622BB00F76EB6 /* QuitAttemptMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEACA432C5622BB00F76EB6 /* QuitAttemptMenu.swift */; };
+		4EEACA602C5628D300F76EB6 /* EditQuitAttemptSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEACA5F2C5628D300F76EB6 /* EditQuitAttemptSheet.swift */; };
 		D6BEFFAC2C44C66200C6678B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F992A92C42E95B001BE18C /* LoginView.swift */; };
 		D6EEF6142C451B810097FF98 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D6EEF6132C451B810097FF98 /* Alamofire */; };
 /* End PBXBuildFile section */
@@ -263,6 +265,8 @@
 		4EDF63EB2C4ED771008CCD82 /* Poppy fireworks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Poppy fireworks.json"; sourceTree = "<group>"; };
 		4EE4659C2C53AC6A0039A729 /* NewQuitAttemptSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuitAttemptSheet.swift; sourceTree = "<group>"; };
 		4EE4659E2C53B1310039A729 /* CircularGaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGaugeView.swift; sourceTree = "<group>"; };
+		4EEACA432C5622BB00F76EB6 /* QuitAttemptMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitAttemptMenu.swift; sourceTree = "<group>"; };
+		4EEACA5F2C5628D300F76EB6 /* EditQuitAttemptSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuitAttemptSheet.swift; sourceTree = "<group>"; };
 		92F992A92C42E95B001BE18C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -392,7 +396,9 @@
 			isa = PBXGroup;
 			children = (
 				4E0F84672C2D10C20037AE25 /* OnboardingViewModel.swift */,
-				4E1A80F42C495D4D0052CBD2 /* User */,
+				4E1A80EE2C495D240052CBD2 /* LoginViewModel.swift */,
+				4E1A80F02C495D310052CBD2 /* SignUpViewModel.swift */,
+				4E1A80F22C495D460052CBD2 /* UpdateUserViewModel.swift */,
 				4E82E3A22C46640D00F06DE3 /* SmokingHabitViewModel.swift */,
 				4E82E3A62C4665EF00F06DE3 /* QuitAttemptViewModel.swift */,
 				4E0F847C2C2D2C880037AE25 /* MotivationViewModel.swift */,
@@ -533,6 +539,8 @@
 			children = (
 				4E0F84BE2C2D3C220037AE25 /* ElapsedTimeTextHeaderView.swift */,
 				4E19A13A2C53380900CB3553 /* QuitAttemptCardView.swift */,
+				4EEACA5F2C5628D300F76EB6 /* EditQuitAttemptSheet.swift */,
+				4EEACA432C5622BB00F76EB6 /* QuitAttemptMenu.swift */,
 				4E0F84C12C2D3C8B0037AE25 /* HealthProgressCardView.swift */,
 				4EE4659E2C53B1310039A729 /* CircularGaugeView.swift */,
 				4EE4659C2C53AC6A0039A729 /* NewQuitAttemptSheet.swift */,
@@ -553,16 +561,6 @@
 				4E0F84D72C2D3DFC0037AE25 /* SmokingLogChartCardView.swift */,
 			);
 			path = Cards;
-			sourceTree = "<group>";
-		};
-		4E1A80F42C495D4D0052CBD2 /* User */ = {
-			isa = PBXGroup;
-			children = (
-				4E1A80EE2C495D240052CBD2 /* LoginViewModel.swift */,
-				4E1A80F02C495D310052CBD2 /* SignUpViewModel.swift */,
-				4E1A80F22C495D460052CBD2 /* UpdateUserViewModel.swift */,
-			);
-			path = User;
 			sourceTree = "<group>";
 		};
 		4E33CEB72C4B979000BE9303 /* Lottie Files */ = {
@@ -796,6 +794,7 @@
 				4E0F846A2C2D28D90037AE25 /* OnboardingView.swift in Sources */,
 				4E0F84982C2D302D0037AE25 /* ActivityService.swift in Sources */,
 				4E0F84BF2C2D3C220037AE25 /* ElapsedTimeTextHeaderView.swift in Sources */,
+				4EEACA442C5622BB00F76EB6 /* QuitAttemptMenu.swift in Sources */,
 				4E0F84DF2C2D3EB80037AE25 /* NewSymptomSheet.swift in Sources */,
 				4E0F849C2C2D30680037AE25 /* MilestoneViewModel.swift in Sources */,
 				4E82E3992C4661C100F06DE3 /* OnboardingStep6View.swift in Sources */,
@@ -813,6 +812,7 @@
 				4E82E39B2C4661CB00F06DE3 /* OnboardingStep7View.swift in Sources */,
 				4E0F84AD2C2D34910037AE25 /* User.swift in Sources */,
 				4E0F849E2C2D30720037AE25 /* MilestoneListViewModel.swift in Sources */,
+				4EEACA602C5628D300F76EB6 /* EditQuitAttemptSheet.swift in Sources */,
 				4E0F84DD2C2D3E940037AE25 /* NewAidProductSheet.swift in Sources */,
 				4EB3C1D72C4B42330066D658 /* View+.swift in Sources */,
 				4E935D452C54BCA50035D6D5 /* UserAidProduct.swift in Sources */,
@@ -1009,7 +1009,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Sennight/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NNA9AVJNUS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
@@ -1039,7 +1039,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Sennight/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NNA9AVJNUS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;

@@ -78,5 +78,5 @@ struct QuitAttemptsResponse: Codable {
 struct MilestonesForQuitAttemptResponse: Codable {
     let status: Bool
     let detail: String
-    let data: [Milestone]?
+    let data: [UserMilestone]?
 }

@@ -23,7 +23,10 @@ class QuitAttemptService {
     //    }
     
     /// Retrieves user's most recent quitting smoking attempt.
-    func getActiveQuitAttempt(userID: Int) -> AnyPublisher<QuitAttempt, AFError> {
+    func getActiveQuitAttempt() -> AnyPublisher<QuitAttempt, AFError> {
+        guard let userID = UserService.shared.getUserID() else {
+            return Fail(error: AFError.explicitlyCancelled).eraseToAnyPublisher()
+        }
         let URL = "\(HOST)/quit-attempts/\(userID)"
         guard let token = UserService.shared.getToken() else {
             return Fail(error: AFError.explicitlyCancelled)
