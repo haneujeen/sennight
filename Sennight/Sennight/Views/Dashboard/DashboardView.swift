@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct DashboardView: View {
-    @StateObject private var quitAttemptViewModel = QuitAttemptViewModel()
+    @EnvironmentObject var quitAttemptViewModel: QuitAttemptViewModel
     @Environment(\.scenePhase) private var scenePhase
     
     var body: some View {
