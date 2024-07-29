@@ -91,7 +91,6 @@
 		4E6F39D32C33951A00058003 /* CheckOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D22C33951A00058003 /* CheckOnboardingView.swift */; };
 		4E6F39D52C33980900058003 /* SupportIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D42C33980900058003 /* SupportIcon.swift */; };
 		4E6F39D72C33989A00058003 /* PostText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D62C33989A00058003 /* PostText.swift */; };
-		4E6F39DB2C339ABF00058003 /* MedalIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39DA2C339ABF00058003 /* MedalIcon.swift */; };
 		4E6F39DD2C33B79200058003 /* MyMilestonesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39DC2C33B79200058003 /* MyMilestonesView.swift */; };
 		4E82E3952C4661A600F06DE3 /* OnboardingStep4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E3942C4661A600F06DE3 /* OnboardingStep4View.swift */; };
 		4E82E3972C4661B600F06DE3 /* OnboardingStep5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E3962C4661B600F06DE3 /* OnboardingStep5View.swift */; };
@@ -233,7 +232,6 @@
 		4E6F39D22C33951A00058003 /* CheckOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOnboardingView.swift; sourceTree = "<group>"; };
 		4E6F39D42C33980900058003 /* SupportIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportIcon.swift; sourceTree = "<group>"; };
 		4E6F39D62C33989A00058003 /* PostText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostText.swift; sourceTree = "<group>"; };
-		4E6F39DA2C339ABF00058003 /* MedalIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalIcon.swift; sourceTree = "<group>"; };
 		4E6F39DC2C33B79200058003 /* MyMilestonesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMilestonesView.swift; sourceTree = "<group>"; };
 		4E82E3942C4661A600F06DE3 /* OnboardingStep4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep4View.swift; sourceTree = "<group>"; };
 		4E82E3962C4661B600F06DE3 /* OnboardingStep5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep5View.swift; sourceTree = "<group>"; };
@@ -501,7 +499,6 @@
 			isa = PBXGroup;
 			children = (
 				4E6F39D42C33980900058003 /* SupportIcon.swift */,
-				4E6F39DA2C339ABF00058003 /* MedalIcon.swift */,
 				4E6F39D62C33989A00058003 /* PostText.swift */,
 				4E0F84DA2C2D3E6A0037AE25 /* MilestonePostCardView.swift */,
 				4E6F39DC2C33B79200058003 /* MyMilestonesView.swift */,
@@ -818,7 +815,6 @@
 				4E935D452C54BCA50035D6D5 /* UserAidProduct.swift in Sources */,
 				4E0BF7DF2C2E4C2B0091ADB2 /* Config.swift in Sources */,
 				4E0F846C2C2D28E60037AE25 /* OnboardingStep1View.swift in Sources */,
-				4E6F39DB2C339ABF00058003 /* MedalIcon.swift in Sources */,
 				4E0F84E12C2D3ECC0037AE25 /* NewActivitySheet.swift in Sources */,
 				4E0F84962C2D30260037AE25 /* SymptomService.swift in Sources */,
 				4E0F84292C2D07F70037AE25 /* SennightApp.swift in Sources */,

@@ -14,6 +14,21 @@ class MilestoneViewModel: ObservableObject {
     
     private var cancellables = Set<AnyCancellable>()
     
+    func addMilestoneForUser(milestoneID: Int, quitAttemptID: Int) {
+        MilestoneService.shared.addMilestoneForUser(milestoneID: milestoneID, quitAttemptID: quitAttemptID)
+            .sink { completion in
+                switch completion {
+                case .finished:
+                    break
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            } receiveValue: { _ in
+                
+            }
+            .store(in: &cancellables)
+    }
+    
     func getAllMilestones() {
         MilestoneService.shared.getAllMilestones()
             .sink { completion in
