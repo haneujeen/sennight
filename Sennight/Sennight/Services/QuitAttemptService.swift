@@ -24,15 +24,10 @@ class QuitAttemptService {
     
     /// Retrieves user's most recent quitting smoking attempt.
     func getActiveQuitAttempt() -> AnyPublisher<QuitAttempt, AFError> {
-        guard let userID = UserService.shared.getUserID() else {
+        guard let userID = UserService.shared.getUserID(), let token = UserService.shared.getToken() else {
             return Fail(error: AFError.explicitlyCancelled).eraseToAnyPublisher()
         }
         let URL = "\(HOST)/quit-attempts/\(userID)"
-        guard let token = UserService.shared.getToken() else {
-            return Fail(error: AFError.explicitlyCancelled)
-                .eraseToAnyPublisher()
-        }
-        
         let headers: HTTPHeaders = ["Authorization": "Bearer \(token)"]
         return AF.request(URL,
                           method: .get,
@@ -58,11 +53,36 @@ class QuitAttemptService {
         .eraseToAnyPublisher()
     }
     
-    //    /// Retrieves all of user's quitting smoking attempts.
-    //    func getAllQuitAttempts(userID: Int) -> [QuitAttempt] {
-    //        // Implementation here
-    //    }
-    //
+        /// Retrieves all of user's quitting smoking attempts.
+        func getAllQuitAttempts() -> AnyPublisher<[QuitAttempt], AFError> {
+            guard let userID = UserService.shared.getUserID(), let token = UserService.shared.getToken() else {
+                return Fail(error: AFError.explicitlyCancelled).eraseToAnyPublisher()
+            }
+            let URL = "\(HOST)/quit-attempts/all/\(userID)"
+            let headers: HTTPHeaders = ["Authorization": "Bearer \(token)"]
+            return AF.request(URL,
+                              method: .get,
+                              headers: headers)
+            .validate(contentType: ["application/json"])
+            .publishDecodable(type: QuitAttemptsResponse.self)
+            .value()
+            .tryMap { quitAttemptsResponse -> [QuitAttempt] in
+                guard let data = quitAttemptsResponse.data else {
+                    print("Error: QuitAttemptsResponse data is nil: \(quitAttemptsResponse)")
+                    throw URLError(.badServerResponse)
+                }
+                return data
+            }
+            .mapError { error -> AFError in
+                if let afError = error as? AFError {
+                    return afError
+                } else {
+                    return AFError.createURLRequestFailed(error: error)
+                }
+            }
+            .eraseToAnyPublisher()
+        }
+    
     //    /// Deletes a quitting smoking attempt.
     //    func deleteQuitAttempt(userID: Int, attemptID: Int) {
     //        // Implementation here

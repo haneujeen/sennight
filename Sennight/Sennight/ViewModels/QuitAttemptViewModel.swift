@@ -14,7 +14,7 @@ import SwiftUI
 class QuitAttemptViewModel: ObservableObject{
     @Published var quitAttempts: [QuitAttempt] = []
     @Published var activeQuitAttempt: QuitAttempt?
-    @Published var milestones: [Milestone] = []
+    @Published var milestones: [UserMilestone] = []
     @Published var isActiveQuitAttempt = false
     
     private var cancellables = Set<AnyCancellable>()
@@ -46,7 +46,18 @@ class QuitAttemptViewModel: ObservableObject{
     
     /// Retrieves all quitting smoking attempts for the user and updates the `quitAttempts` property.
     func getAllQuitAttempts() {
-        
+        QuitAttemptService.shared.getAllQuitAttempts()
+            .sink { completion in
+                switch completion {
+                case .finished:
+                    break
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            } receiveValue: { quitAttempts in
+                self.quitAttempts = quitAttempts
+            }
+            .store(in: &cancellables)
     }
     
     /// Deletes a quitting smoking attempt.
