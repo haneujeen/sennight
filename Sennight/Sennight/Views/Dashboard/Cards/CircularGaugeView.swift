@@ -15,7 +15,7 @@ struct CircularGaugeView: View {
     @State private var showDetail = false
     
     private var startDate: Date {
-        dateFormatter.date(from: quitAttemptViewModel.activeQuitAttempt?.startDate ?? "") ?? Date()
+        dateFormatter().date(from: quitAttemptViewModel.activeQuitAttempt?.startDate ?? "") ?? Date()
     }
     
     var body: some View {

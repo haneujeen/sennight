@@ -12,7 +12,7 @@ struct ElapsedTimeTextHeaderView: View {
     @State private var currentDate = Date()
     
     private var startDate: Date {
-        dateFormatter.date(from: quitAttemptViewModel.activeQuitAttempt?.startDate ?? "") ?? Date()
+        dateFormatter().date(from: quitAttemptViewModel.activeQuitAttempt?.startDate ?? "") ?? Date()
     }
     
     var body: some View {

@@ -15,7 +15,7 @@ struct HealthProgressCardView: View {
     private let cacheKey = "initialSnap"
     
     private var startDate: Date {
-        dateFormatter.date(from: quitAttemptViewModel.activeQuitAttempt?.startDate ?? "") ?? Date()
+        dateFormatter().date(from: quitAttemptViewModel.activeQuitAttempt?.startDate ?? "") ?? Date()
     }
     
     init() {

@@ -12,7 +12,7 @@ struct MoneySavedCardView: View {
     @StateObject private var smokingHabitViewModel = SmokingHabitViewModel()
     
     private var startDate: Date {
-        dateFormatter.date(from: quitAttemptViewModel.activeQuitAttempt?.startDate ?? "") ?? Date()
+        dateFormatter().date(from: quitAttemptViewModel.activeQuitAttempt?.startDate ?? "") ?? Date()
     }
     
     private var daysSinceStartDate: Int {
