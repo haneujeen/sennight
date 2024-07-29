@@ -88,6 +88,9 @@
 		4E33CEC52C4BBC0300BE9303 /* Lavender crossing line.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E33CEC42C4BBC0300BE9303 /* Lavender crossing line.json */; };
 		4E33CECB2C4CA06800BE9303 /* Welcome confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E33CECA2C4CA06700BE9303 /* Welcome confetti.json */; };
 		4E3965F32C53CAE2005E6EB4 /* HealthBenefit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3965F22C53CAE2005E6EB4 /* HealthBenefit.swift */; };
+		4E571A9A2C57730B002BA2DD /* NewMilestoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E571A992C57730B002BA2DD /* NewMilestoneView.swift */; };
+		4E571A9C2C579572002BA2DD /* AllMilestonesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E571A9B2C579572002BA2DD /* AllMilestonesListView.swift */; };
+		4E571A9E2C579647002BA2DD /* SortedMilestonesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E571A9D2C579647002BA2DD /* SortedMilestonesListView.swift */; };
 		4E6F39D32C33951A00058003 /* CheckOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D22C33951A00058003 /* CheckOnboardingView.swift */; };
 		4E6F39D52C33980900058003 /* SupportIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D42C33980900058003 /* SupportIcon.swift */; };
 		4E6F39D72C33989A00058003 /* PostText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D62C33989A00058003 /* PostText.swift */; };
@@ -229,6 +232,9 @@
 		4E33CEC42C4BBC0300BE9303 /* Lavender crossing line.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Lavender crossing line.json"; sourceTree = "<group>"; };
 		4E33CECA2C4CA06700BE9303 /* Welcome confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Welcome confetti.json"; sourceTree = "<group>"; };
 		4E3965F22C53CAE2005E6EB4 /* HealthBenefit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthBenefit.swift; sourceTree = "<group>"; };
+		4E571A992C57730B002BA2DD /* NewMilestoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMilestoneView.swift; sourceTree = "<group>"; };
+		4E571A9B2C579572002BA2DD /* AllMilestonesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMilestonesListView.swift; sourceTree = "<group>"; };
+		4E571A9D2C579647002BA2DD /* SortedMilestonesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedMilestonesListView.swift; sourceTree = "<group>"; };
 		4E6F39D22C33951A00058003 /* CheckOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOnboardingView.swift; sourceTree = "<group>"; };
 		4E6F39D42C33980900058003 /* SupportIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportIcon.swift; sourceTree = "<group>"; };
 		4E6F39D62C33989A00058003 /* PostText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostText.swift; sourceTree = "<group>"; };
@@ -498,10 +504,13 @@
 		4E0F84762C2D2A0E0037AE25 /* MilestonePosts */ = {
 			isa = PBXGroup;
 			children = (
+				4E571A9B2C579572002BA2DD /* AllMilestonesListView.swift */,
+				4E571A9D2C579647002BA2DD /* SortedMilestonesListView.swift */,
+				4E571A992C57730B002BA2DD /* NewMilestoneView.swift */,
+				4E6F39DC2C33B79200058003 /* MyMilestonesView.swift */,
 				4E6F39D42C33980900058003 /* SupportIcon.swift */,
 				4E6F39D62C33989A00058003 /* PostText.swift */,
 				4E0F84DA2C2D3E6A0037AE25 /* MilestonePostCardView.swift */,
-				4E6F39DC2C33B79200058003 /* MyMilestonesView.swift */,
 				4E0F84A72C2D33E50037AE25 /* MilestonePostsView.swift */,
 			);
 			path = MilestonePosts;
@@ -759,6 +768,7 @@
 				4E0F84CA2C2D3D3D0037AE25 /* AidProductRowView.swift in Sources */,
 				4E82E3A12C4663D000F06DE3 /* SmokingHabit.swift in Sources */,
 				4E6F39D52C33980900058003 /* SupportIcon.swift in Sources */,
+				4E571A9E2C579647002BA2DD /* SortedMilestonesListView.swift in Sources */,
 				4E82E3AB2C46663400F06DE3 /* QuitAttemptService.swift in Sources */,
 				4E6F39DD2C33B79200058003 /* MyMilestonesView.swift in Sources */,
 				4E82E3A92C46661F00F06DE3 /* SmokingHabitService.swift in Sources */,
@@ -770,8 +780,10 @@
 				4E0F84922C2D30120037AE25 /* MotivationService.swift in Sources */,
 				4E82E3952C4661A600F06DE3 /* OnboardingStep4View.swift in Sources */,
 				4EABEA8D2C53192300252308 /* StringToDateFormatter.swift in Sources */,
+				4E571A9A2C57730B002BA2DD /* NewMilestoneView.swift in Sources */,
 				4E935D492C54BCB50035D6D5 /* UserActivity.swift in Sources */,
 				4E0F84AF2C2D34990037AE25 /* Motivation.swift in Sources */,
+				4E571A9C2C579572002BA2DD /* AllMilestonesListView.swift in Sources */,
 				4E6F39D72C33989A00058003 /* PostText.swift in Sources */,
 				4E82E39F2C4661E200F06DE3 /* OnboardingStep9View.swift in Sources */,
 				4E0F84C22C2D3C8B0037AE25 /* HealthProgressCardView.swift in Sources */,

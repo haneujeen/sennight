@@ -43,7 +43,7 @@ struct UserMilestoneRequest: Codable {
     }
 }
 
-struct UserMilestone: Codable {
+struct UserMilestone: Codable, Identifiable {
     let id: Int
     let userID: Int
     let milestoneID: Int

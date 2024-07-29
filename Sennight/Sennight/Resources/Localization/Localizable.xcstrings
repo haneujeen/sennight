@@ -19,16 +19,10 @@
     ":" : {
 
     },
+    "%@" : {
+
+    },
     "%lld" : {
-
-    },
-    "3 Month Fresh" : {
-
-    },
-    "7 Day Fresh" : {
-
-    },
-    "30 Day Hero" : {
 
     },
     "100" : {
@@ -38,6 +32,9 @@
 
     },
     "About App" : {
+
+    },
+    "About Milestones" : {
 
     },
     "Account Settings" : {
@@ -52,10 +49,16 @@
     "Add and manage your smoking habits and cravings." : {
 
     },
+    "Add New Milestone" : {
+
+    },
     "Aid product detail edit" : {
 
     },
     "Aid product row" : {
+
+    },
+    "All" : {
 
     },
     "Already have an account?" : {
@@ -76,7 +79,16 @@
     "Begin your journey and stay updated with your progress." : {
 
     },
+    "Cancel" : {
+
+    },
     "Change Password" : {
+
+    },
+    "Click the button below and get your milestone." : {
+
+    },
+    "Close" : {
 
     },
     "Confirm Password" : {
@@ -91,6 +103,9 @@
     "Continue with Apple" : {
 
     },
+    "Craving level" : {
+
+    },
     "Create your account." : {
 
     },
@@ -100,16 +115,13 @@
     "Data Usage" : {
 
     },
+    "Date achieved: %@" : {
+
+    },
     "Dismiss" : {
 
     },
     "Don't have an account?" : {
-
-    },
-    "Done" : {
-
-    },
-    "Edit Quit Attempt" : {
 
     },
     "Edit This Quit Attempt" : {
@@ -128,6 +140,9 @@
 
     },
     "Feelings and Symptoms" : {
+
+    },
+    "Filter" : {
 
     },
     "General" : {
@@ -199,6 +214,9 @@
     "My milestones" : {
 
     },
+    "My Quit History" : {
+
+    },
     "Name" : {
 
     },
@@ -206,9 +224,6 @@
 
     },
     "New aid product sheet" : {
-
-    },
-    "New smoking sheet" : {
 
     },
     "New symptom sheet" : {
@@ -242,6 +257,9 @@
 
     },
     "Q." : {
+
+    },
+    "Save" : {
 
     },
     "Select Date" : {
@@ -296,10 +314,13 @@
     "Step 7: Motivation" : {
 
     },
-    "Stop This Quit Attempt" : {
+    "Stop" : {
 
     },
-    "Submit" : {
+    "Stop Quit Attempt" : {
+
+    },
+    "Stop This Quit Attempt" : {
 
     },
     "Subscription/Billing Information" : {
@@ -326,13 +347,22 @@
     "Terms of Service" : {
 
     },
+    "This will stop your current quit attempt and reset all your progress.\nThis action cannot be undone." : {
+
+    },
     "Time Zone" : {
 
     },
     "Track Habits and Cravings" : {
 
     },
+    "Trigger" : {
+
+    },
     "Update aid product sheet" : {
+
+    },
+    "Update start date" : {
 
     },
     "User achieved %@ Milestone! Send support?" : {
@@ -345,6 +375,9 @@
 
     },
     "What time do you usually have your first cigarette of the day?" : {
+
+    },
+    "You’ve just achieved your first milestone. Keep pushing forward and you'll mark more milestones along the way." : {
 
     },
     "Your password must:" : {
