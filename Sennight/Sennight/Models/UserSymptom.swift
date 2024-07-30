@@ -3,10 +3,8 @@
 //  Sennight
 //
 //  Created by 한유진 on 7/27/24.
-//  Edited by 김소연 on 2024-07-29: Symptom Service 코드 생성
+//  Edited by 김소연 on 2024-07-29: Symptom 모델 정의
 //
-
-import Foundation
 
 //Read Symptom 모델 구현
 struct UserSymptomResponse: Codable {
@@ -19,10 +17,14 @@ struct UserSymptom: Codable, Identifiable {
     let id: Int
     let symptomID: Int
     let userID: Int
+    let startDate: String
+    let endDate: String?
     
     enum CodingKeys: String, CodingKey {
         case id
         case symptomID = "symptom_id"
         case userID = "user_id"
+        case startDate = "start_date"
+        case endDate = "end_date"
     }
 }
