@@ -11,71 +11,37 @@ import SwiftUI
 import Combine
 
 class MotivationViewModel: ObservableObject {
-    
-    @Published var userId = 0
-    @Published var motivationId = 0
-    @Published var userMotivationId = 0
+    @Published var userMotivation: UserMotivation?
+    @Published var motivationDataID = 0
+    @Published var isLoading = false
+    @Published var showError = false
     
     private var cancellables = Set<AnyCancellable>()
     
-    //금연 동기 등록
-    func creat(completion: @escaping (Bool)->Void) {
-        MotivationService.shared.createMO(userId: userId, motivationId: motivationId)
+    // 금연 동기 등록
+    func getMotivation() {
+        guard !isLoading else { return }  // 이미 로딩 중이면 중복 호출 방지
+        
+        isLoading = true
+        showError = false
+        
+        MotivationService.shared.read()
             .receive(on: DispatchQueue.main)
-            .sink { completion in
+            .sink { [weak self] completion in
+                self?.isLoading = false
                 switch completion {
                 case .finished: break
                 case .failure(let error):
                     print(error.localizedDescription)
+                    self?.showError = true
                 }
-            } receiveValue: { response in
+            } receiveValue: { [weak self] response in
                 print("서버응답: \(response)")
-                completion(response.status)
-            }.store(in: &cancellables)
-    }
-    //금연 동기 등록
-    func read(completion: @escaping (Bool)->Void) {
-        MotivationService.shared.readMO(userId: userId)
-            .receive(on: DispatchQueue.main)
-            .sink { completion in
-                switch completion {
-                case .finished: break
-                case .failure(let error):
-                    print(error.localizedDescription)
+                if let data = response.data {
+                    self?.userMotivation = data
+                    self?.motivationDataID = data.id
                 }
-            } receiveValue: { response in
-                print("서버응답: \(response)")
-                completion(response.status)
-            }.store(in: &cancellables)
-    }
-    //금연 동기 수정
-    func update(completion: @escaping (Bool)->Void) {
-        MotivationService.shared.updateMO(userId: userId, motivationId: motivationId, userMotivationId: userMotivationId)
-            .receive(on: DispatchQueue.main)
-            .sink { completion in
-                switch completion {
-                case .finished: break
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
-            } receiveValue: { response in
-                print("서버응답: \(response)")
-                completion(response.status)
-            }.store(in: &cancellables)
-    }
-    //금연 동기 삭제
-    func delete(completion: @escaping (Bool)->Void) {
-        MotivationService.shared.deleteMO(userMotivationId: userMotivationId)
-            .receive(on: DispatchQueue.main)
-            .sink { completion in
-                switch completion {
-                case .finished: break
-                case .failure(let error):
-                    print(error.localizedDescription)
-                }
-            } receiveValue: { response in
-                print("서버응답: \(response)")
-                completion(response.status)
-            }.store(in: &cancellables)
+            }
+            .store(in: &cancellables)
     }
 }
