@@ -17,14 +17,10 @@ struct UserSymptom: Codable, Identifiable {
     let id: Int
     let symptomID: Int
     let userID: Int
-    let startDate: String
-    let endDate: String?
     
     enum CodingKeys: String, CodingKey {
         case id
         case symptomID = "symptom_id"
         case userID = "user_id"
-        case startDate = "start_date"
-        case endDate = "end_date"
     }
 }
