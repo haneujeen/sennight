@@ -45,7 +45,6 @@
 		4E0F849C2C2D30680037AE25 /* MilestoneViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F849B2C2D30680037AE25 /* MilestoneViewModel.swift */; };
 		4E0F849E2C2D30720037AE25 /* MilestoneListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F849D2C2D30720037AE25 /* MilestoneListViewModel.swift */; };
 		4E0F84A02C2D30920037AE25 /* MilestonePostListViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F849F2C2D30920037AE25 /* MilestonePostListViewModel.swift */; };
-		4E0F84A22C2D30AE0037AE25 /* MilestonePostService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84A12C2D30AE0037AE25 /* MilestonePostService.swift */; };
 		4E0F84A42C2D30C90037AE25 /* SmokingLogService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84A32C2D30C90037AE25 /* SmokingLogService.swift */; };
 		4E0F84A62C2D33DA0037AE25 /* DashboardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84A52C2D33DA0037AE25 /* DashboardView.swift */; };
 		4E0F84A82C2D33E50037AE25 /* MilestonePostsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E0F84A72C2D33E50037AE25 /* MilestonePostsView.swift */; };
@@ -186,7 +185,6 @@
 		4E0F849B2C2D30680037AE25 /* MilestoneViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneViewModel.swift; sourceTree = "<group>"; };
 		4E0F849D2C2D30720037AE25 /* MilestoneListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestoneListViewModel.swift; sourceTree = "<group>"; };
 		4E0F849F2C2D30920037AE25 /* MilestonePostListViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestonePostListViewModel.swift; sourceTree = "<group>"; };
-		4E0F84A12C2D30AE0037AE25 /* MilestonePostService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestonePostService.swift; sourceTree = "<group>"; };
 		4E0F84A32C2D30C90037AE25 /* SmokingLogService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingLogService.swift; sourceTree = "<group>"; };
 		4E0F84A52C2D33DA0037AE25 /* DashboardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DashboardView.swift; sourceTree = "<group>"; };
 		4E0F84A72C2D33E50037AE25 /* MilestonePostsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MilestonePostsView.swift; sourceTree = "<group>"; };
@@ -447,7 +445,6 @@
 		4E0F84582C2D0E130037AE25 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
-				4E0F84A12C2D30AE0037AE25 /* MilestonePostService.swift */,
 				4E33CEB72C4B979000BE9303 /* Lottie Files */,
 				4E0F842C2C2D07F90037AE25 /* Assets.xcassets */,
 				4E0F848E2C2D2DE00037AE25 /* Localization */,
@@ -754,7 +751,6 @@
 				4ECADF932C2E8DEC00E8861C /* CircularGauge.swift in Sources */,
 				4E0F84D42C2D3D850037AE25 /* ActivitiesCardView.swift in Sources */,
 				4E0F84942C2D301B0037AE25 /* AidProductService.swift in Sources */,
-				4E0F84A22C2D30AE0037AE25 /* MilestonePostService.swift in Sources */,
 				4E0F84D82C2D3DFC0037AE25 /* SmokingLogChartCardView.swift in Sources */,
 				4E82E3A32C46640D00F06DE3 /* SmokingHabitViewModel.swift in Sources */,
 				4EE4659F2C53B1310039A729 /* CircularGaugeView.swift in Sources */,
