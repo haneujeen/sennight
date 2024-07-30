@@ -9,9 +9,9 @@ import SwiftUI
 
 struct ProfileView: View {
     @EnvironmentObject var smokingHabitViewModel: SmokingHabitViewModel
-    
-    // To hold the date picker value
     @State private var firstCigaretteTime: Date = Date()
+    @State private var showAlert: Bool = false
+    @State private var alertMessage: String = ""
     
     var body: some View {
         Form {
@@ -52,6 +52,32 @@ struct ProfileView: View {
             }
         }
         .navigationTitle("Profile")
+        .navigationBarTitleDisplayMode(.inline)
+        .toolbar {
+            ToolbarItem(placement: .navigationBarTrailing) {
+                Button(action: {
+                    smokingHabitViewModel.createSmokingHabit { status in
+                        if !status {
+                            if !status {
+                                alertMessage = "Failed to save your smoking habit. Please try again."
+                                showAlert = true
+                            } else {
+                                print("Smoking habit saved successfully.")
+                            }
+                        }
+                    }
+                }, label: {
+                    Text("Save")
+                })
+            }
+        }
+        .alert(isPresented: $showAlert) {
+            Alert(
+                title: Text("Error"),
+                message: Text(alertMessage),
+                dismissButton: .default(Text("OK"))
+            )
+        }
     }
 }
 
