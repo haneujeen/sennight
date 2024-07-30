@@ -84,14 +84,18 @@ class UserService {
         .eraseToAnyPublisher()
     }
     
-    func updateUser(userID: Int, name: String?, password: String, photoFilename: String?) -> AnyPublisher<UserResponse, AFError> {
+    func updateUser(name: String?, password: String, photoFilename: String?) -> AnyPublisher<UserResponse, AFError> {
+        guard let userID = UserService.shared.getUserID(), let token = UserService.shared.getToken() else {
+            return Fail(error: AFError.explicitlyCancelled).eraseToAnyPublisher()
+        }
         let URL = "\(HOST)/users/\(userID)"
-        let parameters = UserRequest(email: nil, name: name, password: password, photoFilename: photoFilename)
-        
+        let parameters = UserRequest(email: "", name: nil, password: password, photoFilename: nil)
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(token)"]
         return AF.request(URL,
-                          method: .put,
+                          method: .post,
                           parameters: parameters,
-                          encoder: JSONParameterEncoder.default)
+                          encoder: JSONParameterEncoder.default,
+                          headers: headers)
         .validate(contentType: ["application/json"])
         .publishDecodable(type: UserResponse.self)
         .value()

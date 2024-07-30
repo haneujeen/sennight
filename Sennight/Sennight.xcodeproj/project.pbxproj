@@ -92,6 +92,14 @@
 		4E571A9C2C579572002BA2DD /* AllMilestonesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E571A9B2C579572002BA2DD /* AllMilestonesListView.swift */; };
 		4E571A9E2C579647002BA2DD /* SortedMilestonesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E571A9D2C579647002BA2DD /* SortedMilestonesListView.swift */; };
 		4E66F6482C58C2A900D9D982 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66F6472C58C2A900D9D982 /* ProfileView.swift */; };
+		4E66F64A2C58C96200D9D982 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66F6492C58C96200D9D982 /* ChangePasswordView.swift */; };
+		4E66F64D2C58EFD000D9D982 /* TermsAndConditionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66F64C2C58EFD000D9D982 /* TermsAndConditionsView.swift */; };
+		4E66F64F2C58EFF400D9D982 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66F64E2C58EFF400D9D982 /* PrivacyPolicyView.swift */; };
+		4E66F6512C58F0B400D9D982 /* LicensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66F6502C58F0B400D9D982 /* LicensesView.swift */; };
+		4E66F6532C58F0D900D9D982 /* AboutAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66F6522C58F0D900D9D982 /* AboutAppView.swift */; };
+		4E66F6572C58F39D00D9D982 /* EmailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66F6562C58F39D00D9D982 /* EmailHelper.swift */; };
+		4E66F65A2C59054400D9D982 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66F6592C59054400D9D982 /* SignInWithAppleButton.swift */; };
+		4E66F65C2C59057E00D9D982 /* SignInWithAppleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66F65B2C59057E00D9D982 /* SignInWithAppleViewModel.swift */; };
 		4E6F39D32C33951A00058003 /* CheckOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D22C33951A00058003 /* CheckOnboardingView.swift */; };
 		4E6F39D52C33980900058003 /* SupportIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D42C33980900058003 /* SupportIcon.swift */; };
 		4E6F39D72C33989A00058003 /* PostText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D62C33989A00058003 /* PostText.swift */; };
@@ -237,6 +245,15 @@
 		4E571A9B2C579572002BA2DD /* AllMilestonesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMilestonesListView.swift; sourceTree = "<group>"; };
 		4E571A9D2C579647002BA2DD /* SortedMilestonesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedMilestonesListView.swift; sourceTree = "<group>"; };
 		4E66F6472C58C2A900D9D982 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		4E66F6492C58C96200D9D982 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
+		4E66F64C2C58EFD000D9D982 /* TermsAndConditionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsView.swift; sourceTree = "<group>"; };
+		4E66F64E2C58EFF400D9D982 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
+		4E66F6502C58F0B400D9D982 /* LicensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensesView.swift; sourceTree = "<group>"; };
+		4E66F6522C58F0D900D9D982 /* AboutAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppView.swift; sourceTree = "<group>"; };
+		4E66F6562C58F39D00D9D982 /* EmailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailHelper.swift; sourceTree = "<group>"; };
+		4E66F6582C58F3E500D9D982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4E66F6592C59054400D9D982 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
+		4E66F65B2C59057E00D9D982 /* SignInWithAppleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleViewModel.swift; sourceTree = "<group>"; };
 		4E6F39D22C33951A00058003 /* CheckOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOnboardingView.swift; sourceTree = "<group>"; };
 		4E6F39D42C33980900058003 /* SupportIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportIcon.swift; sourceTree = "<group>"; };
 		4E6F39D62C33989A00058003 /* PostText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostText.swift; sourceTree = "<group>"; };
@@ -325,6 +342,7 @@
 		4E0F84272C2D07F70037AE25 /* Sennight */ = {
 			isa = PBXGroup;
 			children = (
+				4E66F6582C58F3E500D9D982 /* Info.plist */,
 				4E0F84532C2D0DBA0037AE25 /* Models */,
 				4E0F84542C2D0DC50037AE25 /* ViewModels */,
 				4E0F84552C2D0DDE0037AE25 /* Views */,
@@ -420,6 +438,7 @@
 				4E0F849F2C2D30920037AE25 /* MilestonePostListViewModel.swift */,
 				4E0F848A2C2D2CE60037AE25 /* SmokingLogViewModel.swift */,
 				4E0F848C2C2D2D050037AE25 /* SmokingLogChartViewModel.swift */,
+				4E66F65B2C59057E00D9D982 /* SignInWithAppleViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -428,6 +447,7 @@
 			isa = PBXGroup;
 			children = (
 				4EB3C1D42C4B3F2A0066D658 /* HelpersAndCustomViews */,
+				4E66F64B2C58EFAC00D9D982 /* Legal */,
 				4E0F84642C2D106C0037AE25 /* Onboarding */,
 				4E0F84612C2D0EA70037AE25 /* Authentication */,
 				4E0F84752C2D29F70037AE25 /* Dashboard */,
@@ -522,6 +542,8 @@
 			isa = PBXGroup;
 			children = (
 				4E66F6472C58C2A900D9D982 /* ProfileView.swift */,
+				4E66F6492C58C96200D9D982 /* ChangePasswordView.swift */,
+				4E66F6522C58F0D900D9D982 /* AboutAppView.swift */,
 				4E0F84A92C2D33F80037AE25 /* SettingsView.swift */,
 			);
 			path = Settings;
@@ -588,6 +610,16 @@
 			path = "Lottie Files";
 			sourceTree = "<group>";
 		};
+		4E66F64B2C58EFAC00D9D982 /* Legal */ = {
+			isa = PBXGroup;
+			children = (
+				4E66F64C2C58EFD000D9D982 /* TermsAndConditionsView.swift */,
+				4E66F64E2C58EFF400D9D982 /* PrivacyPolicyView.swift */,
+				4E66F6502C58F0B400D9D982 /* LicensesView.swift */,
+			);
+			path = Legal;
+			sourceTree = "<group>";
+		};
 		4EB3C1D42C4B3F2A0066D658 /* HelpersAndCustomViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -597,6 +629,8 @@
 				4E33CEB52C4B973700BE9303 /* LottieView.swift */,
 				4EABEA8A2C5318D800252308 /* ElapsedTimeString.swift */,
 				4EABEA8C2C53192300252308 /* StringToDateFormatter.swift */,
+				4E66F6562C58F39D00D9D982 /* EmailHelper.swift */,
+				4E66F6592C59054400D9D982 /* SignInWithAppleButton.swift */,
 			);
 			path = HelpersAndCustomViews;
 			sourceTree = "<group>";
@@ -773,12 +807,14 @@
 				4E82E3A12C4663D000F06DE3 /* SmokingHabit.swift in Sources */,
 				4E6F39D52C33980900058003 /* SupportIcon.swift in Sources */,
 				4E571A9E2C579647002BA2DD /* SortedMilestonesListView.swift in Sources */,
+				4E66F64A2C58C96200D9D982 /* ChangePasswordView.swift in Sources */,
 				4E82E3AB2C46663400F06DE3 /* QuitAttemptService.swift in Sources */,
 				4E6F39DD2C33B79200058003 /* MyMilestonesView.swift in Sources */,
 				4E82E3A92C46661F00F06DE3 /* SmokingHabitService.swift in Sources */,
 				4E9AC0A62C2E844700B3C2F0 /* AidProductDetailEditView.swift in Sources */,
 				4E0F849A2C2D30460037AE25 /* MilestoneService.swift in Sources */,
 				4E1A80EF2C495D240052CBD2 /* LoginViewModel.swift in Sources */,
+				4E66F6572C58F39D00D9D982 /* EmailHelper.swift in Sources */,
 				4E6F39D32C33951A00058003 /* CheckOnboardingView.swift in Sources */,
 				4E0F84D62C2D3D8E0037AE25 /* ActivityRowView.swift in Sources */,
 				4E0F84922C2D30120037AE25 /* MotivationService.swift in Sources */,
@@ -786,9 +822,11 @@
 				4EABEA8D2C53192300252308 /* StringToDateFormatter.swift in Sources */,
 				4E571A9A2C57730B002BA2DD /* NewMilestoneView.swift in Sources */,
 				4E935D492C54BCB50035D6D5 /* UserActivity.swift in Sources */,
+				4E66F64F2C58EFF400D9D982 /* PrivacyPolicyView.swift in Sources */,
 				4E0F84AF2C2D34990037AE25 /* Motivation.swift in Sources */,
 				4E571A9C2C579572002BA2DD /* AllMilestonesListView.swift in Sources */,
 				4E6F39D72C33989A00058003 /* PostText.swift in Sources */,
+				4E66F64D2C58EFD000D9D982 /* TermsAndConditionsView.swift in Sources */,
 				4E82E39F2C4661E200F06DE3 /* OnboardingStep9View.swift in Sources */,
 				4E0F84C22C2D3C8B0037AE25 /* HealthProgressCardView.swift in Sources */,
 				4E0F84DB2C2D3E6A0037AE25 /* MilestonePostCardView.swift in Sources */,
@@ -835,17 +873,21 @@
 				4E0F84962C2D30260037AE25 /* SymptomService.swift in Sources */,
 				4E0F84292C2D07F70037AE25 /* SennightApp.swift in Sources */,
 				4E0F84632C2D10640037AE25 /* HomeView.swift in Sources */,
+				4E66F6532C58F0D900D9D982 /* AboutAppView.swift in Sources */,
 				4E0F847F2C2D2CA60037AE25 /* AidProductViewModel.swift in Sources */,
 				4E0F84D02C2D3D6D0037AE25 /* SymptomsCardView.swift in Sources */,
 				4E0F84892C2D2CDA0037AE25 /* ActivityListViewModel.swift in Sources */,
+				4E66F65A2C59054400D9D982 /* SignInWithAppleButton.swift in Sources */,
 				4E0F84702C2D28F50037AE25 /* OnboardingStep3View.swift in Sources */,
 				4E0F847B2C2D2C780037AE25 /* MotivationListViewModel.swift in Sources */,
 				4E0F848D2C2D2D050037AE25 /* SmokingLogChartViewModel.swift in Sources */,
 				4E0F84742C2D29220037AE25 /* SignUpView.swift in Sources */,
+				4E66F6512C58F0B400D9D982 /* LicensesView.swift in Sources */,
 				4E0F84B72C2D34B40037AE25 /* Activity.swift in Sources */,
 				4E19A13B2C53380900CB3553 /* QuitAttemptCardView.swift in Sources */,
 				4E0F845C2C2D0E710037AE25 /* NetworkService.swift in Sources */,
 				4E0F84B92C2D34BF0037AE25 /* MilestonePost.swift in Sources */,
+				4E66F65C2C59057E00D9D982 /* SignInWithAppleViewModel.swift in Sources */,
 				4E0F84A02C2D30920037AE25 /* MilestonePostListViewModel.swift in Sources */,
 				4E0F847D2C2D2C880037AE25 /* MotivationViewModel.swift in Sources */,
 				4E33CEB62C4B973700BE9303 /* LottieView.swift in Sources */,
@@ -1024,6 +1066,7 @@
 				DEVELOPMENT_TEAM = NNA9AVJNUS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sennight/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1054,6 +1097,7 @@
 				DEVELOPMENT_TEAM = NNA9AVJNUS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sennight/Info.plist;
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
