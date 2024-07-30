@@ -42,6 +42,8 @@ class LoginViewModel: ObservableObject {
                 completion(response.status)
                 if response.status {
                     UserService.shared.saveToken(token: response.data!.accessToken!, userID: response.data!.id!)
+                    self.email = response.data?.email ?? ""
+                    self.password = response.data?.password ?? ""
                 }
             }.store(in: &cancellables)
     }

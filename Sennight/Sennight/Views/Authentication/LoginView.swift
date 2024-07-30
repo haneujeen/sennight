@@ -132,7 +132,7 @@ struct LoginView: View {
                                 .foregroundColor(Theme.teal.mainColor)
                                 .underline()
                                 .onTapGesture {
-                                    if let url = URL(string: "https://www.example.com/terms") {
+                                    if let url = URL(string: "https://sennight-ios.github.io/terms") {
                                         UIApplication.shared.open(url)
                                     }
                                 }
@@ -141,7 +141,7 @@ struct LoginView: View {
                                 .foregroundColor(Theme.teal.mainColor)
                                 .underline()
                                 .onTapGesture {
-                                    if let url = URL(string: "https://www.example.com/privacy") {
+                                    if let url = URL(string: "https://sennight-ios.github.io/privacy") {
                                         UIApplication.shared.open(url)
                                     }
                                 }
