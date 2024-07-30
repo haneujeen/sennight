@@ -34,7 +34,7 @@ class MotivationService {
             .validate()
             .responseDecodable(of: UserMotivationResponse.self) { response in
                 switch response.result {
-                case .success(let value):
+                case .success(_):
                     if let data = response.data, let jsonString = String(data: data, encoding: .utf8) {
                         print("Raw JSON response: \(jsonString)")
                     }
