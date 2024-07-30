@@ -3,7 +3,7 @@
 //  Sennight
 //
 //  Created by 한유진 on 7/27/24.
-//  Edited by 김소연 on 2024-07-29: Activity Service 코드 생성
+//  Edited by 김소연 on 2024-07-29: Activity 모델 정의
 //
 
 import Foundation
