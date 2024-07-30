@@ -34,9 +34,6 @@
     "Activities" : {
 
     },
-    "Activity row" : {
-
-    },
     "Add and manage your smoking habits and cravings." : {
 
     },
@@ -293,10 +290,7 @@
     "Support and get support from others who are also on this journey." : {
 
     },
-    "Symptom row" : {
-
-    },
-    "Symptoms" : {
+    "Symptom" : {
 
     },
     "Tell us what motivated you to quit smoking?" : {
@@ -332,6 +326,9 @@
     "Your password must:" : {
 
     },
+    "금단 증상 아이디: %lld" : {
+
+    },
     "금연보조제 아이디: %lld" : {
 
     },
@@ -339,6 +336,9 @@
 
     },
     "입력해주세요" : {
+
+    },
+    "활동내역 아이디: %lld" : {
 
     }
   },
