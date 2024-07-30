@@ -54,9 +54,8 @@ struct NewMilestoneView: View {
             isMilestoneAdded = true
             
         }
-        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+        DispatchQueue.main.asyncAfter(deadline: .now()) {
             withAnimation {
-                isMilestoneAdded = false
                 presentationMode.wrappedValue.dismiss()
             }
         }

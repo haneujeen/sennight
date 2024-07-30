@@ -14,13 +14,14 @@ struct MyMilestonesView: View {
     @AppStorage("showAboutMilestones") private var showAboutMilestones: Bool = true
     @State private var isMilestoneAdded = false
     @State private var selectedOption = 0
-    @AppStorage("newMaxMilestoneID") private var newMaxMilestoneID: Int?
+    @AppStorage("newMaxMilestoneID") private var newMaxMilestoneID: Int = 0
     @State private var showAlert = false
-
+    @State private var maxMilestoneID: Int?
+    
     private var startDate: Date {
         dateFormatter().date(from: quitAttemptViewModel.activeQuitAttempt?.startDate ?? "") ?? Date()
     }
-
+    
     var body: some View {
         VStack {
             Picker("Filter", selection: $selectedOption) {
@@ -29,7 +30,7 @@ struct MyMilestonesView: View {
             }
             .pickerStyle(SegmentedPickerStyle())
             .padding()
-
+            
             if selectedOption == 0 {
                 AllMilestonesListView()
                     .environmentObject(milestoneViewModel)
@@ -39,41 +40,49 @@ struct MyMilestonesView: View {
                     .environmentObject(milestoneViewModel)
             }
         }
-        .onAppear(perform: {
+        .onAppear {
             quitAttemptViewModel.getAllQuitAttempts()
             milestoneViewModel.getAllMilestones()
             milestoneViewModel.getMaxMilestoneID()
             checkForNewMilestones()
-        })
-        .fullScreenCover(item: $newMaxMilestoneID) { id in
+        }
+        .fullScreenCover(item: $maxMilestoneID) { id in
             if let milestone = Milestone(rawValue: id) {
-                NewMilestoneView(milestone: milestone, 
+                NewMilestoneView(milestone: milestone,
                                  quitAttemptID: quitAttemptViewModel.activeQuitAttempt?.id ?? 0,
                                  isMilestoneAdded: $isMilestoneAdded)
-                    .environmentObject(milestoneViewModel)
+                .environmentObject(milestoneViewModel)
             }
         }
-        .onChange(of: isMilestoneAdded, { oldValue, newValue in
+        .onChange(of: newMaxMilestoneID) { oldValue, newValue in
+            maxMilestoneID = newValue
+        }
+        .onChange(of: isMilestoneAdded) { oldValue, newValue in
             if newValue && showAboutMilestones {
+                print("alert")
                 showAlert = true
-                showAboutMilestones = false
             }
-        })
+            quitAttemptViewModel.getAllQuitAttempts()
+            milestoneViewModel.getAllMilestones()
+            milestoneViewModel.getMaxMilestoneID()
+            checkForNewMilestones()
+        }
         .alert(isPresented: $showAlert) {
             Alert(title: Text("About Milestones"),
                   message: Text("You’ve just achieved your first milestone. Keep pushing forward and you'll mark more milestones along the way."),
-                  dismissButton: .default(Text("Close")))
+                  dismissButton: .default(Text("Close"), action: {
+                showAboutMilestones = false
+            }))
         }
     }
-
+    
     private func checkForNewMilestones() {
         for milestone in Milestone.allCases {
-            if let storedID = newMaxMilestoneID {
-                if milestone.id > storedID && milestone.timeInterval <= Date().timeIntervalSince(startDate) {
-                    newMaxMilestoneID = milestone.id
-                    milestoneViewModel.maxMilestoneID = milestone.id
-                    break
-                }
+            if milestone.timeInterval <= Date().timeIntervalSince(startDate) &&
+                milestone.id > newMaxMilestoneID {
+                newMaxMilestoneID = milestone.id
+                milestoneViewModel.maxMilestoneID = milestone.id
+                break
             }
         }
     }
