@@ -46,10 +46,10 @@ class UserService {
     }
     
     func register(email: String, name: String, password: String) -> AnyPublisher<UserResponse, AFError> {
-        let URL = "\(HOST)/users/register"
+        let url = "\(HOST)/users/register"
         let parameters = UserRequest(email: email, name: name, password: password, photoFilename: nil)
         
-        return AF.request(URL,
+        return AF.request(url,
                           method: .post,
                           parameters: parameters,
                           encoder: JSONParameterEncoder.default)

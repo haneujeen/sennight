@@ -25,9 +25,9 @@ class MilestoneService {
         guard let userID  = UserService.shared.getUserID() else {
             return Fail(error: AFError.explicitlyCancelled).eraseToAnyPublisher()
         }
-        let URL = "\(HOST)/user-milestones/\(userID)"
+        let url = "\(HOST)/user-milestones/\(userID)"
         let header : HTTPHeaders = ["Authorization": "Bearer \(token)"]
-        return AF.request(URL, method: .get, headers: header)
+        return AF.request(url, method: .get, headers: header)
             .publishData()
                     .tryMap { result -> Data in
                         if let data = result.data {
