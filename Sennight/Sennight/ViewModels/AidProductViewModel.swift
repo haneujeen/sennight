@@ -12,22 +12,22 @@ import SwiftUI
 import Combine
 
 class AidProductViewModel: ObservableObject {
-    @Published var data: [AidProduct] = []
+    @Published var data: [UserAidProduct] = []
     @Published var userID = 0
   
     private var cancellables = Set<AnyCancellable>()
     
-    func read() {
+    func getAidProduct() {
         print("금연보조제 뷰모델에서 금연보조제 읽어오기")
-        AidProductService.shared.read(userID: userID)
+        AidProductService.shared.read()
             .sink { completion in
                 switch completion {
                 case .finished: break
                 case .failure(let error):
                     print(error.localizedDescription)
                 }
-            } receiveValue: { data in
-                self.data = data
+            } receiveValue: { [weak self] data in
+                self?.data = data
             }
             .store(in: &cancellables)
     }

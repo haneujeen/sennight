@@ -10,7 +10,7 @@
 import Foundation
 
 //Read AidProduct 모델 구현
-struct AidProductResponse: Codable {
+struct UserAidProductResponse: Codable {
     let status: Bool
     let detail: String
     let data: [UserAidProduct]
@@ -21,7 +21,7 @@ struct UserAidProduct: Codable, Identifiable {
     let aidProductID: Int
     let userID: Int
     let startDate: String
-    let endDate: String
+    let endDate: String?
     
     enum CodingKeys: String, CodingKey {
         case id
