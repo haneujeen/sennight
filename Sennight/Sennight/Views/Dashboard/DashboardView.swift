@@ -9,7 +9,7 @@ import SwiftUI
 
 struct DashboardView: View {
     @StateObject private var quitAttemptViewModel = QuitAttemptViewModel()
-    
+    @StateObject private var motivationViewModel = MotivationViewModel()
     var body: some View {
         NavigationStack {
             List {
@@ -21,6 +21,7 @@ struct DashboardView: View {
                     .environmentObject(quitAttemptViewModel)
                 MotivationCardView()
                     .frame(height: 40)
+                    .environmentObject(motivationViewModel)
                 MoneySavedCardView()
                     .frame(height: 40)
                 AidProductsCardView()
