@@ -91,6 +91,7 @@
 		4E571A9A2C57730B002BA2DD /* NewMilestoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E571A992C57730B002BA2DD /* NewMilestoneView.swift */; };
 		4E571A9C2C579572002BA2DD /* AllMilestonesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E571A9B2C579572002BA2DD /* AllMilestonesListView.swift */; };
 		4E571A9E2C579647002BA2DD /* SortedMilestonesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E571A9D2C579647002BA2DD /* SortedMilestonesListView.swift */; };
+		4E66F6482C58C2A900D9D982 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66F6472C58C2A900D9D982 /* ProfileView.swift */; };
 		4E6F39D32C33951A00058003 /* CheckOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D22C33951A00058003 /* CheckOnboardingView.swift */; };
 		4E6F39D52C33980900058003 /* SupportIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D42C33980900058003 /* SupportIcon.swift */; };
 		4E6F39D72C33989A00058003 /* PostText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D62C33989A00058003 /* PostText.swift */; };
@@ -235,6 +236,7 @@
 		4E571A992C57730B002BA2DD /* NewMilestoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMilestoneView.swift; sourceTree = "<group>"; };
 		4E571A9B2C579572002BA2DD /* AllMilestonesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMilestonesListView.swift; sourceTree = "<group>"; };
 		4E571A9D2C579647002BA2DD /* SortedMilestonesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedMilestonesListView.swift; sourceTree = "<group>"; };
+		4E66F6472C58C2A900D9D982 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
 		4E6F39D22C33951A00058003 /* CheckOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOnboardingView.swift; sourceTree = "<group>"; };
 		4E6F39D42C33980900058003 /* SupportIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportIcon.swift; sourceTree = "<group>"; };
 		4E6F39D62C33989A00058003 /* PostText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostText.swift; sourceTree = "<group>"; };
@@ -519,6 +521,7 @@
 		4E0F84772C2D2A280037AE25 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				4E66F6472C58C2A900D9D982 /* ProfileView.swift */,
 				4E0F84A92C2D33F80037AE25 /* SettingsView.swift */,
 			);
 			path = Settings;
@@ -759,6 +762,7 @@
 				4E0F84D42C2D3D850037AE25 /* ActivitiesCardView.swift in Sources */,
 				4E0F84942C2D301B0037AE25 /* AidProductService.swift in Sources */,
 				4E0F84A22C2D30AE0037AE25 /* MilestonePostService.swift in Sources */,
+				4E66F6482C58C2A900D9D982 /* ProfileView.swift in Sources */,
 				4E935D4B2C54D5EB0035D6D5 /* UserMilestone.swift in Sources */,
 				4E0F84D82C2D3DFC0037AE25 /* SmokingLogChartCardView.swift in Sources */,
 				4E82E3A32C46640D00F06DE3 /* SmokingHabitViewModel.swift in Sources */,
