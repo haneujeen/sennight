@@ -372,14 +372,14 @@
 				4E82E3A42C4665CB00F06DE3 /* QuitAttempt.swift */,
 				4E3965F22C53CAE2005E6EB4 /* HealthBenefit.swift */,
 				4E935D4C2C54DCC30035D6D5 /* Trigger.swift */,
-				92BB225F2C55D8F30035CDE6 /* UserMotivation.swift */,
 				4E0F84AE2C2D34990037AE25 /* Motivation.swift */,
+				92BB225F2C55D8F30035CDE6 /* UserMotivation.swift */,
 				92BB22592C55D7D70035CDE6 /* AidProduct.swift */,
 				92BB225B2C55D7FC0035CDE6 /* UserAidProduct.swift */,
-				92BB22612C55D8FA0035CDE6 /* UserSymptom.swift */,
 				4E0F84B42C2D34AD0037AE25 /* Symptom.swift */,
-				92BB225D2C55D8ED0035CDE6 /* UserActivity.swift */,
+				92BB22612C55D8FA0035CDE6 /* UserSymptom.swift */,
 				4E0F84B62C2D34B40037AE25 /* Activity.swift */,
+				92BB225D2C55D8ED0035CDE6 /* UserActivity.swift */,
 				92BB22652C55D9EA0035CDE6 /* Milestone.swift */,
 				4E0F84B02C2D349F0037AE25 /* UserMilestone.swift */,
 				4E0F84B82C2D34BF0037AE25 /* MilestonePost.swift */,
@@ -431,15 +431,14 @@
 			isa = PBXGroup;
 			children = (
 				4E0F845B2C2D0E710037AE25 /* NetworkService.swift */,
-				4E0F845D2C2D0E7B0037AE25 /* UserService.swift */,
 				4E82E3A82C46661F00F06DE3 /* SmokingHabitService.swift */,
 				4E82E3AA2C46663400F06DE3 /* QuitAttemptService.swift */,
+				4E0F845D2C2D0E7B0037AE25 /* UserService.swift */,
 				4E0F84912C2D30120037AE25 /* MotivationService.swift */,
 				4E0F84932C2D301B0037AE25 /* AidProductService.swift */,
 				4E0F84952C2D30260037AE25 /* SymptomService.swift */,
 				4E0F84972C2D302D0037AE25 /* ActivityService.swift */,
 				4E0F84992C2D30460037AE25 /* MilestoneService.swift */,
-				4E0F84A12C2D30AE0037AE25 /* MilestonePostService.swift */,
 				4E0F84A32C2D30C90037AE25 /* SmokingLogService.swift */,
 			);
 			path = Services;
@@ -448,6 +447,7 @@
 		4E0F84582C2D0E130037AE25 /* Resources */ = {
 			isa = PBXGroup;
 			children = (
+				4E0F84A12C2D30AE0037AE25 /* MilestonePostService.swift */,
 				4E33CEB72C4B979000BE9303 /* Lottie Files */,
 				4E0F842C2C2D07F90037AE25 /* Assets.xcassets */,
 				4E0F848E2C2D2DE00037AE25 /* Localization */,
