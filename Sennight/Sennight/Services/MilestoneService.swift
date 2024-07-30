@@ -16,7 +16,7 @@ class MilestoneService {
     let tokenKey = "token"
     let userIDKey = "userID"
     
-    func read(userID: Int) -> AnyPublisher<[Milestone], AFError> {
+    func read() -> AnyPublisher<[UserMilestone], AFError> {
         print("마일스톤 서비스에서 마일스톤을 읽어오려합니다")
         
         guard let token  = UserService.shared.getToken() else {
@@ -42,8 +42,8 @@ class MilestoneService {
                             throw AFError.responseValidationFailed(reason: .dataFileNil)
                         }
                     }
-                    .decode(type: MilestoneResponse.self, decoder: JSONDecoder())
-                    .map { $0.data }
+                    .decode(type: UserMilestonesResponse.self, decoder: JSONDecoder())
+                    .map { $0.data ?? [] }
                     .mapError { error in
                         if let afError = error as? AFError {
                             return afError

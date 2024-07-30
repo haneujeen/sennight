@@ -7,22 +7,60 @@
 
 /// Milestone enum 케이스의 id로 PK 대신 days가 사용되었습니다.
 enum Milestone: Int, CaseIterable, Identifiable {
-    case oneWeek = 7
-    case twoWeeks = 14
-    case threeWeeks = 21
-    case oneMonth = 30
-    case twoMonths = 60
-    case threeMonths = 91
-    case sixMonths = 182
-    case oneYear = 365
-    case twoYears = 730
-    case threeYears = 1095
-    case fiveYears = 1825
-    case tenYears = 3650
-    case fifteenYears = 5475
-    case twentyYears = 7300
+    case oneWeek = 1
+    case twoWeeks
+    case threeWeeks
+    case oneMonth
+    case twoMonths
+    case threeMonths
+    case sixMonths
+    case oneYear
+    case twoYears
+    case threeYears
+    case fiveYears
+    case tenYears
+    case fifteenYears
+    case twentyYears
     
     var id: Int { rawValue }
+    
+    var days: Int {
+        switch self {
+        case .oneWeek: return 7
+        case .twoWeeks: return 14
+        case .threeWeeks: return 21
+        case .oneMonth: return 30
+        case .twoMonths: return 60
+        case .threeMonths: return 91
+        case .sixMonths: return 182
+        case .oneYear: return 365
+        case .twoYears: return 730
+        case .threeYears: return 1095
+        case .fiveYears: return 1825
+        case .tenYears: return 3650
+        case .fifteenYears: return 5475
+        case .twentyYears: return 7300
+        }
+    }
+    
+    var title: String {
+        switch self {
+        case .oneWeek: return "First Stepper"
+        case .twoWeeks: return "Lionhearted Adventurer"
+        case .threeWeeks: return "Steadfast Star"
+        case .oneMonth: return "Milestone Maker"
+        case .twoMonths: return "Unwavering Builder"
+        case .threeMonths: return "Hurdle Sprinter"
+        case .sixMonths: return "Superstar"
+        case .oneYear: return "Happy Year Hero"
+        case .twoYears: return "Double Dino"
+        case .threeYears: return "Wanderer"
+        case .fiveYears: return "Lustrum Inspiration"
+        case .tenYears: return "Fearless Gardener"
+        case .fifteenYears: return "Blithe Champion"
+        case .twentyYears: return "Everest Climber"
+        }
+    }
     
     var message: String {
         switch self {

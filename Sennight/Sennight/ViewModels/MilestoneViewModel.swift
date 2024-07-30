@@ -11,14 +11,14 @@ import SwiftUI
 import Combine
 
 class MilestoneViewModel: ObservableObject {
-    @Published var data: [Milestone] = []
+    @Published var data: [UserMilestone] = []
     @Published var userID = 0
   
     private var cancellables = Set<AnyCancellable>()
     
     func read() {
         print("마일스톤 뷰모델에서 마일스톤을 읽어오기")
-        MilestoneService.shared.read(userID: userID)
+        MilestoneService.shared.read()
             .sink { completion in
                 switch completion {
                 case .finished: break
