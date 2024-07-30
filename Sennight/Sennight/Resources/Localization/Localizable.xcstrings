@@ -19,13 +19,10 @@
     ":" : {
 
     },
-    "!" : {
-
-    },
     "%lld" : {
 
     },
-    "%lld%%" : {
+    "100%" : {
 
     },
     "About App" : {
@@ -41,6 +38,9 @@
 
     },
     "Add and manage your smoking habits and cravings." : {
+
+    },
+    "Aid product detail edit" : {
 
     },
     "Already have an account?" : {
@@ -59,6 +59,9 @@
 
     },
     "Begin your journey and stay updated with your progress." : {
+
+    },
+    "Category: %@" : {
 
     },
     "Change Password" : {
@@ -103,7 +106,7 @@
     "Error" : {
 
     },
-    "Factor detail edit" : {
+    "Failed to load motivation. Please try again." : {
 
     },
     "Feelings and Symptoms" : {
@@ -157,6 +160,9 @@
     "Licenses" : {
 
     },
+    "Loading..." : {
+
+    },
     "Logout" : {
 
     },
@@ -172,7 +178,7 @@
     "Money saved card" : {
 
     },
-    "Motivation card" : {
+    "Motivation Message:" : {
 
     },
     "My milestones" : {
@@ -184,7 +190,7 @@
     "New activity sheet" : {
 
     },
-    "New factor sheet" : {
+    "New aid product sheet" : {
 
     },
     "New smoking sheet" : {
@@ -194,6 +200,9 @@
 
     },
     "Next" : {
+
+    },
+    "No motivation available" : {
 
     },
     "Note: The health benefits listed are general estimates and may vary from person to person. Please consult with a healthcare professional for personalized guidance." : {
@@ -305,7 +314,7 @@
     "Track Habits and Cravings" : {
 
     },
-    "Update factor sheet" : {
+    "Update aid product sheet" : {
 
     },
     "User achieved %@ Milestone! Send support?" : {
