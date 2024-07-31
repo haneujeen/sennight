@@ -8,9 +8,10 @@
 import SwiftUI
 
 struct OnboardingStep3View: View {
+    @EnvironmentObject var smokingHabitViewModel: SmokingHabitViewModel
     @Binding var currentStep: Int
     @Binding var isOnboardingComplete: Bool
-    @State private var motivation = ""
+    @State private var price = ""
     @State private var showAlert = false
     @State private var alertMessage = ""
     
@@ -28,32 +29,47 @@ struct OnboardingStep3View: View {
             }
             
             Spacer()
-            Text("Step 3: Motivation")
+            Text("Step 3: cigarettes")
                 .font(.largeTitle)
                 .padding(.bottom, 40)
-            TextField("Why do you want to stop smoking?", text: $motivation)
+            HStack {
+                Text("Q.")
+                    .font(.title2)
+                    .padding(.bottom, 25)
+                Text("Let us know the price of a pack of cigarettes you usually buy.")
+                    .font(.title2)
+                    .padding()
+            }
+            .padding(.horizontal)
+            
+            TextField("입력해주세요", text: $price)
+                .keyboardType(.decimalPad)
                 .padding()
                 .background(Color.gray.opacity(0.2))
                 .cornerRadius(8)
                 .padding(.bottom, 40)
-            
+                .padding(.horizontal)
             Button(action: {
-                if motivation.isEmpty {
-                    alertMessage = "Please select your motivation."
-                    showAlert = true
+                
+                //price를 Double로 변환 시도
+                if let priceValue = Double(price), !price.isEmpty {
+                    smokingHabitViewModel.cigarettePrice = priceValue
+                    currentStep = 4
                 } else {
-                    isOnboardingComplete = true
+                    alertMessage = "Please enter a valid price."
+                    showAlert = true
                 }
             }) {
-                Text("Get Started")
+                Text("Next")
             }
             .padding()
             .background(Color.blue)
             .foregroundColor(.white)
             .cornerRadius(8)
-            .alert(isPresented: $showAlert) {
-                Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+            .alert(isPresented: $showAlert) { // 유효하지 않은 입력 시 경고 메시지 표시
+                Alert(title: Text("Invalid Input"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
             }
+            
             Spacer()
         }
     }
@@ -62,5 +78,6 @@ struct OnboardingStep3View: View {
 struct OnboardingStep3View_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingStep3View(currentStep: .constant(3), isOnboardingComplete: .constant(false))
+            .environmentObject(SmokingHabitViewModel())
     }
 }

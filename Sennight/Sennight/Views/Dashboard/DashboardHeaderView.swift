@@ -11,6 +11,7 @@ struct DashboardHeaderView: View {
     var body: some View {
         Section {
             Text("Dashboard header")
+                .accessibilityAddTraits(.isHeader)
         }
     }
 }

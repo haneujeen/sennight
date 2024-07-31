@@ -5,7 +5,7 @@ from ..schemas import motivation_schemas
 
 
 def create(db: Session, user_id: int, user_motivation: motivation_schemas.UserMotivationCreate):
-    db_user_motivation = models.UserMotivation(**user_motivation.model_dump(), user_id=user_id)
+    db_user_motivation = models.UserMotivation(**user_motivation.model_dump())
     db.add(db_user_motivation)
     db.commit()
     db.refresh(db_user_motivation)

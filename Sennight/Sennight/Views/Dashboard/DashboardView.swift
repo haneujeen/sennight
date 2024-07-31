@@ -19,7 +19,7 @@ struct DashboardView: View {
                     .frame(height: 40)
                 MoneySavedCardView()
                     .frame(height: 40)
-                FactorsCardView()
+                AidProductsCardView()
                 SymptomsCardView()
                 ActivitiesCardView()
             }
