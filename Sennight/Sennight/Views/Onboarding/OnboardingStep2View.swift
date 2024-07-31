@@ -5,76 +5,110 @@
 //  Created by 한유진 on 6/27/24.
 //  Edited by 김소연 on 2024-07-22: 온보딩 스텝 2 UI 수정
 //  Edited by 김소연 on 2024-07-24: selectedNum을 SmokingHabitViewModel의 dailyCigarettes에 저장
+//  Edited by 한유진 on 2024-07-31: 온보딩 스크린의 UI 수정
 //
 
 import SwiftUI
 
 struct OnboardingStep2View: View {
     @EnvironmentObject var smokingHabitViewModel: SmokingHabitViewModel
-    let dailyCigarettesNum = Array(0...60)
-    @State private var selectedNum = 1
     @Binding var currentStep: Int
     @Binding var isOnboardingComplete: Bool
-    @State private var showAlert = false
-    @State private var alertMessage = ""
+    
+    let dailyCigarettesRange = Array(0...60)
+    @State private var dailyCigarettes = 10
     
     var body: some View {
         VStack {
+            OnboardingDismissButton(isOnboardingComplete: $isOnboardingComplete)
+            
+            Image(systemName: "smoke")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 100, height: 100)
+                .foregroundStyle(
+                    LinearGradient(
+                        gradient: Gradient(colors: [Theme.bubblegum.mainColor, Theme.sky.mainColor]),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                )
+            
             HStack {
+                Text("Let us know")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundStyle(
+                        LinearGradient(
+                            gradient: Gradient(colors: [Theme.sky.mainColor, Theme.teal.mainColor]),
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
                 Spacer()
-                Button(action: {
-                    isOnboardingComplete = true
-                }) {
-                    Text("Dismiss")
-                        .foregroundColor(.red)
-                }
-                .padding()
             }
-            
-            Spacer()
-            Text("Step 2: daily cigarettes")
-                .font(.largeTitle)
-                .padding(.bottom, 40)
+            .padding(.horizontal)
             
             HStack {
-                Text("Q.")
-                    .font(.title2)
-                    .padding(.bottom, 25)
-                Text("Let us know the number of cigarettes you smoke daily.")
-                    .font(.title2)
-                    .padding(.horizontal)
+                Text("the number of cigarettes you smoke daily.")
+                    .padding(.leading)
+                    .fontWeight(.semibold)
+                Spacer()
             }
             
-            // Picker의 selection 바인딩과 ForEach의 item 바인딩이 일치해야 합니다.
-            GeometryReader { geometry in
-                Picker("", selection: $selectedNum) {
-                    ForEach(dailyCigarettesNum, id: \.self) { number in
-                        Text("\(number)")
-                            .font(.title3)
-                            .foregroundStyle(.primary)
-                    }
-                }
-                .pickerStyle(.wheel)
-                .frame(width: geometry.size.width, height: 100)
-                .clipped() // 프레임을 벗어나는 이미지 제거
-                .padding(.bottom, 30)
+            HStack {
+                Text("If you’re currently smoke-free, add the number of cigarettes you used to smoke daily. This will help calculate your savings.")
+                    .padding(.horizontal)
+                    .font(.subheadline)
+                    .foregroundStyle(Color.secondary)
+                Spacer()
             }
+            
+            Picker("", selection: $dailyCigarettes) {
+                ForEach(dailyCigarettesRange, id: \.self) { count in
+                    Text("\(count)")
+                        .font(.headline)
+                }
+            }
+            .pickerStyle(.wheel)
+            .frame(height: 150)
+            .clipped()
+            .padding(.horizontal, 50)
+            .padding(.vertical, 30)
             
             Button(action: {
-                smokingHabitViewModel.dailyCigarettes = selectedNum
+                smokingHabitViewModel.dailyCigarettes = dailyCigarettes
                 currentStep = 3
             }) {
                 Text("Next")
+                    .fontWeight(.semibold)
+                    .padding(20)
+                    .frame(maxWidth: .infinity)
+                    .background(LinearGradient(
+                        gradient: Gradient(colors: [Theme.teal.mainColor, Theme.sky.mainColor]),
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    ))
+                    .foregroundColor(Theme.periwinkle.accentColor)
+                    .cornerRadius(25)
             }
-            .padding()
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(8)
-            .alert(isPresented: $showAlert) {
-                Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+            .padding(.horizontal)
+            
+            Button(action: {
+                currentStep = 1
+            }) {
+                Text("Previous")
+                    .fontWeight(.semibold)
+                    .padding(20)
+                    .frame(maxWidth: .infinity)
+                    .background(Theme.lightGray.mainColor)
+                    .cornerRadius(25)
             }
+            .padding(.horizontal)
             Spacer()
         }
+        .foregroundStyle(Theme.indigo.mainColor)
+        .padding()
     }
 }
 

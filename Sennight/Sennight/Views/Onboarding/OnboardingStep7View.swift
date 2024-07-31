@@ -11,82 +11,90 @@ import SwiftUI
 
 struct OnboardingStep7View: View {
     @EnvironmentObject var quitAttemptViewModel: QuitAttemptViewModel
-    // @Binding 변수들은 부모 뷰에서 전달받은 값을 양방향으로 바인딩합니다.
     @Binding var currentStep: Int
     @Binding var isOnboardingComplete: Bool
     
-    // 사용자가 선택한 날짜를 저장합니다.
     @State private var selectedDate = Date()
-    
-    // 경고 표시를 위한 상태 변수들
-    @State private var showAlert = false
-    @State private var alertMessage = ""
+    private var today: Date {
+        return Calendar.current.startOfDay(for: Date())
+    }
     
     var body: some View {
-        // 전체 뷰는 수직으로 구성 요소들을 배치합니다.
         VStack {
-            // 상단 Dismiss 버튼
+            OnboardingDismissButton(isOnboardingComplete: $isOnboardingComplete)
+            
             HStack {
+                Text("Let us know")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundStyle(
+                        LinearGradient(
+                            gradient: Gradient(colors: [Theme.sky.mainColor, Theme.teal.mainColor]),
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
                 Spacer()
-                Button(action: {
-                    isOnboardingComplete = true
-                }) {
-                    Text("Dismiss")
-                        .foregroundColor(.red)
-                }
-                .padding()
             }
-            Spacer()
-            // 제목
-            Text("Step 7: Quit attempt")
-                .font(.largeTitle)
-                .padding(.bottom, 40)
+            .padding(.horizontal)
             
-            // 질문
             HStack {
-                Text("Q.")
-                    .font(.title2)
-                Text("Let us know the date you quit smoking.")
-                    .font(.title2)
-                    .padding(.horizontal)
+                Text("the date you quit smoking.")
+                    .padding(.leading)
+                    .fontWeight(.semibold)
+                Spacer()
             }
-            .padding(.bottom, 25)
             
-            // DatePicker: 사용자가 날짜를 선택할 수 있게 합니다.
-            DatePicker("Select Date", selection: $selectedDate, displayedComponents: .date)
-                .datePickerStyle(GraphicalDatePickerStyle()) // 달력 형태의 UI를 제공합니다.
-                .padding()
+            HStack {
+                Text("We’ll track your progress and milestones.")
+                    .padding(.horizontal)
+                    .font(.subheadline)
+                    .foregroundStyle(Color.secondary)
+                Spacer()
+            }
             
-            // 선택된 날짜 표시
-            Text("Selected Date: \(formattedDate)")
-                .font(.title2)
-                .padding(.vertical, 20)
+            DatePicker("Select Date", selection: $selectedDate, in: ...today, displayedComponents: .date)
+                .datePickerStyle(GraphicalDatePickerStyle())
+                .accentColor(.brown)
+                .padding(.horizontal)
+                .padding(.vertical, 30)
             
-            // 다음 버튼
             Button(action: {
-                // 선택된 날짜가 미래인지 확인합니다.
-                if selectedDate > Date() {
-                    alertMessage = "Please select a date in the past."
-                    showAlert = true
-                } else {
-                    let dateFormatter = DateFormatter()
-                    dateFormatter.dateFormat = "yyyy-MM-dd"
-                    let selectedDateString = dateFormatter.string(from: selectedDate)
-                    quitAttemptViewModel.startDate = selectedDateString
-                    currentStep = 8
-                }
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                let selectedDateString = dateFormatter.string(from: selectedDate)
+                quitAttemptViewModel.startDate = selectedDateString
+                currentStep = 8
             }) {
                 Text("Next")
+                    .fontWeight(.semibold)
+                    .padding(20)
+                    .frame(maxWidth: .infinity)
+                    .background(LinearGradient(
+                        gradient: Gradient(colors: [Theme.teal.mainColor, Theme.sky.mainColor]),
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    ))
+                    .foregroundColor(Theme.periwinkle.accentColor)
+                    .cornerRadius(25)
             }
-            .padding()
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(8)
-            .alert(isPresented: $showAlert) {
-                Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+            .padding(.horizontal)
+            
+            Button(action: {
+                currentStep = 6
+            }) {
+                Text("Previous")
+                    .fontWeight(.semibold)
+                    .padding(20)
+                    .frame(maxWidth: .infinity)
+                    .background(Theme.lightGray.mainColor)
+                    .cornerRadius(25)
             }
+            .padding(.horizontal)
             Spacer()
         }
+        .foregroundStyle(Theme.indigo.mainColor)
+        .padding()
     }
     
     // 선택된 날짜를 포맷팅하는 계산 속성
@@ -97,7 +105,6 @@ struct OnboardingStep7View: View {
     }
 }
 
-// Xcode의 프리뷰에서 이 뷰를 볼 수 있게 합니다.
 struct OnboardingStep7View_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingStep7View(currentStep: .constant(7), isOnboardingComplete: .constant(false))

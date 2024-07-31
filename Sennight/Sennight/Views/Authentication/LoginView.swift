@@ -34,7 +34,10 @@
 import SwiftUI
 
 struct LoginView: View {
+    @StateObject private var signInWithAppleViewModel = SignInWithAppleViewModel()
     @EnvironmentObject var loginViewModel: LoginViewModel
+    @StateObject var signUpViewModel = SignUpViewModel()
+    
     @State private var showSignUpView = false
     @State private var showTermsView = false
     @State private var showPrivacyPolicyView = false
@@ -89,27 +92,56 @@ struct LoginView: View {
                             .fontWeight(.semibold)
                             .padding(20)
                             .frame(maxWidth: .infinity)
-                            .background(Theme.indigo.mainColor)
+                            .background(Theme.poppy.mainColor)
                             .foregroundColor(Theme.indigo.accentColor)
                             .cornerRadius(25)
                     }
                     .padding([.horizontal, .top])
                     
+                    //                    SignInWithAppleButton(cornerRadius: 15)
+                    //                        .frame(width: 330, height: 60)
+                    //                        .onTapGesture {
+                    //                            signInWithAppleViewModel.startSignInWithAppleFlow()
+                    //                        }
+                    
                     Button(action: {
-                        // TODO: Apple sign-in
+                        signInWithAppleViewModel.startSignInWithAppleFlow()
                     }) {
                         HStack {
                             Image(systemName: "applelogo")
+                                .font(.system(size: 20))
                             Text("Continue with Apple")
                                 .fontWeight(.semibold)
                         }
                         .padding(20)
                         .frame(maxWidth: .infinity)
-                        .background(Theme.poppy.mainColor)
-                        .foregroundColor(Theme.poppy.accentColor)
+                        .background(Color.black)
+                        .foregroundColor(Color.white)
                         .cornerRadius(25)
                     }
                     .padding(.horizontal)
+                    .onChange(of: signInWithAppleViewModel.userIdentifier) { oldValue, newValue in
+                        if !newValue.isEmpty {
+                            signUpViewModel.email = signInWithAppleViewModel.userEmail
+                            signUpViewModel.name = signInWithAppleViewModel.userName
+                            signUpViewModel.password = newValue
+                            signUpViewModel.register { response in
+                                if response.status {
+                                    loginViewModel.email = signInWithAppleViewModel.userEmail
+                                    loginViewModel.password = newValue
+                                    loginViewModel.login { status in
+                                        if status {
+                                            loginViewModel.isLoggedIn = status
+                                        } else {
+                                            print("Login failed")
+                                        }
+                                    }
+                                } else {
+                                    print("Cannot sign in with Apple")
+                                }
+                            }
+                        }
+                    }
                     
                     Button(action: {
                         showSignUpView = true
@@ -123,9 +155,7 @@ struct LoginView: View {
                         }
                     }
                     .padding(.top, 15)
-                    
                     Spacer()
-                    
                     VStack {
                         Text("If you are creating a new account,")
                         
@@ -145,7 +175,6 @@ struct LoginView: View {
                                 }
                             Text(" will apply.")
                         }
-                        
                     }
                     .font(.footnote)
                     .foregroundColor(Color.secondary)

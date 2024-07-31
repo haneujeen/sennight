@@ -16,8 +16,39 @@ class MotivationService {
     
     let HOST = Settings.shared.HOST
     
-//    func readMO(userId: Int) -> AnyPublisher<UserMotivationResponse, AFError> {
-//        let url = "\(HOST)/user-motivations/\(userId)"
-//        
-//    }
+    func createMotivation(motivationID: Int, message: String?) -> AnyPublisher<UserMotivationResponse, AFError> {
+        guard let userID = UserService.shared.getUserID(), let token = UserService.shared.getToken() else {
+            return Fail(error: AFError.explicitlyCancelled).eraseToAnyPublisher()
+        }
+        let URL = "\(HOST)/user-motivations"
+        let parameters = UserMotivationRequest(userId: userID, motivationId: motivationID, message: message)
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(token)"]
+        return AF.request(URL,
+                          method: .post,
+                          parameters: parameters,
+                          encoder: JSONParameterEncoder.default,
+                          headers: headers)
+        .publishData()
+        .tryMap { result -> Data in
+            if let data = result.data {
+                if let jsonString = String(data: data, encoding: .utf8) {
+                    print("Raw JSON response: \(jsonString)")
+                } else {
+                    print("Failed to convert data to string")
+                }
+                return data
+            } else {
+                throw AFError.responseValidationFailed(reason: .dataFileNil)
+            }
+        }
+        .decode(type: UserMotivationResponse.self, decoder: JSONDecoder())
+        .mapError { error in
+            if let afError = error as? AFError {
+                return afError
+            } else {
+                return AFError.responseSerializationFailed(reason: .decodingFailed(error: error))
+            }
+        }
+        .eraseToAnyPublisher()
+    }
 }

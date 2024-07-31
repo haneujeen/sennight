@@ -11,7 +11,7 @@ struct OnboardingStep4View: View {
     @EnvironmentObject var smokingHabitViewModel: SmokingHabitViewModel
     let hours = Array(0...23)
     let minutes = Array(0...59)
-    @State private var selectedHour = 0
+    @State private var selectedHour = 11
     @State private var selectedMinute = 0
     
     @Binding var currentStep: Int
@@ -21,29 +21,49 @@ struct OnboardingStep4View: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Spacer()
-                Button(action: {
-                    isOnboardingComplete = true
-                }) {
-                    Text("Dismiss")
-                        .foregroundColor(.red)
-                }
+            OnboardingDismissButton(isOnboardingComplete: $isOnboardingComplete)
+            
+            Image(systemName: "clock.badge.questionmark")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 100, height: 100)
+                .foregroundStyle(
+                    LinearGradient(
+                        gradient: Gradient(colors: [Theme.bubblegum.mainColor, Theme.sky.mainColor]),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                )
                 .padding()
+            
+            HStack {
+                Text("What time")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundStyle(
+                        LinearGradient(
+                            gradient: Gradient(colors: [Theme.sky.mainColor, Theme.teal.mainColor]),
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
+                Spacer()
+            }
+            .padding(.horizontal)
+            
+            HStack {
+                Text("do you usually have your first cigarette of the day?")
+                    .padding(.horizontal)
+                    .fontWeight(.semibold)
+                Spacer()
             }
             
-            Spacer()
-            Text("Step 4: first Cigarette")
-                .font(.largeTitle)
-                .padding(.bottom, 40)
-            
             HStack {
-                Text("Q.")
-                    .font(.title2)
-                    .padding(.bottom, 25)
-                Text("What time do you usually have your first cigarette of the day?")
-                    .font(.title2)
+                Text("Right after you wake up or later in the morning?")
                     .padding(.horizontal)
+                    .font(.subheadline)
+                    .foregroundStyle(Color.secondary)
+                Spacer()
             }
             
             HStack {
@@ -51,7 +71,6 @@ struct OnboardingStep4View: View {
                     ForEach(hours, id: \.self) { hour in
                         Text(String(format: "%02d", hour))
                             .font(.title)
-                            .foregroundStyle(.primary)
                     }
                 }
                 .pickerStyle(.wheel)
@@ -65,39 +84,48 @@ struct OnboardingStep4View: View {
                     ForEach(minutes, id: \.self) { minute in
                         Text(String(format: "%02d", minute))
                             .font(.title)
-                            .foregroundStyle(.primary)
                     }
                 }
                 .pickerStyle(.wheel)
                 .frame(width: 100, height: 120)
                 .clipped()
+                .padding(.vertical, 30)
             }
-            
-            Text("Selected Time: \(String(format: "%02d", selectedHour)):\(String(format: "%02d", selectedMinute))")
-                .font(.title2)
-                .padding(.bottom, 30)
             
             Button(action: {
-                if selectedHour == 0 && selectedMinute == 0 {
-                    alertMessage = "Please enter a valid time."
-                    showAlert = true
-                } else {
-                    let selectedTime = String(format: "%02d:%02d", selectedHour, selectedMinute)
-                    smokingHabitViewModel.firstCigarette = selectedTime
-                    currentStep = 5
-                }
+                let selectedTime = String(format: "%02d:%02d:00", selectedHour, selectedMinute)
+                smokingHabitViewModel.firstCigarette = selectedTime
+                currentStep = 5
             }) {
                 Text("Next")
+                    .fontWeight(.semibold)
+                    .padding(20)
+                    .frame(maxWidth: .infinity)
+                    .background(LinearGradient(
+                        gradient: Gradient(colors: [Theme.teal.mainColor, Theme.sky.mainColor]),
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    ))
+                    .foregroundColor(Theme.periwinkle.accentColor)
+                    .cornerRadius(25)
             }
-            .padding()
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(8)
-            .alert(isPresented: $showAlert) {
-                Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+            .padding(.horizontal)
+            
+            Button(action: {
+                currentStep = 3
+            }) {
+                Text("Previous")
+                    .fontWeight(.semibold)
+                    .padding(20)
+                    .frame(maxWidth: .infinity)
+                    .background(Theme.lightGray.mainColor)
+                    .cornerRadius(25)
             }
+            .padding(.horizontal)
             Spacer()
         }
+        .foregroundStyle(Theme.indigo.mainColor)
+        .padding()
     }
 }
 

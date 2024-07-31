@@ -10,80 +10,176 @@ import SwiftUI
 
 struct OnboardingStep8View: View {
     @EnvironmentObject var motivationViewModel: MotivationViewModel
-    let motivations = ["건강을 위해", "돈을 절약하기 위해", "가족을 위해", "나 자신을 위해" ,"환경보호를 위해", "직접입력"]
-    @State private var selectedMotivation = "건강을 위해"
+    let categories = ["Health", "Family/Relationship", "Personal", "Environment", "Add My Motivation"]
+    @State private var selectedCategory: String = "Health"
+    @State private var selectedMotivation: Motivation?
     @Binding var currentStep: Int
     @Binding var isOnboardingComplete: Bool
     @State private var customMotivation = ""
     @State private var showAlert = false
     @State private var alertMessage = ""
     
+    var filteredMotivations: [Motivation] {
+        return Motivation.allCases.filter { $0.category == selectedCategory }
+    }
+    
     var body: some View {
         VStack {
-            HStack {
-                Spacer()
-                Button(action: {
-                    isOnboardingComplete = true
-                }) {
-                    Text("Dismiss")
-                        .foregroundColor(.red)
+            OnboardingDismissButton(isOnboardingComplete: $isOnboardingComplete)
+            
+            ScrollView {
+                HStack {
+                    Text("Tell us what")
+                        .font(.largeTitle)
+                        .fontWeight(.bold)
+                        .foregroundStyle(
+                            LinearGradient(
+                                gradient: Gradient(colors: [Theme.sky.mainColor, Theme.teal.mainColor]),
+                                startPoint: .leading,
+                                endPoint: .trailing
+                            )
+                        )
+                    Spacer()
                 }
+                .padding(.horizontal)
+                
+                
+                HStack {
+                    Text("motivated you to quit smoking?")
+                        .padding(.leading)
+                        .fontWeight(.semibold)
+                    Spacer()
+                }
+                
+                
+                VStack {
+                    HStack {
+                        ForEach(["Health", "Family/Relationship"], id: \.self) { category in
+                            Button(action: {
+                                selectedCategory = category
+                                selectedMotivation = nil
+                            }) {
+                                Text(category)
+                                    .fontWeight(.bold)
+                                    .textCase(.uppercase)
+                                    .padding(12)
+                                    .background(selectedCategory == category ? Theme.yellow.mainColor : Theme.lightGray.mainColor)
+                                    .cornerRadius(25)
+                            }
+                        }
+                        Spacer()
+                    }
+                    
+                    HStack {
+                        ForEach(["Personal", "Environment"], id: \.self) { category in
+                            Button(action: {
+                                selectedCategory = category
+                                selectedMotivation = nil
+                            }) {
+                                Text(category)
+                                    .fontWeight(.bold)
+                                    .textCase(.uppercase)
+                                    .padding(12)
+                                    .background(selectedCategory == category ? Theme.yellow.mainColor : Theme.lightGray.mainColor)
+                                    .cornerRadius(25)
+                            }
+                        }
+                        Spacer()
+                    }
+                    
+                    HStack {
+                        Button(action: {
+                            selectedCategory = "Add My Motivation"
+                            selectedMotivation = nil
+                        }) {
+                            Text("Add My Motivation")
+                                .fontWeight(.bold)
+                                .textCase(.uppercase)
+                                .padding(12)
+                                .background(selectedCategory == "Add My Motivation" ? Theme.yellow.mainColor : Theme.lightGray.mainColor)
+                                .cornerRadius(25)
+                        }
+                        Spacer()
+                    }
+                }
+                .font(.caption)
+                .foregroundStyle(Color.blue)
                 .padding()
-            }
-            
-            Spacer()
-            Text("Step 8: Motivation")
-                .font(.largeTitle)
-                .padding(.bottom, 40)
-            
-            HStack {
-                Text("Q.")
-                    .font(.title2)
-                    .padding(.bottom, 25)
-                Text("Tell us what motivated you to quit smoking?")
-                    .font(.title2)
-                    .padding(.horizontal)
-            }
-            
-            Picker("", selection: $selectedMotivation) {
-                ForEach(motivations, id: \.self) { motivation in
-                    Text(motivation)
-                        .font(.title3)
-                }
-            }
-            .pickerStyle(.wheel)
-            .frame(height: 100)
-            .clipped()
-            .padding(.bottom, 30)
-            
-            // 조건에 따라 TextField를 표시
-            if selectedMotivation == "직접입력" {
-                TextField("Enter your motivation", text: $customMotivation)
-                    .textFieldStyle(RoundedBorderTextFieldStyle())
-                    .padding(.top, -50)
-                    .padding()
-            }
-            
-            Button(action: {
-                if selectedMotivation == "직접입력" && customMotivation.isEmpty {
-                    alertMessage = "Please enter your custom motivation."
-                    showAlert = true
+                
+                if selectedCategory != "Add My Motivation" {
+                    ForEach(filteredMotivations, id: \.self) { motivation in
+                        Button(action: {
+                            selectedMotivation = motivation
+                        }) {
+                            Text(motivation.message)
+                                .lineLimit(2)
+                                .font(.system(size: 18))
+                                .padding()
+                                .frame(maxWidth: .infinity)
+                                .background(selectedMotivation == motivation ? Theme.indigo.mainColor : Theme.yellow.mainColor)
+                                .foregroundStyle(selectedMotivation == motivation ? .white : Theme.buttercup.accentColor)
+                                .cornerRadius(25)
+                        }
+                        .padding(.vertical, 4)
+                        .padding(.horizontal)
+                    }
                 } else {
-                    //motivationViewModel.motivationID =
-                    currentStep = 9
+                    TextField("Enter your motivation", text: $customMotivation)
+                        .textFieldStyle(CustomGrayTextFieldStyle())
+                        .padding()
                 }
-            }) {
-                Text("Next")
+                
+                
+                Spacer()
+                
+                
+                Button(action: {
+                    if selectedCategory == "Add My Motivation" && customMotivation.isEmpty {
+                        alertMessage = "Please enter your motivation."
+                        showAlert = true
+                    } else if selectedMotivation == nil {
+                        alertMessage = "Please select your motivation."
+                        showAlert = true
+                    } else {
+                        if selectedCategory == "Add My Motivation" {
+                            motivationViewModel.message = customMotivation
+                        }
+                        motivationViewModel.motivationID = selectedMotivation?.id ?? 2
+                        currentStep = 9
+                    }
+                }) {
+                    Text("Next")
+                        .fontWeight(.semibold)
+                        .padding(20)
+                        .frame(maxWidth: .infinity)
+                        .background(LinearGradient(
+                            gradient: Gradient(colors: [Theme.teal.mainColor, Theme.sky.mainColor]),
+                            startPoint: .topLeading,
+                            endPoint: .bottomTrailing
+                        ))
+                        .foregroundColor(Theme.periwinkle.accentColor)
+                        .cornerRadius(25)
+                }
+                .padding(.horizontal)
+                .padding(.top)
+                .alert(isPresented: $showAlert) {
+                    Alert(title: Text("Empty Motivation!"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+                }
+                Button(action: {
+                    currentStep = 6
+                }) {
+                    Text("Previous")
+                        .fontWeight(.semibold)
+                        .padding(20)
+                        .frame(maxWidth: .infinity)
+                        .background(Theme.lightGray.mainColor)
+                        .cornerRadius(25)
+                }
+                .padding(.horizontal)
             }
-            .padding()
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(8)
-            .alert(isPresented: $showAlert) {
-                Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
-            }
-            Spacer()
         }
+        .foregroundStyle(Theme.indigo.mainColor)
+        .padding()
     }
 }
 

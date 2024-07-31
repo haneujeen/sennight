@@ -19,6 +19,7 @@ struct OnboardingView: View {
             LottieView(name: Constants.seafoamCrossingLine, loopMode: .autoReverse, animationSpeed: 0.03, contentMode: .left)
                 .scaleEffect(10)
                 .rotationEffect(.degrees(100))
+                .opacity(0.8)
             
             VStack {
                 if currentStep == 1 {
@@ -54,7 +55,7 @@ struct OnboardingView: View {
                 HStack {
                     ForEach(1...9, id: \.self) { index in
                         Circle()
-                            .fill(index == currentStep ? Theme.sky.mainColor : Theme.lightGray.mainColor)
+                            .fill(index == currentStep ? Color.blue : Theme.lightGray.mainColor)
                             .frame(width: 10, height: 10)
                     }
                 }

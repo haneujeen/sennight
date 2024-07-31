@@ -19,72 +19,94 @@ struct OnboardingStep6View: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Spacer()
-                Button(action: {
-                    isOnboardingComplete = true
-                }) {
-                    Text("Dismiss")
-                        .foregroundColor(.red)
-                }
-                .padding()
-            }
+            OnboardingDismissButton(isOnboardingComplete: $isOnboardingComplete)
+
+            Image(systemName: "leaf")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 100, height: 100)
+                .foregroundStyle(
+                    LinearGradient(
+                        gradient: Gradient(colors: [Theme.bubblegum.mainColor, Theme.sky.mainColor]),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                )
+                .padding(.top, 70)
+                .padding(30)
             
-            Spacer()
-            Text("Step 6: Smoking status")
-                .font(.largeTitle)
-                .padding(.bottom, 40)
             HStack {
-                Text("Q.")
-                    .font(.title2)
                 Text("Are you currently a smoker?")
-                    .font(.title2)
-                    .padding()
+                    .font(.system(size: 24))
+                    .fontWeight(.bold)
+                    .foregroundStyle(
+                        LinearGradient(
+                            gradient: Gradient(colors: [Theme.sky.mainColor, Theme.teal.mainColor]),
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
+                Spacer()
             }
             .padding(.horizontal)
             
             HStack {
-                Button(action: {
-                    smokingStatus = "Yes"
-                }, label: {
-                    Text("Yes")
-                })
-                .padding()
-                .background(smokingStatus == "Yes" ? Color.green : Color.yellow)
-                .foregroundColor(.white)
-                .cornerRadius(8)
-                
-                Button(action: {
-                    smokingStatus = "No"
-                }, label: {
-                    Text("No")
-                })
-                .padding()
-                .background(smokingStatus == "No" ? Color.green : Color.yellow)
-                .foregroundColor(.white)
-                .cornerRadius(8)
+                Text("Please let us know if you are planning to start or continue your journey to quit smoking.")
+                    .font(.subheadline)
+                    .foregroundStyle(Color.secondary)
+                Spacer()
             }
-            .padding(.bottom, 40)
+            .padding([.horizontal, .bottom])
             
             Button(action: {
-                if smokingStatus.isEmpty {
-                    alertMessage = "Please select your smoking status."
-                    showAlert = true
-                } else {
-                    currentStep = 7
-                }
+                currentStep = 7
             }) {
-                Text("Next")
+                Text("No, I'm not smoking now!")
+                    .fontWeight(.semibold)
+                    .padding(20)
+                    .frame(maxWidth: .infinity)
+                    .background(LinearGradient(
+                        gradient: Gradient(colors: [Theme.teal.mainColor, Theme.sky.mainColor]),
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    ))
+                    .foregroundColor(Theme.periwinkle.accentColor)
+                    .cornerRadius(25)
+            }
+            .padding(.horizontal)
+            
+            Button(action: {
+                currentStep = 8
+            }) {
+                Text("Yes, I am a smoker.")
+                    .fontWeight(.semibold)
+                    .padding(20)
+                    .frame(maxWidth: .infinity)
+                    .background(LinearGradient(
+                        gradient: Gradient(colors: [Theme.poppy.mainColor, Theme.sky.mainColor]),
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    ))
+                    .foregroundColor(Theme.periwinkle.accentColor)
+                    .cornerRadius(25)
+            }
+            .padding(.horizontal)
+            
+            Button(action: {
+                currentStep = 5
+            }) {
+                Text("Previous")
+                    .fontWeight(.semibold)
+                    .padding(20)
+                    .frame(maxWidth: .infinity)
+                    .background(Theme.lightGray.mainColor)
+                    .cornerRadius(25)
             }
             .padding()
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(8)
-            .alert(isPresented: $showAlert) {
-                Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
-            }
             Spacer()
         }
+        .foregroundStyle(Theme.indigo.mainColor)
+        .padding()
     }
 }
 

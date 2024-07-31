@@ -14,69 +14,105 @@ struct OnboardingStep5View: View {
     @EnvironmentObject var smokingHabitViewModel: SmokingHabitViewModel
     @Binding var currentStep: Int
     @Binding var isOnboardingComplete: Bool
-    @State private var smokingYears = -1
+    @State private var smokingYears = 7
     @State private var showAlert = false
     @State private var alertMessage = ""
-    let selectedYears = Array(0...60)
+    let selectedYears = Array(1...60)
     
     var body: some View {
         VStack {
-            HStack {
-                Spacer()
-                Button(action: {
-                    isOnboardingComplete = true
-                }) {
-                    Text("Dismiss")
-                        .foregroundColor(.red)
-                }
-                .padding()
-            }
             
-            Spacer()
-            Text("Step 5: smoking years")
-                .font(.largeTitle)
-                .padding(.bottom, 40)
+            OnboardingDismissButton(isOnboardingComplete: $isOnboardingComplete)
+            
+            Image(systemName: "figure.wave")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 100, height: 100)
+                .foregroundStyle(
+                    LinearGradient(
+                        gradient: Gradient(colors: [Theme.bubblegum.mainColor, Theme.sky.mainColor]),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                )
+                .padding()
+            
             HStack {
-                Text("Q.")
-                    .font(.title2)
-                    .padding(.bottom, 25)
-                Text("How many years have you been smoking?")
-                    .font(.title2)
-                    .padding()
+                Text("How many years")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundStyle(
+                        LinearGradient(
+                            gradient: Gradient(colors: [Theme.sky.mainColor, Theme.teal.mainColor]),
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
+                Spacer()
             }
             .padding(.horizontal)
+            
+            HStack {
+                Text("have you been smoking?")
+                    .padding(.horizontal)
+                    .fontWeight(.semibold)
+                Spacer()
+            }
+            
+            HStack {
+                Text("Regardless of how long you've been a smoker, it’s never too late to improve your health.")
+                    .padding(.horizontal)
+                    .font(.subheadline)
+                    .foregroundStyle(Color.secondary)
+                Spacer()
+            }
+            .padding(.top, 5)
        
             Picker("", selection: $smokingYears) {
                 ForEach(selectedYears, id: \.self) { selectedYears in
                     Text("\(selectedYears)")
-                        .font(.title3)
+                        .font(.headline)
                 }
             }
             .pickerStyle(.wheel)
-            .frame(height: 100)
+            .frame(height: 130)
             .clipped()
-            .padding(.bottom, 30)
+            .padding(.horizontal, 50)
+            .padding(.vertical, 30)
             
             Button(action: {
-                if smokingYears == -1 {
-                    alertMessage = "Please select the value."
-                    showAlert = true
-                } else {
-                    smokingHabitViewModel.smokingYears = smokingYears
-                    currentStep = 6
-                }
+                smokingHabitViewModel.smokingYears = smokingYears
+                currentStep = 6
             }) {
                 Text("Next")
+                    .fontWeight(.semibold)
+                    .padding(20)
+                    .frame(maxWidth: .infinity)
+                    .background(LinearGradient(
+                        gradient: Gradient(colors: [Theme.teal.mainColor, Theme.sky.mainColor]),
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    ))
+                    .foregroundColor(Theme.periwinkle.accentColor)
+                    .cornerRadius(25)
             }
-            .padding()
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(8)
-            .alert(isPresented: $showAlert) {
-                Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+            .padding(.horizontal)
+            
+            Button(action: {
+                currentStep = 4
+            }) {
+                Text("Previous")
+                    .fontWeight(.semibold)
+                    .padding(20)
+                    .frame(maxWidth: .infinity)
+                    .background(Theme.lightGray.mainColor)
+                    .cornerRadius(25)
             }
+            .padding(.horizontal)
             Spacer()
         }
+        .foregroundStyle(Theme.indigo.mainColor)
+        .padding()
     }
 }
 

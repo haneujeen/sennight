@@ -100,6 +100,7 @@
 		4E66F6572C58F39D00D9D982 /* EmailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66F6562C58F39D00D9D982 /* EmailHelper.swift */; };
 		4E66F65A2C59054400D9D982 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66F6592C59054400D9D982 /* SignInWithAppleButton.swift */; };
 		4E66F65C2C59057E00D9D982 /* SignInWithAppleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66F65B2C59057E00D9D982 /* SignInWithAppleViewModel.swift */; };
+		4E6C26B72C5A2C7A00E0F9A8 /* OnboardingDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C26B62C5A2C7A00E0F9A8 /* OnboardingDismissButton.swift */; };
 		4E6F39D32C33951A00058003 /* CheckOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D22C33951A00058003 /* CheckOnboardingView.swift */; };
 		4E6F39D52C33980900058003 /* SupportIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D42C33980900058003 /* SupportIcon.swift */; };
 		4E6F39D72C33989A00058003 /* PostText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D62C33989A00058003 /* PostText.swift */; };
@@ -254,6 +255,7 @@
 		4E66F6582C58F3E500D9D982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
 		4E66F6592C59054400D9D982 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
 		4E66F65B2C59057E00D9D982 /* SignInWithAppleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleViewModel.swift; sourceTree = "<group>"; };
+		4E6C26B62C5A2C7A00E0F9A8 /* OnboardingDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDismissButton.swift; sourceTree = "<group>"; };
 		4E6F39D22C33951A00058003 /* CheckOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOnboardingView.swift; sourceTree = "<group>"; };
 		4E6F39D42C33980900058003 /* SupportIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportIcon.swift; sourceTree = "<group>"; };
 		4E6F39D62C33989A00058003 /* PostText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostText.swift; sourceTree = "<group>"; };
@@ -500,6 +502,7 @@
 		4E0F84642C2D106C0037AE25 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				4E6C26B62C5A2C7A00E0F9A8 /* OnboardingDismissButton.swift */,
 				4E0F846B2C2D28E60037AE25 /* OnboardingStep1View.swift */,
 				4E0F846D2C2D28ED0037AE25 /* OnboardingStep2View.swift */,
 				4E0F846F2C2D28F40037AE25 /* OnboardingStep3View.swift */,
@@ -892,6 +895,7 @@
 				4E0F847D2C2D2C880037AE25 /* MotivationViewModel.swift in Sources */,
 				4E33CEB62C4B973700BE9303 /* LottieView.swift in Sources */,
 				4E0F84852C2D2CC70037AE25 /* SymptomListViewModel.swift in Sources */,
+				4E6C26B72C5A2C7A00E0F9A8 /* OnboardingDismissButton.swift in Sources */,
 				4E935D4D2C54DCC30035D6D5 /* Trigger.swift in Sources */,
 				4E0F84A42C2D30C90037AE25 /* SmokingLogService.swift in Sources */,
 				4EABEA8B2C5318D800252308 /* ElapsedTimeString.swift in Sources */,
@@ -1079,7 +1083,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sennight.Sennight;
+				PRODUCT_BUNDLE_IDENTIFIER = io.sennight.Sennight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1111,7 +1115,7 @@
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sennight.Sennight;
+				PRODUCT_BUNDLE_IDENTIFIER = io.sennight.Sennight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

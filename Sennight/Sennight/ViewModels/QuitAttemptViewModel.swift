@@ -24,7 +24,7 @@ class QuitAttemptViewModel: ObservableObject{
     
     //금연 시간 등록
     func create(completion: @escaping (Bool)->Void) {
-        QuitAttemptService.shared.createQuitAttempt(onboardingToken: onboardingToken, startDate: startDate, userID: userID)
+        QuitAttemptService.shared.createQuitAttempt(startDate: startDate)
             .receive(on: DispatchQueue.main)
             .sink { completion in
                 switch completion {
@@ -42,7 +42,6 @@ class QuitAttemptViewModel: ObservableObject{
     @Published var milestones: [UserMilestone] = []
     @Published var isActiveQuitAttempt = false
     
-    private var cancellables = Set<AnyCancellable>()
     
     /// Creates a new quitting smoking attempt.
     func createQuitAttempt() {

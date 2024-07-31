@@ -44,154 +44,151 @@ struct OnboardingStep9View: View {
     }
     
     var body: some View {
-        NavigationStack {
-            ZStack {
-                LottieView(name: Constants.lavenderCrossingLine, loopMode: .autoReverse, animationSpeed: 0.2)
-                    .rotationEffect(.degrees(290))
-                    .scaleEffect(2.5)
-                    .ignoresSafeArea()
-                
-                VStack {
-                    HStack {
-                        Spacer()
-                        Button(action: {
-                            isOnboardingComplete = true
-                        }) {
-                            Text("Dismiss")
-                                .foregroundColor(.red)
-                        }
-                        .padding()
-                    }
-                    Spacer()
-                    HStack {
-                        Text("Step 9: Sign Up")
-                            .font(.largeTitle)
-                            .padding(.bottom, 40)
-                    }
-                    .padding(.horizontal)
-                    
-                    VStack {
-                        TextField("Email address", text: $signUpViewModel.email)
-                            .textFieldStyle(CustomTextFieldStyle())
-                            .textInputAutocapitalization(.never)
-                        
-                        TextField("Name", text: $signUpViewModel.name)
-                            .textFieldStyle(CustomTextFieldStyle())
-                            .textInputAutocapitalization(.words)
-                        
-                        SecureField("Password", text: $signUpViewModel.password)
-                            .textFieldStyle(CustomTextFieldStyle())
-                        
-                        if !signUpViewModel.password.isEmpty {
-                            VStack(alignment: .leading) {
-                                HStack {
-                                    Text("Your password must:")
-                                        .fontWeight(.semibold)
-                                    Spacer()
-                                }
-                                
-                                HStack {
-                                    Image(systemName: isPasswordLengthValid ? "checkmark" : "checkmark")
-                                        .foregroundStyle(isPasswordLengthValid ? Theme.poppy.mainColor : Theme.indigo.mainColor)
-                                        .fontWeight(isPasswordLengthValid ? .bold : .regular)
-                                    Text("be 8-32 characters long")
-                                }
-                                
-                                HStack {
-                                    Image(systemName: hasLetter ? "checkmark" : "checkmark")
-                                        .foregroundStyle(hasLetter ? Theme.poppy.mainColor : Theme.indigo.mainColor)
-                                        .fontWeight(hasLetter ? .bold : .regular)
-                                    Text("have at least 1 letter (A-Z, a-z)")
-                                }
-                                
-                                HStack {
-                                    Image(systemName: hasDigit ? "checkmark" : "checkmark")
-                                        .foregroundStyle(hasDigit ? Theme.poppy.mainColor : Theme.indigo.mainColor)
-                                        .fontWeight(hasDigit ? .bold : .regular)
-                                    Text("have at least 1 digit (0-9)")
-                                }
-                                
-                            }
-                            .font(.footnote)
-                            .foregroundColor(Theme.indigo.mainColor)
-                        }
-                        
-                        SecureField("Confirm Password", text: $confirmPassword)
-                            .textFieldStyle(CustomTextFieldStyle())
-                    }
-                    .padding()
-                    
-                    Spacer()
-                    
-                    Button(action: {
-                        signUpViewModel.register { response in
-                            // 온보딩 토큰이 UserDefaults에 저장된 상태
-                            if response.status {
-                                guard let token = response.data?.onboardingToken else {
-                                     return
-                                }
-                                
-                                smokingHabitViewModel.onboardingToken = token
-                                //isOnboardingComplete = true //온보딩 완료 처리
-                                smokingHabitViewModel.create { status in
-                                    if status{
-                                        print("Smoking habit 추가 성공")
-                                    } else {
-                                        print("Smoking habit 추가 실패")
-                                    }
-                                }
-                                
-                                quitAttemptViewModel.onboardingToken = token
-                                quitAttemptViewModel.create { status in
-                                    if status{
-                                        print("Quit attempt 추가 성공")
-                                    } else {
-                                        print("Quit attempt 추가 실패")
-                                    }
-                                }
-                                
-                                motivationViewModel.onboardingToken = token
-                                motivationViewModel.create { status in
-                                    if status{
-                                        print("Motivation 추가 성공")
-                                    } else {
-                                        print("Motivation 추가 실패")
-                                    }
-                                }
-                                dismiss()
-                            } else {
-                                if response.detail == "Email in use" {
-                                    alertMessage = "Email in use"
-                                } else {
-                                    alertMessage = "An unknown error occurred."
-                                }
-                                showAlert = true
-                            }
-                        }
-                    }, label: {
-                        Text("Get started")
-                            .fontWeight(.semibold)
-                    })
-                    .padding(20)
-                    .frame(maxWidth: .infinity)
-                    .background(isSignUpDisabled ? Color.secondary : Theme.sky.mainColor)
-                    .foregroundColor(Theme.sky.accentColor)
-                    .cornerRadius(25)
-                    .disabled(isSignUpDisabled)
-                    .alert("Error", isPresented: $showAlert, presenting: alertMessage) { _ in
-                        Button("OK", role: .cancel) { }
-                    } message: { alertMessage in
-                        Text(alertMessage)
-                    }
-                    .padding(.horizontal)
-                }
-                .padding()
-                .onTapGesture {
-                    hideKeyboard()
-                }
+        VStack {
+            OnboardingDismissButton(isOnboardingComplete: $isOnboardingComplete)
+            Spacer()
+            HStack {
+                Text("Keep track your smoking habits")
+                    .font(.title)
+                    .fontWeight(.bold)
+                    .foregroundStyle(
+                        LinearGradient(
+                            gradient: Gradient(colors: [Theme.sky.mainColor, Theme.teal.mainColor]),
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
+                Spacer()
             }
-            .background(Theme.seafoam.mainColor, ignoresSafeAreaEdges: .all)
+            .padding(.horizontal)
+            
+            HStack {
+                Text("monitor your progress, and stay informed about withdrawal symptoms and cessation support products.")
+                    .padding(.horizontal)
+                    .font(.subheadline)
+                    .foregroundStyle(Color.secondary)
+                Spacer()
+            }
+            
+            VStack {
+                TextField("Email address", text: $signUpViewModel.email)
+                    .textFieldStyle(CustomGrayTextFieldStyle())
+                    .textInputAutocapitalization(.never)
+                
+                TextField("Name", text: $signUpViewModel.name)
+                    .textFieldStyle(CustomGrayTextFieldStyle())
+                    .textInputAutocapitalization(.words)
+                
+                SecureField("Password", text: $signUpViewModel.password)
+                    .textFieldStyle(CustomGrayTextFieldStyle())
+                
+                if !signUpViewModel.password.isEmpty {
+                    VStack(alignment: .leading) {
+                        HStack {
+                            Text("Your password must:")
+                                .fontWeight(.semibold)
+                            Spacer()
+                        }
+                        
+                        HStack {
+                            Image(systemName: isPasswordLengthValid ? "checkmark" : "checkmark")
+                                .foregroundStyle(isPasswordLengthValid ? Theme.poppy.mainColor : Theme.indigo.mainColor)
+                                .fontWeight(isPasswordLengthValid ? .bold : .regular)
+                            Text("be 8-32 characters long")
+                        }
+                        
+                        HStack {
+                            Image(systemName: hasLetter ? "checkmark" : "checkmark")
+                                .foregroundStyle(hasLetter ? Theme.poppy.mainColor : Theme.indigo.mainColor)
+                                .fontWeight(hasLetter ? .bold : .regular)
+                            Text("have at least 1 letter (A-Z, a-z)")
+                        }
+                        
+                        HStack {
+                            Image(systemName: hasDigit ? "checkmark" : "checkmark")
+                                .foregroundStyle(hasDigit ? Theme.poppy.mainColor : Theme.indigo.mainColor)
+                                .fontWeight(hasDigit ? .bold : .regular)
+                            Text("have at least 1 digit (0-9)")
+                        }
+                        
+                    }
+                    .font(.footnote)
+                }
+                
+                SecureField("Confirm Password", text: $confirmPassword)
+                    .textFieldStyle(CustomGrayTextFieldStyle())
+            }
+            .padding()
+            
+            Spacer()
+            
+            Button(action: {
+                signUpViewModel.register { response in
+                    if response.status {
+                        //isOnboardingComplete = true
+                        smokingHabitViewModel.createSmokingHabit { status in
+                            if status{
+                                print("Smoking habit 추가 성공")
+                            } else {
+                                print("Smoking habit 추가 실패")
+                            }
+                        }
+                        
+                        quitAttemptViewModel.create { status in
+                            if status{
+                                print("Quit attempt 추가 성공")
+                            } else {
+                                print("Quit attempt 추가 실패")
+                            }
+                        }
+                        
+                        motivationViewModel.createMotivation { status in
+                            if status{
+                                print("Motivation 추가 성공")
+                            } else {
+                                print("Motivation 추가 실패")
+                            }
+                        }
+                        dismiss()
+                    } else {
+                        if response.detail == "Email in use" {
+                            alertMessage = "Email in use"
+                        } else {
+                            alertMessage = "An unknown error occurred."
+                        }
+                        showAlert = true
+                    }
+                }
+            }, label: {
+                Text("Get started")
+                    .fontWeight(.semibold)
+            })
+            .padding()
+            .frame(maxWidth: .infinity)
+            .background(isSignUpDisabled ?
+                        LinearGradient(gradient: Gradient(colors: [Color.secondary]), startPoint: .leading, endPoint: .trailing) :
+                            LinearGradient(
+                                gradient: Gradient(colors: [Theme.teal.mainColor, Theme.sky.mainColor]),
+                                startPoint: .topLeading,
+                                endPoint: .bottomTrailing
+                            ))
+            .foregroundColor(Theme.sky.accentColor)
+            .cornerRadius(25)
+            .disabled(isSignUpDisabled)
+            .alert("Error", isPresented: $showAlert, presenting: alertMessage) { _ in
+                Button("OK", role: .cancel) { }
+            } message: { alertMessage in
+                Text(alertMessage)
+            }
+            .padding(.horizontal)
+            Spacer()
         }
+        .onTapGesture {
+            hideKeyboard()
+        }
+        
+        .foregroundStyle(Theme.indigo.mainColor)
+        .padding()
     }
 }
 

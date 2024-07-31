@@ -17,61 +17,99 @@ struct OnboardingStep3View: View {
     
     var body: some View {
         VStack {
-            HStack {
-                Spacer()
-                Button(action: {
-                    isOnboardingComplete = true
-                }) {
-                    Text("Dismiss")
-                        .foregroundColor(.red)
-                }
-                .padding()
-            }
+            OnboardingDismissButton(isOnboardingComplete: $isOnboardingComplete)
             
-            Spacer()
-            Text("Step 3: cigarettes")
-                .font(.largeTitle)
-                .padding(.bottom, 40)
+            Image(systemName: "dollarsign.square")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 100, height: 100)
+                .foregroundStyle(
+                    LinearGradient(
+                        gradient: Gradient(colors: [Theme.bubblegum.mainColor, Theme.sky.mainColor]),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                )
+                .padding()
+            
             HStack {
-                Text("Q.")
-                    .font(.title2)
-                    .padding(.bottom, 25)
-                Text("Let us know the price of a pack of cigarettes you usually buy.")
-                    .font(.title2)
-                    .padding()
+                Text("Let us know")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundStyle(
+                        LinearGradient(
+                            gradient: Gradient(colors: [Theme.sky.mainColor, Theme.teal.mainColor]),
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
+                Spacer()
             }
             .padding(.horizontal)
             
-            TextField("입력해주세요", text: $price)
+            HStack {
+                Text("the price of a pack of cigarettes you usually buy.")
+                    .padding(.leading)
+                    .fontWeight(.semibold)
+                Spacer()
+            }
+            
+            HStack {
+                Text("If you’re currently smoke-free, enter the price of cigarettes you used to smoke.")
+                    .padding(.horizontal)
+                    .font(.subheadline)
+                    .foregroundStyle(Color.secondary)
+                Spacer()
+            }
+            
+            TextField("Enter price", text: $price)
                 .keyboardType(.decimalPad)
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(8)
-                .padding(.bottom, 40)
-                .padding(.horizontal)
+                .textFieldStyle(CustomGrayTextFieldStyle())
+                .padding(.horizontal, 90)
+                .padding(.vertical, 50)
+            
             Button(action: {
-                
-                //price를 Double로 변환 시도
-                if let priceValue = Double(price), !price.isEmpty {
+                if !price.isEmpty, let priceValue = Double(price) {
                     smokingHabitViewModel.cigarettePrice = priceValue
                     currentStep = 4
                 } else {
                     alertMessage = "Please enter a valid price."
                     showAlert = true
                 }
+                currentStep = 4
             }) {
                 Text("Next")
+                    .fontWeight(.semibold)
+                    .padding(20)
+                    .frame(maxWidth: .infinity)
+                    .background(LinearGradient(
+                        gradient: Gradient(colors: [Theme.teal.mainColor, Theme.sky.mainColor]),
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    ))
+                    .foregroundColor(Theme.periwinkle.accentColor)
+                    .cornerRadius(25)
             }
-            .padding()
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(8)
-            .alert(isPresented: $showAlert) { // 유효하지 않은 입력 시 경고 메시지 표시
-                Alert(title: Text("Invalid Input"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+            .padding(.horizontal)
+            .alert(isPresented: $showAlert) {
+                Alert(title: Text("Invalid Price"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
             }
             
+            Button(action: {
+                currentStep = 2
+            }) {
+                Text("Previous")
+                    .fontWeight(.semibold)
+                    .padding(20)
+                    .frame(maxWidth: .infinity)
+                    .background(Theme.lightGray.mainColor)
+                    .cornerRadius(25)
+            }
+            .padding(.horizontal)
             Spacer()
         }
+        .foregroundStyle(Theme.indigo.mainColor)
+        .padding()
     }
 }
 
