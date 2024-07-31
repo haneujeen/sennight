@@ -132,12 +132,12 @@ struct SignUpView: View {
                     }, label: {
                         Text("Continue")
                             .fontWeight(.semibold)
+                            .padding(20)
+                            .frame(maxWidth: .infinity)
+                            .background(isSignUpDisabled ? Color.secondary : Theme.sky.mainColor)
+                            .foregroundColor(Theme.sky.accentColor)
+                            .cornerRadius(25)
                     })
-                    .padding(20)
-                    .frame(maxWidth: .infinity)
-                    .background(isSignUpDisabled ? Color.secondary : Theme.sky.mainColor)
-                    .foregroundColor(Theme.sky.accentColor)
-                    .cornerRadius(25)
                     .disabled(isSignUpDisabled)
                     .alert("Error", isPresented: $showAlert, presenting: alertMessage) { _ in
                         Button("OK", role: .cancel) { }

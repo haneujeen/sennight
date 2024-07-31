@@ -10,7 +10,7 @@ import SwiftUI
 
 struct AidProductRowView: View {
     var body: some View {
-        Text("Factor row")
+        Text("Aid product row")
             .frame(maxWidth: .infinity)
             .background(Color.white)
             .cornerRadius(10)

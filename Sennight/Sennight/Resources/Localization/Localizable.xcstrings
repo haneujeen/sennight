@@ -16,28 +16,61 @@
     " will apply." : {
 
     },
+    "_Last updated on 2024/07/30_" : {
+
+    },
     ":" : {
 
     },
-    "!" : {
+    "%@" : {
 
     },
     "%lld" : {
 
     },
-    "%lld%%" : {
+    "1. Acceptance of Terms" : {
 
     },
-    "3 Month Fresh" : {
+    "2. User Accounts" : {
 
     },
-    "7 Day Fresh" : {
+    "3. Use of the App" : {
 
     },
-    "30 Day Hero" : {
+    "4. Intellectual Property" : {
+
+    },
+    "5. Privacy" : {
+
+    },
+    "6. Third-Party Links" : {
+
+    },
+    "7. Disclaimer" : {
+
+    },
+    "8. Limitation of Liability" : {
+
+    },
+    "9. Changes to Terms" : {
+
+    },
+    "10. Contact Information" : {
+
+    },
+    "100" : {
+
+    },
+    "100%" : {
 
     },
     "About App" : {
+
+    },
+    "About App View" : {
+
+    },
+    "About Milestones" : {
 
     },
     "Account Settings" : {
@@ -49,19 +82,28 @@
     "Activity row" : {
 
     },
-    "Add smoking" : {
+    "Add and manage your smoking habits and cravings." : {
 
     },
-    "Add your smoking habits and cravings." : {
+    "Add New Milestone" : {
+
+    },
+    "Aid product detail edit" : {
+
+    },
+    "Aid product row" : {
+
+    },
+    "All" : {
+
+    },
+    "All content, trademarks, and other intellectual property on the Sennight are owned by or licensed to Sennight and are protected by applicable laws. You may not use, reproduce, or distribute any content from the Sennight without explicit permission." : {
 
     },
     "Already have an account?" : {
 
     },
-    "App Permissions" : {
-
-    },
-    "App Version" : {
+    "Are you currently a smoker?" : {
 
     },
     "Are you currently a smoker?" : {
@@ -73,7 +115,25 @@
     "Begin your journey and stay updated with your progress." : {
 
     },
+    "By accessing or using the Sennight (\"Sennight\"), you agree to comply with and be bound by these Terms and Conditions." : {
+
+    },
+    "Cancel" : {
+
+    },
     "Change Password" : {
+
+    },
+    "Change Password View" : {
+
+    },
+    "Cigarette Price" : {
+
+    },
+    "Click the button below and get your milestone." : {
+
+    },
+    "Close" : {
 
     },
     "Confirm Password" : {
@@ -88,16 +148,19 @@
     "Continue with Apple" : {
 
     },
+    "Craving level" : {
+
+    },
     "Create your account." : {
+
+    },
+    "Daily Cigarettes" : {
 
     },
     "Dashboard" : {
 
     },
-    "Dashboard header" : {
-
-    },
-    "Data Usage" : {
+    "Date achieved: %@" : {
 
     },
     "Dismiss" : {
@@ -106,7 +169,22 @@
     "Don't have an account?" : {
 
     },
-    "Email address" : {
+    "Edit This Quit Attempt" : {
+
+    },
+    "Email" : {
+
+    },
+    "Enter your motivation" : {
+
+    },
+    "Enter cigarette price" : {
+
+    },
+    "Enter daily cigarettes" : {
+
+    },
+    "Enter years smoking" : {
 
     },
     "Enter your motivation" : {
@@ -115,16 +193,16 @@
     "Error" : {
 
     },
-    "Factor detail edit" : {
-
-    },
-    "Factor row" : {
-
-    },
     "Feelings and Symptoms" : {
 
     },
-    "General" : {
+    "Filter" : {
+
+    },
+    "First Cigarette Time" : {
+
+    },
+    "For any questions or concerns regarding these Terms and Conditions, please contact us at [Sennight Help](mailto:eujeenhan@gmail.com)." : {
 
     },
     "Get started" : {
@@ -136,7 +214,7 @@
     "have at least 1 letter (A-Z, a-z)" : {
 
     },
-    "Health progress card" : {
+    "Hello, World!" : {
 
     },
     "Hour" : {
@@ -148,16 +226,25 @@
     "If you are creating a new account," : {
 
     },
-    "Invalid Input" : {
+    "In no event shall the creators be liable for any indirect, incidental, special, or consequential damages arising from or related to your use of the Sennight." : {
+
+    },
+    "It's tough. So are you." : {
 
     },
     "Keep track of your emotions and withdrawal symptoms." : {
 
     },
-    "Language" : {
+    "Legal" : {
 
     },
-    "Legal" : {
+    "Let us know the date you quit smoking." : {
+
+    },
+    "Let us know the number of cigarettes you smoke daily." : {
+
+    },
+    "Let us know the price of a pack of cigarettes you usually buy." : {
 
     },
     "Let us know the date you quit smoking." : {
@@ -175,6 +262,9 @@
     "Logout" : {
 
     },
+    "Menu" : {
+
+    },
     "Milestone Posts" : {
 
     },
@@ -184,13 +274,13 @@
     "Minute" : {
 
     },
-    "Money saved card" : {
-
-    },
     "Motivation card" : {
 
     },
     "My milestones" : {
+
+    },
+    "My Quit History" : {
 
     },
     "Name" : {
@@ -199,10 +289,7 @@
     "New activity sheet" : {
 
     },
-    "New factor sheet" : {
-
-    },
-    "New smoking sheet" : {
+    "New aid product sheet" : {
 
     },
     "New symptom sheet" : {
@@ -211,7 +298,7 @@
     "Next" : {
 
     },
-    "No" : {
+    "Note: The health benefits listed are general estimates and may vary from person to person. Please consult with a healthcare professional for personalized guidance." : {
 
     },
     "OK" : {
@@ -220,7 +307,7 @@
     "Password" : {
 
     },
-    "Privacy and Security" : {
+    "Please enter your email, name, and password." : {
 
     },
     "Privacy Policy" : {
@@ -233,6 +320,28 @@
 
     },
     "Q." : {
+
+    },
+    "Save" : {
+
+    },
+    "Select Date" : {
+
+    },
+    "Selected Date: %@" : {
+
+    },
+    "Selected Time: %@:%@" : {
+      "localizations" : {
+        "en" : {
+          "stringUnit" : {
+            "state" : "new",
+            "value" : "Selected Time: %1$@:%2$@"
+          }
+        }
+      }
+    },
+    "Sennight Help" : {
 
     },
     "Select Date" : {
@@ -257,37 +366,49 @@
     "Share Your Milestones" : {
 
     },
+    "Smoking Habits" : {
+
+    },
+    "Smoking History" : {
+
+    },
     "Smoking log chart card" : {
+
+    },
+    "Start quitting today!" : {
 
     },
     "Start Your Quitting Log" : {
 
     },
-    "Step 2: daily cigarettes" : {
+    "Step 1: daily cigarettes" : {
 
     },
-    "Step 3: cigarettes" : {
+    "Step 2: cigarettes" : {
 
     },
-    "Step 4: first Cigarette" : {
+    "Step 3: firstCigarette" : {
 
     },
-    "Step 5: smoking years" : {
+    "Step 4: smoking years" : {
 
     },
-    "Step 6: Smoking status" : {
+    "Step 5: Smoking status" : {
 
     },
-    "Step 7: Quit attempt" : {
+    "Step 6: Quit attempt" : {
 
     },
-    "Step 8: Motivation" : {
+    "Step 7: Motivation" : {
 
     },
-    "Step 9: Sign Up" : {
+    "Stop" : {
 
     },
-    "Subscription/Billing Information" : {
+    "Stop Quit Attempt" : {
+
+    },
+    "Stop This Quit Attempt" : {
 
     },
     "Support" : {
@@ -308,19 +429,40 @@
     "Terms & Conditions" : {
 
     },
+    "Terms and Conditions" : {
+
+    },
     "Terms of Service" : {
 
     },
-    "Time Zone" : {
+    "The Sennight is provided on an “as is” and “as available” basis. We make no warranties or representations regarding the availability, accuracy, or reliability of the Sennight. We disclaim all warranties to the fullest extent permitted by law." : {
+
+    },
+    "The Sennight may contain links to third-party websites or services. We are not responsible for the content, privacy policies, or practices of any third-party sites." : {
+
+    },
+    "This will stop your current quit attempt and reset all your progress.\nThis action cannot be undone." : {
+
+    },
+    "To access certain features of the Sennight, you may be required to create a user account. You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account." : {
 
     },
     "Track Habits and Cravings" : {
 
     },
-    "Update factor sheet" : {
+    "Trigger" : {
+
+    },
+    "Update aid product sheet" : {
+
+    },
+    "Update start date" : {
 
     },
     "User achieved %@ Milestone! Send support?" : {
+
+    },
+    "We may update these Terms from time to time. Any changes will be posted on this page with an updated effective date. Your continued use of the App after any changes constitutes acceptance of the new terms." : {
 
     },
     "Welcome back" : {
@@ -332,10 +474,19 @@
     "What time do you usually have your first cigarette of the day?" : {
 
     },
-    "Yes" : {
+    "Years Smoking" : {
+
+    },
+    "You agree to use the Sennight only for lawful purposes and in accordance with these Terms. You may not use the Sennight in any way that could damage, disable, overburden, or impair the Sennight or interfere with any other party’s use of the Sennight." : {
+
+    },
+    "You’ve just achieved your first milestone. Keep pushing forward and you'll mark more milestones along the way." : {
 
     },
     "Your password must:" : {
+
+    },
+    "Your use of the Sennight is also governed by our [Privacy Policy](https://sennight-ios.github.io/privacy). By using the Sennight, you consent to the collection and use of your information as described in the Privacy Policy." : {
 
     },
     "입력해주세요" : {

@@ -7,12 +7,14 @@
 //  Edited by 한유진 on 2024-07-18: Refactored register and login methods
 //  Edited by 한유진 on 2024-07-19: saveToken에서 token과 userID를 함께 저장하도록 수정
 //  Edited by 김소연 on 2024-07-21: userID를 가져오는 메서드 추가
+//  Edited by 한유진 on 2024-07-19: updateUser 메서드 추가
 //
 
 import Foundation
 import Combine
 import Alamofire
 
+// TODO: UserService TokenService 분리
 class UserService {
     static let shared = UserService() // 싱글톤 패턴 공유 인스턴스 생성
     let HOST = Settings.shared.HOST
@@ -42,7 +44,7 @@ class UserService {
         UserDefaults.standard.removeObject(forKey: tokenKey)
         UserDefaults.standard.removeObject(forKey: userIDKey)
     }
-  
+    
     func register(email: String, name: String, password: String) -> AnyPublisher<UserResponse, AFError> {
         let URL = "\(HOST)/users/register"
         let parameters = UserRequest(email: email, name: name, password: password, photoFilename: nil)
@@ -77,6 +79,24 @@ class UserService {
                           method: .post,
                           parameters: parameters,
                           encoder: JSONParameterEncoder.default)
+        .publishDecodable(type: UserResponse.self)
+        .value()
+        .eraseToAnyPublisher()
+    }
+    
+    func updateUser(name: String?, password: String, photoFilename: String?) -> AnyPublisher<UserResponse, AFError> {
+        guard let userID = UserService.shared.getUserID(), let token = UserService.shared.getToken() else {
+            return Fail(error: AFError.explicitlyCancelled).eraseToAnyPublisher()
+        }
+        let URL = "\(HOST)/users/\(userID)"
+        let parameters = UserRequest(email: "", name: nil, password: password, photoFilename: nil)
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(token)"]
+        return AF.request(URL,
+                          method: .post,
+                          parameters: parameters,
+                          encoder: JSONParameterEncoder.default,
+                          headers: headers)
+        .validate(contentType: ["application/json"])
         .publishDecodable(type: UserResponse.self)
         .value()
         .eraseToAnyPublisher()

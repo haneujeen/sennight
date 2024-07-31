@@ -36,16 +36,18 @@ import SwiftUI
 struct LoginView: View {
     @EnvironmentObject var loginViewModel: LoginViewModel
     @State private var showSignUpView = false
+    @State private var showTermsView = false
+    @State private var showPrivacyPolicyView = false
     @State private var isWelcoming = false
     
     var body: some View {
         NavigationStack {
             ZStack {
-                LottieView(name: Constants.yellowCrossingLine, loopMode: .autoReverse, animationSpeed: 0.2)
-                    .rotationEffect(.degrees(60))
-                    .scaleEffect(2.5)
+                LottieView(name: Constants.yellowCrossingLine, loopMode: .autoReverse, animationSpeed: 0.1)
+                    .rotationEffect(.degrees(70))
+                    .scaleEffect(5)
                     .ignoresSafeArea()
-                    
+                
                 VStack {
                     Spacer()
                     if !isWelcoming {
@@ -132,18 +134,14 @@ struct LoginView: View {
                                 .foregroundColor(Theme.teal.mainColor)
                                 .underline()
                                 .onTapGesture {
-                                    if let url = URL(string: "https://www.example.com/terms") {
-                                        UIApplication.shared.open(url)
-                                    }
+                                    showTermsView = true
                                 }
                             Text(" and ")
                             Text("Privacy Policy")
                                 .foregroundColor(Theme.teal.mainColor)
                                 .underline()
                                 .onTapGesture {
-                                    if let url = URL(string: "https://www.example.com/privacy") {
-                                        UIApplication.shared.open(url)
-                                    }
+                                    showPrivacyPolicyView = true
                                 }
                             Text(" will apply.")
                         }
@@ -163,6 +161,32 @@ struct LoginView: View {
                 }
                 .sheet(isPresented: $showSignUpView) {
                     SignUpView()
+                }
+                .sheet(isPresented: $showTermsView) {
+                    NavigationStack {
+                        TermsAndConditionsView()
+                            .navigationTitle("Terms & Conditions")
+                            .toolbar {
+                                ToolbarItem(placement: .cancellationAction) {
+                                    Button("Close") {
+                                        showTermsView = false
+                                    }
+                                }
+                            }
+                    }
+                }
+                .sheet(isPresented: $showPrivacyPolicyView) {
+                    NavigationStack {
+                        PrivacyPolicyView()
+                            .navigationTitle("Privacy Policy")
+                            .toolbar {
+                                ToolbarItem(placement: .cancellationAction) {
+                                    Button("Close") {
+                                        showPrivacyPolicyView = false
+                                    }
+                                }
+                            }
+                    }
                 }
             }
             .background(Theme.buttercup.mainColor, ignoresSafeAreaEdges: .all)

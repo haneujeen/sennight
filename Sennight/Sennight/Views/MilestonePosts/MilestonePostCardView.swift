@@ -12,7 +12,6 @@ struct MilestonePostCardView: View {
     
     var body: some View {
         HStack {
-            MedalIcon()
             PostText(title: title)
             Spacer()
             SupportIcon()
