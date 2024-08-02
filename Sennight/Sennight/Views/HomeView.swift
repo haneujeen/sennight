@@ -10,6 +10,8 @@ import SwiftUI
 
 struct HomeView: View {
     @StateObject private var quitAttemptViewModel = QuitAttemptViewModel()
+    @StateObject private var smokingHabitViewModel = SmokingHabitViewModel()
+    @StateObject private var loginViewModel = LoginViewModel()
     
     var body: some View {
         TabView {
@@ -29,6 +31,8 @@ struct HomeView: View {
                 .tabItem {
                     Label("Settings", systemImage: "person.crop.circle.fill")
                 }
+                .environmentObject(smokingHabitViewModel)
+                .environmentObject(loginViewModel)
             // TODO: Add views
 //            Text("Calendar view")
 //                .tabItem {

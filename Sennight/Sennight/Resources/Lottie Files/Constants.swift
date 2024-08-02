@@ -8,6 +8,7 @@
 import Foundation
 
 enum Constants {
+    static var sparklesLoader = "Sparkles loader"
     static var yellowCrossingLine = "Yellow crossing line"
     static var buttercupCrossingLine = "Buttercup crossing line"
     static var seafoamCrossingLine = "Seafoam crossing line"

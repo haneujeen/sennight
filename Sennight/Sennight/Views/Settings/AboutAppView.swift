@@ -1,18 +1,18 @@
 //
-//  HomeView.swift
-//  QuitSmoking
+//  AboutAppView.swift
+//  Sennight
 //
-//  Created by 한유진 on 6/14/24.
+//  Created by 한유진 on 7/30/24.
 //
 
 import SwiftUI
 
-struct HomeView: View {
+struct AboutAppView: View {
     var body: some View {
         Text(/*@START_MENU_TOKEN@*/"Hello, World!"/*@END_MENU_TOKEN@*/)
     }
 }
 
 #Preview {
-    HomeView()
+    AboutAppView()
 }

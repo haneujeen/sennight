@@ -16,11 +16,12 @@ class SignUpViewModel: ObservableObject {
     @Published var email: String = ""
     @Published var name: String = ""
     @Published var password: String = ""
+    @Published var appleID: String?
     
     private var cancellables = Set<AnyCancellable>()
     
     func register(completionHandler: @escaping (UserResponse) -> Void){
-        UserService.shared.register(email: email, name: name, password: password)
+        UserService.shared.register(email: email, name: name, password: password, appleID: appleID)
             .sink { completion in
                 switch completion {
                 case .finished:
@@ -29,7 +30,14 @@ class SignUpViewModel: ObservableObject {
                     print(error.localizedDescription)
                 }
             } receiveValue: { response in
+                if response.status {
+                    UserService.shared.saveToken(token: response.data!.onboardingToken!, userID: response.data!.id!)
+                }
                 completionHandler(response)
+                if response.status {
+                    // 응답 상태가 성공인 경우
+                    UserService.shared.saveToken(token: response.data!.onboardingToken!, userID: response.data!.id!)
+                }
             }
             .store(in: &cancellables)
     }
