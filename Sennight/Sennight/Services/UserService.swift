@@ -107,35 +107,13 @@ class UserService {
     
     func sendAppleUserIdentifier(userIdentifier: String) -> AnyPublisher<AppleSignInResponse, AFError> {
         let URL = "\(HOST)/apple-sign-in"
-        print("Sending \(userIdentifier) to server in UserService...")
         return AF.request(URL,
                           method: .post,
                           parameters: ["apple_id": userIdentifier],
                           encoder: JSONParameterEncoder.default)
         .validate(contentType: ["application/json"])
-//        .publishDecodable(type: AppleSignInResponse.self)
-//        .value()
-        .publishData()
-        .tryMap { result -> Data in
-            if let data = result.data {
-                if let jsonString = String(data: data, encoding: .utf8) {
-                    print("Raw JSON response: \(jsonString)")
-                } else {
-                    print("Failed to convert data to string")
-                }
-                return data
-            } else {
-                throw AFError.responseValidationFailed(reason: .dataFileNil)
-            }
-        }
-        .decode(type: AppleSignInResponse.self, decoder: JSONDecoder())
-        .mapError { error in
-            if let afError = error as? AFError {
-                return afError
-            } else {
-                return AFError.responseSerializationFailed(reason: .decodingFailed(error: error))
-            }
-        }
+        .publishDecodable(type: AppleSignInResponse.self)
+        .value()
         .eraseToAnyPublisher()
     }
 }
