@@ -3,16 +3,23 @@
 //  Sennight
 //
 //  Created by 한유진 on 6/27/24.
+//  Edited by 김소연 on 2024-07-30: SymptomRowView 코드 추가
 //
 
 import SwiftUI
 
 struct SymptomRowView: View {
+    @StateObject private var symptomViewModel = SymptomViewModel()
     var body: some View {
-        Text("Symptom row")
-            .frame(maxWidth: .infinity)
-            .background(Color.white)
-            .cornerRadius(10)
+        List(symptomViewModel.data) { data in
+            Text("활동내역 아이디: \(data.symptomID)")
+                .frame(maxWidth: .infinity)
+                .background(Color.white)
+                .cornerRadius(10)
+        }
+        .onAppear {
+            symptomViewModel.getSymptom()
+        }
     }
 }
 

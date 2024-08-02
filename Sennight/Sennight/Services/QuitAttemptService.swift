@@ -62,7 +62,7 @@ class QuitAttemptService {
         }
         let URL = "\(HOST)/quit-attempts/\(userID)"
         let headers: HTTPHeaders = ["Authorization": "Bearer \(token)"]
-        return AF.request(URL,
+        return AF.request(url,
                           method: .get,
                           headers: headers)
         .validate(contentType: ["application/json"])
