@@ -48,6 +48,45 @@ enum HealthBenefit: String, CaseIterable {
         }
     }
     
+    var icon: Image {
+        switch self {
+        case .heartRate:
+            return Image(systemName: "heart.fill")
+        case .bloodPressure:
+            return Image(systemName: "waveform.path.ecg")
+        case .oxygenLevel:
+            return Image(systemName: "lungs")
+        case .nicotineLevel:
+            return Image(systemName: "nosign")
+        case .carbonMonoxide:
+            return Image(systemName: "circle.slash")
+        case .mucus:
+            return Image(systemName: "cloud")
+        case .smellAndTaste:
+            return Image(systemName: "nose")
+        case .breathing:
+            return Image(systemName: "wind")
+        case .circulation:
+            return Image(systemName: "circle.grid.3x3")
+        case .lungFunction:
+            return Image(systemName: "lungs")
+        case .coughing:
+            return Image(systemName: "wind.snow")
+        case .cardiovascularSystem:
+            return Image(systemName: "heart.text.square")
+        case .stroke:
+            return Image(systemName: "waveform.path.ecg")
+        case .mouthAndThroatCancer:
+            return Image(systemName: "mouth")
+        case .bladderAndKidneyCancer:
+            return Image(systemName: "water.waves.and.arrow.down")
+        case .lungCancer:
+            return Image(systemName: "lungs.")
+        case .heartDisease:
+            return Image(systemName: "heart.fill")
+        }
+    }
+    
     var timeInterval: TimeInterval {
         switch self {
         case .heartRate: return 1_200 // 20 minutes
@@ -71,26 +110,26 @@ enum HealthBenefit: String, CaseIterable {
     }
     
     var timeIntervalString: String {
-            switch self {
-            case .heartRate: return "20 minutes"
-            case .bloodPressure: return "20 minutes"
-            case .oxygenLevel: return "8 hours"
-            case .nicotineLevel: return "48 hours"
-            case .carbonMonoxide: return "48 hours"
-            case .mucus: return "48 hours"
-            case .smellAndTaste: return "48 hours"
-            case .breathing: return "72 hours"
-            case .circulation: return "8 weeks"
-            case .lungFunction: return "12 weeks"
-            case .coughing: return "6 months"
-            case .cardiovascularSystem: return "1 year"
-            case .stroke: return "5 years"
-            case .mouthAndThroatCancer: return "7 years"
-            case .bladderAndKidneyCancer: return "10 years"
-            case .lungCancer: return "12 years"
-            case .heartDisease: return "15 years"
-            }
+        switch self {
+        case .heartRate: return "20 minutes"
+        case .bloodPressure: return "20 minutes"
+        case .oxygenLevel: return "8 hours"
+        case .nicotineLevel: return "48 hours"
+        case .carbonMonoxide: return "48 hours"
+        case .mucus: return "48 hours"
+        case .smellAndTaste: return "48 hours"
+        case .breathing: return "72 hours"
+        case .circulation: return "8 weeks"
+        case .lungFunction: return "12 weeks"
+        case .coughing: return "6 months"
+        case .cardiovascularSystem: return "1 year"
+        case .stroke: return "5 years"
+        case .mouthAndThroatCancer: return "7 years"
+        case .bladderAndKidneyCancer: return "10 years"
+        case .lungCancer: return "12 years"
+        case .heartDisease: return "15 years"
         }
+    }
     
     var description: String {
         switch self {

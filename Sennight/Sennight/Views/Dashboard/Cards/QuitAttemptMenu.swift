@@ -8,6 +8,8 @@
 import SwiftUI
 
 struct QuitAttemptMenu: View {
+    @EnvironmentObject var quitAttemptViewModel: QuitAttemptViewModel
+    
     @State private var isEditSheetPresented = false
     @State private var selectedDate = Date()
     @State private var isStopAlertPresented = false
@@ -41,16 +43,25 @@ struct QuitAttemptMenu: View {
             EditQuitAttemptSheet(selectedDate: $selectedDate, isEditSheetPresented: $isEditSheetPresented)
                 .presentationDetents([.medium, .large])
                 .presentationDragIndicator(.hidden)
+                .environmentObject(quitAttemptViewModel)
         }
-        .alert("Stop Quit Attempt", isPresented: $isStopAlertPresented) {
+        .alert("Stop My Progress", isPresented: $isStopAlertPresented) {
             Button("Cancel", role: .cancel) { }
             Button("Stop", role: .destructive) {
-                // Action to stop the quit attempt
-                // This will stop your current quit attempt and reset all your progress.
-                // This action cannot be undone.
+                guard let activeQuitAttempt = quitAttemptViewModel.activeQuitAttempt else { return }
+                quitAttemptViewModel.startDate = activeQuitAttempt.startDate
+                
+                let dateFormatter = DateFormatter()
+                dateFormatter.dateFormat = "yyyy-MM-dd"
+                quitAttemptViewModel.endDate = dateFormatter.string(from: Date())
+                quitAttemptViewModel.isActive = false
+                
+                quitAttemptViewModel.updateQuitAttempt()
+                quitAttemptViewModel.activeQuitAttempt = nil
+                quitAttemptViewModel.isActiveQuitAttempt = false
             }
         } message: {
-            Text("This will stop your current quit attempt and reset all your progress.\nThis action cannot be undone.")
+            Text("This will erase your current progress and reset all health improvements.\nThis action cannot be undone.")
         }
     }
 }

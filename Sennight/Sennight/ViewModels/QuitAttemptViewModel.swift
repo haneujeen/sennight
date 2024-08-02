@@ -12,17 +12,18 @@ import Combine
 import SwiftUI
 
 class QuitAttemptViewModel: ObservableObject{
-    
-    @Published var userID = 0
     @Published var startDate = ""
-    @Published var attemptID = 0
-    @Published var endDate = ""
-    @Published var isActive = false
-    @Published var onboardingToken = ""
+    @Published var endDate: String?
+    @Published var isActive = true
+    
+    @Published var quitAttempts: [QuitAttempt] = []
+    @Published var activeQuitAttempt: QuitAttempt?
+    @Published var milestones: [UserMilestone] = []
+    @Published var isActiveQuitAttempt = false
     
     private var cancellables = Set<AnyCancellable>()
     
-    //금연 시간 등록
+    // 새로운 금연 도전 추가
     func createQuitAttempt(completion: @escaping (Bool)->Void) {
         QuitAttemptService.shared.createQuitAttempt(startDate: startDate)
             .receive(on: DispatchQueue.main)
@@ -33,24 +34,10 @@ class QuitAttemptViewModel: ObservableObject{
                     print(error.localizedDescription)
                 }
             } receiveValue: { response in
-                print("서버응답: \(response)")
                 completion(response.status)
             }.store(in: &cancellables)
     }
-    @Published var quitAttempts: [QuitAttempt] = []
-    @Published var activeQuitAttempt: QuitAttempt?
-    @Published var milestones: [UserMilestone] = []
-    @Published var isActiveQuitAttempt = false
     
-    
-    /// Creates a new quitting smoking attempt.
-    func createQuitAttempt() {
-        
-    }
-    
-    /*
-     
-     */
     /// Retrieves the most recent quitting smoking attempt for the user and updates the `latestQuitAttempt` property.
     func getActiveQuitAttempt() {
         QuitAttemptService.shared.getActiveQuitAttempt()
@@ -91,7 +78,27 @@ class QuitAttemptViewModel: ObservableObject{
     
     /// Updates an existing quitting smoking attempt.
     func updateQuitAttempt() {
+        guard let activeQuitAttempt else { print("No activeQuitAttempt"); return }
         
+        QuitAttemptService.shared.updateQuitAttempt(attemptID: activeQuitAttempt.id,
+                                                    startDate: startDate,
+                                                    endDate: endDate,
+                                                    isActive: isActive)
+            .sink { completion in
+                switch completion {
+                case .finished:
+                    break
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            } receiveValue: { response in
+                if response.status {
+                    print("Success updating quit attempt. Do stuff...")
+                } else {
+                    print("Error updating quit attempt. Do stuff...")
+                }
+            }
+            .store(in: &cancellables)
     }
     
     /// Retrieves milestones associated with a specific quitting smoking attempt and updates the `milestones` property.

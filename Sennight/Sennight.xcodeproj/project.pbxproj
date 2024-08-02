@@ -118,6 +118,8 @@
 		4E82E3A72C4665EF00F06DE3 /* QuitAttemptViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E3A62C4665EF00F06DE3 /* QuitAttemptViewModel.swift */; };
 		4E82E3A92C46661F00F06DE3 /* SmokingHabitService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E3A82C46661F00F06DE3 /* SmokingHabitService.swift */; };
 		4E82E3AB2C46663400F06DE3 /* QuitAttemptService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E3AA2C46663400F06DE3 /* QuitAttemptService.swift */; };
+		4E8D67852C5CED6F006D408D /* Trophy.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E8D67832C5CED6F006D408D /* Trophy.json */; };
+		4E8D678E2C5CF14A006D408D /* Confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E8D678D2C5CF14A006D408D /* Confetti.json */; };
 		4E935D432C54B5E80035D6D5 /* UserMotivation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E935D422C54B5E80035D6D5 /* UserMotivation.swift */; };
 		4E935D452C54BCA50035D6D5 /* UserAidProduct.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E935D442C54BCA50035D6D5 /* UserAidProduct.swift */; };
 		4E935D472C54BCAC0035D6D5 /* UserSymptom.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E935D462C54BCAC0035D6D5 /* UserSymptom.swift */; };
@@ -134,7 +136,6 @@
 		4EB3C1D72C4B42330066D658 /* View+.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EB3C1D62C4B42330066D658 /* View+.swift */; };
 		4ECADF932C2E8DEC00E8861C /* CircularGauge.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4ECADF922C2E8DEC00E8861C /* CircularGauge.swift */; };
 		4EDF63EC2C4ED771008CCD82 /* Poppy fireworks.json in Resources */ = {isa = PBXBuildFile; fileRef = 4EDF63EB2C4ED771008CCD82 /* Poppy fireworks.json */; };
-		4EE4659D2C53AC6A0039A729 /* NewQuitAttemptSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4659C2C53AC6A0039A729 /* NewQuitAttemptSheet.swift */; };
 		4EE4659F2C53B1310039A729 /* CircularGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4659E2C53B1310039A729 /* CircularGaugeView.swift */; };
 		4EEACA442C5622BB00F76EB6 /* QuitAttemptMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEACA432C5622BB00F76EB6 /* QuitAttemptMenu.swift */; };
 		4EEACA602C5628D300F76EB6 /* EditQuitAttemptSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEACA5F2C5628D300F76EB6 /* EditQuitAttemptSheet.swift */; };
@@ -275,6 +276,8 @@
 		4E82E3A62C4665EF00F06DE3 /* QuitAttemptViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitAttemptViewModel.swift; sourceTree = "<group>"; };
 		4E82E3A82C46661F00F06DE3 /* SmokingHabitService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SmokingHabitService.swift; sourceTree = "<group>"; };
 		4E82E3AA2C46663400F06DE3 /* QuitAttemptService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitAttemptService.swift; sourceTree = "<group>"; };
+		4E8D67832C5CED6F006D408D /* Trophy.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Trophy.json; sourceTree = "<group>"; };
+		4E8D678D2C5CF14A006D408D /* Confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = Confetti.json; sourceTree = "<group>"; };
 		4E935D422C54B5E80035D6D5 /* UserMotivation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserMotivation.swift; sourceTree = "<group>"; };
 		4E935D442C54BCA50035D6D5 /* UserAidProduct.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAidProduct.swift; sourceTree = "<group>"; };
 		4E935D462C54BCAC0035D6D5 /* UserSymptom.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserSymptom.swift; sourceTree = "<group>"; };
@@ -291,7 +294,6 @@
 		4EB3C1D62C4B42330066D658 /* View+.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+.swift"; sourceTree = "<group>"; };
 		4ECADF922C2E8DEC00E8861C /* CircularGauge.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGauge.swift; sourceTree = "<group>"; };
 		4EDF63EB2C4ED771008CCD82 /* Poppy fireworks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Poppy fireworks.json"; sourceTree = "<group>"; };
-		4EE4659C2C53AC6A0039A729 /* NewQuitAttemptSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuitAttemptSheet.swift; sourceTree = "<group>"; };
 		4EE4659E2C53B1310039A729 /* CircularGaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGaugeView.swift; sourceTree = "<group>"; };
 		4EEACA432C5622BB00F76EB6 /* QuitAttemptMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitAttemptMenu.swift; sourceTree = "<group>"; };
 		4EEACA5F2C5628D300F76EB6 /* EditQuitAttemptSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuitAttemptSheet.swift; sourceTree = "<group>"; };
@@ -581,7 +583,6 @@
 				4EEACA432C5622BB00F76EB6 /* QuitAttemptMenu.swift */,
 				4E0F84C12C2D3C8B0037AE25 /* HealthProgressCardView.swift */,
 				4EE4659E2C53B1310039A729 /* CircularGaugeView.swift */,
-				4EE4659C2C53AC6A0039A729 /* NewQuitAttemptSheet.swift */,
 				4E0F84C32C2D3CBB0037AE25 /* MotivationCardView.swift */,
 				4E0F84C52C2D3CC70037AE25 /* MoneySavedCardView.swift */,
 				4E9AC0A52C2E844700B3C2F0 /* AidProductDetailEditView.swift */,
@@ -604,6 +605,8 @@
 		4E33CEB72C4B979000BE9303 /* Lottie Files */ = {
 			isa = PBXGroup;
 			children = (
+				4E8D678D2C5CF14A006D408D /* Confetti.json */,
+				4E8D67832C5CED6F006D408D /* Trophy.json */,
 				4E5893702C5C6F16003BA732 /* Sparkles loader.json */,
 				4E33CEB82C4B9B8E00BE9303 /* Yellow crossing line.json */,
 				4E33CEBE2C4BBA9800BE9303 /* Buttercup crossing line.json */,
@@ -763,9 +766,11 @@
 				4EDF63EC2C4ED771008CCD82 /* Poppy fireworks.json in Resources */,
 				4E0F842D2C2D07F90037AE25 /* Assets.xcassets in Resources */,
 				4EB3C1D22C4B3D260066D658 /* Launch Screen.storyboard in Resources */,
+				4E8D67852C5CED6F006D408D /* Trophy.json in Resources */,
 				4E0128532C4D63DC007FB1C6 /* Lavender fireworks.json in Resources */,
 				4E0F84E52C2D3FA60037AE25 /* Localizable.xcstrings in Resources */,
 				4E33CEC52C4BBC0300BE9303 /* Lavender crossing line.json in Resources */,
+				4E8D678E2C5CF14A006D408D /* Confetti.json in Resources */,
 				4E5893712C5C6F16003BA732 /* Sparkles loader.json in Resources */,
 				4E33CEC32C4BBABC00BE9303 /* Seafoam crossing line.json in Resources */,
 				4E33CEB92C4B9B8E00BE9303 /* Yellow crossing line.json in Resources */,
@@ -865,7 +870,6 @@
 				4E0F84682C2D10C20037AE25 /* OnboardingViewModel.swift in Sources */,
 				4EB3C1D02C4B3CE90066D658 /* Theme.swift in Sources */,
 				4E0F84B12C2D349F0037AE25 /* Milestone.swift in Sources */,
-				4EE4659D2C53AC6A0039A729 /* NewQuitAttemptSheet.swift in Sources */,
 				4E1A80F12C495D310052CBD2 /* SignUpViewModel.swift in Sources */,
 				4E0F84B52C2D34AD0037AE25 /* Symptom.swift in Sources */,
 				4E0F84A82C2D33E50037AE25 /* MilestonePostsView.swift in Sources */,
@@ -1085,6 +1089,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -1119,6 +1124,7 @@
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",

@@ -11,6 +11,8 @@ struct DashboardView: View {
     @EnvironmentObject var quitAttemptViewModel: QuitAttemptViewModel
     @Environment(\.scenePhase) private var scenePhase
     
+    @State private var showConfetti = false
+    
     var body: some View {
         NavigationStack {
             ZStack {
@@ -23,7 +25,7 @@ struct DashboardView: View {
                             .frame(height: 40)
                             .listRowBackground(Color.clear)
                     }
-                    QuitAttemptCardView()
+                    QuitAttemptCardView(showConfetti: $showConfetti)
                         .frame(height: 320)
                         .environmentObject(quitAttemptViewModel)
                         .listRowBackground(
@@ -53,6 +55,13 @@ struct DashboardView: View {
                     } else {
                         print("Scene phase changed to: \(newPhase)")
                     }
+                }
+                
+                if showConfetti {
+                    LottieView(name: Constants.confetti, animationSpeed: 0.8)
+                        .ignoresSafeArea()
+                        .scaleEffect(1.7)
+                        .allowsHitTesting(false)
                 }
                 
                 VStack {

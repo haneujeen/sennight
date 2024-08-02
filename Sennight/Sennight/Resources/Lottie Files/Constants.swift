@@ -17,4 +17,6 @@ enum Constants {
     static var lavenderFireworks = "Lavender fireworks"
     static var yellowFireworks = "Yellow fireworks"
     static var poppyFireworks = "Poppy fireworks"
+    static var confetti = "Confetti"
+    static var trophy = "Trophy"
 }

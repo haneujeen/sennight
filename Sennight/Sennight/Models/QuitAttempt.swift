@@ -35,7 +35,7 @@ import Foundation
  */
 
 struct QuitAttemptRequest: Codable {
-    let userID: Int
+    let userID: Int?
     let startDate: String
     let endDate: String?
     let isActive: Bool?

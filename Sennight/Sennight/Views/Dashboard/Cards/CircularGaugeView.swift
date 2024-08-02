@@ -28,11 +28,14 @@ struct CircularGaugeView: View {
             Button(action: {
                 showDetail = true
             }, label: {
-                Text(healthBenefit.rawValue)
+                HStack {
+                    healthBenefit.icon
+                    Text(healthBenefit.rawValue)
+                }
                     .font(.footnote)
                     .fontWeight(.bold)
                     .padding(12)
-                    .padding(.horizontal, 50)
+                    .padding(.horizontal, 40)
                     .foregroundStyle(.blue)
                     .background(Theme.yellow.mainColor)
                     .cornerRadius(16)

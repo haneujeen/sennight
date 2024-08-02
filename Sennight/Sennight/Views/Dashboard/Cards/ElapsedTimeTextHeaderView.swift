@@ -45,7 +45,8 @@ struct ElapsedTimeTextHeaderView: View {
                         Text(elapsedTimeStringMinutes(from: startDate, to: currentDate))
                         Text(elapsedTimeStringSeconds(from: startDate, to: currentDate))
                     }
-                    .font(currentDate.timeIntervalSince(startDate) <= 86400 ? .system(size: 20) : .footnote)
+                    .font(currentDate.timeIntervalSince(startDate) <= 86400 ? .system(size: 22) : .footnote)
+                    .padding(.top, currentDate.timeIntervalSince(startDate) <= 86400 ? 20 : 0)
                     .fontWeight(currentDate.timeIntervalSince(startDate) <= 86400 ? .heavy : .regular)
                     .foregroundStyle(currentDate.timeIntervalSince(startDate) <= 86400 ? Theme.periwinkle.mainColor : Theme.indigo.mainColor)
                     
@@ -65,7 +66,7 @@ struct ElapsedTimeTextHeaderView: View {
                     Text("It's tough. So are you.")
                         .font(.title3)
                     Text("START QUITTING TODAY!")
-                        .font(.title2)
+                        .font(.title)
                 }
                 .italic()
                 .fontWeight(.black)

@@ -30,6 +30,7 @@ struct HealthProgressCardView: View {
 //                    Label("100", systemImage: "heart.fill")
                     Spacer()
                     QuitAttemptMenu()
+                        .environmentObject(quitAttemptViewModel)
                 }
                 TabView(selection: $selection) {
                     ForEach(HealthBenefit.allCases.indices, id: \.self) { index in
@@ -64,6 +65,6 @@ struct HealthProgressCardView: View {
 #Preview {
     HealthProgressCardView()
         .environmentObject(QuitAttemptViewModel())
-        .frame(height: 310)
+        .frame(height: 320)
         .background(Theme.lightGray.mainColor)
 }

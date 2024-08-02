@@ -980,6 +980,7 @@
 
     },
     "Get Started" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -2067,6 +2068,9 @@
         }
       }
     },
+    "Start my first day" : {
+
+    },
     "Start quitting today!" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -2279,7 +2283,7 @@
     "Stop" : {
 
     },
-    "Stop Quit Attempt" : {
+    "Stop My Progress" : {
 
     },
     "Stop This Quit Attempt" : {
@@ -2475,7 +2479,7 @@
     "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE." : {
 
     },
-    "This will stop your current quit attempt and reset all your progress.\nThis action cannot be undone." : {
+    "This will erase your current progress and reset all health improvements.\nThis action cannot be undone." : {
 
     },
     "Time Zone" : {
@@ -2554,7 +2558,7 @@
     "Update Password" : {
 
     },
-    "Update start date" : {
+    "Update the date you started to quit." : {
 
     },
     "User achieved %@ Milestone! Send support?" : {
