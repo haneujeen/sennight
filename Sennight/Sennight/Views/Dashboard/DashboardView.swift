@@ -18,10 +18,11 @@ struct DashboardView: View {
                     .ignoresSafeArea()
                 
                 List {
-                    ElapsedTimeTextHeaderView()
-                        .frame(height: 40)
-                        .listRowBackground(Theme.buttercup.mainColor)
-                        .environmentObject(quitAttemptViewModel)
+                    Section {
+                        Color.clear
+                            .frame(height: 40)
+                            .listRowBackground(Color.clear)
+                    }
                     QuitAttemptCardView()
                         .frame(height: 300)
                         .environmentObject(quitAttemptViewModel)
@@ -47,6 +48,17 @@ struct DashboardView: View {
                     } else {
                         print("Scene phase changed to: \(newPhase)")
                     }
+                }
+                
+                VStack {
+                    ElapsedTimeTextHeaderView()
+                        .padding(.vertical, 5)
+                        .background(Theme.buttercup.mainColor.opacity(0.3))
+                        .clipShape(RoundedRectangle(cornerRadius: 20))
+                        .padding(.horizontal, 25)
+                        .padding(.top, 5)
+                        .environmentObject(quitAttemptViewModel)
+                    Spacer()
                 }
             }
         }

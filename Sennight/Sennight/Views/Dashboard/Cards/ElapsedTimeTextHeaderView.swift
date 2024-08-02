@@ -19,6 +19,12 @@ struct ElapsedTimeTextHeaderView: View {
         Section {
             if quitAttemptViewModel.isActiveQuitAttempt {
                 VStack {
+                    Image(systemName: "timer")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30, height: 30)
+                        .padding(.bottom, -10)
+                        .foregroundStyle(LinearGradient(gradient: Gradient(colors: [Theme.poppy.mainColor, Theme.periwinkle.mainColor]), startPoint: .topLeading, endPoint: .bottomTrailing))
                     HStack {
                         if currentDate.timeIntervalSince(startDate) > 31_536_000 {
                             Text(elapsedTimeStringYears(from: startDate, to: currentDate))
@@ -30,23 +36,19 @@ struct ElapsedTimeTextHeaderView: View {
                             Text(elapsedTimeStringDays(from: startDate, to: currentDate))
                         }
                     }
-                    .font(.system(size: 26))
-                    if currentDate.timeIntervalSince(startDate) > 86400 {
-                        Spacer()
-                        HStack {
-                            Text(elapsedTimeStringHours(from: startDate, to: currentDate))
-                            Text(elapsedTimeStringMinutes(from: startDate, to: currentDate))
-                            Text(elapsedTimeStringSeconds(from: startDate, to: currentDate))
-                        }
-                    } else {
-                        Spacer()
-                        HStack {
-                            Text(elapsedTimeStringHours(from: startDate, to: currentDate))
-                            Text(elapsedTimeStringMinutes(from: startDate, to: currentDate))
-                            Text(elapsedTimeStringSeconds(from: startDate, to: currentDate))
-                        }
-                        .font(.system(size: 24))
+                    .font(.system(size: 27))
+                    .fontWeight(.heavy)
+                    .foregroundStyle(Theme.periwinkle.mainColor)
+                    
+                    HStack {
+                        Text(elapsedTimeStringHours(from: startDate, to: currentDate))
+                        Text(elapsedTimeStringMinutes(from: startDate, to: currentDate))
+                        Text(elapsedTimeStringSeconds(from: startDate, to: currentDate))
                     }
+                    .font(currentDate.timeIntervalSince(startDate) <= 86400 ? .system(size: 20) : .footnote)
+                    .fontWeight(currentDate.timeIntervalSince(startDate) <= 86400 ? .heavy : .regular)
+                    .foregroundStyle(currentDate.timeIntervalSince(startDate) <= 86400 ? Theme.periwinkle.mainColor : Theme.indigo.mainColor)
+                    
                 }
                 .onAppear(perform: {
                     Timer.scheduledTimer(withTimeInterval: 1.0, repeats: true) { timer in
@@ -55,9 +57,19 @@ struct ElapsedTimeTextHeaderView: View {
                 })
             } else {
                 VStack {
+                    Image(systemName: "cloud.rainbow.half")
+                        .resizable()
+                        .scaledToFit()
+                        .frame(width: 30, height: 30)
+                        .padding(.bottom, -10)
                     Text("It's tough. So are you.")
-                    Text("Start quitting today!")
+                        .font(.title3)
+                    Text("START QUITTING TODAY!")
+                        .font(.title2)
                 }
+                .italic()
+                .fontWeight(.black)
+                .foregroundStyle(LinearGradient(gradient: Gradient(colors: [Theme.periwinkle.mainColor, Theme.lightBlue.mainColor]), startPoint: .topLeading, endPoint: .bottomTrailing))
             }
         }
         .accessibilityAddTraits(.isHeader)
@@ -68,7 +80,7 @@ struct ElapsedTimeTextHeaderView: View {
 struct ElapsedTimeTextHeaderView_Previews: PreviewProvider {
     static var previews: some View {
         ElapsedTimeTextHeaderView()
-            .previewLayout(.fixed(width: 400, height: 60))
+            .previewLayout(.fixed(width: 400, height: 80))
             .environmentObject(QuitAttemptViewModel())
     }
 }

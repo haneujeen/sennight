@@ -16,6 +16,7 @@ enum Theme: String, CaseIterable, Identifiable {
     case lightBlue
     case lightGray
     case lightGreen
+    case lightPurple
     case magenta
     case mint
     case navy
@@ -33,7 +34,7 @@ enum Theme: String, CaseIterable, Identifiable {
     var accentColor: Color {
         switch self {
         case .bubblegum, .buttercup, .lavender, .lightBlue, .lightGray, .lightGreen, .mint, .orange, .seafoam, .tan, .yellow: return .black
-        case .darkGray, .indigo, .magenta, .navy, .periwinkle, .purple, .red, .poppy, .sky, .teal: return .white
+        case .darkGray, .indigo, .magenta, .navy, .periwinkle, .lightPurple, .purple, .red, .poppy, .sky, .teal: return .white
         }
     }
     var mainColor: Color {
