@@ -16,18 +16,16 @@ struct OnboardingDismissButton: View {
         HStack {
             Button(action: {
                 showAlert = true
-                alertMessage = "You’re about to exit the onboarding. Don’t worry, you can set up your preferences later."
+                alertMessage = "You can update your preferences and settings later."
             }) {
                 Text("Dismiss")
                     .foregroundStyle(Color.secondary)
             }
-            .padding(.vertical)
-            .padding(.horizontal)
             .alert(isPresented: $showAlert) {
                 Alert(
-                    title: Text(""),
+                    title: Text("Leaving onboarding?"),
                     message: Text(alertMessage),
-                    primaryButton: .destructive(Text("Yes")) {
+                    primaryButton: .destructive(Text("OK")) {
                         isOnboardingComplete = true
                     },
                     secondaryButton: .cancel()

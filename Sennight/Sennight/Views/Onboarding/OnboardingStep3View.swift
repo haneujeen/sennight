@@ -18,7 +18,7 @@ struct OnboardingStep3View: View {
     var body: some View {
         VStack {
             OnboardingDismissButton(isOnboardingComplete: $isOnboardingComplete)
-            
+            Spacer()
             Image(systemName: "dollarsign.square")
                 .resizable()
                 .scaledToFit()
@@ -68,15 +68,16 @@ struct OnboardingStep3View: View {
                 .padding(.horizontal, 90)
                 .padding(.vertical, 50)
             
+            Spacer()
+            
             Button(action: {
-                if !price.isEmpty, let priceValue = Double(price) {
+                if price != "", let priceValue = Double(price) {
                     smokingHabitViewModel.cigarettePrice = priceValue
                     currentStep = 4
                 } else {
                     alertMessage = "Please enter a valid price."
                     showAlert = true
                 }
-                currentStep = 4
             }) {
                 Text("Next")
                     .fontWeight(.semibold)
@@ -106,10 +107,13 @@ struct OnboardingStep3View: View {
                     .cornerRadius(25)
             }
             .padding(.horizontal)
-            Spacer()
+            .padding(.bottom)
         }
         .foregroundStyle(Theme.indigo.mainColor)
         .padding()
+        .onTapGesture {
+            hideKeyboard()
+        }
     }
 }
 

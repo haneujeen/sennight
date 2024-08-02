@@ -22,7 +22,7 @@ struct OnboardingStep4View: View {
     var body: some View {
         VStack {
             OnboardingDismissButton(isOnboardingComplete: $isOnboardingComplete)
-            
+            Spacer()
             Image(systemName: "clock.badge.questionmark")
                 .resizable()
                 .scaledToFit()
@@ -92,6 +92,8 @@ struct OnboardingStep4View: View {
                 .padding(.vertical, 30)
             }
             
+            Spacer()
+            
             Button(action: {
                 let selectedTime = String(format: "%02d:%02d:00", selectedHour, selectedMinute)
                 smokingHabitViewModel.firstCigarette = selectedTime
@@ -122,7 +124,7 @@ struct OnboardingStep4View: View {
                     .cornerRadius(25)
             }
             .padding(.horizontal)
-            Spacer()
+            .padding(.bottom)
         }
         .foregroundStyle(Theme.indigo.mainColor)
         .padding()

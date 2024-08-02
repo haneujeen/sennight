@@ -21,7 +21,7 @@ struct OnboardingStep2View: View {
     var body: some View {
         VStack {
             OnboardingDismissButton(isOnboardingComplete: $isOnboardingComplete)
-            
+            Spacer()
             Image(systemName: "smoke")
                 .resizable()
                 .scaledToFit()
@@ -105,7 +105,7 @@ struct OnboardingStep2View: View {
                     .cornerRadius(25)
             }
             .padding(.horizontal)
-            Spacer()
+            .padding(.bottom)
         }
         .foregroundStyle(Theme.indigo.mainColor)
         .padding()

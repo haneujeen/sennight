@@ -20,7 +20,7 @@ struct OnboardingStep6View: View {
     var body: some View {
         VStack {
             OnboardingDismissButton(isOnboardingComplete: $isOnboardingComplete)
-
+            Spacer()
             Image(systemName: "leaf")
                 .resizable()
                 .scaledToFit()
@@ -32,8 +32,7 @@ struct OnboardingStep6View: View {
                         endPoint: .bottom
                     )
                 )
-                .padding(.top, 70)
-                .padding(30)
+                .padding(.bottom, 30)
             
             HStack {
                 Text("Are you currently a smoker?")
@@ -56,7 +55,8 @@ struct OnboardingStep6View: View {
                     .foregroundStyle(Color.secondary)
                 Spacer()
             }
-            .padding([.horizontal, .bottom])
+            .padding(.horizontal)
+            .padding(.bottom, 50)
             
             Button(action: {
                 currentStep = 7
@@ -92,6 +92,8 @@ struct OnboardingStep6View: View {
             }
             .padding(.horizontal)
             
+            Spacer()
+            
             Button(action: {
                 currentStep = 5
             }) {
@@ -103,7 +105,6 @@ struct OnboardingStep6View: View {
                     .cornerRadius(25)
             }
             .padding()
-            Spacer()
         }
         .foregroundStyle(Theme.indigo.mainColor)
         .padding()

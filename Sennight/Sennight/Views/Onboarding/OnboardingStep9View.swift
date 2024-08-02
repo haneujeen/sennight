@@ -12,15 +12,14 @@ struct OnboardingStep9View: View {
     @EnvironmentObject var motivationViewModel: MotivationViewModel
     @EnvironmentObject var quitAttemptViewModel: QuitAttemptViewModel
     @EnvironmentObject var smokingHabitViewModel: SmokingHabitViewModel
+    @StateObject var signUpViewModel = SignUpViewModel()
+    
     @Binding var currentStep: Int
     @Binding var isOnboardingComplete: Bool
-    @StateObject var signUpViewModel = SignUpViewModel()
     @State private var confirmPassword: String = ""
-    @Environment(\.dismiss) var dismiss
     @State private var showAlert = false
     @State private var alertMessage = ""
     
-    // 비밀번호와 확인 비밀번호가 같은지 확인하는 연산 프로퍼티
     private var isSignUpDisabled: Bool {
         signUpViewModel.email.isEmpty ||
         signUpViewModel.password.isEmpty ||
@@ -30,7 +29,6 @@ struct OnboardingStep9View: View {
         !hasDigit
     }
     
-    // 비밀번호 길이 확인하는 연산 프로퍼티
     private var isPasswordLengthValid: Bool {
         signUpViewModel.password.count >= 8 && signUpViewModel.password.count <= 32
     }
@@ -110,11 +108,9 @@ struct OnboardingStep9View: View {
                                 .fontWeight(hasDigit ? .bold : .regular)
                             Text("have at least 1 digit (0-9)")
                         }
-                        
                     }
                     .font(.footnote)
                 }
-                
                 SecureField("Confirm Password", text: $confirmPassword)
                     .textFieldStyle(CustomGrayTextFieldStyle())
             }
@@ -125,31 +121,18 @@ struct OnboardingStep9View: View {
             Button(action: {
                 signUpViewModel.register { response in
                     if response.status {
-                        //isOnboardingComplete = true
-                        smokingHabitViewModel.createSmokingHabit { status in
-                            if status{
-                                print("Smoking habit 추가 성공")
-                            } else {
-                                print("Smoking habit 추가 실패")
-                            }
+                        isOnboardingComplete = true
+                        smokingHabitViewModel.createSmokingHabit { _ in
+                            
                         }
                         
-                        quitAttemptViewModel.create { status in
-                            if status{
-                                print("Quit attempt 추가 성공")
-                            } else {
-                                print("Quit attempt 추가 실패")
-                            }
+                        quitAttemptViewModel.createQuitAttempt { _ in
+                            
                         }
                         
-                        motivationViewModel.createMotivation { status in
-                            if status{
-                                print("Motivation 추가 성공")
-                            } else {
-                                print("Motivation 추가 실패")
-                            }
+                        motivationViewModel.createMotivation { _ in
+                            
                         }
-                        dismiss()
                     } else {
                         if response.detail == "Email in use" {
                             alertMessage = "Email in use"
@@ -162,18 +145,18 @@ struct OnboardingStep9View: View {
             }, label: {
                 Text("Get started")
                     .fontWeight(.semibold)
+                    .padding(20)
+                    .frame(maxWidth: .infinity)
+                    .background(isSignUpDisabled ?
+                                LinearGradient(gradient: Gradient(colors: [Color.secondary]), startPoint: .leading, endPoint: .trailing) :
+                                    LinearGradient(
+                                        gradient: Gradient(colors: [Theme.teal.mainColor, Theme.sky.mainColor]),
+                                        startPoint: .topLeading,
+                                        endPoint: .bottomTrailing
+                                    ))
+                    .foregroundColor(Theme.sky.accentColor)
+                    .cornerRadius(25)
             })
-            .padding()
-            .frame(maxWidth: .infinity)
-            .background(isSignUpDisabled ?
-                        LinearGradient(gradient: Gradient(colors: [Color.secondary]), startPoint: .leading, endPoint: .trailing) :
-                            LinearGradient(
-                                gradient: Gradient(colors: [Theme.teal.mainColor, Theme.sky.mainColor]),
-                                startPoint: .topLeading,
-                                endPoint: .bottomTrailing
-                            ))
-            .foregroundColor(Theme.sky.accentColor)
-            .cornerRadius(25)
             .disabled(isSignUpDisabled)
             .alert("Error", isPresented: $showAlert, presenting: alertMessage) { _ in
                 Button("OK", role: .cancel) { }
@@ -181,12 +164,22 @@ struct OnboardingStep9View: View {
                 Text(alertMessage)
             }
             .padding(.horizontal)
-            Spacer()
+            
+            Button(action: {
+                currentStep = 8
+            }) {
+                Text("Previous")
+                    .fontWeight(.semibold)
+                    .padding(20)
+                    .frame(maxWidth: .infinity)
+                    .background(Theme.lightGray.mainColor)
+                    .cornerRadius(25)
+            }
+            .padding([.horizontal, .bottom])
         }
         .onTapGesture {
             hideKeyboard()
         }
-        
         .foregroundStyle(Theme.indigo.mainColor)
         .padding()
     }

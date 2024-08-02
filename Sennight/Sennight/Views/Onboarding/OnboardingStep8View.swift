@@ -26,8 +26,8 @@ struct OnboardingStep8View: View {
     var body: some View {
         VStack {
             OnboardingDismissButton(isOnboardingComplete: $isOnboardingComplete)
-            
             ScrollView {
+                Spacer()
                 HStack {
                     Text("Tell us what")
                         .font(.largeTitle)
@@ -41,12 +41,9 @@ struct OnboardingStep8View: View {
                         )
                     Spacer()
                 }
-                .padding(.horizontal)
-                
                 
                 HStack {
                     Text("motivated you to quit smoking?")
-                        .padding(.leading)
                         .fontWeight(.semibold)
                     Spacer()
                 }
@@ -121,17 +118,15 @@ struct OnboardingStep8View: View {
                                 .cornerRadius(25)
                         }
                         .padding(.vertical, 4)
-                        .padding(.horizontal)
                     }
                 } else {
-                    TextField("Enter your motivation", text: $customMotivation)
+                    TextField("Add your own motivation", text: $customMotivation)
                         .textFieldStyle(CustomGrayTextFieldStyle())
                         .padding()
+                        .padding(.vertical, 50)
                 }
                 
-                
                 Spacer()
-                
                 
                 Button(action: {
                     if selectedCategory == "Add My Motivation" && customMotivation.isEmpty {
@@ -143,6 +138,8 @@ struct OnboardingStep8View: View {
                     } else {
                         if selectedCategory == "Add My Motivation" {
                             motivationViewModel.message = customMotivation
+                        } else {
+                            motivationViewModel.message = selectedMotivation?.message
                         }
                         motivationViewModel.motivationID = selectedMotivation?.id ?? 2
                         currentStep = 9
@@ -175,11 +172,11 @@ struct OnboardingStep8View: View {
                         .background(Theme.lightGray.mainColor)
                         .cornerRadius(25)
                 }
-                .padding(.horizontal)
+                .padding([.horizontal, .bottom])
             }
+            .foregroundStyle(Theme.indigo.mainColor)
+            .padding()
         }
-        .foregroundStyle(Theme.indigo.mainColor)
-        .padding()
     }
 }
 

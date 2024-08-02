@@ -7,6 +7,7 @@
 //  Edited by 한유진 on 2024-07-27: Refactor SmokingHabitService.swift
 //
 
+import Foundation
 import Combine
 import Alamofire
 

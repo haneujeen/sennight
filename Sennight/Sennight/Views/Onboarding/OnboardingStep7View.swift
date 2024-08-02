@@ -22,7 +22,7 @@ struct OnboardingStep7View: View {
     var body: some View {
         VStack {
             OnboardingDismissButton(isOnboardingComplete: $isOnboardingComplete)
-            
+            Spacer()
             HStack {
                 Text("Let us know")
                     .font(.largeTitle)
@@ -90,8 +90,7 @@ struct OnboardingStep7View: View {
                     .background(Theme.lightGray.mainColor)
                     .cornerRadius(25)
             }
-            .padding(.horizontal)
-            Spacer()
+            .padding([.horizontal, .bottom])
         }
         .foregroundStyle(Theme.indigo.mainColor)
         .padding()

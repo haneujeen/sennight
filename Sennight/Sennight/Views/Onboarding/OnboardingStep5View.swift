@@ -21,9 +21,8 @@ struct OnboardingStep5View: View {
     
     var body: some View {
         VStack {
-            
             OnboardingDismissButton(isOnboardingComplete: $isOnboardingComplete)
-            
+            Spacer()
             Image(systemName: "figure.wave")
                 .resizable()
                 .scaledToFit()
@@ -66,7 +65,6 @@ struct OnboardingStep5View: View {
                     .foregroundStyle(Color.secondary)
                 Spacer()
             }
-            .padding(.top, 5)
        
             Picker("", selection: $smokingYears) {
                 ForEach(selectedYears, id: \.self) { selectedYears in
@@ -79,6 +77,8 @@ struct OnboardingStep5View: View {
             .clipped()
             .padding(.horizontal, 50)
             .padding(.vertical, 30)
+            
+            Spacer()
             
             Button(action: {
                 smokingHabitViewModel.smokingYears = smokingYears
@@ -109,7 +109,7 @@ struct OnboardingStep5View: View {
                     .cornerRadius(25)
             }
             .padding(.horizontal)
-            Spacer()
+            .padding(.bottom)
         }
         .foregroundStyle(Theme.indigo.mainColor)
         .padding()

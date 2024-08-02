@@ -23,7 +23,7 @@ class QuitAttemptViewModel: ObservableObject{
     private var cancellables = Set<AnyCancellable>()
     
     //금연 시간 등록
-    func create(completion: @escaping (Bool)->Void) {
+    func createQuitAttempt(completion: @escaping (Bool)->Void) {
         QuitAttemptService.shared.createQuitAttempt(startDate: startDate)
             .receive(on: DispatchQueue.main)
             .sink { completion in
