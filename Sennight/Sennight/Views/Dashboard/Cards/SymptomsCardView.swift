@@ -9,7 +9,7 @@ import SwiftUI
 
 struct SymptomsCardView: View {
     var body: some View {
-        Section(header: Text("Symptom")) {
+        Section(header: Text("Symptoms")) {
             ForEach(0..<3) { _ in
                 SymptomRowView()
             }

@@ -3,7 +3,6 @@
 //  Sennight
 //
 //  Created by 한유진 on 6/27/24.
-//  Edited by 김소연 on 2024-07-25: Milestone view model 정의
 //
 
 import Foundation

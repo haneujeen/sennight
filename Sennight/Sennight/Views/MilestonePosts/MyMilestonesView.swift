@@ -3,15 +3,9 @@
 //  Sennight
 //
 //  Created by 한유진 on 7/2/24.
-//  Edited by 김소연 on 2024-07-25: Milestone view 정의
 //
 
 import SwiftUI
-var milestoneMessages = [
-    "Congratulations on reaching 7 days of being smoke-free! Your determination inspires us. Keep it up!",
-    "Two weeks smoke-free! It’s going to get easier from here. Stay strong!",
-    "Congrats on hitting the 3-week mark without smoking! You are a superstar."
-]
 
 struct MyMilestonesView: View {
     @EnvironmentObject var quitAttemptViewModel: QuitAttemptViewModel

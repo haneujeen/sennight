@@ -13,27 +13,27 @@
 import Foundation
 
 struct UserMotivationRequest: Codable {
-    let userID: Int?
-    let motivationID: Int?
+    let userId: Int?
+    let motivationId: Int?
     let message: String?
    
     enum CodingKeys: String, CodingKey {
-        case userID = "user_id"
-        case motivationID = "motivation_id"
+        case userId = "user_id"
+        case motivationId = "motivation_id"
         case message
     }
 }
 
 struct UserMotivation: Codable {
     let id: Int
-    let userID: Int
-    let motivationID: Int
-    let message: String?
+    let userId: Int
+    let motivationId: Int
+    let message: String
     
     enum CodingKeys: String, CodingKey {
         case id
-        case userID = "user_id"
-        case motivationID = "motivation_id"
+        case userId = "user_id"
+        case motivationId = "motivation_id"
         case message
     }
 }

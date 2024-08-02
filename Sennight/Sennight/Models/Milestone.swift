@@ -57,7 +57,7 @@ enum Milestone: Int, CaseIterable, Identifiable {
         case .threeMonths: return "Hurdle Sprinter"
         case .sixMonths: return "Superstar"
         case .oneYear: return "Happy Year Hero"
-        case .twoYears: return "Double Dino"
+        case .twoYears: return "Double Dynamo"
         case .threeYears: return "Wanderer"
         case .fiveYears: return "Lustrum Inspiration"
         case .tenYears: return "Fearless Gardener"

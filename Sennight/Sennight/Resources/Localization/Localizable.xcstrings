@@ -5,2399 +5,604 @@
 
     },
     " and " : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "and"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Et"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "그리고"
-          }
-        }
-      }
+
     },
     " Log In" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Log In"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Se connecter"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "로그인"
-          }
-        }
-      }
+
     },
     " Sign Up" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sign Up"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "S'inscrire"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "회원가입"
-          }
-        }
-      }
+
     },
     " will apply." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "will apply"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "S'appliquera"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "신청하기"
-          }
-        }
-      }
+
+    },
+    "- **Access and Update Your Information**: Request access to or update your personal information." : {
+
+    },
+    "- **Device Information**: Information about your device, such as your device ID, operating system, and other technical details." : {
+
+    },
+    "- **For Legal Reasons**: We may disclose your information if required to do so by law or to protect our rights, privacy, safety, or property." : {
+
+    },
+    "- **Opt-Out**: Choose not to receive promotional communications from us by following the instructions in those communications." : {
+
+    },
+    "- **Personal Information**: Information that identifies you personally, such as your name, email address, or other contact details." : {
+
+    },
+    "- **To Communicate with You**: Sending updates, notifications, and other information related to the App." : {
+
+    },
+    "- **To Comply with Legal Obligations**: Adhering to applicable laws and regulations." : {
+
+    },
+    "- **To Improve the App**: Analyzing usage patterns to enhance features and performance." : {
+
+    },
+    "- **To Provide and Maintain the App**: Ensuring the App functions correctly and addressing any issues." : {
+
+    },
+    "- **Usage Data**: Information about how you use the App, including your interactions with features and services." : {
+
+    },
+    "- **With Service Providers**: We may share your information with third-party service providers who assist us in operating the App and providing services." : {
+
     },
     ":" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ":"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : ":"
-          }
-        }
-      }
+
+    },
+    "%@" : {
+
     },
     "%lld" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "%lld"
-          }
-        }
-      }
+
+    },
+    "1. Acceptance of Terms" : {
+
+    },
+    "1. Introduction" : {
+
+    },
+    "2. Information We Collect" : {
+
+    },
+    "2. User Accounts" : {
+
+    },
+    "3. How We Use Your Information" : {
+
+    },
+    "3. Use of the App" : {
+
+    },
+    "4. How We Share Your Information" : {
+
+    },
+    "4. Intellectual Property" : {
+
+    },
+    "5. Privacy" : {
+
+    },
+    "5. Security" : {
+
+    },
+    "6. Third-Party Links" : {
+
+    },
+    "6. Your Choices" : {
+
+    },
+    "7. Children’s Privacy" : {
+
+    },
+    "7. Disclaimer" : {
+
+    },
+    "8. Changes to This Privacy Policy" : {
+
+    },
+    "8. Limitation of Liability" : {
+
+    },
+    "9. Changes to Terms" : {
+
+    },
+    "10. Contact Information" : {
+
+    },
+    "100" : {
+
     },
     "100%" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "100%"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "100%"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "100%"
-          }
-        }
-      }
+
     },
-    "About App" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "About App"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "À propos de l'application"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "앱 정보"
-          }
-        }
-      }
+    "About Milestones" : {
+
     },
     "Account Settings" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Account Settings"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Paramètres du compte"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "계정 설정"
-          }
-        }
-      }
+
     },
     "Activities" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Activities"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Activités"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "활동"
-          }
-        }
-      }
+
+    },
+    "Activity row" : {
+
     },
     "Add and manage your smoking habits and cravings." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Add and manage your smoking habits and cravings."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Ajoutez et gérez vos habitudes et envies de fumer."
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "흡연정보를 추가하고 관리합니다"
-          }
-        }
-      }
+
+    },
+    "Add My Motivation" : {
+
+    },
+    "Add New Milestone" : {
+
+    },
+    "Add your own motivation" : {
+
     },
     "Aid product detail edit" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Aid product detail edit"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Modifier les détails du produit d'aide"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "금연보조제 세부정보 수정"
-          }
-        }
-      }
+
+    },
+    "Aid product row" : {
+
+    },
+    "All" : {
+
+    },
+    "All content, trademarks, and other intellectual property on the Sennight are owned by or licensed to Sennight and are protected by applicable laws. You may not use, reproduce, or distribute any content from the Sennight without explicit permission." : {
+
     },
     "Already have an account?" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Already have an account?"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vous avez déjà un compte ?"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "이미 계정이 있으신가요?"
-          }
-        }
-      }
+
     },
-    "App Permissions" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "App Permissions"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Autorisations de l'application"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "앱 권한"
-          }
-        }
-      }
-    },
-    "App Version" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "App Version"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Version de l'application"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "앱 버전"
-          }
-        }
-      }
+    "An unknown error occurred." : {
+
     },
     "Are you currently a smoker?" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Are you currently a smoker?"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Êtes-vous actuellement fumeur ?"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "현재 흡연 중이신가요?"
-          }
-        }
-      }
+
     },
     "be 8-32 characters long" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "be 8-32 characters long"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "doit contenir entre 8 et 32 caractères"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "8~32자의 길이어야 합니다"
-          }
-        }
-      }
+
     },
     "Begin your journey and stay updated with your progress." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Begin your journey and stay updated with your progress."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Commencez votre voyage et restez à jour avec vos progrès."
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "금연을 시작하고 진행사항을 업데이트 하세요"
-          }
-        }
-      }
+
     },
-    "Category: %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Category: %@"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Catégorie : %@"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "카테고리:%@"
-          }
-        }
-      }
+    "By accessing or using the Sennight (\"Sennight\"), you agree to comply with and be bound by these Terms and Conditions." : {
+
+    },
+    "Cancel" : {
+
     },
     "Change Password" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Change Password"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Changer le mot de passe"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "비밀번호 변경"
-          }
-        }
-      }
+
+    },
+    "Cigarette Price" : {
+
+    },
+    "Click the button below and get your milestone." : {
+
+    },
+    "Close" : {
+
+    },
+    "Confirm New Password" : {
+
     },
     "Confirm Password" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Confirm Password"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Confirmer le mot de passe"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "비밀번호 확인"
-          }
-        }
-      }
+
     },
     "Contact Support" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Contact Support"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Contacter le support"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "지원팀에게 연락하기"
-          }
-        }
-      }
+
     },
     "Continue" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Continue"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Continuer"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "계속"
-          }
-        }
-      }
+
     },
     "Continue with Apple" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Continue with Apple"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Continuer avec Apple"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Apple로 계속하기"
-          }
-        }
-      }
+
+    },
+    "Copyright (c) 2024 Sennight" : {
+
+    },
+    "Craving level" : {
+
     },
     "Create your account." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Create your account."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Créez votre compte."
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "계정을 만드세요"
-          }
-        }
-      }
+
+    },
+    "Current Password" : {
+
+    },
+    "Daily Cigarettes" : {
+
     },
     "Dashboard" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dashboard"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tableau de bord"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "대시보드"
-          }
-        }
-      }
+
     },
-    "Data Usage" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Data Usage"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Utilisation des données"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "데이터 사용량"
-          }
-        }
-      }
+    "Date achieved: %@" : {
+
     },
     "Dismiss" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dismiss"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Rejeter"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "넘어가기"
-          }
-        }
-      }
+
+    },
+    "do you usually have your first cigarette of the day?" : {
+
     },
     "Don't have an account?" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Don't have an account?"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Vous n'avez pas de compte?"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "계정이 없으신가요?"
-          }
-        }
-      }
+
     },
-    "Email" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Email"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "e-mail"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "이메일"
-          }
-        }
-      }
+    "Edit This Quit Attempt" : {
+
     },
     "Email address" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Email address"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Adresse e-mail"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "이메일 주소"
-          }
-        }
-      }
+
     },
-    "Enter your motivation" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Enter your motivation"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Entrez votre motivation"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "동기를 입력하세요"
-          }
-        }
-      }
+    "Empty Motivation!" : {
+
+    },
+    "Enter cigarette price" : {
+
+    },
+    "Enter daily cigarettes" : {
+
+    },
+    "Enter price" : {
+
+    },
+    "Enter years smoking" : {
+
     },
     "Error" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Error"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Erreur"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "오류"
-          }
-        }
-      }
-    },
-    "Failed to load motivation. Please try again." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Failed to load motivation. Please try again."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Échec du chargement de la motivation. Veuillez réessayer."
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "흡연동기를 불러오지 못했습니다 다시 시도해주세요"
-          }
-        }
-      }
+
     },
     "Feelings and Symptoms" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Feelings and Symptoms"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sentiments et symptômes"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "감정 및 증상"
-          }
-        }
-      }
+
     },
-    "General" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "General"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Général"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "일반"
-          }
-        }
-      }
+    "Filter" : {
+
+    },
+    "First Cigarette Time" : {
+
+    },
+    "Get started" : {
+
     },
     "Get Started" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Get Started"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Commencer"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "시작하기"
-          }
-        }
-      }
+
     },
     "have at least 1 digit (0-9)" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "have at least 1 digit (0-9)"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "doit contenir au moins 1 chiffre (0-9)"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "적어도 1개의 숫자(0~9)를 포함해야합니다"
-          }
-        }
-      }
+
     },
     "have at least 1 letter (A-Z, a-z)" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "have at least 1 letter (A-Z, a-z)"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "doit contenir au moins 1 lettre (A-Z, a-z)"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "적어도 1개의 알파벳을 포함해야합니다(A~Z, a~z)"
-          }
-        }
-      }
+
+    },
+    "have you been smoking?" : {
+
     },
     "Hello, World!" : {
 
     },
     "Hour" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Hour"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Heure"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "시간"
-          }
-        }
-      }
+
     },
-    "How many years have you been smoking?" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "How many years have you been smoking?"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Depuis combien d'années fumez-vous?"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "흡연한지 몇년이 되었습니까?"
-          }
-        }
-      }
+    "How many years" : {
+
     },
     "If you are creating a new account," : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "If you are creating a new account,"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Si vous créez un nouveau compte,"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "새로운 계정을 만드는 경우,"
-          }
-        }
-      }
+
+    },
+    "If you have any questions or concerns about this Privacy Policy, please contact us at [Sennight Help](mailto:eujeenhan@gmail.com)." : {
+
+    },
+    "If you have any questions or concerns about this Terms and Conditions, please contact us at [Sennight Help](mailto:eujeenhan@gmail.com)." : {
+
+    },
+    "If you’re currently smoke-free, add the number of cigarettes you used to smoke daily. This will help calculate your savings." : {
+
+    },
+    "If you’re currently smoke-free, enter the price of cigarettes you used to smoke." : {
+
+    },
+    "In no event shall the creators be liable for any indirect, incidental, special, or consequential damages arising from or related to your use of the Sennight." : {
+
+    },
+    "Invalid Price" : {
+
     },
     "It's tough. So are you." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "It's tough. So are you."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "C'est difficile. Vous l'êtes aussi."
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "힘들겠네요"
-          }
-        }
-      }
+
     },
     "Keep track of your emotions and withdrawal symptoms." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Keep track of your emotions and withdrawal symptoms."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Suivez vos émotions et vos symptômes de sevrage."
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "금단 증상을 기록하세요"
-          }
-        }
-      }
+
     },
-    "Language" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Language"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Langue"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "언어"
-          }
-        }
-      }
+    "Keep track your smoking habits" : {
+
+    },
+    "Leaving onboarding?" : {
+
     },
     "Legal" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Legal"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Légal"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "법적"
-          }
-        }
-      }
+
     },
-    "Let us know the date you quit smoking." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Let us know the date you quit smoking."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Faites-nous savoir la date à laquelle vous avez arrêté de fumer."
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "금연 날짜를 알려주세요"
-          }
-        }
-      }
-    },
-    "Let us know the number of cigarettes you smoke daily." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Let us know the number of cigarettes you smoke daily."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Indiquez-nous le nombre de cigarettes que vous fumez quotidiennement."
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "하루에 몇 개피의 담배를 피우는지 알려주세요"
-          }
-        }
-      }
-    },
-    "Let us know the price of a pack of cigarettes you usually buy." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Let us know the price of a pack of cigarettes you usually buy."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Indiquez-nous le prix d'un paquet de cigarettes que vous achetez habituellement."
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "사용하는 담배의 한 갑의 가격을 알려주세요"
-          }
-        }
-      }
+    "Let us know" : {
+
     },
     "Licenses" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Licenses"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Licences"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "라이센스"
-          }
-        }
-      }
-    },
-    "Loading..." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Loading..."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Chargement..."
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "로딩중"
-          }
-        }
-      }
+
     },
     "Logout" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Logout"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Se déconnecter"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "로그아웃"
-          }
-        }
-      }
+
+    },
+    "Menu" : {
+
     },
     "Milestone Posts" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Milestone Posts"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Publications de jalons"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "마일스톤 게시물"
-          }
-        }
-      }
+
     },
     "Milestones" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Milestones"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Jalons"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "마일스톤"
-          }
-        }
-      }
+
     },
     "Minute" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Minute"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Minute"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "분"
-          }
-        }
-      }
+
     },
-    "Money saved card" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Money saved card"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Carte des économies réalisées"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "절약한 금액"
-          }
-        }
-      }
+    "MIT License" : {
+
     },
-    "Motivation Message:" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Motivation Message:"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Message de motivation :"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "흡연 동기 메세지:"
-          }
-        }
-      }
+    "monitor your progress, and stay informed about withdrawal symptoms and cessation support products." : {
+
+    },
+    "motivated you to quit smoking?" : {
+
+    },
+    "Motivation card" : {
+
     },
     "My milestones" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "My milestones"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mes jalons"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "나의 마일스톤"
-          }
-        }
-      }
+
+    },
+    "My Quit History" : {
+
     },
     "Name" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Name"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nom"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "이름"
-          }
-        }
-      }
+
     },
     "New activity sheet" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "New activity sheet"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nouvelle feuille d'activité"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "새 활동 시트"
-          }
-        }
-      }
+
     },
     "New aid product sheet" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "New aid product sheet"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nouvelle feuille de produit d'aide"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "새로운 금연보조제 시트"
-          }
-        }
-      }
+
     },
-    "New smoking sheet" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "New smoking sheet"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nouvelle feuille de tabagisme"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "새로운 흡연 시트"
-          }
-        }
-      }
+    "New Password" : {
+
     },
     "New symptom sheet" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "New symptom sheet"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Nouvelle feuille de symptômes"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "새로운 금단증상 시트"
-          }
-        }
-      }
+
     },
     "Next" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Next"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Suivant"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "다음"
-          }
-        }
-      }
+
     },
-    "No motivation available" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "No motivation available"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Pas de motivation disponible"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "동기를 입력하지 않았습니다"
-          }
-        }
-      }
+    "No Account Linked" : {
+
+    },
+    "No, I'm not smoking now!" : {
+
+    },
+    "Not Now" : {
+
     },
     "Note: The health benefits listed are general estimates and may vary from person to person. Please consult with a healthcare professional for personalized guidance." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Note: The health benefits listed are general estimates and may vary from person to person. Please consult with a healthcare professional for personalized guidance."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Remarque : Les avantages pour la santé répertoriés sont des estimations générales et peuvent varier d'une personne à l'autre. Veuillez consulter un professionnel de la santé pour des conseils personnalisés."
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "참고: 나열된 건강상의 이점은 일반적인 추정치이며 사람마다 차이가 있을 수 있습니다. 개인 맞춤형 지침은 의료전문가와 상담하세요."
-          }
-        }
-      }
+
     },
     "OK" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OK"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OK"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "OK"
-          }
-        }
-      }
+
     },
     "Password" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Password"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mot de passe"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "비밀번호"
-          }
-        }
-      }
+
     },
-    "Please enter your email, name, and password." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Please enter your email, name, and password."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Veuillez entrer votre e-mail, nom et mot de passe."
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "이메일, 이름 및 비밀번호를 입력하세요"
-          }
-        }
-      }
+    "Password must be between 8 and 32 characters long." : {
+
     },
-    "Privacy and Security" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Privacy and Security"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Confidentialité et sécurité"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "개인 정보 및 보안 "
-          }
-        }
-      }
+    "Password must include at least one letter and one digit." : {
+
+    },
+    "Passwords do not match." : {
+
+    },
+    "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:" : {
+
+    },
+    "Please let us know if you are planning to start or continue your journey to quit smoking." : {
+
+    },
+    "Previous" : {
+
     },
     "Privacy Policy" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Privacy Policy"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Politique de confidentialité"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "개인 정보 보호 정책"
-          }
-        }
-      }
+
     },
     "Products" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Products"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Produits"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "제품"
-          }
-        }
-      }
+
     },
     "Profile" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Profile"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Profil"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "프로필"
-          }
-        }
-      }
+
     },
-    "Q." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Q."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Q."
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Q."
-          }
-        }
-      }
+    "Regardless of how long you've been a smoker, it’s never too late to improve your health." : {
+
+    },
+    "Right after you wake up or later in the morning?" : {
+
+    },
+    "Save" : {
+
     },
     "Select Date" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Select Date"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sélectionnez la date"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "날짜선택"
-          }
-        }
-      }
+
     },
-    "Selected Date: %@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Selected Date: %@"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Date sélectionnée : %@"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "선택한 날짜:%@"
-          }
-        }
-      }
-    },
-    "Selected Time: %@:%@" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "new",
-            "value" : "Selected Time: %1$@:%2$@"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Heure sélectionnée : %1$@:%2$@"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "선택한 시간:%1$@:%2$@"
-          }
-        }
-      }
+    "Sennight is not intended for use by individuals under the age of 13. We do not knowingly collect or solicit personal information from children under 13. If we become aware that we have collected such information, we will take steps to delete it." : {
+
     },
     "Settings" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Settings"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Paramètres"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "설정"
-          }
-        }
-      }
+
     },
     "Share Your Milestones" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Share Your Milestones"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Partagez vos jalons"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "나의 마일스톤 공유하기"
-          }
-        }
-      }
+
+    },
+    "Sign in to personalize your app experience. Track your smoking habits, monitor your progress, and stay informed about withdrawal symptoms and cessation support products." : {
+
+    },
+    "Smoking Habits" : {
+
+    },
+    "Smoking History" : {
+
     },
     "Smoking log chart card" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Smoking log chart card"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Carte de suivi du tabagisme"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "흡연 기록 차트 카드"
-          }
-        }
-      }
+
     },
-    "Start quitting today!" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Start quitting today!"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Commencez à arrêter de fumer aujourd'hui !"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "오늘 금연을 시작하세요!"
-          }
-        }
-      }
+    "START QUITTING TODAY!" : {
+
     },
     "Start Your Quitting Log" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Start Your Quitting Log"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Commencez votre journal d'arrêt du tabac"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "금연 기록 시작"
-          }
-        }
-      }
+
     },
-    "Step 1: daily cigarettes" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Step 1: daily cigarettes"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Étape 1 : cigarettes quotidiennes"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "1단계: 하루에 피는 담배의 개비 수"
-          }
-        }
-      }
+    "Stop" : {
+
     },
-    "Step 2: cigarettes" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Step 2: cigarettes"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Étape 2 : cigarettes"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "2단계: 담배"
-          }
-        }
-      }
+    "Stop Quit Attempt" : {
+
     },
-    "Step 3: firstCigarette" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Step 3: firstCigarette"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Étape 3 : première cigarette"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "3단계: 처음 담배를 피우는 시간"
-          }
-        }
-      }
-    },
-    "Step 4: smoking years" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Step 4: smoking years"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Étape 4 : années de tabagisme"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "4단계: 흡연한 기간"
-          }
-        }
-      }
-    },
-    "Step 5: Smoking status" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Step 5: Smoking status"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Étape 5 : statut de fumeur"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "5단계: 흡연 상태"
-          }
-        }
-      }
-    },
-    "Step 6: Quit attempt" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Step 6: Quit attempt"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Étape 6 : tentative d'arrêt"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "6단계:  금연시도"
-          }
-        }
-      }
-    },
-    "Step 7: Motivation" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Step 7: Motivation"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Étape 7 : motivation"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "7단계: 금연 동기"
-          }
-        }
-      }
-    },
-    "Subscription/Billing Information" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Subscription/Billing Information"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Informations sur l'abonnement/la facturation"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "구독/결제 정보"
-          }
-        }
-      }
+    "Stop This Quit Attempt" : {
+
     },
     "Support" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Support"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Support"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "지원"
-          }
-        }
-      }
+
     },
     "Support and get support from others who are also on this journey." : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Support and get support from others who are also on this journey."
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Obtenez du soutien et soutenez les autres qui sont également sur ce parcours."
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "이 여정을 함꼐하는 다른 사람들에게 지원하고 지원 받으세요"
-          }
-        }
-      }
+
     },
-    "Symptom" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Symptom"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Symptôme"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "증상"
-          }
-        }
-      }
+    "Symptom row" : {
+
     },
-    "Tell us what motivated you to quit smoking?" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Tell us what motivated you to quit smoking?"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Dites-nous ce qui vous a motivé à arrêter de fumer."
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "금연 동기를 알려주세요"
-          }
-        }
-      }
+    "Symptoms" : {
+
+    },
+    "Tell us what" : {
+
     },
     "Terms & Conditions" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Terms & Conditions"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Termes et conditions"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "이용약관"
-          }
-        }
-      }
+
     },
     "Terms of Service" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Terms of Service"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Conditions d'utilisation"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "서비스 약관"
-          }
-        }
-      }
+
     },
-    "Time Zone" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Time Zone"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Fuseau horaire"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "시간대"
-          }
-        }
-      }
+    "The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software." : {
+
+    },
+    "The current password does not match. Please make sure you’ve entered it correctly." : {
+
+    },
+    "the date you quit smoking." : {
+
+    },
+    "the number of cigarettes you smoke daily." : {
+
+    },
+    "the price of a pack of cigarettes you usually buy." : {
+
+    },
+    "The Sennight is provided on an “as is” and “as available” basis. We make no warranties or representations regarding the availability, accuracy, or reliability of the Sennight. We disclaim all warranties to the fullest extent permitted by law." : {
+
+    },
+    "The Sennight may contain links to third-party websites or services. We are not responsible for the content, privacy policies, or practices of any third-party sites." : {
+
+    },
+    "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE." : {
+
+    },
+    "This will stop your current quit attempt and reset all your progress.\nThis action cannot be undone." : {
+
+    },
+    "To access certain features of the Sennight, you may be required to create a user account. You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account." : {
+
     },
     "Track Habits and Cravings" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Track Habits and Cravings"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Suivre les habitudes et les envies"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "습관 및 갈망 추적"
-          }
-        }
-      }
+
+    },
+    "Trigger" : {
+
     },
     "Update aid product sheet" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Update aid product sheet"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Mettre à jour la feuille de produit d'aide"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "금연 보조제 목록 업데이트"
-          }
-        }
-      }
+
+    },
+    "Update Password" : {
+
+    },
+    "Update start date" : {
+
     },
     "User achieved %@ Milestone! Send support?" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "User achieved %@ Milestone! Send support?"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "L'utilisateur a atteint %@ jalon ! Envoyer du soutien?"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "사용자가 %@ 마일스톤 달성! 지원을 보낼까요?"
-          }
-        }
-      }
+
+    },
+    "We do not sell or rent your personal information to third parties. We may share your information in the following circumstances:" : {
+
+    },
+    "We employ reasonable measures to protect your information from unauthorized access, use, or disclosure. However, no method of transmission over the internet or electronic storage is completely secure, and we cannot guarantee absolute security." : {
+
+    },
+    "We may collect and use the following types of information:" : {
+
+    },
+    "We may update these Terms from time to time. Any changes will be posted on this page with an updated effective date. Your continued use of the App after any changes constitutes acceptance of the new terms." : {
+
+    },
+    "We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date. Your continued use of the App after any changes constitutes acceptance of the new policy." : {
+
+    },
+    "We use the information we collect for various purposes, including:" : {
+
+    },
+    "We’ll track your progress and milestones." : {
+
     },
     "Welcome back" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Welcome back"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bon retour"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "환영합니다"
-          }
-        }
-      }
+
+    },
+    "Welcome to Sennight (\"Sennight\"). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our iOS application. By using Sennight, you agree to the collection and use of information in accordance with this policy." : {
+
     },
     "Welcome to Sennight!" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Welcome to Sennight!"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Bienvenue chez Sennight !"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Sennight에 오신 것을 환영합니다!"
-          }
-        }
-      }
+
     },
-    "What time do you usually have your first cigarette of the day?" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "What time do you usually have your first cigarette of the day?"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "À quelle heure fumez-vous généralement votre première cigarette de la journée ?"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "보통 하루 중 몇시에 담배를 피우시나요?"
-          }
-        }
-      }
+    "What time" : {
+
+    },
+    "Years Smoking" : {
+
+    },
+    "Yes" : {
+
+    },
+    "Yes, I am a smoker." : {
+
+    },
+    "You agree to use the Sennight only for lawful purposes and in accordance with these Terms. You may not use the Sennight in any way that could damage, disable, overburden, or impair the Sennight or interfere with any other party’s use of the Sennight." : {
+
+    },
+    "You may:" : {
+
+    },
+    "You're Logging In..." : {
+
+    },
+    "You’ve just achieved your first milestone. Keep pushing forward and you'll mark more milestones along the way." : {
+
     },
     "Your password must:" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Your password must:"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Votre mot de passe doit :"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "비밀번호는 다음을 포함해야합니다:"
-          }
-        }
-      }
+
     },
-    "금단 증상 아이디: %lld" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "aid product ID: %lld"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "identifiant du produit d'aide : %lld"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "금단 증상 아이디: %lld"
-          }
-        }
-      }
-    },
-    "금연보조제 아이디: %lld" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "symptom ID: %lld"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "identifiant du symptôme : %lld"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "금연보조제 아이디: %lld"
-          }
-        }
-      }
-    },
-    "마일스톤 아이디: %lld" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "milestone ID: %lld"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "identifiant du jalon : %lld"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "마일스톤 아이디: %lld"
-          }
-        }
-      }
-    },
-    "입력해주세요" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Please input it"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "Veuillez l'entrer"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "입력해주세요"
-          }
-        }
-      }
-    },
-    "활동내역 아이디: %lld" : {
-      "localizations" : {
-        "en" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "activity ID: %lld"
-          }
-        },
-        "fr" : {
-          "stringUnit" : {
-            "state" : "translated",
-            "value" : "identifiant de l'activité : %lld"
-          }
-        },
-        "ko" : {
-          "stringUnit" : {
-            "state" : "needs_review",
-            "value" : "활동내역 아이디: %lld"
-          }
-        }
-      }
+    "Your use of the Sennight is also governed by our Privacy Policy. By using the Sennight, you consent to the collection and use of your information as described in the Privacy Policy." : {
+
     }
   },
   "version" : "1.0"

@@ -44,7 +44,7 @@ class UserService {
         let URL = "\(HOST)/users/register"
         let parameters = UserRequest(email: email, name: name, password: password, photoFilename: nil, appleID: appleID)
         
-        return AF.request(url,
+        return AF.request(URL,
                           method: .post,
                           parameters: parameters,
                           encoder: JSONParameterEncoder.default)
