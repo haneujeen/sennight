@@ -13,7 +13,7 @@ import SwiftUI
 import Combine
 
 struct SignUpView: View {
-    @StateObject var signUpViewModel = SignUpViewModel()
+    @EnvironmentObject var signUpViewModel: SignUpViewModel
     @State private var confirmPassword: String = ""
     @Environment(\.dismiss) var dismiss
     @State private var showAlert = false
@@ -172,4 +172,5 @@ struct SignUpView: View {
 
 #Preview {
     SignUpView()
+        .environmentObject(SignUpViewModel())
 }

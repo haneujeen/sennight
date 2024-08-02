@@ -29,7 +29,7 @@ class LoginViewModel: ObservableObject {
         isLoggedIn = UserService.shared.isLoggedIn()
     }
     
-    func login(completion: @escaping (Bool) -> Void) {
+    func login(completionHandler: @escaping (Bool) -> Void) {
         UserService.shared.login(email: email, password: password)
             .sink { completion in
                 switch completion {
@@ -39,7 +39,7 @@ class LoginViewModel: ObservableObject {
                     print(error.localizedDescription)
                 }
             } receiveValue: { response in
-                completion(response.status)
+                completionHandler(response.status)
                 if response.status {
                     UserService.shared.saveToken(token: response.data!.accessToken!, userID: response.data!.id!)
                     self.email = response.data?.email ?? ""

@@ -88,6 +88,9 @@
     "Add New Milestone" : {
 
     },
+    "Add your own motivation" : {
+
+    },
     "Aid product detail edit" : {
 
     },
@@ -101,6 +104,9 @@
 
     },
     "Already have an account?" : {
+
+    },
+    "An unknown error occurred." : {
 
     },
     "Are you currently a smoker?" : {
@@ -184,9 +190,6 @@
     "Enter years smoking" : {
 
     },
-    "Enter your motivation" : {
-
-    },
     "Error" : {
 
     },
@@ -232,6 +235,15 @@
     "Keep track of your emotions and withdrawal symptoms." : {
 
     },
+<<<<<<< Updated upstream
+=======
+    "Keep track your smoking habits" : {
+
+    },
+    "Leaving onboarding?" : {
+
+    },
+>>>>>>> Stashed changes
     "Legal" : {
 
     },
@@ -286,6 +298,18 @@
     "Next" : {
 
     },
+<<<<<<< Updated upstream
+=======
+    "No Account Linked" : {
+
+    },
+    "No, I'm not smoking now!" : {
+
+    },
+    "Not Now" : {
+
+    },
+>>>>>>> Stashed changes
     "Note: The health benefits listed are general estimates and may vary from person to person. Please consult with a healthcare professional for personalized guidance." : {
 
     },
@@ -452,6 +476,15 @@
     "You agree to use the Sennight only for lawful purposes and in accordance with these Terms. You may not use the Sennight in any way that could damage, disable, overburden, or impair the Sennight or interfere with any other party’s use of the Sennight." : {
 
     },
+<<<<<<< Updated upstream
+=======
+    "You may:" : {
+
+    },
+    "You're Logging In..." : {
+
+    },
+>>>>>>> Stashed changes
     "You’ve just achieved your first milestone. Keep pushing forward and you'll mark more milestones along the way." : {
 
     },

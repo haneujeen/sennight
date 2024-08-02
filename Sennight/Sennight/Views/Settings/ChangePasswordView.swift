@@ -86,7 +86,7 @@ struct ChangePasswordView: View {
             }
             
             Button(action: {
-                updateUserViewModel.update { response in
+                updateUserViewModel.updatePassword { response in
                     if let newPassword = response.data?.password {
                         loginViewModel.password = newPassword
                     }
