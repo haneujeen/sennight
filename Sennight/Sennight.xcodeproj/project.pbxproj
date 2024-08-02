@@ -578,11 +578,7 @@
 			isa = PBXGroup;
 			children = (
 				4E0F84BE2C2D3C220037AE25 /* ElapsedTimeTextHeaderView.swift */,
-				4E19A13A2C53380900CB3553 /* QuitAttemptCardView.swift */,
-				4EEACA5F2C5628D300F76EB6 /* EditQuitAttemptSheet.swift */,
-				4EEACA432C5622BB00F76EB6 /* QuitAttemptMenu.swift */,
-				4E0F84C12C2D3C8B0037AE25 /* HealthProgressCardView.swift */,
-				4EE4659E2C53B1310039A729 /* CircularGaugeView.swift */,
+				4E8D678F2C5D18E7006D408D /* QuitAttemptCard */,
 				4E0F84C32C2D3CBB0037AE25 /* MotivationCardView.swift */,
 				4E0F84C52C2D3CC70037AE25 /* MoneySavedCardView.swift */,
 				4E9AC0A52C2E844700B3C2F0 /* AidProductDetailEditView.swift */,
@@ -629,6 +625,18 @@
 				4E66F6502C58F0B400D9D982 /* LicensesView.swift */,
 			);
 			path = Legal;
+			sourceTree = "<group>";
+		};
+		4E8D678F2C5D18E7006D408D /* QuitAttemptCard */ = {
+			isa = PBXGroup;
+			children = (
+				4E19A13A2C53380900CB3553 /* QuitAttemptCardView.swift */,
+				4EEACA5F2C5628D300F76EB6 /* EditQuitAttemptSheet.swift */,
+				4EEACA432C5622BB00F76EB6 /* QuitAttemptMenu.swift */,
+				4E0F84C12C2D3C8B0037AE25 /* HealthProgressCardView.swift */,
+				4EE4659E2C53B1310039A729 /* CircularGaugeView.swift */,
+			);
+			path = QuitAttemptCard;
 			sourceTree = "<group>";
 		};
 		4EB3C1D42C4B3F2A0066D658 /* HelpersAndCustomViews */ = {
