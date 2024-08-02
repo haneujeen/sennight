@@ -452,8 +452,8 @@
 		4E0F84552C2D0DDE0037AE25 /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				4EB3C1D42C4B3F2A0066D658 /* HelpersAndCustomViews */,
 				4E66F64B2C58EFAC00D9D982 /* Legal */,
+				4EB3C1D42C4B3F2A0066D658 /* HelpersAndCustomViews */,
 				4E0F84642C2D106C0037AE25 /* Onboarding */,
 				4E0F84612C2D0EA70037AE25 /* Authentication */,
 				4E0F84752C2D29F70037AE25 /* Dashboard */,
@@ -1078,6 +1078,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sennight/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
@@ -1111,6 +1112,7 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sennight/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
