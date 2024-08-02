@@ -40,8 +40,12 @@ struct DashboardView: View {
                                 .fill(Color.white)
                         )
                     MoneySavedCardView()
-                        .frame(height: 40)
+                        .frame(height: 30)
                         .environmentObject(quitAttemptViewModel)
+                        .listRowBackground(
+                            RoundedRectangle(cornerRadius: 20)
+                                .fill(Color.white)
+                        )
                     AidProductsCardView()
                     SymptomsCardView()
                     ActivitiesCardView()

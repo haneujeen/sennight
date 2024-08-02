@@ -21,12 +21,27 @@ struct MoneySavedCardView: View {
     }
     
     private var moneySaved: Double {
-        smokingHabitViewModel.cigarettePrice * Double(daysSinceStartDate)
+        smokingHabitViewModel.smokingHabit?.cigarettePrice ?? 0 * Double(daysSinceStartDate)
     }
     
     var body: some View {
         Section {
-            Text(String(format: "%.2f USD", moneySaved))
+            HStack(spacing: 0) {
+                Spacer()
+                Text("Saved up to ")
+                
+                Group {
+                    Text(String(format: "%.2f", moneySaved))
+                        .foregroundStyle(LinearGradient(gradient: Gradient(colors: [Theme.teal.mainColor, Theme.sky.mainColor]), startPoint: .topLeading, endPoint: .bottomTrailing))
+                    Text(" USD")
+                }
+                .font(.headline)
+                .fontWeight(.bold)
+                
+                Text(" so far")
+                Spacer()
+            }
+            .font(.subheadline)
         }
         .onAppear {
             smokingHabitViewModel.getSmokingHabit()

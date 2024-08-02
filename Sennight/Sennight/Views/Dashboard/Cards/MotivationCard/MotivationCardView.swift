@@ -26,11 +26,13 @@ struct MotivationCardView: View {
                     VStack {
                         motivation.icon
                             .padding(.bottom, 1)
-                        Text(!motivation.message.isEmpty ? motivation.message : (motivationViewModel.motivation?.message ?? ""))
-                            .lineLimit(2)
-                            .font(.system(size: 14))
-                            .fontWeight(.bold)
+                        HStack(alignment: .center) {
+                            Text(!motivation.message.isEmpty ? motivation.message : (motivationViewModel.motivation?.message ?? ""))
+                                .lineLimit(2)
+                                .font(.system(size: 14))
+                                .fontWeight(.bold)
                             .frame(maxWidth: .infinity)
+                        }
                     }
                 } else {
                     VStack {

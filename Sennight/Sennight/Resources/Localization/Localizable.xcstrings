@@ -70,6 +70,12 @@
         }
       }
     },
+    " so far" : {
+
+    },
+    " USD" : {
+
+    },
     " will apply." : {
       "localizations" : {
         "en" : {
@@ -1920,6 +1926,9 @@
 
     },
     "Save" : {
+
+    },
+    "Saved up to " : {
 
     },
     "Select Date" : {
