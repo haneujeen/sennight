@@ -51,4 +51,16 @@ class MotivationService {
         }
         .eraseToAnyPublisher()
     }
+    
+    func getMotivation() -> AnyPublisher<UserMotivationResponse, AFError> {
+        guard let userID = UserService.shared.getUserID(), let token = UserService.shared.getToken() else {
+            return Fail(error: AFError.explicitlyCancelled).eraseToAnyPublisher()
+        }
+        let url = "\(HOST)/user-motivations/\(userID)"
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(token)"]
+        return AF.request(url, method: .get, headers: headers)
+            .publishDecodable(type: UserMotivationResponse.self)
+            .value()
+            .eraseToAnyPublisher()
+    }
 }

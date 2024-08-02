@@ -1,21 +1,21 @@
 //
-//  OnboardingStep8View.swift
+//  NewMotivationSheet.swift
 //  Sennight
 //
-//  Created by 한유진 on 7/16/24.
-//  Edited by 김소연 on 2024-07-23: 피커의 직접입력 선택시 텍스트 필드 입력창이 나타나도록 수정
+//  Created by 한유진 on 8/2/24.
 //
 
 import SwiftUI
 
-struct OnboardingStep8View: View {
+struct NewMotivationSheet: View {
+    @Environment(\.presentationMode) var presentationMode
     @EnvironmentObject var motivationViewModel: MotivationViewModel
     let categories = ["Health", "Family/Relationship", "Personal", "Environment", "Add My Motivation"]
+    
     @State private var selectedCategory: String = "Health"
     @State private var selectedMotivation: Motivation?
-    @Binding var currentStep: Int
-    @Binding var isOnboardingComplete: Bool
     @State private var customMotivation = ""
+    
     @State private var showAlert = false
     @State private var alertMessage = ""
     
@@ -23,32 +23,11 @@ struct OnboardingStep8View: View {
         return Motivation.allCases.filter { $0.category == selectedCategory }
     }
     
+    @Binding var currentMotivation: Motivation?
+    
     var body: some View {
-        VStack {
-            OnboardingDismissButton(isOnboardingComplete: $isOnboardingComplete)
+        NavigationView {
             ScrollView {
-                Spacer()
-                HStack {
-                    Text("Tell us what")
-                        .font(.largeTitle)
-                        .fontWeight(.bold)
-                        .foregroundStyle(
-                            LinearGradient(
-                                gradient: Gradient(colors: [Theme.sky.mainColor, Theme.teal.mainColor]),
-                                startPoint: .leading,
-                                endPoint: .trailing
-                            )
-                        )
-                    Spacer()
-                }
-                
-                HStack {
-                    Text("motivated you to quit smoking?")
-                        .fontWeight(.semibold)
-                    Spacer()
-                }
-                
-                
                 VStack {
                     HStack {
                         ForEach(["Health", "Family/Relationship"], id: \.self) { category in
@@ -64,7 +43,6 @@ struct OnboardingStep8View: View {
                                     .cornerRadius(25)
                             }
                         }
-                        Spacer()
                     }
                     
                     HStack {
@@ -81,7 +59,6 @@ struct OnboardingStep8View: View {
                                     .cornerRadius(25)
                             }
                         }
-                        Spacer()
                     }
                     
                     HStack {
@@ -96,7 +73,6 @@ struct OnboardingStep8View: View {
                                 .background(selectedCategory == "Add My Motivation" ? Theme.yellow.mainColor : Theme.lightGray.mainColor)
                                 .cornerRadius(25)
                         }
-                        Spacer()
                     }
                 }
                 .font(.caption)
@@ -128,14 +104,24 @@ struct OnboardingStep8View: View {
                 
                 Spacer()
                 
-                Button(action: {
+            }
+            .navigationBarTitle("My Motivation", displayMode: .inline)
+            .navigationBarItems(
+                leading: Button(action: {
+                    presentationMode.wrappedValue.dismiss()
+                }) {
+                    Text("Close")
+                },
+                trailing: Button(action: {
+                    /// Incorrect input cases
                     if selectedCategory == "Add My Motivation" && customMotivation.isEmpty {
-                        alertMessage = "Please enter your motivation."
-                        showAlert = true
+                        print("????")
+                        //alertMessage = "Please enter your motivation."
+                        //showAlert = true
                     } else if selectedCategory != "Add My Motivation" && selectedMotivation == nil {
-                        alertMessage = "Please select your motivation."
-                        showAlert = true
-                    } else {
+                        //alertMessage = "Please select your motivation."
+                        //showAlert = true
+                    } else { /// Correct input cases
                         if selectedCategory == "Add My Motivation" {
                             motivationViewModel.message = customMotivation
                             motivationViewModel.motivationID = 99
@@ -143,47 +129,29 @@ struct OnboardingStep8View: View {
                             motivationViewModel.message = selectedMotivation?.message
                             motivationViewModel.motivationID = selectedMotivation?.id ?? 2
                         }
-                        currentStep = 9
+                        motivationViewModel.createMotivation { status in
+                            if status {
+                                motivationViewModel.getMotivation { status in
+                                    if status {
+                                        currentMotivation = Motivation.allCases.first(where: { $0.id == motivationViewModel.motivation?.motivationId })
+                                    }
+                                }
+                            }
+                            presentationMode.wrappedValue.dismiss()
+                        }
                     }
                 }) {
-                    Text("Next")
-                        .fontWeight(.semibold)
-                        .padding(20)
-                        .frame(maxWidth: .infinity)
-                        .background(LinearGradient(
-                            gradient: Gradient(colors: [Theme.teal.mainColor, Theme.sky.mainColor]),
-                            startPoint: .topLeading,
-                            endPoint: .bottomTrailing
-                        ))
-                        .foregroundColor(Theme.periwinkle.accentColor)
-                        .cornerRadius(25)
+                    Text("Save")
+                        .bold()
+                        .foregroundStyle(.blue)
                 }
-                .padding(.horizontal)
-                .padding(.top)
-                .alert(isPresented: $showAlert) {
-                    Alert(title: Text("Empty Motivation!"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
-                }
-                Button(action: {
-                    currentStep = 6
-                }) {
-                    Text("Previous")
-                        .fontWeight(.semibold)
-                        .padding(20)
-                        .frame(maxWidth: .infinity)
-                        .background(Theme.lightGray.mainColor)
-                        .cornerRadius(25)
-                }
-                .padding([.horizontal, .bottom])
-            }
-            .foregroundStyle(Theme.indigo.mainColor)
+            )
             .padding()
         }
     }
 }
 
-struct OnboardingStep8View_Previews: PreviewProvider {
-    static var previews: some View {
-        OnboardingStep8View(currentStep: .constant(8), isOnboardingComplete: .constant(false))
-            .environmentObject(MotivationViewModel())
-    }
+#Preview {
+    NewMotivationSheet(currentMotivation: .constant(Motivation.health2))
+        .environmentObject(MotivationViewModel())
 }

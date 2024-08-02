@@ -12,6 +12,7 @@ struct DashboardView: View {
     @Environment(\.scenePhase) private var scenePhase
     
     @State private var showConfetti = false
+    @State private var isLoading = false
     
     var body: some View {
         NavigationStack {
@@ -32,9 +33,12 @@ struct DashboardView: View {
                             RoundedRectangle(cornerRadius: 25)
                                 .fill(Color.white)
                         )
-                    MotivationCardView()
-                        .frame(height: 40)
+                    MotivationCardView(isLoading: $isLoading)
                         .environmentObject(quitAttemptViewModel)
+                        .listRowBackground(
+                            RoundedRectangle(cornerRadius: 25)
+                                .fill(Color.white)
+                        )
                     MoneySavedCardView()
                         .frame(height: 40)
                         .environmentObject(quitAttemptViewModel)
@@ -61,6 +65,12 @@ struct DashboardView: View {
                     LottieView(name: Constants.confetti, animationSpeed: 0.8)
                         .ignoresSafeArea()
                         .scaleEffect(1.7)
+                        .allowsHitTesting(false)
+                }
+                
+                if isLoading {
+                    LottieView(name: Constants.sparklesLoader)
+                        .frame(width: 100, height: 100)
                         .allowsHitTesting(false)
                 }
                 

@@ -66,7 +66,7 @@ struct ElapsedTimeTextHeaderView: View {
                     Text("It's tough. So are you.")
                         .font(.title3)
                     Text("START QUITTING TODAY!")
-                        .font(.title)
+                        .font(.system(size: 27))
                 }
                 .italic()
                 .fontWeight(.black)

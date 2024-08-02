@@ -76,7 +76,44 @@ enum Motivation: Int, CaseIterable, Identifiable {
         case .environment2:
             return "To reduce pollution and cigarette litter."
         case .user:
-            return "" // User-specific message will be defined elsewhere
+            return ""
+        }
+    }
+    
+    var icon: Image {
+        switch self {
+        case .health1:
+            return Image(systemName: "heart.fill")
+        case .health2:
+            return Image(systemName: "heart")
+        case .health3:
+            return Image(systemName: "lungs")
+        case .health4:
+            return Image(systemName: "bolt.heart")
+        case .health5:
+            return Image(systemName: "ant.circle")
+        case .health6:
+            return Image(systemName: "nose")
+        case .family1:
+            return Image(systemName: "person.2")
+        case .family2:
+            return Image(systemName: "person.3")
+        case .family3:
+            return Image(systemName: "shield")
+        case .family4:
+            return Image(systemName: "exclamationmark.triangle")
+        case .personal1:
+            return Image(systemName: "dollarsign.circle")
+        case .personal2:
+            return Image(systemName: "star")
+        case .personal3:
+            return Image(systemName: "sparkles")
+        case .environment1:
+            return Image(systemName: "house")
+        case .environment2:
+            return Image(systemName: "leaf")
+        case .user:
+            return Image(systemName: "pencil.and.outline")
         }
     }
 }

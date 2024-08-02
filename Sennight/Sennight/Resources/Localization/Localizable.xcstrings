@@ -1475,9 +1475,6 @@
     "motivated you to quit smoking?" : {
 
     },
-    "Motivation card" : {
-
-    },
     "Motivation Message:" : {
       "extractionState" : "stale",
       "localizations" : {
@@ -1522,6 +1519,9 @@
           }
         }
       }
+    },
+    "My Motivation" : {
+
     },
     "My Quit History" : {
 
@@ -2650,6 +2650,9 @@
           }
         }
       }
+    },
+    "What inspires/motivates you? Add here." : {
+
     },
     "What time" : {
 
