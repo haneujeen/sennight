@@ -20,12 +20,22 @@ struct CircularGaugeView: View {
     
     var body: some View {
         VStack {
-            Text(healthBenefit.timeIntervalString)
+            Text(healthBenefit.timeIntervalString.uppercased())
+                .font(.footnote)
+                .fontWeight(.semibold)
             CircularGauge(progress: progress)
+                .padding()
             Button(action: {
                 showDetail = true
             }, label: {
                 Text(healthBenefit.rawValue)
+                    .font(.footnote)
+                    .fontWeight(.bold)
+                    .padding(12)
+                    .padding(.horizontal, 50)
+                    .foregroundStyle(.blue)
+                    .background(Theme.yellow.mainColor)
+                    .cornerRadius(16)
             })
             .sheet(isPresented: $showDetail) {
                 VStack(alignment: .leading, spacing: 16) {
@@ -47,6 +57,7 @@ struct CircularGaugeView: View {
                 .presentationDetents([.medium, .large])
                 .presentationDragIndicator(.hidden)
             }
+            Spacer()
         }
         .onAppear(perform: {
             range = startDate...startDate.addingTimeInterval(healthBenefit.timeInterval)

@@ -37,10 +37,15 @@ struct QuitAttemptCardView: View {
         .sheet(isPresented: $isShowingSheet) {
             NewQuitAttemptSheet()
         }
+        .onAppear(perform: {
+            quitAttemptViewModel.activeQuitAttempt = QuitAttempt(id: 0, userID: 2, startDate: "2024-07-30", endDate: nil, isActive: true)
+            quitAttemptViewModel.isActiveQuitAttempt = true
+        })
     }
 }
 
 #Preview {
     QuitAttemptCardView()
+        .previewLayout(.fixed(width: 400, height: 300))
         .environmentObject(QuitAttemptViewModel())
 }

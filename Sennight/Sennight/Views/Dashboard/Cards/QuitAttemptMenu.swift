@@ -26,7 +26,16 @@ struct QuitAttemptMenu: View {
                 Text("Stop This Quit Attempt")
             }
         } label: {
-            Label("Menu", systemImage: "ellipsis.circle")
+            HStack {
+                Image(systemName: "ellipsis")
+                Text("Menu")
+            }
+            .frame(width: 60.0)
+                .font(.footnote)
+                .foregroundStyle(Theme.poppy.mainColor)
+                .padding(8)
+                .background(Theme.poppy.mainColor.opacity(0.3))
+                .cornerRadius(10)
         }
         .sheet(isPresented: $isEditSheetPresented) {
             EditQuitAttemptSheet(selectedDate: $selectedDate, isEditSheetPresented: $isEditSheetPresented)

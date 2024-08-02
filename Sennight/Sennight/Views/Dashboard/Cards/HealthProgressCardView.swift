@@ -19,15 +19,15 @@ struct HealthProgressCardView: View {
     }
     
     init() {
-        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.systemBlue
-        UIPageControl.appearance().pageIndicatorTintColor = UIColor.lightGray
+        UIPageControl.appearance().currentPageIndicatorTintColor = UIColor.poppy
+        UIPageControl.appearance().pageIndicatorTintColor = UIColor.poppy.withAlphaComponent(0.3)
     }
     
     var body: some View {
         Section {
             VStack {
                 HStack {
-                    Label("100", systemImage: "heart.fill")
+//                    Label("100", systemImage: "heart.fill")
                     Spacer()
                     QuitAttemptMenu()
                 }
@@ -35,6 +35,7 @@ struct HealthProgressCardView: View {
                     ForEach(HealthBenefit.allCases.indices, id: \.self) { index in
                         CircularGaugeView(healthBenefit: HealthBenefit.allCases[index])
                             .tag(index)
+                            .padding(.bottom)
                     }
                 }
                 .tabViewStyle(PageTabViewStyle(indexDisplayMode: .automatic))
@@ -63,6 +64,6 @@ struct HealthProgressCardView: View {
 #Preview {
     HealthProgressCardView()
         .environmentObject(QuitAttemptViewModel())
-        .frame(height: 300)
+        .frame(height: 310)
         .background(Theme.lightGray.mainColor)
 }

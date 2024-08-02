@@ -24,8 +24,12 @@ struct DashboardView: View {
                             .listRowBackground(Color.clear)
                     }
                     QuitAttemptCardView()
-                        .frame(height: 300)
+                        .frame(height: 320)
                         .environmentObject(quitAttemptViewModel)
+                        .listRowBackground(
+                            RoundedRectangle(cornerRadius: 25)
+                                .fill(Color.white)
+                        )
                     MotivationCardView()
                         .frame(height: 40)
                         .environmentObject(quitAttemptViewModel)
@@ -36,6 +40,7 @@ struct DashboardView: View {
                     SymptomsCardView()
                     ActivitiesCardView()
                 }
+                .foregroundStyle(Theme.indigo.mainColor)
                 .padding(.top, -20)
                 .scrollContentBackground(.hidden)
                 .onAppear {

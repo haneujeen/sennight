@@ -13,7 +13,7 @@ struct CircularGauge: View {
     var lineWidth: CGFloat = 20
     var gaugeColor: Color = .blue
     var backgroundColor: Color = .gray.opacity(0.2)
-    var size: CGFloat = 150
+    var size: CGFloat = 130 // Circle size
     
     var body: some View {
         ZStack {
@@ -34,8 +34,8 @@ struct CircularGauge: View {
                     .bold()
             } else {
                 Text(String(format: "%.1f%%", progress * 100))
-                    .font(.largeTitle)
-                    .bold()
+                    .font(.system(size: 30))
+                    .fontWeight(.heavy)
             }
         }
     }
