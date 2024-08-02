@@ -4,6 +4,7 @@
 //
 //  Created by 한유진 on 7/16/24.
 //  Edited by 김소연 on 2024-07-19: Quit Attempt 모델 정의
+//  Edited by 김소연 on 2024-07-23: Quit Attempt 모델 수정
 //  Edited by 한유진 on 2024-07-24:
 //      QuitAttempt 예시 응답 및 요청 주석 추가
 //      QuitAttempt.swift 수정

@@ -8,63 +8,111 @@
 import SwiftUI
 
 struct OnboardingStep3View: View {
+    @EnvironmentObject var smokingHabitViewModel: SmokingHabitViewModel
     @Binding var currentStep: Int
     @Binding var isOnboardingComplete: Bool
-    @State private var motivation = ""
+    @State private var price = ""
     @State private var showAlert = false
     @State private var alertMessage = ""
     
     var body: some View {
         VStack {
-            HStack {
-                Spacer()
-                Button(action: {
-                    isOnboardingComplete = true
-                }) {
-                    Text("Dismiss")
-                        .foregroundColor(.red)
-                }
-                .padding()
-            }
-            
+            OnboardingDismissButton(isOnboardingComplete: $isOnboardingComplete)
             Spacer()
-            Text("Step 2: cigarettes")
-                .font(.largeTitle)
-                .padding(.bottom, 40)
+            Image(systemName: "dollarsign.square")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 100, height: 100)
+                .foregroundStyle(
+                    LinearGradient(
+                        gradient: Gradient(colors: [Theme.bubblegum.mainColor, Theme.sky.mainColor]),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                )
+                .padding()
+            
             HStack {
-                Text("Q.")
-                    .font(.title2)
-                    .padding(.bottom, 25)
-                Text("Let us know the price of a pack of cigarettes you usually buy.")
-                    .font(.title2)
-                    .padding()
+                Text("Let us know")
+                    .font(.largeTitle)
+                    .fontWeight(.bold)
+                    .foregroundStyle(
+                        LinearGradient(
+                            gradient: Gradient(colors: [Theme.sky.mainColor, Theme.teal.mainColor]),
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
+                Spacer()
             }
             .padding(.horizontal)
             
-            TextField("입력해주세요", text: $motivation)
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(8)
-                .padding(.bottom, 40)
-                .padding(.horizontal)
+            HStack {
+                Text("the price of a pack of cigarettes you usually buy.")
+                    .padding(.leading)
+                    .fontWeight(.semibold)
+                Spacer()
+            }
+            
+            HStack {
+                Text("If you’re currently smoke-free, enter the price of cigarettes you used to smoke.")
+                    .padding(.horizontal)
+                    .font(.subheadline)
+                    .foregroundStyle(Color.secondary)
+                Spacer()
+            }
+            
+            TextField("Enter price", text: $price)
+                .keyboardType(.decimalPad)
+                .textFieldStyle(CustomGrayTextFieldStyle())
+                .padding(.horizontal, 90)
+                .padding(.vertical, 50)
+            
+            Spacer()
+            
             Button(action: {
-                if motivation.isEmpty {
-                    alertMessage = "Please select your motivation."
-                    showAlert = true
+                if price != "", let priceValue = Double(price) {
+                    smokingHabitViewModel.cigarettePrice = priceValue
+                    currentStep = 4
                 } else {
-                    isOnboardingComplete = true
+                    alertMessage = "Please enter a valid price."
+                    showAlert = true
                 }
             }) {
                 Text("Next")
+                    .fontWeight(.semibold)
+                    .padding(20)
+                    .frame(maxWidth: .infinity)
+                    .background(LinearGradient(
+                        gradient: Gradient(colors: [Theme.teal.mainColor, Theme.sky.mainColor]),
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    ))
+                    .foregroundColor(Theme.periwinkle.accentColor)
+                    .cornerRadius(25)
             }
-            .padding()
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(8)
+            .padding(.horizontal)
             .alert(isPresented: $showAlert) {
-                Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
+                Alert(title: Text("Invalid Price"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
             }
-            Spacer()
+            
+            Button(action: {
+                currentStep = 2
+            }) {
+                Text("Previous")
+                    .fontWeight(.semibold)
+                    .padding(20)
+                    .frame(maxWidth: .infinity)
+                    .background(Theme.lightGray.mainColor)
+                    .cornerRadius(25)
+            }
+            .padding(.horizontal)
+            .padding(.bottom)
+        }
+        .foregroundStyle(Theme.indigo.mainColor)
+        .padding()
+        .onTapGesture {
+            hideKeyboard()
         }
     }
 }
@@ -72,5 +120,6 @@ struct OnboardingStep3View: View {
 struct OnboardingStep3View_Previews: PreviewProvider {
     static var previews: some View {
         OnboardingStep3View(currentStep: .constant(3), isOnboardingComplete: .constant(false))
+            .environmentObject(SmokingHabitViewModel())
     }
 }

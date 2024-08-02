@@ -12,9 +12,26 @@ import SwiftUI
 import Combine
 
 class MotivationViewModel: ObservableObject {
-    @Published var userId = 0
-    @Published var motivationId = 0
-    @Published var userMotivationId = 0
+    @Published var userID = 0
+    @Published var motivationID = 0
+    @Published var userMotivationID = 0
+    @Published var message: String?
     
     private var cancellables = Set<AnyCancellable>()
+    
+    //금연 동기 등록
+    func createMotivation(completion: @escaping (Bool)->Void) {
+        MotivationService.shared.createMotivation(motivationID: motivationID, message: message)
+            .receive(on: DispatchQueue.main)
+            .sink { completion in
+                switch completion {
+                case .finished: break
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            } receiveValue: { response in
+                print("서버응답: \(response)")
+                completion(response.status)
+            }.store(in: &cancellables)
+    }
 }

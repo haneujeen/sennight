@@ -3,9 +3,11 @@
 //  Sennight
 //
 //  Created by 한유진 on 7/16/24.
+//  Edited by 김소연 on 2024-07-23: SmokingHabitService 코드 수정
 //  Edited by 한유진 on 2024-07-27: Refactor SmokingHabitService.swift
 //
 
+import Foundation
 import Combine
 import Alamofire
 

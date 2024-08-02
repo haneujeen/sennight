@@ -3,70 +3,111 @@
 //  Sennight
 //
 //  Created by 한유진 on 7/16/24.
+//  Edited by 김소연 on 2024-07-23:
+//    UI 수정
+//    Next 버튼을 눌렀을 때 다음 온보딩 화면으로 넘어가지 않는 오류 수정
 //
-
-import SwiftUI
 
 import SwiftUI
 
 struct OnboardingStep6View: View {
     @Binding var currentStep: Int
     @Binding var isOnboardingComplete: Bool
-    @State private var motivation = ""
+    @State private var smokingStatus: String = ""
     @State private var showAlert = false
     @State private var alertMessage = ""
     
     var body: some View {
         VStack {
-            HStack {
-                Spacer()
-                Button(action: {
-                    isOnboardingComplete = true
-                }) {
-                    Text("Dismiss")
-                        .foregroundColor(.red)
-                }
-                .padding()
-            }
-            
+            OnboardingDismissButton(isOnboardingComplete: $isOnboardingComplete)
             Spacer()
-            Text("Step 5: Smoking status")
-                .font(.largeTitle)
-                .padding(.bottom, 40)
+            Image(systemName: "leaf")
+                .resizable()
+                .scaledToFit()
+                .frame(width: 100, height: 100)
+                .foregroundStyle(
+                    LinearGradient(
+                        gradient: Gradient(colors: [Theme.bubblegum.mainColor, Theme.sky.mainColor]),
+                        startPoint: .top,
+                        endPoint: .bottom
+                    )
+                )
+                .padding(.bottom, 30)
+            
             HStack {
-                Text("Q.")
-                    .font(.title2)
                 Text("Are you currently a smoker?")
-                    .font(.title2)
-                    .padding()
+                    .font(.system(size: 24))
+                    .fontWeight(.bold)
+                    .foregroundStyle(
+                        LinearGradient(
+                            gradient: Gradient(colors: [Theme.sky.mainColor, Theme.teal.mainColor]),
+                            startPoint: .leading,
+                            endPoint: .trailing
+                        )
+                    )
+                Spacer()
             }
             .padding(.horizontal)
-            TextField("입력해주세요", text: $motivation)
-                .padding()
-                .background(Color.gray.opacity(0.2))
-                .cornerRadius(8)
-                .padding(.bottom, 40)
-                .padding(.horizontal)
+            
+            HStack {
+                Text("Please let us know if you are planning to start or continue your journey to quit smoking.")
+                    .font(.subheadline)
+                    .foregroundStyle(Color.secondary)
+                Spacer()
+            }
+            .padding(.horizontal)
+            .padding(.bottom, 50)
             
             Button(action: {
-                if motivation.isEmpty {
-                    alertMessage = "Please select your motivation."
-                    showAlert = true
-                } else {
-                    isOnboardingComplete = true
-                }
+                currentStep = 7
             }) {
-                Text("Next")
+                Text("No, I'm not smoking now!")
+                    .fontWeight(.semibold)
+                    .padding(20)
+                    .frame(maxWidth: .infinity)
+                    .background(LinearGradient(
+                        gradient: Gradient(colors: [Theme.teal.mainColor, Theme.sky.mainColor]),
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    ))
+                    .foregroundColor(Theme.periwinkle.accentColor)
+                    .cornerRadius(25)
+            }
+            .padding(.horizontal)
+            
+            Button(action: {
+                currentStep = 8
+            }) {
+                Text("Yes, I am a smoker.")
+                    .fontWeight(.semibold)
+                    .padding(20)
+                    .frame(maxWidth: .infinity)
+                    .background(LinearGradient(
+                        gradient: Gradient(colors: [Theme.poppy.mainColor, Theme.sky.mainColor]),
+                        startPoint: .topLeading,
+                        endPoint: .bottomTrailing
+                    ))
+                    .foregroundColor(Theme.periwinkle.accentColor)
+                    .cornerRadius(25)
+            }
+            .padding(.horizontal)
+            
+            Spacer()
+            
+            Button(action: {
+                currentStep = 5
+            }) {
+                Text("Previous")
+                    .fontWeight(.semibold)
+                    .padding(20)
+                    .frame(maxWidth: .infinity)
+                    .background(Theme.lightGray.mainColor)
+                    .cornerRadius(25)
             }
             .padding()
-            .background(Color.blue)
-            .foregroundColor(.white)
-            .cornerRadius(8)
-            .alert(isPresented: $showAlert) {
-                Alert(title: Text("Error"), message: Text(alertMessage), dismissButton: .default(Text("OK")))
-            }
-            Spacer()
         }
+        .foregroundStyle(Theme.indigo.mainColor)
+        .padding()
     }
 }
 
