@@ -155,28 +155,6 @@ struct LoginView: View {
                         .cornerRadius(25)
                     }
                     .padding(.horizontal)
-                    .onChange(of: signInWithAppleViewModel.userIdentifier) { oldValue, newValue in
-                        if !newValue.isEmpty {
-                            signUpViewModel.email = signInWithAppleViewModel.userEmail
-                            signUpViewModel.name = signInWithAppleViewModel.userName
-                            signUpViewModel.password = newValue
-                            signUpViewModel.register { response in
-                                if response.status {
-                                    loginViewModel.email = signInWithAppleViewModel.userEmail
-                                    loginViewModel.password = newValue
-                                    loginViewModel.login { status in
-                                        if status {
-                                            loginViewModel.isLoggedIn = status
-                                        } else {
-                                            print("Login failed")
-                                        }
-                                    }
-                                } else {
-                                    print("Cannot sign in with Apple")
-                                }
-                            }
-                        }
-                    }
                     
                     Button(action: {
                         showSignUpView = true
