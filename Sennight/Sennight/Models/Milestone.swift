@@ -4,25 +4,67 @@
 //
 //  Created by 한유진 on 6/27/24.
 //
+import SwiftUI
 
-/// Milestone enum 케이스의 id로 PK 대신 days가 사용되었습니다.
 enum Milestone: Int, CaseIterable, Identifiable {
-    case oneWeek = 7
-    case twoWeeks = 14
-    case threeWeeks = 21
-    case oneMonth = 30
-    case twoMonths = 60
-    case threeMonths = 91
-    case sixMonths = 182
-    case oneYear = 365
-    case twoYears = 730
-    case threeYears = 1095
-    case fiveYears = 1825
-    case tenYears = 3650
-    case fifteenYears = 5475
-    case twentyYears = 7300
+    case oneWeek = 1
+    case twoWeeks
+    case threeWeeks
+    case oneMonth
+    case twoMonths
+    case threeMonths
+    case sixMonths
+    case oneYear
+    case twoYears
+    case threeYears
+    case fiveYears
+    case tenYears
+    case fifteenYears
+    case twentyYears
     
     var id: Int { rawValue }
+    
+    var days: Int {
+        switch self {
+        case .oneWeek: return 7
+        case .twoWeeks: return 14
+        case .threeWeeks: return 21
+        case .oneMonth: return 30
+        case .twoMonths: return 60
+        case .threeMonths: return 91
+        case .sixMonths: return 182
+        case .oneYear: return 365
+        case .twoYears: return 730
+        case .threeYears: return 1095
+        case .fiveYears: return 1825
+        case .tenYears: return 3650
+        case .fifteenYears: return 5475
+        case .twentyYears: return 7300
+        }
+    }
+    
+    var timeInterval: TimeInterval {
+        TimeInterval(days * 24 * 60 * 60)
+    }
+    
+    var title: String {
+        switch self {
+        case .oneWeek: return "First Stepper"
+        case .twoWeeks: return "Lionhearted Adventurer"
+        case .threeWeeks: return "Steadfast Star"
+        case .oneMonth: return "Milestone Maker"
+        case .twoMonths: return "Unwavering Builder"
+        case .threeMonths: return "Hurdle Sprinter"
+        case .sixMonths: return "Superstar"
+        case .oneYear: return "Happy Year Hero"
+        case .twoYears: return "Double Dynamo"
+        case .threeYears: return "Wanderer"
+        case .fiveYears: return "Lustrum Inspiration"
+        case .tenYears: return "Fearless Gardener"
+        case .fifteenYears: return "Blithe Champion"
+        case .twentyYears: return "Everest Climber"
+        }
+    }
     
     var message: String {
         switch self {
@@ -54,6 +96,109 @@ enum Milestone: Int, CaseIterable, Identifiable {
             return "Fifteen years without smoking! You’re a true champion. Celebrate this amazing milestone!"
         case .twentyYears:
             return "Twenty years smoke-free! Can you believe it’s been that long? Our lives (not just yours) have changed so much for the better. Here’s to many more healthy years ahead!"
+        }
+    }
+    
+    var icon: some View {
+        switch self {
+        case .oneWeek:
+            return Image(systemName: "shoe.circle.fill")
+                .resizable()
+                .scaledToFit()
+                .foregroundStyle(LinearGradient(colors: [Theme.lightGreen.mainColor, Theme.lightBlue.mainColor],
+                                                startPoint: .topLeading,
+                                                endPoint: .bottomTrailing))
+        case .twoWeeks:
+            return Image(systemName: "bolt.heart.fill")
+                .resizable()
+                .scaledToFit()
+                .foregroundStyle(LinearGradient(colors: [Theme.bubblegum.mainColor, Theme.red.mainColor],
+                                                startPoint: .top,
+                                                endPoint: .bottom))
+        case .threeWeeks:
+            return Image(systemName: "flame.circle.fill")
+                .resizable()
+                .scaledToFit()
+                .foregroundStyle(LinearGradient(colors: [Theme.orange.mainColor, Theme.yellow.mainColor],
+                                                startPoint: .top,
+                                                endPoint: .bottom))
+        case .oneMonth:
+            return Image(systemName: "pin.circle.fill")
+                .resizable()
+                .scaledToFit()
+                .foregroundStyle(LinearGradient(colors: [Theme.poppy.mainColor, Theme.red.mainColor],
+                                                startPoint: .top,
+                                                endPoint: .bottom))
+        case .twoMonths:
+            return Image(systemName: "hammer.circle.fill")
+                .resizable()
+                .scaledToFit()
+                .foregroundStyle(LinearGradient(colors: [Color.secondary, Theme.darkGray.mainColor],
+                                                startPoint: .top,
+                                                endPoint: .bottom))
+        case .threeMonths:
+            return Image(systemName: "figure.track.and.field")
+                .resizable()
+                .scaledToFit()
+                .foregroundStyle(LinearGradient(colors: [Theme.sky.mainColor, Color.blue],
+                                                startPoint: .leading,
+                                                endPoint: .trailing))
+        case .sixMonths:
+            return Image(systemName: "seal.fill")
+                .resizable()
+                .scaledToFit()
+                .foregroundStyle(LinearGradient(colors: [Theme.lightBlue.mainColor, Theme.red.mainColor],
+                                                startPoint: .top,
+                                                endPoint: .bottom))
+        case .oneYear:
+            return Image(systemName: "party.popper.fill")
+                .resizable()
+                .scaledToFit()
+                .foregroundStyle(LinearGradient(colors: [Theme.orange.mainColor, Theme.bubblegum.mainColor],
+                                                startPoint: .top,
+                                                endPoint: .bottom))
+        case .twoYears:
+            return Image(systemName: "circle.grid.2x1.fill")
+                .resizable()
+                .scaledToFit()
+                .foregroundStyle(LinearGradient(colors: [Theme.teal.mainColor, Theme.sky.mainColor],
+                                                startPoint: .top,
+                                                endPoint: .bottom))
+        case .threeYears:
+            return Image(systemName: "figure.hiking")
+                .resizable()
+                .scaledToFit()
+                .foregroundStyle(LinearGradient(colors: [Theme.periwinkle.mainColor, Theme.poppy.mainColor],
+                                                startPoint: .top,
+                                                endPoint: .bottom))
+        case .fiveYears:
+            return Image(systemName: "circle.hexagonpath.fill")
+                .resizable()
+                .scaledToFit()
+                .foregroundStyle(LinearGradient(colors: [ Theme.purple.mainColor, Theme.indigo.mainColor],
+                                                startPoint: .leading,
+                                                endPoint: .trailing))
+        case .tenYears:
+            return Image(systemName: "tree.circle")
+                .resizable()
+                .scaledToFit()
+                .foregroundStyle(LinearGradient(colors: [Theme.lightGreen.mainColor, Theme.lightBlue.mainColor],
+                                                startPoint: .top,
+                                                endPoint: .bottom))
+        case .fifteenYears:
+            return Image(systemName: "fireworks")
+                .resizable()
+                .scaledToFit()
+                .foregroundStyle(LinearGradient(colors: [Theme.red.mainColor, Theme.yellow.mainColor],
+                                                startPoint: .topLeading,
+                                                endPoint: .bottomTrailing))
+        case .twentyYears:
+            return Image(systemName: "mountain.2.circle.fill")
+                .resizable()
+                .scaledToFit()
+                .foregroundStyle(LinearGradient(colors: [Theme.sky.mainColor, Theme.teal.mainColor],
+                                                startPoint: .topLeading,
+                                                endPoint: .bottomTrailing))
         }
     }
 }

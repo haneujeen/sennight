@@ -12,12 +12,36 @@ import Combine
 import SwiftUI
 
 class QuitAttemptViewModel: ObservableObject{
-    @Published var quitAttempts: [QuitAttempt] = []
-    @Published var activeQuitAttempt: QuitAttempt?
-    @Published var milestones: [Milestone] = []
-    @Published var isActiveQuitAttempt = false
+    
+    @Published var userID = 0
+    @Published var startDate = ""
+    @Published var attemptID = 0
+    @Published var endDate = ""
+    @Published var isActive = false
+    @Published var onboardingToken = ""
     
     private var cancellables = Set<AnyCancellable>()
+    
+    //금연 시간 등록
+    func createQuitAttempt(completion: @escaping (Bool)->Void) {
+        QuitAttemptService.shared.createQuitAttempt(startDate: startDate)
+            .receive(on: DispatchQueue.main)
+            .sink { completion in
+                switch completion {
+                case .finished: break
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            } receiveValue: { response in
+                print("서버응답: \(response)")
+                completion(response.status)
+            }.store(in: &cancellables)
+    }
+    @Published var quitAttempts: [QuitAttempt] = []
+    @Published var activeQuitAttempt: QuitAttempt?
+    @Published var milestones: [UserMilestone] = []
+    @Published var isActiveQuitAttempt = false
+    
     
     /// Creates a new quitting smoking attempt.
     func createQuitAttempt() {
@@ -29,10 +53,7 @@ class QuitAttemptViewModel: ObservableObject{
      */
     /// Retrieves the most recent quitting smoking attempt for the user and updates the `latestQuitAttempt` property.
     func getActiveQuitAttempt() {
-        guard let userID = UserService.shared.getUserID() else {
-            return
-        }
-        QuitAttemptService.shared.getActiveQuitAttempt(userID: userID)
+        QuitAttemptService.shared.getActiveQuitAttempt()
             .sink { completion in
                 switch completion {
                 case .finished:
@@ -49,7 +70,18 @@ class QuitAttemptViewModel: ObservableObject{
     
     /// Retrieves all quitting smoking attempts for the user and updates the `quitAttempts` property.
     func getAllQuitAttempts() {
-        
+        QuitAttemptService.shared.getAllQuitAttempts()
+            .sink { completion in
+                switch completion {
+                case .finished:
+                    break
+                case .failure(let error):
+                    print(error.localizedDescription)
+                }
+            } receiveValue: { quitAttempts in
+                self.quitAttempts = quitAttempts
+            }
+            .store(in: &cancellables)
     }
     
     /// Deletes a quitting smoking attempt.

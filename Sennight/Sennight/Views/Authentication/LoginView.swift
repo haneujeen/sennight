@@ -5,6 +5,7 @@
 //  Created by 김소연 on 7/14/24.
 //  Edited by 한유진 on 2024-07-18: 코드 개선 문서 추가
 //  Edited by 한유진 on 2024-07-20: Updated UI
+//  Edited by 한유진 on 2024-08-02: Sign in with Apple 기능 추가, UI 수정
 //
 
 /**
@@ -34,9 +35,25 @@
 import SwiftUI
 
 struct LoginView: View {
+    @StateObject private var signInWithAppleViewModel = SignInWithAppleViewModel()
     @EnvironmentObject var loginViewModel: LoginViewModel
+    @StateObject var signUpViewModel = SignUpViewModel()
+    @StateObject var updateUserViewModel = UpdateUserViewModel()
+    
     @State private var showSignUpView = false
+    @State private var showTermsView = false
+    @State private var showPrivacyPolicyView = false
     @State private var isWelcoming = false
+    @State private var isLoading = false
+    
+    @State private var showAlert = false
+    @State private var alertMessage = ""
+    @State private var alertType: AlertType? = nil
+    
+    enum AlertType {
+        case linkAccount
+        case signUp
+    }
     
     var body: some View {
         NavigationStack {
@@ -45,7 +62,8 @@ struct LoginView: View {
                     .rotationEffect(.degrees(70))
                     .scaleEffect(5)
                     .ignoresSafeArea()
-                    
+                
+                // MARK: VStack
                 VStack {
                     Spacer()
                     if !isWelcoming {
@@ -69,6 +87,7 @@ struct LoginView: View {
                         .textFieldStyle(CustomTextFieldStyle())
                         .padding(.horizontal)
                         .textInputAutocapitalization(.never)
+                        .disableAutocorrection(true)
                     
                     SecureField("Password", text: $loginViewModel.password)
                         .textFieldStyle(CustomTextFieldStyle())
@@ -76,9 +95,17 @@ struct LoginView: View {
                     
                     // TODO: isLoginDisabled 변수 추가...
                     Button(action: {
+                        isLoading = true
                         loginViewModel.login { status in
                             if status {
-                                loginViewModel.isLoggedIn = status
+                                isLoading = false
+                                if signInWithAppleViewModel.userIdentifier != nil {
+                                    alertMessage = "Do you want to link your account with Apple?"
+                                    alertType = .linkAccount
+                                    showAlert = true
+                                } else {
+                                    loginViewModel.isLoggedIn = true
+                                }
                             } else {
                             }
                         }
@@ -87,24 +114,44 @@ struct LoginView: View {
                             .fontWeight(.semibold)
                             .padding(20)
                             .frame(maxWidth: .infinity)
-                            .background(Theme.indigo.mainColor)
+                            .background(Theme.poppy.mainColor)
                             .foregroundColor(Theme.indigo.accentColor)
                             .cornerRadius(25)
                     }
                     .padding([.horizontal, .top])
                     
+                    //                    SignInWithAppleButton(cornerRadius: 15)
+                    //                        .frame(width: 330, height: 60)
+                    //                        .onTapGesture {
+                    //                            signInWithAppleViewModel.startSignInWithAppleFlow()
+                    //                        }
+                    
                     Button(action: {
-                        // TODO: Apple sign-in
+                        Task {
+                            await signInWithAppleViewModel.startSignInWithAppleFlow()
+                            let isUserWithAppleID = await signInWithAppleViewModel.sendAppleUserIdentifier()
+                            if isUserWithAppleID {
+                                loginViewModel.isLoggedIn = true
+                            } else {
+                                signUpViewModel.email = signInWithAppleViewModel.userEmail
+                                signUpViewModel.name = signInWithAppleViewModel.userName
+                                signUpViewModel.appleID = signInWithAppleViewModel.userIdentifier
+                                alertMessage = "Sign up or log in with your Sennight account.\nYou only need to do this once."
+                                alertType = .signUp
+                                showAlert = true
+                            }
+                        }
                     }) {
                         HStack {
                             Image(systemName: "applelogo")
+                                .font(.system(size: 20))
                             Text("Continue with Apple")
                                 .fontWeight(.semibold)
                         }
                         .padding(20)
                         .frame(maxWidth: .infinity)
-                        .background(Theme.poppy.mainColor)
-                        .foregroundColor(Theme.poppy.accentColor)
+                        .background(Color.black)
+                        .foregroundColor(Color.white)
                         .cornerRadius(25)
                     }
                     .padding(.horizontal)
@@ -121,9 +168,7 @@ struct LoginView: View {
                         }
                     }
                     .padding(.top, 15)
-                    
                     Spacer()
-                    
                     VStack {
                         Text("If you are creating a new account,")
                         
@@ -132,22 +177,17 @@ struct LoginView: View {
                                 .foregroundColor(Theme.teal.mainColor)
                                 .underline()
                                 .onTapGesture {
-                                    if let url = URL(string: "https://www.example.com/terms") {
-                                        UIApplication.shared.open(url)
-                                    }
+                                    showTermsView = true
                                 }
                             Text(" and ")
                             Text("Privacy Policy")
                                 .foregroundColor(Theme.teal.mainColor)
                                 .underline()
                                 .onTapGesture {
-                                    if let url = URL(string: "https://www.example.com/privacy") {
-                                        UIApplication.shared.open(url)
-                                    }
+                                    showPrivacyPolicyView = true
                                 }
                             Text(" will apply.")
                         }
-                        
                     }
                     .font(.footnote)
                     .foregroundColor(Color.secondary)
@@ -163,6 +203,70 @@ struct LoginView: View {
                 }
                 .sheet(isPresented: $showSignUpView) {
                     SignUpView()
+                        .environmentObject(signUpViewModel)
+                }
+                .sheet(isPresented: $showTermsView) {
+                    NavigationStack {
+                        TermsAndConditionsView()
+                            .navigationTitle("Terms & Conditions")
+                            .toolbar {
+                                ToolbarItem(placement: .cancellationAction) {
+                                    Button("Close") {
+                                        showTermsView = false
+                                    }
+                                }
+                            }
+                    }
+                }
+                .sheet(isPresented: $showPrivacyPolicyView) {
+                    NavigationStack {
+                        PrivacyPolicyView()
+                            .navigationTitle("Privacy Policy")
+                            .toolbar {
+                                ToolbarItem(placement: .cancellationAction) {
+                                    Button("Close") {
+                                        showPrivacyPolicyView = false
+                                    }
+                                }
+                            }
+                    }
+                }
+                .alert(isPresented: $showAlert) {
+                    switch alertType {
+                    case .linkAccount:
+                        return Alert(
+                            title: Text("You're Logging In..."),
+                            message: Text(alertMessage),
+                            primaryButton: .default(Text("Yes")) {
+                                updateUserViewModel.appleID = signInWithAppleViewModel.userIdentifier
+                                updateUserViewModel.updateWithAppleID { _ in }
+                                loginViewModel.isLoggedIn = true
+                            },
+                            secondaryButton: .cancel(Text("Not Now")) {
+                                loginViewModel.isLoggedIn = true
+                            }
+                        )
+                    case .signUp:
+                        return Alert(
+                            title: Text("No Account Linked"),
+                            message: Text(alertMessage),
+                            dismissButton: .default(Text("OK")) {
+                                showSignUpView = true
+                            }
+                        )
+                    case .none:
+                        return Alert(
+                            title: Text("Error"),
+                            message: Text("An unknown error occurred."),
+                            dismissButton: .default(Text("OK"))
+                        )
+                    }
+                }
+                // MARK: VStack
+                
+                if isLoading {
+                    LottieView(name: Constants.sparklesLoader)
+                        .frame(width: 100, height: 100)
                 }
             }
             .background(Theme.buttercup.mainColor, ignoresSafeAreaEdges: .all)

@@ -88,10 +88,23 @@
 		4E33CEC52C4BBC0300BE9303 /* Lavender crossing line.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E33CEC42C4BBC0300BE9303 /* Lavender crossing line.json */; };
 		4E33CECB2C4CA06800BE9303 /* Welcome confetti.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E33CECA2C4CA06700BE9303 /* Welcome confetti.json */; };
 		4E3965F32C53CAE2005E6EB4 /* HealthBenefit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E3965F22C53CAE2005E6EB4 /* HealthBenefit.swift */; };
+		4E571A9A2C57730B002BA2DD /* NewMilestoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E571A992C57730B002BA2DD /* NewMilestoneView.swift */; };
+		4E571A9C2C579572002BA2DD /* AllMilestonesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E571A9B2C579572002BA2DD /* AllMilestonesListView.swift */; };
+		4E571A9E2C579647002BA2DD /* SortedMilestonesListView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E571A9D2C579647002BA2DD /* SortedMilestonesListView.swift */; };
+		4E5893712C5C6F16003BA732 /* Sparkles loader.json in Resources */ = {isa = PBXBuildFile; fileRef = 4E5893702C5C6F16003BA732 /* Sparkles loader.json */; };
+		4E66F6482C58C2A900D9D982 /* ProfileView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66F6472C58C2A900D9D982 /* ProfileView.swift */; };
+		4E66F64A2C58C96200D9D982 /* ChangePasswordView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66F6492C58C96200D9D982 /* ChangePasswordView.swift */; };
+		4E66F64D2C58EFD000D9D982 /* TermsAndConditionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66F64C2C58EFD000D9D982 /* TermsAndConditionsView.swift */; };
+		4E66F64F2C58EFF400D9D982 /* PrivacyPolicyView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66F64E2C58EFF400D9D982 /* PrivacyPolicyView.swift */; };
+		4E66F6512C58F0B400D9D982 /* LicensesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66F6502C58F0B400D9D982 /* LicensesView.swift */; };
+		4E66F6532C58F0D900D9D982 /* AboutAppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66F6522C58F0D900D9D982 /* AboutAppView.swift */; };
+		4E66F6572C58F39D00D9D982 /* EmailHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66F6562C58F39D00D9D982 /* EmailHelper.swift */; };
+		4E66F65A2C59054400D9D982 /* SignInWithAppleButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66F6592C59054400D9D982 /* SignInWithAppleButton.swift */; };
+		4E66F65C2C59057E00D9D982 /* SignInWithAppleViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E66F65B2C59057E00D9D982 /* SignInWithAppleViewModel.swift */; };
+		4E6C26B72C5A2C7A00E0F9A8 /* OnboardingDismissButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6C26B62C5A2C7A00E0F9A8 /* OnboardingDismissButton.swift */; };
 		4E6F39D32C33951A00058003 /* CheckOnboardingView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D22C33951A00058003 /* CheckOnboardingView.swift */; };
 		4E6F39D52C33980900058003 /* SupportIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D42C33980900058003 /* SupportIcon.swift */; };
 		4E6F39D72C33989A00058003 /* PostText.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39D62C33989A00058003 /* PostText.swift */; };
-		4E6F39DB2C339ABF00058003 /* MedalIcon.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39DA2C339ABF00058003 /* MedalIcon.swift */; };
 		4E6F39DD2C33B79200058003 /* MyMilestonesView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E6F39DC2C33B79200058003 /* MyMilestonesView.swift */; };
 		4E82E3952C4661A600F06DE3 /* OnboardingStep4View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E3942C4661A600F06DE3 /* OnboardingStep4View.swift */; };
 		4E82E3972C4661B600F06DE3 /* OnboardingStep5View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4E82E3962C4661B600F06DE3 /* OnboardingStep5View.swift */; };
@@ -123,6 +136,8 @@
 		4EDF63EC2C4ED771008CCD82 /* Poppy fireworks.json in Resources */ = {isa = PBXBuildFile; fileRef = 4EDF63EB2C4ED771008CCD82 /* Poppy fireworks.json */; };
 		4EE4659D2C53AC6A0039A729 /* NewQuitAttemptSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4659C2C53AC6A0039A729 /* NewQuitAttemptSheet.swift */; };
 		4EE4659F2C53B1310039A729 /* CircularGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4659E2C53B1310039A729 /* CircularGaugeView.swift */; };
+		4EEACA442C5622BB00F76EB6 /* QuitAttemptMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEACA432C5622BB00F76EB6 /* QuitAttemptMenu.swift */; };
+		4EEACA602C5628D300F76EB6 /* EditQuitAttemptSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEACA5F2C5628D300F76EB6 /* EditQuitAttemptSheet.swift */; };
 		D6BEFFAC2C44C66200C6678B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F992A92C42E95B001BE18C /* LoginView.swift */; };
 		D6EEF6142C451B810097FF98 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = D6EEF6132C451B810097FF98 /* Alamofire */; };
 /* End PBXBuildFile section */
@@ -228,10 +243,25 @@
 		4E33CEC42C4BBC0300BE9303 /* Lavender crossing line.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Lavender crossing line.json"; sourceTree = "<group>"; };
 		4E33CECA2C4CA06700BE9303 /* Welcome confetti.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Welcome confetti.json"; sourceTree = "<group>"; };
 		4E3965F22C53CAE2005E6EB4 /* HealthBenefit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HealthBenefit.swift; sourceTree = "<group>"; };
+		4E571A992C57730B002BA2DD /* NewMilestoneView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMilestoneView.swift; sourceTree = "<group>"; };
+		4E571A9B2C579572002BA2DD /* AllMilestonesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllMilestonesListView.swift; sourceTree = "<group>"; };
+		4E571A9D2C579647002BA2DD /* SortedMilestonesListView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SortedMilestonesListView.swift; sourceTree = "<group>"; };
+		4E58936D2C5B9542003BA732 /* Sennight.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Sennight.entitlements; sourceTree = "<group>"; };
+		4E5893702C5C6F16003BA732 /* Sparkles loader.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Sparkles loader.json"; sourceTree = "<group>"; };
+		4E66F6472C58C2A900D9D982 /* ProfileView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileView.swift; sourceTree = "<group>"; };
+		4E66F6492C58C96200D9D982 /* ChangePasswordView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangePasswordView.swift; sourceTree = "<group>"; };
+		4E66F64C2C58EFD000D9D982 /* TermsAndConditionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TermsAndConditionsView.swift; sourceTree = "<group>"; };
+		4E66F64E2C58EFF400D9D982 /* PrivacyPolicyView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PrivacyPolicyView.swift; sourceTree = "<group>"; };
+		4E66F6502C58F0B400D9D982 /* LicensesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LicensesView.swift; sourceTree = "<group>"; };
+		4E66F6522C58F0D900D9D982 /* AboutAppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutAppView.swift; sourceTree = "<group>"; };
+		4E66F6562C58F39D00D9D982 /* EmailHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EmailHelper.swift; sourceTree = "<group>"; };
+		4E66F6582C58F3E500D9D982 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist; path = Info.plist; sourceTree = "<group>"; };
+		4E66F6592C59054400D9D982 /* SignInWithAppleButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleButton.swift; sourceTree = "<group>"; };
+		4E66F65B2C59057E00D9D982 /* SignInWithAppleViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInWithAppleViewModel.swift; sourceTree = "<group>"; };
+		4E6C26B62C5A2C7A00E0F9A8 /* OnboardingDismissButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingDismissButton.swift; sourceTree = "<group>"; };
 		4E6F39D22C33951A00058003 /* CheckOnboardingView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckOnboardingView.swift; sourceTree = "<group>"; };
 		4E6F39D42C33980900058003 /* SupportIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SupportIcon.swift; sourceTree = "<group>"; };
 		4E6F39D62C33989A00058003 /* PostText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostText.swift; sourceTree = "<group>"; };
-		4E6F39DA2C339ABF00058003 /* MedalIcon.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MedalIcon.swift; sourceTree = "<group>"; };
 		4E6F39DC2C33B79200058003 /* MyMilestonesView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyMilestonesView.swift; sourceTree = "<group>"; };
 		4E82E3942C4661A600F06DE3 /* OnboardingStep4View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep4View.swift; sourceTree = "<group>"; };
 		4E82E3962C4661B600F06DE3 /* OnboardingStep5View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OnboardingStep5View.swift; sourceTree = "<group>"; };
@@ -263,6 +293,8 @@
 		4EDF63EB2C4ED771008CCD82 /* Poppy fireworks.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = "Poppy fireworks.json"; sourceTree = "<group>"; };
 		4EE4659C2C53AC6A0039A729 /* NewQuitAttemptSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewQuitAttemptSheet.swift; sourceTree = "<group>"; };
 		4EE4659E2C53B1310039A729 /* CircularGaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGaugeView.swift; sourceTree = "<group>"; };
+		4EEACA432C5622BB00F76EB6 /* QuitAttemptMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitAttemptMenu.swift; sourceTree = "<group>"; };
+		4EEACA5F2C5628D300F76EB6 /* EditQuitAttemptSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuitAttemptSheet.swift; sourceTree = "<group>"; };
 		92F992A92C42E95B001BE18C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -315,6 +347,8 @@
 		4E0F84272C2D07F70037AE25 /* Sennight */ = {
 			isa = PBXGroup;
 			children = (
+				4E58936D2C5B9542003BA732 /* Sennight.entitlements */,
+				4E66F6582C58F3E500D9D982 /* Info.plist */,
 				4E0F84532C2D0DBA0037AE25 /* Models */,
 				4E0F84542C2D0DC50037AE25 /* ViewModels */,
 				4E0F84552C2D0DDE0037AE25 /* Views */,
@@ -392,7 +426,9 @@
 			isa = PBXGroup;
 			children = (
 				4E0F84672C2D10C20037AE25 /* OnboardingViewModel.swift */,
-				4E1A80F42C495D4D0052CBD2 /* User */,
+				4E1A80EE2C495D240052CBD2 /* LoginViewModel.swift */,
+				4E1A80F02C495D310052CBD2 /* SignUpViewModel.swift */,
+				4E1A80F22C495D460052CBD2 /* UpdateUserViewModel.swift */,
 				4E82E3A22C46640D00F06DE3 /* SmokingHabitViewModel.swift */,
 				4E82E3A62C4665EF00F06DE3 /* QuitAttemptViewModel.swift */,
 				4E0F847C2C2D2C880037AE25 /* MotivationViewModel.swift */,
@@ -408,6 +444,7 @@
 				4E0F849F2C2D30920037AE25 /* MilestonePostListViewModel.swift */,
 				4E0F848A2C2D2CE60037AE25 /* SmokingLogViewModel.swift */,
 				4E0F848C2C2D2D050037AE25 /* SmokingLogChartViewModel.swift */,
+				4E66F65B2C59057E00D9D982 /* SignInWithAppleViewModel.swift */,
 			);
 			path = ViewModels;
 			sourceTree = "<group>";
@@ -415,6 +452,7 @@
 		4E0F84552C2D0DDE0037AE25 /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				4E66F64B2C58EFAC00D9D982 /* Legal */,
 				4EB3C1D42C4B3F2A0066D658 /* HelpersAndCustomViews */,
 				4E0F84642C2D106C0037AE25 /* Onboarding */,
 				4E0F84612C2D0EA70037AE25 /* Authentication */,
@@ -468,6 +506,7 @@
 		4E0F84642C2D106C0037AE25 /* Onboarding */ = {
 			isa = PBXGroup;
 			children = (
+				4E6C26B62C5A2C7A00E0F9A8 /* OnboardingDismissButton.swift */,
 				4E0F846B2C2D28E60037AE25 /* OnboardingStep1View.swift */,
 				4E0F846D2C2D28ED0037AE25 /* OnboardingStep2View.swift */,
 				4E0F846F2C2D28F40037AE25 /* OnboardingStep3View.swift */,
@@ -494,11 +533,13 @@
 		4E0F84762C2D2A0E0037AE25 /* MilestonePosts */ = {
 			isa = PBXGroup;
 			children = (
+				4E571A9B2C579572002BA2DD /* AllMilestonesListView.swift */,
+				4E571A9D2C579647002BA2DD /* SortedMilestonesListView.swift */,
+				4E571A992C57730B002BA2DD /* NewMilestoneView.swift */,
+				4E6F39DC2C33B79200058003 /* MyMilestonesView.swift */,
 				4E6F39D42C33980900058003 /* SupportIcon.swift */,
-				4E6F39DA2C339ABF00058003 /* MedalIcon.swift */,
 				4E6F39D62C33989A00058003 /* PostText.swift */,
 				4E0F84DA2C2D3E6A0037AE25 /* MilestonePostCardView.swift */,
-				4E6F39DC2C33B79200058003 /* MyMilestonesView.swift */,
 				4E0F84A72C2D33E50037AE25 /* MilestonePostsView.swift */,
 			);
 			path = MilestonePosts;
@@ -507,6 +548,9 @@
 		4E0F84772C2D2A280037AE25 /* Settings */ = {
 			isa = PBXGroup;
 			children = (
+				4E66F6472C58C2A900D9D982 /* ProfileView.swift */,
+				4E66F6492C58C96200D9D982 /* ChangePasswordView.swift */,
+				4E66F6522C58F0D900D9D982 /* AboutAppView.swift */,
 				4E0F84A92C2D33F80037AE25 /* SettingsView.swift */,
 			);
 			path = Settings;
@@ -533,6 +577,8 @@
 			children = (
 				4E0F84BE2C2D3C220037AE25 /* ElapsedTimeTextHeaderView.swift */,
 				4E19A13A2C53380900CB3553 /* QuitAttemptCardView.swift */,
+				4EEACA5F2C5628D300F76EB6 /* EditQuitAttemptSheet.swift */,
+				4EEACA432C5622BB00F76EB6 /* QuitAttemptMenu.swift */,
 				4E0F84C12C2D3C8B0037AE25 /* HealthProgressCardView.swift */,
 				4EE4659E2C53B1310039A729 /* CircularGaugeView.swift */,
 				4EE4659C2C53AC6A0039A729 /* NewQuitAttemptSheet.swift */,
@@ -555,19 +601,10 @@
 			path = Cards;
 			sourceTree = "<group>";
 		};
-		4E1A80F42C495D4D0052CBD2 /* User */ = {
-			isa = PBXGroup;
-			children = (
-				4E1A80EE2C495D240052CBD2 /* LoginViewModel.swift */,
-				4E1A80F02C495D310052CBD2 /* SignUpViewModel.swift */,
-				4E1A80F22C495D460052CBD2 /* UpdateUserViewModel.swift */,
-			);
-			path = User;
-			sourceTree = "<group>";
-		};
 		4E33CEB72C4B979000BE9303 /* Lottie Files */ = {
 			isa = PBXGroup;
 			children = (
+				4E5893702C5C6F16003BA732 /* Sparkles loader.json */,
 				4E33CEB82C4B9B8E00BE9303 /* Yellow crossing line.json */,
 				4E33CEBE2C4BBA9800BE9303 /* Buttercup crossing line.json */,
 				4E33CEC22C4BBABC00BE9303 /* Seafoam crossing line.json */,
@@ -581,6 +618,16 @@
 			path = "Lottie Files";
 			sourceTree = "<group>";
 		};
+		4E66F64B2C58EFAC00D9D982 /* Legal */ = {
+			isa = PBXGroup;
+			children = (
+				4E66F64C2C58EFD000D9D982 /* TermsAndConditionsView.swift */,
+				4E66F64E2C58EFF400D9D982 /* PrivacyPolicyView.swift */,
+				4E66F6502C58F0B400D9D982 /* LicensesView.swift */,
+			);
+			path = Legal;
+			sourceTree = "<group>";
+		};
 		4EB3C1D42C4B3F2A0066D658 /* HelpersAndCustomViews */ = {
 			isa = PBXGroup;
 			children = (
@@ -590,6 +637,8 @@
 				4E33CEB52C4B973700BE9303 /* LottieView.swift */,
 				4EABEA8A2C5318D800252308 /* ElapsedTimeString.swift */,
 				4EABEA8C2C53192300252308 /* StringToDateFormatter.swift */,
+				4E66F6562C58F39D00D9D982 /* EmailHelper.swift */,
+				4E66F6592C59054400D9D982 /* SignInWithAppleButton.swift */,
 			);
 			path = HelpersAndCustomViews;
 			sourceTree = "<group>";
@@ -717,6 +766,7 @@
 				4E0128532C4D63DC007FB1C6 /* Lavender fireworks.json in Resources */,
 				4E0F84E52C2D3FA60037AE25 /* Localizable.xcstrings in Resources */,
 				4E33CEC52C4BBC0300BE9303 /* Lavender crossing line.json in Resources */,
+				4E5893712C5C6F16003BA732 /* Sparkles loader.json in Resources */,
 				4E33CEC32C4BBABC00BE9303 /* Seafoam crossing line.json in Resources */,
 				4E33CEB92C4B9B8E00BE9303 /* Yellow crossing line.json in Resources */,
 				4E33CEBF2C4BBA9800BE9303 /* Buttercup crossing line.json in Resources */,
@@ -755,6 +805,7 @@
 				4E0F84D42C2D3D850037AE25 /* ActivitiesCardView.swift in Sources */,
 				4E0F84942C2D301B0037AE25 /* AidProductService.swift in Sources */,
 				4E0F84A22C2D30AE0037AE25 /* MilestonePostService.swift in Sources */,
+				4E66F6482C58C2A900D9D982 /* ProfileView.swift in Sources */,
 				4E935D4B2C54D5EB0035D6D5 /* UserMilestone.swift in Sources */,
 				4E0F84D82C2D3DFC0037AE25 /* SmokingLogChartCardView.swift in Sources */,
 				4E82E3A32C46640D00F06DE3 /* SmokingHabitViewModel.swift in Sources */,
@@ -764,20 +815,27 @@
 				4E0F84CA2C2D3D3D0037AE25 /* AidProductRowView.swift in Sources */,
 				4E82E3A12C4663D000F06DE3 /* SmokingHabit.swift in Sources */,
 				4E6F39D52C33980900058003 /* SupportIcon.swift in Sources */,
+				4E571A9E2C579647002BA2DD /* SortedMilestonesListView.swift in Sources */,
+				4E66F64A2C58C96200D9D982 /* ChangePasswordView.swift in Sources */,
 				4E82E3AB2C46663400F06DE3 /* QuitAttemptService.swift in Sources */,
 				4E6F39DD2C33B79200058003 /* MyMilestonesView.swift in Sources */,
 				4E82E3A92C46661F00F06DE3 /* SmokingHabitService.swift in Sources */,
 				4E9AC0A62C2E844700B3C2F0 /* AidProductDetailEditView.swift in Sources */,
 				4E0F849A2C2D30460037AE25 /* MilestoneService.swift in Sources */,
 				4E1A80EF2C495D240052CBD2 /* LoginViewModel.swift in Sources */,
+				4E66F6572C58F39D00D9D982 /* EmailHelper.swift in Sources */,
 				4E6F39D32C33951A00058003 /* CheckOnboardingView.swift in Sources */,
 				4E0F84D62C2D3D8E0037AE25 /* ActivityRowView.swift in Sources */,
 				4E0F84922C2D30120037AE25 /* MotivationService.swift in Sources */,
 				4E82E3952C4661A600F06DE3 /* OnboardingStep4View.swift in Sources */,
 				4EABEA8D2C53192300252308 /* StringToDateFormatter.swift in Sources */,
+				4E571A9A2C57730B002BA2DD /* NewMilestoneView.swift in Sources */,
 				4E935D492C54BCB50035D6D5 /* UserActivity.swift in Sources */,
+				4E66F64F2C58EFF400D9D982 /* PrivacyPolicyView.swift in Sources */,
 				4E0F84AF2C2D34990037AE25 /* Motivation.swift in Sources */,
+				4E571A9C2C579572002BA2DD /* AllMilestonesListView.swift in Sources */,
 				4E6F39D72C33989A00058003 /* PostText.swift in Sources */,
+				4E66F64D2C58EFD000D9D982 /* TermsAndConditionsView.swift in Sources */,
 				4E82E39F2C4661E200F06DE3 /* OnboardingStep9View.swift in Sources */,
 				4E0F84C22C2D3C8B0037AE25 /* HealthProgressCardView.swift in Sources */,
 				4E0F84DB2C2D3E6A0037AE25 /* MilestonePostCardView.swift in Sources */,
@@ -796,6 +854,7 @@
 				4E0F846A2C2D28D90037AE25 /* OnboardingView.swift in Sources */,
 				4E0F84982C2D302D0037AE25 /* ActivityService.swift in Sources */,
 				4E0F84BF2C2D3C220037AE25 /* ElapsedTimeTextHeaderView.swift in Sources */,
+				4EEACA442C5622BB00F76EB6 /* QuitAttemptMenu.swift in Sources */,
 				4E0F84DF2C2D3EB80037AE25 /* NewSymptomSheet.swift in Sources */,
 				4E0F849C2C2D30680037AE25 /* MilestoneViewModel.swift in Sources */,
 				4E82E3992C4661C100F06DE3 /* OnboardingStep6View.swift in Sources */,
@@ -813,31 +872,36 @@
 				4E82E39B2C4661CB00F06DE3 /* OnboardingStep7View.swift in Sources */,
 				4E0F84AD2C2D34910037AE25 /* User.swift in Sources */,
 				4E0F849E2C2D30720037AE25 /* MilestoneListViewModel.swift in Sources */,
+				4EEACA602C5628D300F76EB6 /* EditQuitAttemptSheet.swift in Sources */,
 				4E0F84DD2C2D3E940037AE25 /* NewAidProductSheet.swift in Sources */,
 				4EB3C1D72C4B42330066D658 /* View+.swift in Sources */,
 				4E935D452C54BCA50035D6D5 /* UserAidProduct.swift in Sources */,
 				4E0BF7DF2C2E4C2B0091ADB2 /* Config.swift in Sources */,
 				4E0F846C2C2D28E60037AE25 /* OnboardingStep1View.swift in Sources */,
-				4E6F39DB2C339ABF00058003 /* MedalIcon.swift in Sources */,
 				4E0F84E12C2D3ECC0037AE25 /* NewActivitySheet.swift in Sources */,
 				4E0F84962C2D30260037AE25 /* SymptomService.swift in Sources */,
 				4E0F84292C2D07F70037AE25 /* SennightApp.swift in Sources */,
 				4E0F84632C2D10640037AE25 /* HomeView.swift in Sources */,
+				4E66F6532C58F0D900D9D982 /* AboutAppView.swift in Sources */,
 				4E0F847F2C2D2CA60037AE25 /* AidProductViewModel.swift in Sources */,
 				4E0F84D02C2D3D6D0037AE25 /* SymptomsCardView.swift in Sources */,
 				4E0F84892C2D2CDA0037AE25 /* ActivityListViewModel.swift in Sources */,
+				4E66F65A2C59054400D9D982 /* SignInWithAppleButton.swift in Sources */,
 				4E0F84702C2D28F50037AE25 /* OnboardingStep3View.swift in Sources */,
 				4E0F847B2C2D2C780037AE25 /* MotivationListViewModel.swift in Sources */,
 				4E0F848D2C2D2D050037AE25 /* SmokingLogChartViewModel.swift in Sources */,
 				4E0F84742C2D29220037AE25 /* SignUpView.swift in Sources */,
+				4E66F6512C58F0B400D9D982 /* LicensesView.swift in Sources */,
 				4E0F84B72C2D34B40037AE25 /* Activity.swift in Sources */,
 				4E19A13B2C53380900CB3553 /* QuitAttemptCardView.swift in Sources */,
 				4E0F845C2C2D0E710037AE25 /* NetworkService.swift in Sources */,
 				4E0F84B92C2D34BF0037AE25 /* MilestonePost.swift in Sources */,
+				4E66F65C2C59057E00D9D982 /* SignInWithAppleViewModel.swift in Sources */,
 				4E0F84A02C2D30920037AE25 /* MilestonePostListViewModel.swift in Sources */,
 				4E0F847D2C2D2C880037AE25 /* MotivationViewModel.swift in Sources */,
 				4E33CEB62C4B973700BE9303 /* LottieView.swift in Sources */,
 				4E0F84852C2D2CC70037AE25 /* SymptomListViewModel.swift in Sources */,
+				4E6C26B72C5A2C7A00E0F9A8 /* OnboardingDismissButton.swift in Sources */,
 				4E935D4D2C54DCC30035D6D5 /* Trigger.swift in Sources */,
 				4E0F84A42C2D30C90037AE25 /* SmokingLogService.swift in Sources */,
 				4EABEA8B2C5318D800252308 /* ElapsedTimeString.swift in Sources */,
@@ -1006,24 +1070,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Sennight/Sennight.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Sennight/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NNA9AVJNUS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sennight/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sennight.Sennight;
+				PRODUCT_BUNDLE_IDENTIFIER = io.sennight.Sennight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
@@ -1036,24 +1104,28 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = Sennight/Sennight.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_ASSET_PATHS = "\"Sennight/Preview Content\"";
-				DEVELOPMENT_TEAM = "";
+				DEVELOPMENT_TEAM = NNA9AVJNUS;
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = Sennight/Info.plist;
+				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0.0;
-				PRODUCT_BUNDLE_IDENTIFIER = com.sennight.Sennight;
+				PRODUCT_BUNDLE_IDENTIFIER = io.sennight.Sennight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;

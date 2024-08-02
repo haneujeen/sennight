@@ -8,11 +8,28 @@
 import SwiftUI
 
 struct NewSmokingLogSheet: View {
+    @Binding var selectedDate: Date
+    @Binding var isNewSmokingLogSheetPresented: Bool
+    
     var body: some View {
-        Text("New smoking sheet")
+        NavigationView {
+            VStack {
+                Text("Craving level")
+                    .font(.title)
+                Text("Trigger")
+                    .font(.title)
+                DatePicker("Select Date", selection: $selectedDate, displayedComponents: .date)
+                    .datePickerStyle(.wheel)
+                    .labelsHidden()
+                    .padding()
+            }
+            .navigationBarItems(trailing: Button("Save") {
+                isNewSmokingLogSheetPresented = false
+            })
+        }
     }
 }
 
 #Preview {
-    NewSmokingLogSheet()
+    NewSmokingLogSheet(selectedDate: .constant(Date()), isNewSmokingLogSheetPresented: .constant(true))
 }

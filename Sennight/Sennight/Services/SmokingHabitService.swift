@@ -3,6 +3,8 @@
 //  Sennight
 //
 //  Created by 한유진 on 7/16/24.
+//  Edited by 김소연 on 2024-07-23: SmokingHabitService 코드 수정
+//  Edited by 한유진 on 2024-07-27: Refactor SmokingHabitService.swift
 //
 
 import Foundation
@@ -14,50 +16,55 @@ class SmokingHabitService {
     
     let HOST = Settings.shared.HOST
     
-    //smoking habits create Publisher 생성
-    func createSH(userId: Int, dailyCigarettes: Int, cigarettePrice: Int, firstCigarette: String, smokingYears: Int) -> AnyPublisher<SmokingHabitResponse, AFError> {
+    func createSmokingHabit(dailyCigarettes: Int, cigarettePrice: Double, firstCigarette: String, smokingYears: Int) -> AnyPublisher<SmokingHabitResponse, AFError> {
+        guard let userID = UserService.shared.getUserID(), let token = UserService.shared.getToken() else {
+            return Fail(error: AFError.explicitlyCancelled).eraseToAnyPublisher()
+        }
         let url = "\(HOST)/smoking-habits"
-        let body = SmokingHabitsRequest(userId: userId,
-                                        dailyCigarettes: dailyCigarettes,
-                                        cigarettePrice: cigarettePrice,
-                                        firstCigarette: firstCigarette,
-                                        smokingYears: smokingYears)
+        let parameters = SmokingHabitRequest(userID: userID,
+                                             dailyCigarettes: dailyCigarettes,
+                                             cigarettePrice: cigarettePrice,
+                                             firstCigarette: firstCigarette,
+                                             smokingYears: smokingYears)
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(token)"]
         return AF.request(url,
                           method: .post,
-                          parameters: body,
-                          encoder: JSONParameterEncoder.default)
+                          parameters: parameters,
+                          encoder: JSONParameterEncoder.default,
+                          headers: headers)
         .publishDecodable(type: SmokingHabitResponse.self)
         .value()
         .eraseToAnyPublisher()
     }
     
-    //smoking habits read 생성
-//    func readSH(userId: Int) -> AnyPublisher<SmokingHabitResponse, AFError> {
-//        let url = "\(HOST)/smoking-habits/\(userId)"
-//        guard let token = UserService.shared.getToken() else {
-//            return Fail(error: AFError.explicitlyCancelled).eraseToAnyPublisher()
-//        }
-//        return AF.request(url,
-//                          method: .get,
-//                          encoder: JSONParameterEncoder.default)
-//        .publishDecodable(type: SmokingHabitResponse.self)
-//        .value()
-//        .eraseToAnyPublisher()
-//    }
+    func getSmokingHabit() -> AnyPublisher<SmokingHabitResponse, AFError> {
+        guard let userID = UserService.shared.getUserID(), let token = UserService.shared.getToken() else {
+            return Fail(error: AFError.explicitlyCancelled).eraseToAnyPublisher()
+        }
+        let url = "\(HOST)/smoking-habits/\(userID)"
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(token)"]
+        return AF.request(url, method: .get, headers: headers)
+            .publishDecodable(type: SmokingHabitResponse.self)
+            .value()
+            .eraseToAnyPublisher()
+    }
     
-    //smoking habits update 생성
-    func updateSH(habitId: Int, userId: Int, dailyCigarettes: Int, cigarettePrice: Int, firstCigarette: String, smokingYears: Int) -> AnyPublisher<SmokingHabitResponse, AFError> {
-        let url = "\(HOST)/smoking-habits/:habit_id"
-        let body = SmokingHabitsRequest(userId: userId,
-                                        dailyCigarettes: dailyCigarettes,
-                                        cigarettePrice: cigarettePrice,
-                                        firstCigarette: firstCigarette,
-                                        smokingYears: smokingYears)
-        
+    func updateSmokingHabit(habitID: Int, dailyCigarettes: Int, cigarettePrice: Double, firstCigarette: String, smokingYears: Int) -> AnyPublisher<SmokingHabitResponse, AFError> {
+        guard let userID = UserService.shared.getUserID(), let token = UserService.shared.getToken() else {
+            return Fail(error: AFError.explicitlyCancelled).eraseToAnyPublisher()
+        }
+        let url = "\(HOST)/smoking-habits/\(habitID)"
+        let parameters = SmokingHabitRequest(userID: userID,
+                                             dailyCigarettes: dailyCigarettes,
+                                             cigarettePrice: cigarettePrice,
+                                             firstCigarette: firstCigarette,
+                                             smokingYears: smokingYears)
+        let headers: HTTPHeaders = ["Authorization": "Bearer \(token)"]
         return AF.request(url,
                           method: .put,
-                          parameters: body,
-                          encoder: JSONParameterEncoder.default)
+                          parameters: parameters,
+                          encoder: JSONParameterEncoder.default,
+                          headers: headers)
         .publishDecodable(type: SmokingHabitResponse.self)
         .value()
         .eraseToAnyPublisher()

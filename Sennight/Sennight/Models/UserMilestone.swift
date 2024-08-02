@@ -43,7 +43,7 @@ struct UserMilestoneRequest: Codable {
     }
 }
 
-struct UserMilestone: Codable {
+struct UserMilestone: Codable, Identifiable {
     let id: Int
     let userID: Int
     let milestoneID: Int
@@ -59,8 +59,21 @@ struct UserMilestone: Codable {
     }
 }
 
+
+struct UserMilestoneResponse: Codable {
+    let status: Bool
+    let detail: String
+    let data: UserMilestone?
+}
+
 struct UserMilestonesResponse: Codable {
     let status: Bool
     let detail: String
     let data: [UserMilestone]?
+}
+
+struct UserMaxMilestoneIDResponse: Codable {
+    let status: Bool
+    let detail: String
+    let data: Int?
 }

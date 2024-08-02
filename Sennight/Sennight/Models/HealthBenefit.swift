@@ -70,6 +70,28 @@ enum HealthBenefit: String, CaseIterable {
         }
     }
     
+    var timeIntervalString: String {
+            switch self {
+            case .heartRate: return "20 minutes"
+            case .bloodPressure: return "20 minutes"
+            case .oxygenLevel: return "8 hours"
+            case .nicotineLevel: return "48 hours"
+            case .carbonMonoxide: return "48 hours"
+            case .mucus: return "48 hours"
+            case .smellAndTaste: return "48 hours"
+            case .breathing: return "72 hours"
+            case .circulation: return "8 weeks"
+            case .lungFunction: return "12 weeks"
+            case .coughing: return "6 months"
+            case .cardiovascularSystem: return "1 year"
+            case .stroke: return "5 years"
+            case .mouthAndThroatCancer: return "7 years"
+            case .bladderAndKidneyCancer: return "10 years"
+            case .lungCancer: return "12 years"
+            case .heartDisease: return "15 years"
+            }
+        }
+    
     var description: String {
         switch self {
         case .heartRate:

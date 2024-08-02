@@ -17,3 +17,14 @@ struct CustomTextFieldStyle: TextFieldStyle {
             )
     }
 }
+
+struct CustomGrayTextFieldStyle: TextFieldStyle {
+    func _body(configuration: TextField<Self._Label>) -> some View {
+        configuration
+            .padding(15)
+            .background(
+                RoundedRectangle(cornerRadius: 20, style: .continuous)
+                    .fill(Color.gray.opacity(0.2))
+            )
+    }
+}

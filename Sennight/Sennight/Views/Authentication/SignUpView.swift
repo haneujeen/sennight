@@ -13,7 +13,7 @@ import SwiftUI
 import Combine
 
 struct SignUpView: View {
-    @StateObject var signUpViewModel = SignUpViewModel()
+    @EnvironmentObject var signUpViewModel: SignUpViewModel
     @State private var confirmPassword: String = ""
     @Environment(\.dismiss) var dismiss
     @State private var showAlert = false
@@ -45,7 +45,7 @@ struct SignUpView: View {
     var body: some View {
         NavigationStack {
             ZStack {
-                LottieView(name: Constants.lavenderCrossingLine, loopMode: .autoReverse, animationSpeed: 0.2)
+                LottieView(name: Constants.lavenderCrossingLine, loopMode: .autoReverse, animationSpeed: 0.1)
                     .rotationEffect(.degrees(290))
                     .scaleEffect(2.5)
                     .ignoresSafeArea()
@@ -58,6 +58,10 @@ struct SignUpView: View {
                                 .font(.title2)
                                 .fontWeight(.bold)
                                 .foregroundStyle(Theme.indigo.mainColor)
+                            Text("Sign in to personalize your app experience. Track your smoking habits, monitor your progress, and stay informed about withdrawal symptoms and cessation support products.")
+                                .font(.footnote)
+                                .foregroundColor(Color.secondary)
+                                .padding(.top, 1)
                         }
                         Spacer()
                     }
@@ -172,4 +176,5 @@ struct SignUpView: View {
 
 #Preview {
     SignUpView()
+        .environmentObject(SignUpViewModel())
 }
