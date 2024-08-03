@@ -10,9 +10,12 @@ import SwiftUI
 struct SymptomsCardView: View {
     var body: some View {
         Section(header: Text("Symptoms")) {
-            ForEach(0..<3) { _ in
-                SymptomRowView()
+            VStack {
+                ForEach(0..<3) { _ in
+                    SymptomRowView()
+                }
             }
+            .clipShape(RoundedRectangle(cornerRadius: 20))
         }
     }
 }

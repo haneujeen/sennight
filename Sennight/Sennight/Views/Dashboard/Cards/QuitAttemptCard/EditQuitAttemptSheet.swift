@@ -31,9 +31,12 @@ struct EditQuitAttemptSheet: View {
                 dateFormatter.dateFormat = "yyyy-MM-dd"
                 let selectedDateString = dateFormatter.string(from: selectedDate)
                 quitAttemptViewModel.startDate = selectedDateString
-                quitAttemptViewModel.updateQuitAttempt()
-                quitAttemptViewModel.getActiveQuitAttempt()
-                isEditSheetPresented = false
+                quitAttemptViewModel.updateQuitAttempt { status in
+                    if status {
+                        quitAttemptViewModel.getActiveQuitAttempt()
+                        isEditSheetPresented = false                        
+                    }
+                }
             }) {
                 Text("Save")
                     .foregroundColor(.blue)

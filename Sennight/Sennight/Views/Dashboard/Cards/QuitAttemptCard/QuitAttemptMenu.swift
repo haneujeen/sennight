@@ -52,11 +52,13 @@ struct QuitAttemptMenu: View {
                 quitAttemptViewModel.startDate = activeQuitAttempt.startDate
                 
                 let dateFormatter = DateFormatter()
-                dateFormatter.dateFormat = "yyyy-MM-dd"
+                dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss"
                 quitAttemptViewModel.endDate = dateFormatter.string(from: Date())
                 quitAttemptViewModel.isActive = false
                 
-                quitAttemptViewModel.updateQuitAttempt()
+                quitAttemptViewModel.updateQuitAttempt { _ in
+                    
+                }
                 quitAttemptViewModel.activeQuitAttempt = nil
                 quitAttemptViewModel.isActiveQuitAttempt = false
             }

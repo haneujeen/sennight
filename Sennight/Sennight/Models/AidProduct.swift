@@ -23,7 +23,7 @@ enum AidProduct: Int, CaseIterable, Identifiable {
     var category: String {
         switch self {
         case .patch, .gum, .lozenge, .oralInhaler, .nasalSpray:
-            return "Nicotine Replacement Therapy"
+            return "NRT"
         case .varenicline, .bupropion:
             return "Pill"
         case .nicotinePouch:
@@ -34,15 +34,15 @@ enum AidProduct: Int, CaseIterable, Identifiable {
     var name: String {
         switch self {
         case .patch:
-            return "Patch"
+            return "Nicotine Patch"
         case .gum:
-            return "Gum"
+            return "Nicotine Gum"
         case .lozenge:
             return "Lozenge"
         case .oralInhaler:
-            return "Oral Inhaler"
+            return "Nicotine Oral Inhaler"
         case .nasalSpray:
-            return "Nasal Spray"
+            return "Nicotine Nasal Spray"
         case .varenicline:
             return "Varenicline (Chantix)"
         case .bupropion:

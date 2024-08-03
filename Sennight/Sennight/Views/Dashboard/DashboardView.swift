@@ -47,8 +47,12 @@ struct DashboardView: View {
                                 .fill(Color.white)
                         )
                     AidProductsCardView()
-                    SymptomsCardView()
-                    ActivitiesCardView()
+//                    SymptomsCardView()
+//                        .listRowBackground(
+//                            RoundedRectangle(cornerRadius: 20)
+//                                .fill(Theme.seafoam.mainColor)
+//                        )
+                    //ActivitiesCardView()
                 }
                 .foregroundStyle(Theme.indigo.mainColor)
                 .padding(.top, -20)

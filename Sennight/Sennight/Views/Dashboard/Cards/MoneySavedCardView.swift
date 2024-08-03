@@ -15,13 +15,18 @@ struct MoneySavedCardView: View {
         dateFormatter().date(from: quitAttemptViewModel.activeQuitAttempt?.startDate ?? "") ?? Date()
     }
     
-    private var daysSinceStartDate: Int {
+    private var daysSinceStartDate: Double {
         let timeInterval = Date().timeIntervalSince(startDate)
-        return max(0, Int(timeInterval / (60 * 60 * 24)))
+        return max(0, timeInterval / (60 * 60 * 24))
     }
-    
+
     private var moneySaved: Double {
-        smokingHabitViewModel.smokingHabit?.cigarettePrice ?? 0 * Double(daysSinceStartDate)
+        guard let cigarettePrice = smokingHabitViewModel.smokingHabit?.cigarettePrice,
+              let dailyCigarettes = smokingHabitViewModel.smokingHabit?.dailyCigarettes else {
+            return 0
+        }
+        let pricePerCigarette = cigarettePrice / 20
+        return pricePerCigarette * Double(dailyCigarettes) * daysSinceStartDate
     }
     
     var body: some View {

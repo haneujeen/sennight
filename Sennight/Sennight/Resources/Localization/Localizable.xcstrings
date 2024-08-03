@@ -349,6 +349,9 @@
     "Add New Milestone" : {
 
     },
+    "Add smoking cessation aid you use" : {
+
+    },
     "Add your own motivation" : {
 
     },
@@ -373,9 +376,6 @@
           }
         }
       }
-    },
-    "Aid product row" : {
-
     },
     "All" : {
 
@@ -524,6 +524,9 @@
 
     },
     "Cancel" : {
+
+    },
+    "Category" : {
 
     },
     "Category: %@" : {
@@ -1577,6 +1580,7 @@
       }
     },
     "New aid product sheet" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {
@@ -1597,6 +1601,9 @@
           }
         }
       }
+    },
+    "New Cessation Aid" : {
+
     },
     "New Password" : {
 
@@ -1721,6 +1728,9 @@
           }
         }
       }
+    },
+    "Numbers" : {
+
     },
     "OK" : {
       "localizations" : {
@@ -1923,6 +1933,9 @@
 
     },
     "Right after you wake up or later in the morning?" : {
+
+    },
+    "Row %lld" : {
 
     },
     "Save" : {
@@ -2543,6 +2556,7 @@
 
     },
     "Update aid product sheet" : {
+      "extractionState" : "stale",
       "localizations" : {
         "en" : {
           "stringUnit" : {

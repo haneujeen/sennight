@@ -24,7 +24,7 @@ class QuitAttemptViewModel: ObservableObject{
     private var cancellables = Set<AnyCancellable>()
     
     // 새로운 금연 도전 추가
-    func createQuitAttempt(completion: @escaping (Bool)->Void) {
+    func createQuitAttempt(completionHandler: @escaping (Bool)->Void) {
         QuitAttemptService.shared.createQuitAttempt(startDate: startDate)
             .receive(on: DispatchQueue.main)
             .sink { completion in
@@ -34,7 +34,7 @@ class QuitAttemptViewModel: ObservableObject{
                     print(error.localizedDescription)
                 }
             } receiveValue: { response in
-                completion(response.status)
+                completionHandler(response.status)
             }.store(in: &cancellables)
     }
     
@@ -77,7 +77,7 @@ class QuitAttemptViewModel: ObservableObject{
     }
     
     /// Updates an existing quitting smoking attempt.
-    func updateQuitAttempt() {
+    func updateQuitAttempt(completionHandler: @escaping (Bool)->Void) {
         guard let activeQuitAttempt else { print("No activeQuitAttempt"); return }
         
         QuitAttemptService.shared.updateQuitAttempt(attemptID: activeQuitAttempt.id,
@@ -93,7 +93,7 @@ class QuitAttemptViewModel: ObservableObject{
                 }
             } receiveValue: { response in
                 if response.status {
-                    print("Success updating quit attempt. Do stuff...")
+                    completionHandler(response.status)
                 } else {
                     print("Error updating quit attempt. Do stuff...")
                 }

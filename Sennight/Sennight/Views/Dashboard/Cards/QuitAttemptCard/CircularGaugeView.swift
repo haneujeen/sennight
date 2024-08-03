@@ -42,18 +42,25 @@ struct CircularGaugeView: View {
             })
             .sheet(isPresented: $showDetail) {
                 VStack(alignment: .leading, spacing: 16) {
-                    Text(healthBenefit.rawValue)
-                        .font(.headline)
-                    Text(healthBenefit.description)
-                        .lineLimit(5)
-                    Text("Note: The health benefits listed are general estimates and may vary from person to person. Please consult with a healthcare professional for personalized guidance.")
-                        .font(.footnote)
-                        .foregroundColor(.gray)
-                    
                     Button("Dismiss") {
                         showDetail = false
                     }
-                    .padding()
+                    Spacer()
+                    VStack {
+                        healthBenefit.icon
+                            .resizable()
+                            .frame(width: 50, height: 50)
+                        Text(healthBenefit.rawValue)
+                            .font(.headline)
+                            .padding(.bottom)
+                        Text(healthBenefit.description)
+                            .lineLimit(5)
+                            .padding(.bottom)
+                        Text("Note: The health benefits listed are general estimates and may vary from person to person. Please consult with a healthcare professional for personalized guidance.")
+                            .font(.footnote)
+                            .foregroundColor(.gray)
+                    }
+                    Spacer()
                 }
                 .padding()
                 .background(Color.white)
