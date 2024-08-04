@@ -24,27 +24,39 @@ struct MyMilestonesView: View {
     
     var body: some View {
         VStack {
-            Picker("Filter", selection: $selectedOption) {
-                Text("All").tag(0)
-                Text("My Quit History").tag(1)
-            }
-            .pickerStyle(SegmentedPickerStyle())
-            .padding()
-            
-            if selectedOption == 0 {
-                AllMilestonesListView()
-                    .environmentObject(milestoneViewModel)
-            } else {
-                SortedMilestonesListView()
-                    .environmentObject(quitAttemptViewModel)
-                    .environmentObject(milestoneViewModel)
-            }
+            //            Picker("Filter", selection: $selectedOption) {
+            //                Text("All").tag(0)
+            //                Text("My Quit History").tag(1)
+            //            }
+            //            .pickerStyle(SegmentedPickerStyle())
+            //            .padding()
+            //
+            //            if selectedOption == 0 {
+            //                AllMilestonesListView()
+            //                    .environmentObject(milestoneViewModel)
+            //            } else {
+            //                SortedMilestonesListView()
+            //                    .environmentObject(quitAttemptViewModel)
+            //                    .environmentObject(milestoneViewModel)
+            //            }
+            AllMilestonesListView()
+                .environmentObject(milestoneViewModel)
         }
         .onAppear {
             quitAttemptViewModel.getAllQuitAttempts()
             milestoneViewModel.getAllMilestones()
-            milestoneViewModel.getMaxMilestoneID()
-            checkForNewMilestones()
+            milestoneViewModel.getMaxMilestoneID { status in
+                if status {
+                    for milestone in Milestone.allCases {
+                        if milestone.timeInterval <= Date().timeIntervalSince(startDate) &&
+                            milestone.id > newMaxMilestoneID {
+                            newMaxMilestoneID = milestone.id
+                            milestoneViewModel.maxMilestoneID = milestone.id
+                            break
+                        }
+                    }
+                }
+            }
         }
         .fullScreenCover(item: $maxMilestoneID) { id in
             if let milestone = Milestone(rawValue: id) {
@@ -59,13 +71,22 @@ struct MyMilestonesView: View {
         }
         .onChange(of: isMilestoneAdded) { oldValue, newValue in
             if newValue && showAboutMilestones {
-                print("alert")
                 showAlert = true
             }
             quitAttemptViewModel.getAllQuitAttempts()
             milestoneViewModel.getAllMilestones()
-            milestoneViewModel.getMaxMilestoneID()
-            checkForNewMilestones()
+            milestoneViewModel.getMaxMilestoneID { status in
+                if status {
+                    for milestone in Milestone.allCases {
+                        if milestone.timeInterval <= Date().timeIntervalSince(startDate) &&
+                            milestone.id > newMaxMilestoneID {
+                            newMaxMilestoneID = milestone.id
+                            milestoneViewModel.maxMilestoneID = milestone.id
+                            break
+                        }
+                    }
+                }
+            }
         }
         .alert(isPresented: $showAlert) {
             Alert(title: Text("About Milestones"),
@@ -73,17 +94,6 @@ struct MyMilestonesView: View {
                   dismissButton: .default(Text("Close"), action: {
                 showAboutMilestones = false
             }))
-        }
-    }
-    
-    private func checkForNewMilestones() {
-        for milestone in Milestone.allCases {
-            if milestone.timeInterval <= Date().timeIntervalSince(startDate) &&
-                milestone.id > newMaxMilestoneID {
-                newMaxMilestoneID = milestone.id
-                milestoneViewModel.maxMilestoneID = milestone.id
-                break
-            }
         }
     }
 }

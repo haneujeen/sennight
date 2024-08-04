@@ -17,6 +17,7 @@ struct CheckOnboardingView: View {
         if isOnboardingComplete {
             if loginViewModel.isLoggedIn {
                 HomeView()
+                    .environmentObject(loginViewModel)
             } else {
                 LoginView()
                     .environmentObject(loginViewModel)

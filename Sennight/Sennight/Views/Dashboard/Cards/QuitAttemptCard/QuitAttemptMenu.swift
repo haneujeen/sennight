@@ -19,13 +19,13 @@ struct QuitAttemptMenu: View {
             Button {
                 isEditSheetPresented = true
             } label: {
-                Text("Edit This Quit Attempt")
+                Text("Edit This Quit Log")
             }
             
             Button(role: .destructive) {
                 isStopAlertPresented = true
             } label: {
-                Text("Stop This Quit Attempt")
+                Text("Stop This Quit Log")
             }
         } label: {
             HStack {

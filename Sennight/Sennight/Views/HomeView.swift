@@ -9,9 +9,9 @@
 import SwiftUI
 
 struct HomeView: View {
+    @EnvironmentObject var loginViewModel: LoginViewModel
     @StateObject private var quitAttemptViewModel = QuitAttemptViewModel()
     @StateObject private var smokingHabitViewModel = SmokingHabitViewModel()
-    @StateObject private var loginViewModel = LoginViewModel()
     
     var body: some View {
         TabView {
@@ -48,4 +48,5 @@ struct HomeView: View {
 
 #Preview {
     HomeView()
+        .environmentObject(LoginViewModel())
 }

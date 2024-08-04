@@ -21,8 +21,10 @@ struct AllMilestonesListView: View {
                         HStack {
                             Spacer()
                             Text(milestone.title)
+                                .fontWeight(.bold)
                             Spacer()
                         }
+                        
                         if milestone.id <= milestoneViewModel.maxMilestoneID {
                             HStack {
                                 Text(milestone.message)

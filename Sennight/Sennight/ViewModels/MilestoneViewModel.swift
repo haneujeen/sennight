@@ -44,7 +44,7 @@ class MilestoneViewModel: ObservableObject {
             .store(in: &cancellables)
     }
     
-    func getMaxMilestoneID() {
+    func getMaxMilestoneID(completionHandler: @escaping (Bool)->Void) {
         MilestoneService.shared.getMaxMilestoneID()
             .sink { completion in
                 switch completion {
@@ -55,6 +55,7 @@ class MilestoneViewModel: ObservableObject {
                 }
             } receiveValue: { maxMilestoneID in
                 self.maxMilestoneID = maxMilestoneID
+                completionHandler(true)
             }
             .store(in: &cancellables)
     }

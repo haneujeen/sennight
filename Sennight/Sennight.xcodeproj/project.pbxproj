@@ -134,6 +134,7 @@
 		4EE4659F2C53B1310039A729 /* CircularGaugeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE4659E2C53B1310039A729 /* CircularGaugeView.swift */; };
 		4EE9E9882C5D25E2001833CB /* NewMotivationSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9E9872C5D25E2001833CB /* NewMotivationSheet.swift */; };
 		4EE9E98D2C5E538D001833CB /* AddYourAidProductRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9E98C2C5E538D001833CB /* AddYourAidProductRow.swift */; };
+		4EE9E9932C5F4E21001833CB /* SwiftUIView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EE9E9922C5F4E21001833CB /* SwiftUIView.swift */; };
 		4EEACA442C5622BB00F76EB6 /* QuitAttemptMenu.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEACA432C5622BB00F76EB6 /* QuitAttemptMenu.swift */; };
 		4EEACA602C5628D300F76EB6 /* EditQuitAttemptSheet.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4EEACA5F2C5628D300F76EB6 /* EditQuitAttemptSheet.swift */; };
 		D6BEFFAC2C44C66200C6678B /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 92F992A92C42E95B001BE18C /* LoginView.swift */; };
@@ -289,6 +290,7 @@
 		4EE4659E2C53B1310039A729 /* CircularGaugeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CircularGaugeView.swift; sourceTree = "<group>"; };
 		4EE9E9872C5D25E2001833CB /* NewMotivationSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NewMotivationSheet.swift; sourceTree = "<group>"; };
 		4EE9E98C2C5E538D001833CB /* AddYourAidProductRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddYourAidProductRow.swift; sourceTree = "<group>"; };
+		4EE9E9922C5F4E21001833CB /* SwiftUIView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SwiftUIView.swift; sourceTree = "<group>"; };
 		4EEACA432C5622BB00F76EB6 /* QuitAttemptMenu.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuitAttemptMenu.swift; sourceTree = "<group>"; };
 		4EEACA5F2C5628D300F76EB6 /* EditQuitAttemptSheet.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EditQuitAttemptSheet.swift; sourceTree = "<group>"; };
 		92F992A92C42E95B001BE18C /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
@@ -525,14 +527,8 @@
 		4E0F84762C2D2A0E0037AE25 /* MilestonePosts */ = {
 			isa = PBXGroup;
 			children = (
-				4E571A9B2C579572002BA2DD /* AllMilestonesListView.swift */,
-				4E571A9D2C579647002BA2DD /* SortedMilestonesListView.swift */,
-				4E571A992C57730B002BA2DD /* NewMilestoneView.swift */,
-				4E6F39DC2C33B79200058003 /* MyMilestonesView.swift */,
-				4E6F39D42C33980900058003 /* SupportIcon.swift */,
-				4E6F39D62C33989A00058003 /* PostText.swift */,
-				4E0F84DA2C2D3E6A0037AE25 /* MilestonePostCardView.swift */,
-				4E0F84A72C2D33E50037AE25 /* MilestonePostsView.swift */,
+				4EE9E9902C5F4271001833CB /* MilestonsView */,
+				4EE9E9912C5F427D001833CB /* PostsView */,
 			);
 			path = MilestonePosts;
 			sourceTree = "<group>";
@@ -659,6 +655,29 @@
 				4E0F84C72C2D3D0B0037AE25 /* AidProductsCardView.swift */,
 			);
 			path = AidProductsCard;
+			sourceTree = "<group>";
+		};
+		4EE9E9902C5F4271001833CB /* MilestonsView */ = {
+			isa = PBXGroup;
+			children = (
+				4E571A9B2C579572002BA2DD /* AllMilestonesListView.swift */,
+				4E571A9D2C579647002BA2DD /* SortedMilestonesListView.swift */,
+				4E571A992C57730B002BA2DD /* NewMilestoneView.swift */,
+				4E6F39DC2C33B79200058003 /* MyMilestonesView.swift */,
+				4EE9E9922C5F4E21001833CB /* SwiftUIView.swift */,
+			);
+			path = MilestonsView;
+			sourceTree = "<group>";
+		};
+		4EE9E9912C5F427D001833CB /* PostsView */ = {
+			isa = PBXGroup;
+			children = (
+				4E6F39D42C33980900058003 /* SupportIcon.swift */,
+				4E6F39D62C33989A00058003 /* PostText.swift */,
+				4E0F84DA2C2D3E6A0037AE25 /* MilestonePostCardView.swift */,
+				4E0F84A72C2D33E50037AE25 /* MilestonePostsView.swift */,
+			);
+			path = PostsView;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -865,6 +884,7 @@
 				4E82E3A52C4665CB00F06DE3 /* QuitAttempt.swift in Sources */,
 				4EB3C1D52C4B3F2A0066D658 /* CustomTextFieldStyle.swift in Sources */,
 				4E0F848B2C2D2CE60037AE25 /* SmokingLogViewModel.swift in Sources */,
+				4EE9E9932C5F4E21001833CB /* SwiftUIView.swift in Sources */,
 				4E0F84C62C2D3CC70037AE25 /* MoneySavedCardView.swift in Sources */,
 				4E0F84832C2D2CBD0037AE25 /* SymptomViewModel.swift in Sources */,
 				4E0F842B2C2D07F70037AE25 /* ContentView.swift in Sources */,
@@ -1094,25 +1114,28 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sennight/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Sennight;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 0.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.sennight.Sennight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -1129,25 +1152,28 @@
 				ENABLE_PREVIEWS = YES;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = Sennight/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = Sennight;
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.healthcare-fitness";
 				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = "Launch Screen.storyboard";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
 				INFOPLIST_KEY_UIUserInterfaceStyle = Light;
 				IPHONEOS_DEPLOYMENT_TARGET = 17.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.0.0;
+				MARKETING_VERSION = 0.0.0;
 				PRODUCT_BUNDLE_IDENTIFIER = io.sennight.Sennight;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};

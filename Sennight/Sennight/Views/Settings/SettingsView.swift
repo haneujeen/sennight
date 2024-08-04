@@ -13,72 +13,79 @@ struct SettingsView: View {
     
     var body: some View {
         NavigationView {
-            List {
-                Section(header: Text("Account Settings")) {
-                    NavigationLink(destination: ProfileView()
-                        .environmentObject(smokingHabitViewModel)) {
-                        Text("Profile")
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.leading)
-                            .background(Color.white)
-                    }
-                    NavigationLink(destination: ChangePasswordView()
-                        .environmentObject(smokingHabitViewModel)) {
-                        Text("Change Password")
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.leading)
-                            .background(Color.white)
-                    }
-                    Button(action: {
-                        loginViewModel.logout()
-                    }) {
-                        Text("Logout")
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.leading)
-                            .contentShape(Rectangle())
-                    }
-                }
+            ZStack {
+                Theme.buttercup.mainColor
+                    .ignoresSafeArea()
                 
-                Section(header: Text("Legal")) {
-                    NavigationLink(destination: TermsAndConditionsView()) {
-                        Text("Terms of Service")
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.leading)
-                            .background(Color.white)
+                List {
+                    Section(header: Text("Account Settings")) {
+    //                    NavigationLink(destination: ProfileView()
+    //                        .environmentObject(smokingHabitViewModel)) {
+    //                        Text("Profile")
+    //                            .frame(maxWidth: .infinity, alignment: .leading)
+    //                            .padding(.leading)
+    //                            .background(Color.white)
+    //                    }
+    //                    NavigationLink(destination: ChangePasswordView()
+    //                        .environmentObject(smokingHabitViewModel)) {
+    //                        Text("Change Password")
+    //                            .frame(maxWidth: .infinity, alignment: .leading)
+    //                            .padding(.leading)
+    //                            .background(Color.white)
+    //                    }
+                        Button(action: {
+                            loginViewModel.logout()
+                        }) {
+                            Text("Logout")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading)
+                                .contentShape(Rectangle())
+                        }
                     }
-                    NavigationLink(destination: PrivacyPolicyView()) {
-                        Text("Privacy Policy")
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.leading)
-                            .background(Color.white)
+                    
+                    Section(header: Text("Legal")) {
+                        NavigationLink(destination: TermsAndConditionsView()) {
+                            Text("Terms of Service")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading)
+                                .background(Color.white)
+                        }
+                        NavigationLink(destination: PrivacyPolicyView()) {
+                            Text("Privacy Policy")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading)
+                                .background(Color.white)
+                        }
+                        NavigationLink(destination: LicensesView()) {
+                            Text("Licenses")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading)
+                                .background(Color.white)
+                        }
                     }
-                    NavigationLink(destination: LicensesView()) {
-                        Text("Licenses")
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.leading)
-                            .background(Color.white)
+                    
+                    Section(header: Text("Support")) {
+    //                    NavigationLink(destination: Text("About App View")) {
+    //                        Text("About App")
+    //                            .frame(maxWidth: .infinity, alignment: .leading)
+    //                            .padding(.leading)
+    //                            .contentShape(Rectangle())
+    //                    }
+                        Button(action: {
+                            if let url = URL(string: "mailto:eujeenhan@gmail.com") {
+                                UIApplication.shared.open(url)
+                            }
+                        }) {
+                            Text("[Contact Support](mailto:eujeenhan@gmail.com)")
+                                .frame(maxWidth: .infinity, alignment: .leading)
+                                .padding(.leading)
+                                .foregroundColor(.blue) // Make it look like a link
+                        }
                     }
                 }
-                
-                Section(header: Text("Support")) {
-//                    NavigationLink(destination: Text("About App View")) {
-//                        Text("About App")
-//                            .frame(maxWidth: .infinity, alignment: .leading)
-//                            .padding(.leading)
-//                            .contentShape(Rectangle())
-//                    }
-                    Button(action: {
-                        EmailHelper.shared.send(subject: "Support Request from Sennight App",
-                                                body: "",
-                                                to: ["eujeenhan@gmail.com"])
-                    }) {
-                        Text("Contact Support")
-                            .frame(maxWidth: .infinity, alignment: .leading)
-                            .padding(.leading)
-                    }
-                }
+                .navigationTitle("Settings")
+                .scrollContentBackground(.hidden)
             }
-            .navigationTitle("Settings")
         }
     }
 }
