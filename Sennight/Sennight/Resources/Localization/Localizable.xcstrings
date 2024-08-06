@@ -113,37 +113,114 @@
       }
     },
     "- **Access and Update Your Information**: Request access to or update your personal information." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "- **정보 접근 및 업데이트** : 개인정보 접근 또는 업데이트 요청."
+          }
+        }
+      }
     },
     "- **Device Information**: Information about your device, such as your device ID, operating system, and other technical details." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "- **장치 정보**: 장치 ID, 운영 체제 및 기타 기술 세부 정보와 같은 장치에 대한 정보입니다."
+          }
+        }
+      }
     },
     "- **For Legal Reasons**: We may disclose your information if required to do so by law or to protect our rights, privacy, safety, or property." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "- **법적 이유로**: 당사는 법에 따라 또는 당사의 권리, 사생활, 안전 또는 재산을 보호하기 위해 귀하의 정보를 공개할 수 있습니다."
+          }
+        }
+      }
     },
     "- **Opt-Out**: Choose not to receive promotional communications from us by following the instructions in those communications." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "- **Opt-Out**: 해당 커뮤니케이션의 지침에 따라 프로모션 커뮤니케이션을 받지 않도록 선택하십시오."
+          }
+        }
+      }
     },
     "- **Personal Information**: Information that identifies you personally, such as your name, email address, or other contact details." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "- **개인정보** : 본인의 이름, 이메일 주소, 기타 연락처 등 본인을 식별할 수 있는 정보입니다."
+          }
+        }
+      }
     },
     "- **To Communicate with You**: Sending updates, notifications, and other information related to the App." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "- **당신과 소통하기**: 앱과 관련된 업데이트, 알림 및 기타 정보 전송."
+          }
+        }
+      }
     },
     "- **To Comply with Legal Obligations**: Adhering to applicable laws and regulations." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "- **법적 의무 준수**: 해당 법규 준수."
+          }
+        }
+      }
     },
     "- **To Improve the App**: Analyzing usage patterns to enhance features and performance." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "- **앱 개선을 위해**: 사용 패턴을 분석하여 기능과 성능을 향상시킵니다."
+          }
+        }
+      }
     },
     "- **To Provide and Maintain the App**: Ensuring the App functions correctly and addressing any issues." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "- **앱 제공 및 유지관리**: 앱이 올바르게 작동하는지 확인하고 모든 문제를 해결합니다."
+          }
+        }
+      }
     },
     "- **Usage Data**: Information about how you use the App, including your interactions with features and services." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "- **UsageData**: 기능 및 서비스와의 상호 작용을 포함하여 앱을 사용하는 방법에 대한 정보입니다."
+          }
+        }
+      }
     },
     "- **With Service Providers**: We may share your information with third-party service providers who assist us in operating the App and providing services." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "- **서비스 제공업체**: 앱을 운영하고 서비스를 제공하는 데 도움이 되는 타사 서비스 제공업체와 귀하의 정보를 공유할 수 있습니다."
+          }
+        }
+      }
     },
     ":" : {
       "localizations" : {
@@ -162,10 +239,24 @@
       }
     },
     "[Contact Support](mailto:eujeenhan@gmail.com)" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "[문의지원](메일:eujeenhan@gmail.com )"
+          }
+        }
+      }
     },
     "%@" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "%@"
+          }
+        }
+      }
     },
     "%lld" : {
       "localizations" : {
@@ -190,58 +281,184 @@
       }
     },
     "1. Acceptance of Terms" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1. 조건 수락"
+          }
+        }
+      }
     },
     "1. Introduction" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "1. 소개"
+          }
+        }
+      }
     },
     "2. Information We Collect" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2. 우리가 수집하는 정보"
+          }
+        }
+      }
     },
     "2. User Accounts" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "2. 사용자 계정"
+          }
+        }
+      }
     },
     "3. How We Use Your Information" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3. 귀하의 정보를 사용하는 방법"
+          }
+        }
+      }
     },
     "3. Use of the App" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "3. 앱 사용"
+          }
+        }
+      }
     },
     "4. How We Share Your Information" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4. 우리가 당신의 정보를 공유하는 방법"
+          }
+        }
+      }
     },
     "4. Intellectual Property" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "4. 지적재산권"
+          }
+        }
+      }
     },
     "5. Privacy" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5. 개인정보보호"
+          }
+        }
+      }
     },
     "5. Security" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "5. 보안"
+          }
+        }
+      }
     },
     "6. Third-Party Links" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "6. 서드파티 링크"
+          }
+        }
+      }
     },
     "6. Your Choices" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "6. 사용자의 선택 사항"
+          }
+        }
+      }
     },
     "7. Children’s Privacy" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7. 아이들의 사생활"
+          }
+        }
+      }
     },
     "7. Disclaimer" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "7. 면책조항"
+          }
+        }
+      }
     },
     "8. Changes to This Privacy Policy" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "8. 개인 정보 보호 정책의 변경 사항"
+          }
+        }
+      }
     },
     "8. Limitation of Liability" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "8. 책임제한"
+          }
+        }
+      }
     },
     "9. Changes to Terms" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "9. 약관 변경 사항"
+          }
+        }
+      }
     },
     "10. Contact Information" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "10. 연락처 정보"
+          }
+        }
+      }
     },
     "100%" : {
       "localizations" : {
@@ -343,7 +560,14 @@
       }
     },
     "Activity row" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "활동내역"
+          }
+        }
+      }
     },
     "Add and manage your smoking habits and cravings." : {
       "localizations" : {
@@ -430,7 +654,14 @@
       }
     },
     "All content, trademarks, and other intellectual property on the Sennight are owned by or licensed to Sennight and are protected by applicable laws. You may not use, reproduce, or distribute any content from the Sennight without explicit permission." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sennight의 모든 콘텐츠, 상표 및 기타 지적 재산은 Sennight가 소유하거나 Sennight에게 라이센스를 부여하며 해당 법률에 의해 보호됩니다. 명시적인 허가 없이 Sennight의 콘텐츠를 사용, 복제 또는 배포할 수 없습니다."
+          }
+        }
+      }
     },
     "Already have an account?" : {
       "localizations" : {
@@ -455,7 +686,14 @@
       }
     },
     "An unknown error occurred." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "알 수 없는 오류가 발생했습니다."
+          }
+        }
+      }
     },
     "App Permissions" : {
       "extractionState" : "stale",
@@ -570,7 +808,14 @@
       }
     },
     "By accessing or using the Sennight (\"Sennight\"), you agree to comply with and be bound by these Terms and Conditions." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sennight(\"Sennight\")에 접속하거나 사용함으로써 귀하는 본 약관을 준수하고 이에 구속되는 것에 동의합니다."
+          }
+        }
+      }
     },
     "Cancel" : {
       "localizations" : {
@@ -777,10 +1022,24 @@
       }
     },
     "Copyright (c) 2024 Sennight" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저작권 (c) 2024 Sennight"
+          }
+        }
+      }
     },
     "Craving level" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "갈망수준"
+          }
+        }
+      }
     },
     "Create your account." : {
       "localizations" : {
@@ -1322,22 +1581,64 @@
       }
     },
     "If you have any questions or concerns about this Privacy Policy, please contact us at [Sennight Help](mailto:eujeenhan@gmail.com)." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "본 개인정보 보호정책과 관련하여 궁금한 점이나 우려 사항이 있으시면 [Sennight Help](메일:eujeenhan@gmail.com )로 문의해 주시기 바랍니다."
+          }
+        }
+      }
     },
     "If you have any questions or concerns about this Terms and Conditions, please contact us at [Sennight Help](mailto:eujeenhan@gmail.com)." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "본 약관과 관련하여 궁금한 점이나 우려 사항이 있으시면 [Sennight Help](메일:eujeenhan@gmail.com )로 문의해 주시기 바랍니다."
+          }
+        }
+      }
     },
     "If you’re currently smoke-free, add the number of cigarettes you used to smoke daily. This will help calculate your savings." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "만약 여러분이 현재 금연 상태라면, 매일 피우던 담배의 수를 더하세요. 이렇게 하면 여러분의 저축액을 계산하는 데 도움이 될 것입니다."
+          }
+        }
+      }
     },
     "If you’re currently smoke-free, enter the price of cigarettes you used to smoke." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "현재 금연인 경우, 흡연하던 담배의 가격을 입력합니다."
+          }
+        }
+      }
     },
     "In no event shall the creators be liable for any indirect, incidental, special, or consequential damages arising from or related to your use of the Sennight." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "어떠한 경우에도 제작자는 귀하의 Sennight 사용으로 인해 발생하거나 이와 관련된 간접적, 부수적, 특별한 또는 결과적인 손해에 대해 책임을 지지 않습니다."
+          }
+        }
+      }
     },
     "Invalid Price" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "잘못된 가격"
+          }
+        }
+      }
     },
     "It's tough. So are you." : {
       "localizations" : {
@@ -1384,7 +1685,14 @@
       }
     },
     "Keep track your smoking habits" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "흡연 습관을 계속 추적합니다"
+          }
+        }
+      }
     },
     "Language" : {
       "extractionState" : "stale",
@@ -1442,7 +1750,14 @@
       }
     },
     "Let us know" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "저희에게 알려 주세요."
+          }
+        }
+      }
     },
     "Let us know the date you quit smoking." : {
       "extractionState" : "stale",
@@ -1581,7 +1896,14 @@
       }
     },
     "Menu" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "메뉴"
+          }
+        }
+      }
     },
     "Milestone Posts" : {
       "localizations" : {
@@ -1650,7 +1972,14 @@
       }
     },
     "MIT License" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "라이센스 포함"
+          }
+        }
+      }
     },
     "Money saved card" : {
       "extractionState" : "stale",
@@ -1741,7 +2070,14 @@
       }
     },
     "My Motivation" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "나의 동기"
+          }
+        }
+      }
     },
     "Name" : {
       "localizations" : {
@@ -1814,7 +2150,14 @@
 
     },
     "New Password" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "새로운 비밀번호"
+          }
+        }
+      }
     },
     "New smoking sheet" : {
       "extractionState" : "stale",
@@ -1884,7 +2227,14 @@
       }
     },
     "No Account Linked" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "연결된 계정 없음"
+          }
+        }
+      }
     },
     "No motivation available" : {
       "extractionState" : "stale",
@@ -1920,7 +2270,14 @@
       }
     },
     "Not Now" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "지금은 안돼요"
+          }
+        }
+      }
     },
     "Note: The health benefits listed are general estimates and may vary from person to person. Please consult with a healthcare professional for personalized guidance." : {
       "localizations" : {
@@ -1961,7 +2318,7 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "OK"
+            "value" : "네"
           }
         }
       }
@@ -2019,7 +2376,14 @@
       }
     },
     "Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the \"Software\"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "본 소프트웨어 및 관련 문서 파일(\"소프트웨어\")의 사본을 입수하는 모든 사람에게 본 소프트웨어를 제한 없이 취급할 수 있는 권한이 부여되며, 여기에는 본 소프트웨어의 사본을 사용, 복사, 수정, 병합, 게시, 배포, 서브라이선스 및 판매할 수 있는 권한이 제한 없이 포함되며, 다음 조건에 따라 본 소프트웨어가 제공되는 사람에게 이를 허용할 수 있습니다"
+          }
+        }
+      }
     },
     "Please enter your email, name, and password." : {
       "extractionState" : "stale",
@@ -2286,7 +2650,14 @@
       }
     },
     "Sennight is not intended for use by individuals under the age of 13. We do not knowingly collect or solicit personal information from children under 13. If we become aware that we have collected such information, we will take steps to delete it." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "센나잇은 13세 미만의 개인이 사용하는 것을 목적으로 하지 않습니다. 13세 미만의 어린이로부터 고의로 개인 정보를 수집하거나 요청하지 않습니다. 만약 우리가 그런 정보를 수집했다는 것을 알게 된다면, 우리는 그것을 삭제하는 조치를 취할 것입니다."
+          }
+        }
+      }
     },
     "Settings" : {
       "localizations" : {
@@ -2343,10 +2714,24 @@
       }
     },
     "Smoking Habits" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "흡연습관"
+          }
+        }
+      }
     },
     "Smoking History" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "흡연이력"
+          }
+        }
+      }
     },
     "Smoking log chart card" : {
       "localizations" : {
@@ -2436,7 +2821,14 @@
       }
     },
     "Stop" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "멈춤"
+          }
+        }
+      }
     },
     "Stop My Progress" : {
       "localizations" : {
@@ -2543,16 +2935,30 @@
         "ko" : {
           "stringUnit" : {
             "state" : "translated",
-            "value" : "증상"
+            "value" : "금단증상"
           }
         }
       }
     },
     "Symptom row" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "금단증상목록"
+          }
+        }
+      }
     },
     "Symptoms" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "금단증상"
+          }
+        }
+      }
     },
     "Tell us what" : {
       "localizations" : {
@@ -2632,10 +3038,24 @@
       }
     },
     "The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "상기 저작권 고지 및 본 허가 고지는 본 소프트웨어의 모든 사본 또는 상당 부분에 포함되어야 합니다"
+          }
+        }
+      }
     },
     "The current password does not match. Please make sure you’ve entered it correctly." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "비밀번호가 일치하지 않습니다. 정확하게 입력했는지 확인하십시오."
+          }
+        }
+      }
     },
     "the date you quit smoking." : {
       "localizations" : {
@@ -2668,16 +3088,44 @@
       }
     },
     "The Sennight is provided on an “as is” and “as available” basis. We make no warranties or representations regarding the availability, accuracy, or reliability of the Sennight. We disclaim all warranties to the fullest extent permitted by law." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "상원의원의 밤은 \"있는 그대로\" 그리고 \"가능한 대로\" 기준으로 제공됩니다. 저희는 상원의원의 밤의 이용 가능성, 정확성 또는 신뢰성에 대해 어떠한 보증도 하지 않습니다. 저희는 법이 허용하는 범위 내에서 모든 보증을 부인합니다."
+          }
+        }
+      }
     },
     "The Sennight may contain links to third-party websites or services. We are not responsible for the content, privacy policies, or practices of any third-party sites." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sennight에는 타사 웹 사이트 또는 서비스에 대한 링크가 포함되어 있을 수 있습니다. 저희는 타사 사이트의 콘텐츠, 개인 정보 보호 정책 또는 관행에 대해 책임을 지지 않습니다."
+          }
+        }
+      }
     },
     "THE SOFTWARE IS PROVIDED \"AS IS\", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "본 소프트웨어는 상품성, 특정 목적에 대한 적합성 및 비침해를 포함하지만 이에 제한되지 않는 명시적 또는 묵시적 보증 없이 \"있는 그대로\" 제공됩니다. 어떠한 경우에도 저작자 또는 저작권자는 본 소프트웨어 또는 본 소프트웨어의 사용 또는 기타 거래로 인해 발생한 계약, 불법 행위 또는 기타 모든 청구, 손해 또는 기타 책임에 대해 책임을 지지 않습니다."
+          }
+        }
+      }
     },
     "This will erase your current progress and reset all health improvements.\nThis action cannot be undone." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이렇게 하면 현재 진행 상황이 지워지고 모든 건강 개선 사항이 재설정됩니다.\n이 작업은 취소할 수 없습니다."
+          }
+        }
+      }
     },
     "Time Zone" : {
       "extractionState" : "stale",
@@ -2703,7 +3151,14 @@
       }
     },
     "To access certain features of the Sennight, you may be required to create a user account. You are responsible for maintaining the confidentiality of your account information and for all activities that occur under your account." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sennight의 특정 기능에 액세스하려면 사용자 계정을 만들어야 할 수도 있습니다. 계정 정보의 기밀성과 계정에서 발생하는 모든 활동에 대한 책임이 있습니다."
+          }
+        }
+      }
     },
     "Track Habits and Cravings" : {
       "localizations" : {
@@ -2728,7 +3183,14 @@
       }
     },
     "Trigger" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "트리거"
+          }
+        }
+      }
     },
     "Update aid product sheet" : {
       "extractionState" : "stale",
@@ -2754,10 +3216,24 @@
       }
     },
     "Update Password" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : " 비밀번호 업데이트"
+          }
+        }
+      }
     },
     "Update the date you started to quit." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "중단 날짜를 업데이트합니다."
+          }
+        }
+      }
     },
     "User achieved %@ Milestone! Send support?" : {
       "localizations" : {
@@ -2782,25 +3258,74 @@
       }
     },
     "We do not sell or rent your personal information to third parties. We may share your information in the following circumstances:" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "당사는 고객님의 개인정보를 제3자에게 판매 또는 대여하지 않습니다. 다음과 같은 경우 고객님의 정보를 공유할 수 있습니다:"
+          }
+        }
+      }
     },
     "We employ reasonable measures to protect your information from unauthorized access, use, or disclosure. However, no method of transmission over the internet or electronic storage is completely secure, and we cannot guarantee absolute security." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "당사는 귀하의 정보를 무단 액세스, 사용 또는 공개로부터 보호하기 위해 합리적인 방법을 사용합니다. 그러나 인터넷 또는 전자 저장소를 통한 전송 방법은 완전히 안전하지 않으며 절대적인 보안을 보장할 수 없습니다."
+          }
+        }
+      }
     },
     "We may collect and use the following types of information:" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다음과 같은 유형의 정보를 수집하고 사용할 수 있습니다:"
+          }
+        }
+      }
     },
     "We may update these Terms from time to time. Any changes will be posted on this page with an updated effective date. Your continued use of the App after any changes constitutes acceptance of the new terms." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "본 약관을 수시로 업데이트할 수 있습니다. 변경 사항은 업데이트된 유효 날짜와 함께 이 페이지에 게시됩니다. 변경 사항이 발생한 후 앱을 계속 사용하는 것은 새 약관을 수락하는 것으로 간주됩니다"
+          }
+        }
+      }
     },
     "We may update this Privacy Policy from time to time. Any changes will be posted on this page with an updated effective date. Your continued use of the App after any changes constitutes acceptance of the new policy." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "본 개인 정보 보호 정책을 수시로 업데이트할 수 있습니다. 변경 사항은 업데이트된 유효 날짜와 함께 이 페이지에 게시됩니다. 변경 사항이 발생한 후 앱을 계속 사용하면 새 정책을 수락할 수 있습니다."
+          }
+        }
+      }
     },
     "We use the information we collect for various purposes, including:" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "우리는 수집한 정보를 다음과 같은 다양한 목적으로 사용합니다:"
+          }
+        }
+      }
     },
     "We’ll track your progress and milestones." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "진행 상황과 마일스톤을 추적하겠습니다."
+          }
+        }
+      }
     },
     "Welcome back" : {
       "localizations" : {
@@ -2825,7 +3350,14 @@
       }
     },
     "Welcome to Sennight (\"Sennight\"). We are committed to protecting your privacy. This Privacy Policy explains how we collect, use, disclose, and safeguard your information when you use our iOS application. By using Sennight, you agree to the collection and use of information in accordance with this policy." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "Sennight에 오신 것을 환영합니다. 우리는 여러분의 개인 정보를 보호하기 위해 최선을 다하고 있습니다. 이 개인 정보 보호 정책은 iOS 애플리케이션을 사용할 때 여러분의 정보를 수집, 사용, 공개 및 보호하는 방법을 설명합니다. Sennight를 사용하면 이 정책에 따라 정보를 수집하고 사용하는 데 동의하는 것입니다."
+          }
+        }
+      }
     },
     "Welcome to Sennight!" : {
       "localizations" : {
@@ -2893,10 +3425,24 @@
       }
     },
     "Years Smoking" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "흡연기간"
+          }
+        }
+      }
     },
     "Yes" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "네"
+          }
+        }
+      }
     },
     "Yes, I am a smoker." : {
       "localizations" : {
@@ -2909,16 +3455,44 @@
       }
     },
     "You agree to use the Sennight only for lawful purposes and in accordance with these Terms. You may not use the Sennight in any way that could damage, disable, overburden, or impair the Sennight or interfere with any other party’s use of the Sennight." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "귀하는 본 약관에 따라 합법적인 목적으로만 상원을 사용하는 것에 동의합니다. 귀하는 상원을 훼손, 무력화, 과도한 부담 또는 장애를 초래하거나 다른 당사자의 상원 사용을 방해할 수 있는 어떠한 방법으로도 상원을 사용할 수 없습니다."
+          }
+        }
+      }
     },
     "You may:" : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "다음을 수행할 수 있습니다 : "
+          }
+        }
+      }
     },
     "You're Logging In..." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "로그인 중..."
+          }
+        }
+      }
     },
     "You’ve just achieved your first milestone. Keep pushing forward and you'll mark more milestones along the way." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "이제 막 첫 번째 마일스톤을 달성했습니다. 앞으로 계속 나아가면 도중에 더 많은 이정표를 표시할 수 있습니다."
+          }
+        }
+      }
     },
     "Your password must:" : {
       "localizations" : {
@@ -2943,7 +3517,14 @@
       }
     },
     "Your use of the Sennight is also governed by our Privacy Policy. By using the Sennight, you consent to the collection and use of your information as described in the Privacy Policy." : {
-
+      "localizations" : {
+        "ko" : {
+          "stringUnit" : {
+            "state" : "translated",
+            "value" : "귀하의 Sennight 사용은 또한 당사의 개인정보 보호정책에 의해 관리됩니다. Sennight를 사용함으로써 귀하는 개인정보 보호정책에 설명된 대로 귀하의 정보 수집 및 사용에 동의하게 됩니다."
+          }
+        }
+      }
     }
   },
   "version" : "1.0"
